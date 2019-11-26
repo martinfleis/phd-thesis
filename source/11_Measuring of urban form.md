@@ -4,4 +4,3 @@
 * Based mostly on my MSc 
 * How others measured form?
 * Where is the gap?
-
