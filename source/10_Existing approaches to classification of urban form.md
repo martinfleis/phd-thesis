@@ -1,4 +1,4 @@
-# 02 Existing approaches to classification of urban form
+# Existing approaches to classification of urban form
 6 000 words (if less, better)
 
 ## Introduction

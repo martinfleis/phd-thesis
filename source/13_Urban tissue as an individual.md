@@ -1,4 +1,4 @@
-# 05. Urban tissue as an individual
+# Urban tissue as an individual
 
 * ~~Identification of “individual” (OTU)~~
 	* ~~Urban Tissue~~
@@ -11,7 +11,7 @@
 * Principles of identification of individuals
 * Introduction of DHC (as a theoretical concept)
 
-###### 05.x.x What is the *individual* in the urban form?
+## What is the *individual* in the urban form?
 
 * We are trying to identify and describe distinct kinds of urban form. *Individuals* forming the population - the city.
 * Dibble et al. used Sanctuary Areas (SA), I argue that the concept of SA is limited. By qualitative definition of SA, and by possible heterogeneity of it. 
@@ -19,7 +19,7 @@
 	* Use of SA as OTU assumes that whole cities are in fact ideal according to ‘Emergent Neighbourhood Model’ (Mehaffy et al). Even the authors states that they are not (e.g. the three pathologies). While the concept of SA in this model perfectly works, in case of unrestricted taxonomy it doesn’t.
 * We are looking for the structure indicating the smallest distinct kind (Sneath and Sokal) of urban form, which urban morphologists define as urban tissue (Kropf)
 
-###### 05.x.x Urban Tissue and similar concepts
+## Urban Tissue and similar concepts
 
 * Urban tissue has several definitions
 	* principal unit of growth

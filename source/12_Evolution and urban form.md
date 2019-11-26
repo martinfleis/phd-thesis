@@ -1,4 +1,4 @@
-# 04. Evolution and urban form
+# Evolution and urban form
 
 * Evolutionary perspective in the context of urban design
     * Biological as well as cultural
@@ -9,3 +9,4 @@
 - use cultural evolution alongside with biological
 - introduce evolutionary approach to classification - cladistics, taxonomy
 - current views of evolution and cities (e.g. Marshall)
+

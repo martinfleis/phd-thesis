@@ -1,4 +1,4 @@
-# 06. Identification of urban tissues through urban morphometrics
+# Identification of urban tissues through urban morphometrics
 
 ~~* Scales~~
 ~~* Measurable elements~~
@@ -50,14 +50,14 @@ II. Then we have to **identify characters for each subset** by following selecti
 He stated “These characters of urban form, at this point, are only hypothesised to be valid. Although certain characters utilised in this Methodology are quite simple and relate to non-abstract concepts, such as area and length, there is no preconception of the relative importance of the characteristics of urban form.“
 - lets make a general test of reliability of characters via spatial autocorrelation. Characters are valid and valuable when they capture some patterns, hence spatial autocorrelation has to be present. It can work as a validation (of capability not completeness) of set of characters.
 
-###### 06.x.x Scales for categorisation of characters for definition of DHC
+###### Scales for categorisation of characters for definition of DHC
 Scales are selected to capture characters of urban tissues on all relevant levels of complexity. At the same time, it is trying to be as compatible with MoRE as possible, but naturally it is not the same. I am not using Sanctuary Areas or any other qualitatively stated characters (street hierarchy). 
 
 
 **Plot**
 Scale of a plot as the smallest element of urban form covers characters deductible from a single plot, building (or buildings) on the plot and their interrelations.
 
-###### 06.x.x Plot
+###### Plot
 - In urban morphology, plot is usually seen as one of the fundamental elements of urban form.(Moudon 1997, Kropf) However, its definition and employability in the analysis is far from ideal as Kropf 2018 identified. 
 - Cadaster is not equal to morphological plots
 - Physical boundaries are not always present
@@ -102,12 +102,12 @@ While thinking about those scales, it is important to understand that all values
 
 **181203** Every element has inherent relation to elements of other type. There is always relation *building-cell-street-block*. As such, characters using building-cell relation are using topological distance 0, because the relation is always present
 
-###### 06.x.x Cross-scale measuring system / explanation
+###### Cross-scale measuring system / explanation
 * Measuring will cover relevant scales, to capture different levels of complexity of urban form
 * Values from measuring will be stored at the plot level, no matter the original measuring scale
 * Different scales have different methods of measuring affecting the uniqueness of values derived for each plot (illustrated in the figure below - each colour represents unique value and shows how plots share them).
 
-###### 06.x.x Selection of taxonomic characters
+###### Selection of taxonomic characters
 - 'characters should be distributed as widely and evenly as possible over the organism studied. Colles (1969c) advocates a deliberate policy of stratified sampling from various organs' (Sneath and Sokal,p.103)
 - 'A systematic survey of all known characters, or the inclusion of all characters the investigator has been able to observe, should prevent bias of this sort.'(SS, 96) [bias in choosing the characters]
 - there is no real benchmark assessing the selection of characters. Theory say, that if you include all possible characters, it should be okay. (Kinda weak I must say)
@@ -122,13 +122,13 @@ While thinking about those scales, it is important to understand that all values
 - approximately half of the characters were excluded due to some logical correlations or based on existing research assessing the quality of characters (e.g. shape indicators)
 - existing database was not well balanced, for example characters capturing diversity were in only few examples
 
-###### 06.x.x Shape
+###### Shape
 - I have identified high number of characters assessing the shape of the object, but applying them all would shew the results towards shape itself.
 - Some of them are correlated, then only one was applied
 - some of them are designed to capture complexity. In that case, selection is based on Basaraner and Centinkaya (2017) who assessed shape complexity characters.
 - characters based on topological skeleton and centreline (Schirmer and Axhausen, 2015) are omitted for two reasons - it is expected that their input is already covered by another characters and it is algorithmically complicated (REF)
 
-###### 06.x.x Diversity
+###### Diversity
 - new characters capturing diversity has to be introduced
 - Dibble was using statistical values (min, max, stdev...) to capture diversity within the subsets. But the applicability is limited, therefore it is better to use more complex calculations focusing directly on diversity
 - the most frequently used measurement of diversity is Simpson's diversity index, but it has one major drawback. It is necessary to identify all subsets of character before calculation. It means, for example, that to measure Simspon's index of plot size, one first have to come up with categories of those sizes and those will necessarily be arbitrary and specific for each case (as in Bobkova 2017). I argue that while most of the characters are linear values, categorising them means loosing the information and adding unnecessary bias into the dataset.
