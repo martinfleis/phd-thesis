@@ -16,3 +16,5 @@ Citation examples:
 `[@almazan2012, pp.33-34]` (Almazán & Nakajima 2012, pp.33–34) `@almazan2012` Almazán & Nakajima (2012)
 `@almazan2012 [p.2]` Almazán & Nakajima (2012, p.2) 
 `[-@almazan2012]` (2012)
+
+From Zotero export as Better BibTeX
