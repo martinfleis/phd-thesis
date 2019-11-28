@@ -1,5 +1,82 @@
 # Identification of urban tissues through urban morphometrics
 
+## Theory: The relational model of urban form
+
+## Principles of systematic morphometric description
+
+## Methodological proposition
+
+### Selection of morphometric characters
+
+#### Diversity as a statistical dispersion
+
+##### Diversity in urban morphology
+- *reiterate the issue of capturing diversity (ch3, EPB paper)*
+- *importance of diversity in urban environment (Jacobs)*
+
+##### Existing methods of measuring diversity
+- *a bit of introduction here*
+- *check other methods in the table*
+- *mention Dibble's IQR*
+
+
+*to be edited, text below comes from EPB paper (unused)*
+	- *expand description of methods*
+
+The frequent use of the Simpson’s diversity index, for example, could be worrying, as it relies on pre-defined “bins” (classes of values). For example, Bobkova, Marcus and Berghauser Pont (2017) use this index to measure the diversity of plot sizes, but their binning into intervals based on the actual case-specific values makes the outcomes hardly comparable to any other: if we apply the same formula to another place, we will get different binning. This appears to be a rather ubiquitous problem in applying the Simpson’s diversity index, i.e. it is necessary to set a finite set of pre-established bins prior to undertaking the analysis, however despite the need for urban morphology analysis to produce comparable outcomes, it is difficult to ensure specific descriptiveness to “universal” predefined bins. The use of the Simpson’s diversity index in ecology is encouraged (Jost, 2006) because ecologists have a finite number of groups enabling them to pre-define all bins appropriately (moreover, bins are usually not defined on a continuous numerical scale), however this is not often the case in urban morphology. 
+
+Recent literature shows that we now have alternative ways to measure the diversity of morphological characters. Caruso, Hilal and Thomas (2017) applied the Local Index of Spatial Autocorrelation (LISA) in a form of local Moran’s I, defined as “the weighted product of the difference to the mean of the value of a variable at a certain observation and the same difference for all other observations, with more weight given to the observations in close spatial proximity. (Caruso et al., 2017: 84) LISA aims to identify clusters of similar values in space, describing their similarity or dissimilarity, which could be seen as a proxy for diversity. 
+
+Another approach grounds the character on the statistical distribution of all measured values and compares it to the ideal distribution. One example is a test whether such distribution follows the principle of the Power Law used by Salat (2017). Another is an application of the Gini index initially used to measure inequality. In the case of diversity, the more unequal the distribution is, the more diverse. Since none of these measurements requires pre-defined grouping, they resolve the problem of binning highlighted above with reference to the Simpson’s diversity index.
+
+- *conclude literature with the clear gap*
+	- *simpson problematic*
+	- *LISA reductionalist*
+	- *Power law - distribution often unknown*
+	- *IQR simplistic*
+
+##### Diversity of continuous variables
+- *focus on diversity of measurable characters - continuous variables*
+- *diversity as statistical dispersion*
+- *three types*
+	- *dimensional*
+		- *list them and make a short description*
+	- *dimensionless*
+		- *list them and make a short description*
+	- *binned*
+		- *list them and make a short description*
+		- *add more than simple Simpson's?*
+- *robustness of measures*
+	- *discuss the issue of robustness*
+
+##### Method of comparison
+- *select large sample*
+- *select easy-to-understand characters*
+- *measure diversity of each character using every method*
+- *normalise results*
+- *visual assessment*
+- *correllation*
+	- *Pearson*
+	- *Spearman?*
+	- *Scatter plots*
+
+##### Results
+- *present raw results*
+
+##### Interpretation
+- *selection of the most appropriate per each type*
+	- *dimensional*
+	- *dimensionless*
+	- *binned* 
+- *synthesis of all*
+- *discuss diversity in homogeneity and order (many small units..) vs measurable diversity*
+- *conclude*
+
+##### NOTES
+
+../../00_Core/06_Identification of urban tissues/03_Characters tests/Diversity as statistical dispersion/Diversity as statistical dispersion.md
+
+## MIXED CHAPTER NOTES
 ~~* Scales~~
 ~~* Measurable elements~~
 ~~* Characters~~
