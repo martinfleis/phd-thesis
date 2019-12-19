@@ -1,9 +1,6 @@
 # Thesis Structure
 Last update: 191126
 
-To be placed:
--	Difference between UMM and Quantitative methods. Establishing UMM. **discuss with O**
-
 - **Ch1. Introduction**
 	- Introduction
 	- Motivation
@@ -77,7 +74,12 @@ To be placed:
 
 Comment: The first 2 background chapter conclude with a GAP. Is there one here too? If you don’t want to call it a gap, call it an ‘unexplored/ potential’ but in principle it would be good if all 3 background chapters conclude with something to act upon. The ‘unexplored potential’ could be the definition of city as community and development of all elements and connection that pertain to it
 
-- **Ch5. | Core | Morphometric elements of urban form**
+- **Ch5. | Propositions**
+	- hypothesis
+	- Difference between UMM and Quantitative methods. Establishing UMM.
+	- top-scale methodology
+
+- **Ch6. | Core | Morphometric elements of urban form**
   - *The first of the core chapters, focusing on the existing morphological elements, their definitions and their applicability. Plot is the first: As there is “an issue of plot” (ink to Ch 1) this chapter introduces morphological tessellation and discuss its derivates. Tissue is the second. urban tissue is the right “individual” unit for this type of analysis and what are the concepts needed for  its definition. The chapter concludes proposing  the Distinct Homogenous Cluster as a morphometric proxy of the urban tissue.*
   - Fundamental morphological elements
     - *Overview of know and used elements as building, street, plot, axial line and others.*
@@ -104,7 +106,7 @@ Comment: The first 2 background chapter conclude with a GAP. Is there one here t
       - Urban tissue
     - Urban tissue as an individual
     - Distinct Homogenous Cluster as morphometric proxy of urban tissue
-- **Ch6. | Core | Identification of DHC**
+- **Ch7. | Core | Identification of DHC**
   - *Chapter on the identification of DHC will probably be the longest one (by far) as it proposes critical components of the whole research. Starting from the relational model of urban form and going through the complete methodology of DHC recognition (all characters and steps) finishing with the case study (Prague) and interpretation of DHC.*
   - Theory: The relational model of urban form
     - *Introduction of the model of urban form used within the rest of morphometric framework based on the identified relationships between fundamental elements of the form (building-cell-street-node) and definition of vicinity based on the topology (relations) rather than a metric definition.*
@@ -163,7 +165,7 @@ Comment: The first 2 background chapter conclude with a GAP. Is there one here t
       - variants based on resolution and scalability tests
   - Interpretation of DHC
     - *Interpretation of the meaning of DHC in relation to urban tissue as it is much more granular than urban tissue would be.*
-- **Ch7. | Core | Taxonomy of urban form**
+- **Ch8. | Core | Taxonomy of urban form**
   - *Final of the core chapters, focusing on the taxonomy of urban form and hierarchical clustering of DHCs.*
   - Taxonomy as a classification method
     - *Why taxonomy as a classification method and what would be its relation to typology.*
@@ -189,7 +191,7 @@ Comment: The first 2 background chapter conclude with a GAP. Is there one here t
     - Different branches allow different distinction
   - Profiling of taxa
     - *The final part of the core of the research is the profiling of selected taxa using their morphometric values. We can either provide a full profile of ~300 values or identify that which are the most significant for each of the taxa.*
-- **Ch8. Synthesis**
+- **Ch9. Synthesis**
   - *The last chapter which is currently only crudely outlined as the major part of the discussion will be based on the data I do not have at this moment (final clustering, taxonomy, extended case study).*
   - Research outcomes
     - Reflections
