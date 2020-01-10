@@ -1,4 +1,4 @@
-Thesis Structure (updated: 200109)
+Thesis Structure (updated: 200110)
 
 - Ch1. Introduction
   - Introduction
@@ -144,6 +144,7 @@ Thesis Structure (updated: 200109)
       - Levels of DHC resolution and its scalability
         - *Discussion on the resolution of DHC (number of clusters) and scalibility of method (exponential growth of resource needs as case study area grows).*
         - BIC
+        - Subclustering
     - Data preprocessing
       - The common issues with selected data
       - Preprocessing of buildings
@@ -159,7 +160,7 @@ Thesis Structure (updated: 200109)
     - Clustering
       - variants based on resolution and scalability tests
       - Whole Prague
-      - Detial
+      - Compact Prague subcluster illustration
   - Interpretation of DHC
     - *Interpretation of the meaing of DHC in relation to urban tissue.*
 - Ch8.  | Core | Taxonomy of urban form
@@ -180,6 +181,7 @@ Thesis Structure (updated: 200109)
     - *Application of taxonomy methodology on the case of Prague and validation of results.*
     - comparison
     - validation
+      - 1880-1920 are compined, lets try subcluster
   - Extended case study
     - *Morphometric analysis of one or more other cities to test the ability to compare geographically distinct urban forms and generate combined taxonomic tree as a way towards the Urban Atlas.*
     - Combined taxonomic tree
