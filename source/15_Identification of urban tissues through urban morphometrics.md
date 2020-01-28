@@ -127,7 +127,7 @@ II. Then we have to **identify characters for each subset** by following selecti
 He stated “These characters of urban form, at this point, are only hypothesised to be valid. Although certain characters utilised in this Methodology are quite simple and relate to non-abstract concepts, such as area and length, there is no preconception of the relative importance of the characteristics of urban form.“
 - lets make a general test of reliability of characters via spatial autocorrelation. Characters are valid and valuable when they capture some patterns, hence spatial autocorrelation has to be present. It can work as a validation (of capability not completeness) of set of characters.
 
-###### Scales for categorisation of characters for definition of DHC
+###### ~~Scales for categorisation of characters for definition of DHC~~
 Scales are selected to capture characters of urban tissues on all relevant levels of complexity. At the same time, it is trying to be as compatible with MoRE as possible, but naturally it is not the same. I am not using Sanctuary Areas or any other qualitatively stated characters (street hierarchy). 
 
 

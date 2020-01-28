@@ -1,4 +1,4 @@
-Thesis Structure (updated: 200110)
+Thesis Structure (updated: 200128)
 
 - Ch1. Introduction
   - Introduction
@@ -8,29 +8,92 @@ Thesis Structure (updated: 200110)
   - Focus on quantitative morphology = urban morphometrics
   - Context. Urban form as something to observe and measure (K Lynch: you cannot know how something should be if you don’t know how it is).
 - Ch2. | Background | Existing approaches to classification of urban form
-  - UPDATED VERSION IN CH2 DOCUMENT
-  - *The first of the three chapters prividing the background for the rest of the thesis, focusing on the existing approaches to the classification of urban form. *
+  - Introduction
+    - Explain prior focus on quantitative morphology (link to introduction), but say that the chapters gives overview of all, with the focus on quantitative.
   - The need for the classification
-    - *Why is a classification important, what can it bring to the table, why should we bother doing it.*
-  - The history of classification attempts
-    - *A brief overview if history of classificaiton of urban form focusing on its origins and early attempts.*
+    - *Why is classification important, what can it bring to the table, why should we bother doing it.*
+    - What is classification
+      - a bit of definitions
+      - different ways of making classification
+        - typology/taxonomy distinction **important**
+    - Why is classification useful in general
+    - Why is classification useful in urban morphology
   - Existing methods of classification of urban form
     - *Literature review of existing methods of classification and its analysis and description of patterns within the field.*
+    - Introduction
+    - The history of classification attempts
+      - *A brief overview of the history of classification of urban form focusing on its origins and early attempts. People like Lynch, Kostof.*
+      - link between history and qualitative
     - Qualitative
-      - Conzen, Duany ...
+      - Traditional schools of urban morphology
+        - Conzen
+        - Muratori
+        - Duany
+      - City-based approaches (Portland, Berlin, Prague)
+      - Spatial typology
+        - Kohout, a+t
+      - The qualities of such approaches, their limits.
+        - **Research TO DO (a bit)**
+          - expert knowledge needed
+          - concepts based
+          - might be biased (not necessarily)
+          - good in interpretation, could be detailed
+          - time consuming, information demanding
+          - limited applicability
+    - Mixed (predominantly non-morphological)
+      - Socio-demography as a main branch
+      - Additional (energy)
+      - The qualities of such approaches, their limits
+        - capturing non-morphological classes
+        - good for specific purposes
+        - good source for link between form and soft data
+      - **Research TO DO (a bit)**
     - Quantitative
+      - introduction
+        - what does it mean quantitative method
+        - two major groups divided by the data source
+          - remote sensing — raster data
+          - morphometrics — vector data
+            - *morphometrics can in theory be done on remote sensing as well, so it might be better to use another term*
       - Remote sensing
+        - Introduce RS
+          - satellite or aerial data, automatic (multi-spectral) image recognition, supervised ML
+        - Units of analysis
+          - patch
+          - block
+          - grid
+          - *add some figures as an illustration*
+        - Number of categories
+          - 1 - 10
+        - The qualities of such approaches, their limits
+          - possible extent
+          - only "visible" spectrum - roofs can make a lot of difference in RS but minimal in reality
+          - mostly supervised nature - you have to predefine ground truth
+          - the aspect of resolution and data availability
+          - number of categories is generally low related to low number of actual indicators (like Copernicus)
       - Urban Morphology (quantitative)
-        - *This is the key focus of the whole chapter and majority of scrutinised works fall into this category. The rest mentioned above and below is to draw a full picture but it does not aim to provide the deep understanding, unlike this part.*
-        - units of classification
-          - *Assessment based on the unit of classification and its placement on the scale.*
+        - *This is the key focus of the whole chapter, and the majority of scrutinised works fall into this category. The rest mentioned above and below is to draw a full picture, but it does not aim to provide an in-depth understanding, unlike this part.*
+      - **Research TO DO - check recent papers, some might be included**
+      - Introduce quantitative morphology
+      - units of classification
+        - *Assessment based on the unit of classification and its placement on the scale.*
           - gradient of scales
-        - number of classes
-          - *Assesment absed on the richness of data used for classification as some try to classify based on very few indicators while others aim to use rich set of indicators.*
-          - limits
-    - Mixed
+          - from city scale to building and plot
+          - *do some quantitative assessment of the db*
+      - number of classes
+        - generally low, in few cases higher
+          - *do some quantitative assessment of the db*
+      - mention number of characters used for classification (scrutinised in the next chapter)
+      - Synthesis of the corpus of works
+        - *taxonomic relations between types?*
+        - The qualities of such approaches, their limits
   - The gap in the systematic classification
-    - *The conclusion of the chapter is the understadning the existing approaches and identifying the gap, which is the lack of systematic classfication based on the small-scale units using rich inclusive set of indicators. That should help position my work within field and say what I am bringing new in later stages.*
+    - lack of systematic classification based on the small-scale unit
+    - gap in unsupervised classification
+    - gap in detailed classification (i.e. number of classes)
+    - gap in exploration of relationships between classes (*check before writing*)
+  - Conclusion
+    - *conclusion: the existing approaches and methods have gaps: the lack of systematic classification based on the small-scale units ~~using an extensive, inclusive set of indicators~~ enabling detailed classification into larger number of types/taxa/classes.  That should help position my work within the field and say what I am bringing new in later stages. BE CAREFUL TO CONCLUDE ONLY BASED ON THE CONTENT OF THE CHAPTER NOT MORE. FIND A GAP WHICH MAKES SENSE. THIS TEXT IS MIXING TOGETHER RESULTS OF THIS AND THE NEXT CHAPTER. THIS LOOKS AT THE UNIT AND NUMBER OF CLASSES MOSTLY. NUMBER OF CHARACTERS SHOULD BE LEFT TO THE NEXT CHAPTER.*
 - Ch3. | Background | Measuring of urban form
   - *Second background chapter focusing on urban morphometrics, its emergence and existing methods and morphometric characters. It is vaguely based on my MSc thesis, but since then it has evolved significantly and the whole analysis is new as well as proposed classification of literature and changes were done in classification system of morphometric characters as well. The previous work will be acknowledged. The content of this chapter mirrors what the revised version of the paper for EPB will be about.*
   - Mapping the scene
@@ -75,6 +138,7 @@ Thesis Structure (updated: 200110)
   - hypothesis
   - Difference between UMM and Quantitative methods. Establishing UMM.
   - top-scale methodology
+  - Case study Prague  (reasoning why Prague...)
 - Ch6. | Core | Morphometric elements of urban form
   - *The first of the core chapters, focusing on the existing morphological elements and their applicability. As there is "an issue of plot" this chapter introduces morphological tessellation and discuss its derivates. Moreover, it argues why urban tissue is the right "individual" unit for this type of analysis and what are the concepts of its definition. The final part proposes Distinct Homogenous Cluster as a morphometric proxy of urban tissue.*
   - Fundamental morphological elements
@@ -119,44 +183,42 @@ Thesis Structure (updated: 200110)
     - Principle of DHC recognition
       - Primary & patterned characters
       - Clustering
-    - Primary characters
-      - Initial selection and adaptation to relational model
-        - Optimisation of L scale (part of adaptation)
-          - Optimisation topological distance on MT
-          - Optimal distance on network
-      - Expansion of initial selection
-      - Cleaning?? of the selection
-        - Collinearity of characters
-          - tests of collinearity of characters (correlations)
-          - Exclusion of reduntant characters 
-        - Spatial Autocorrelation
-          - tests for the ability of each character to capture meaningful patterns
-          - Exclusion of pattern-less characters
-    - Patterned characters
-      - Diversity as a statistical dispersion
-      - *To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their 'patterned' versions. That is calculation of interquartile mean and diversity characters for each one of them within 3 topological steps on MT. These characters will then be used within clustering algorithm itself.*
-      - Collinearity
+    - Morphometric characters
+      - Primary characters
+        - Principles of character selection and definition
+        - Identified set of primary characters
+      - Patterned characters
+        - *To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their 'patterned' versions. That is calculation of interquartile mean and diversity characters for each one of them within 3 topological steps on MT. These characters will then be used within clustering algorithm itself.*
+        - Central tendency
+          - Mean, IQ, ID, Median
+          - Definition of Interquartile mean
+        - Diversity as a statistical dispersion
+          - Analysis of selection as an annexe
+          - Definitions if ID Theil, IQR and Simpson
     - Gaussian clustering
       - *Introduction of selected clustering method and reasoning for its selection.*
       - Dimensionality issue
         - *As resulting morphometric description of each building/cell has ~300 values, with 140 000 buildings, we are facing 'dimensionality curse'.  This issue is discussed in relation to clustering and possible reducing of dimensionality (PCA, Factor analysis).*
-      - Clustering method
+      - Gaussian Mixture Model clustering
       - Levels of DHC resolution and its scalability
         - *Discussion on the resolution of DHC (number of clusters) and scalibility of method (exponential growth of resource needs as case study area grows).*
-        - BIC
+        - Selection of number of components
+          - Stability of procedure
+          - BIC, AIC, etc.
+          - *we can go with lower number of clusters to maximise stability of procedure (may incurr underfitting) or with the smallest BIC (might be overfitted). However, as the next step is hierarchical clustering, we can use its help in interpretation of smaller clusters.*
         - Subclustering
     - Data preprocessing
-      - The common issues with selected data
+      - The common issues with input data
       - Preprocessing of buildings
         - to ensure precise results of tessellation
       - Preprocessing of street network
-        - to ensure topologically correct network representing streets in morphlogical terms
-  - Case study Prague
-    - *Application of the whole methodology to the case study of Prague (reasoning why Prague...)*
+        - to ensure topologically correct network representing streets in morphological terms
+  - DHC recognition | Case study Prague
+    - *Application of the whole methodology to the case study of Prague*
     - Primary characters
-      - Collinearity test
-      - Spatial Autocorrelation test
+      - Few examples, rest in Appendix
     - Patterned characters
+      - Few examples, rest in Appendix?
     - Clustering
       - variants based on resolution and scalability tests
       - Whole Prague
@@ -211,3 +273,31 @@ Thesis Structure (updated: 200110)
 - Annex 1: momepy - Urban Morphology Measuring Toolkit
   - JOSS paper
   - Software repository
+- Annex 2: Selection of primary characters
+  - Method
+    - Rules
+    - Initial selection and adaptation to relational model
+      - Optimisation of L scale (part of adaptation)
+        - Optimisation topological distance on MT
+        - Optimal distance on network
+    - Expansion of initial selection
+    - Cleaning?? of the selection
+      - Collinearity of characters
+        - tests of collinearity of characters (correlations)
+        - Exclusion of reduntant characters 
+      - Spatial Autocorrelation
+        - tests for the ability of each character to capture meaningful patterns
+        - Exclusion of pattern-less characters
+  - Results
+    - Initial adapted characters
+    - Expansion of initial selection
+    - Cleaning??
+      - Collinearity test
+      - Spatial Autocorrelation test
+    - Final set of primary characters
+- Annex 3: Diversity as statistical dispersion
+  - Add collinearity with IQ Mean
+- Annex 4: Importance of building height
+  - Prague clustering without height
+  - Grand Rapids clusteirng
+  - Combined tree
