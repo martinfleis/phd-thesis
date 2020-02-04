@@ -1,4 +1,4 @@
-# Urban tissue as an individual
+# Morphometric elements of urban form
 
 * ~~Identification of “individual” (OTU)~~
 	* ~~Urban Tissue~~
@@ -36,3 +36,20 @@
 One of the result of the research should therefore be the taxonomy of urban tissues (defined as DHC).
 
 ~~###### 05.x.x Complexity (of urban form)~~
+##### Generating blocks
+Blocks are generated based on the street network and morphological tessellation. Because the street network obtained from open data portal is capturing car-based network, it sometimes does not connect where it should. This should be fixed.
+
+In the case of Prague, using original street network I have generated 9428 blocks, out of which 1839 were "unusual". (19.5%)
+
+	bdkSec > 500 or bskCom < 0.2 or bskCon <0.76 or bskERI < 0.7 or bskShI <0.5  
+
+After that I fixed the street network so it snapped to itself and closed gaps in street network - if the 20m extension of line intersects street network - snap. If the 70 extension of line intersects boundary of built-up area (defined by tessellation), snap. 
+
+The result gave me 9800 blocks and 1092 unusual (11%). 10% of unusual blocks are randomly selected and assessed whether they are correct blocks or incorrect. Based on that, the approximate error is estimated.
+
+Out of 109 randomly selected blocks, 76 were marked as correct representation of block, 33 as incorrect. Based on that, the **estimated error is 3.4%**. That includes blocks which were incorrect before the network snapping as well as blocks which were falsely identified by the snapping.
+
+Additionally, there should be a subchapter talking about exceptions which momepy is not able to capture (Krizikova, Karlin, Nabrezi Karluv most).
+
+###### Problem with blocks in modernist structure
+As block is defined by street, it is expecting that street is major divider of space and was there first. In modernist structures, street is often designed as a way though the area, in the middle of what we could see as morphological piece (or block). We are effectively trying to define something which does not exist. **WHAT IS THE CONSEQUENCE OF THIS???**

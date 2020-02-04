@@ -1,13 +1,103 @@
 # Identification of urban tissues through urban morphometrics
-
-## Theory: The relational model of urban form
+*link back to theory in chapter 4*
+*the aim of this chapter is abc*
+*this chapter goes to aim by (slight contents overview)*
 
 ## Principles of systematic morphometric description
+*Restate principles of numerical taxonomy in biology*
+*Link to the urban form and this specific methodology*
+*Systematic methodology means that it is…*
+*Comprehensive methodology means that it is…*
+*This method is trying to be both by…*
 
 ## Methodological proposition
+*method introduces several steps to get to DHC recognition*
+### Principle of DHC recognition
+*DHC recognition is using the principles we know from numerical taxonomy, but in a specific way*
+*characters are of dual nature due to the nature of urban form - one big exception*
+*primary characters are those focusing on elements and their relationships in absolute values*
+*patterned characters are capturing the central tendency*
+*patterned characters are then used as an input for clustering aiming to distinguish DHC*
+*following sections detail the principle*
+### Morphometric characters
+*going back to chapter 3 for a resource*
+#### Primary characters
+*primary characters are those (define), link to relational model*
+*there is a large number of possible characters, but the set needs to be specific, non-overlapping etc.*
+##### Principles of character selection and definition
+*To select set of primary characters, following principles are followed.*
+*rules based on relational model and characters classification*
+*rules based on Sneath and Sokal (check with Annex 2)*
+*Initial selection and then expansion*
+*cleaning of the selection (check with rules above)*
+*full details of the steps are in Annex 2*
 
-### Selection of morphometric characters
+##### Identified set of primary characters
+*based on the principles, following characters compose the final set of primary characters*
+*OVERVIEW OF CHARACTERS HERE. HAVE TO FIGURE OUT IDEAL WAY OF DOING IT.*
+#### Patterned characters
+*primary characters could be abrupt and do not necessarily capture patterns as they are*
+*To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their 'patterned' versions*
+*That is calculation of central tendency and diversity characters for each one of them within 3 topological steps on MT. These characters will then be used within clustering algorithm itself.*
+##### Central tendency
+*Local central tendency is …*
+*Mean, IQ, ID, Median as options, including truncated versions*
+*Interquartile mean (def) is used because…*
+##### Diversity as a statistical dispersion
+*apart from central tendency, we need to understand the diversity of values within 3 steps*
+*diversity on continuous values is statistical dispersion*
+*there are multiple ways of measuring dispersion, many were analysed*
+*three main (largely correlated) groups are there - absolute, unitless, binned*
+*absolute are these*
+*unitless are those*
+*binned are that*
+*Analysis of selection as an annexe*
+###### Selected diversity characters 
+*interquartile range definition*
+*interdecile Theil definition*
+*Simpson diversity index definition*
+*Each of the primary characters is represented by its local central tendency and local diversity (using all 3 characters)*
 
+**CONTINUE HERE**
+### Gaussian clustering
+*Introduction of selected clustering method and reasoning for its selection.*
+#### Dimensionality issue
+*As resulting morphometric description of each building/cell has ~300 values, with 140 000 buildings, we are facing 'dimensionality curse'.  This issue is discussed in relation to clustering and possible reducing of dimensionality (PCA, Factor analysis).*
+#### Gaussian Mixture Model clustering
+#### Levels of DHC resolution and its scalability
+*Discussion on the resolution of DHC (number of clusters) and scalibility of method (exponential growth of resource needs as case study area grows).*
+##### Selection of number of components
+###### Stability of procedure
+- There is a certain effect of randomness in the process, so clustering comes with a confidence interval - show on the sampled data.
+###### BIC, AIC, etc.
+*we can go with lower number of clusters to maximise stability of procedure (may incurr underfitting) or with the smallest BIC (might be overfitted). However, as the next step is hierarchical clustering, we can use its help in interpretation of smaller clusters.*
+##### Sample-based clustering
+*As the dataset grows, it may become increasingly impossbile to run clustering on the whole dataset. For that reason, it might be worth training the method on sampled data before classiying the whole dataset.*
+- There are an issues linked to it.
+- It is always a balance between what is ideal and what is possible.
+##### Subclustering
+### Data preprocessing
+#### The common issues with input data
+#### Preprocessing of buildings
+- to ensure precise results of tessellation
+#### Preprocessing of street network
+- to ensure topologically correct network representing streets in morphological terms
+## DHC recognition | Case study Prague
+*Application of the whole methodology to the case study of Prague*
+### Primary characters
+- Few examples, rest in Appendix
+### Patterned characters
+- Few examples, rest in Appendix?
+### Clustering
+#### variants based on resolution and scalability tests
+#### Whole Prague
+#### Compact Prague subcluster illustration
+## Interpretation of DHC
+*Interpretation of the meaing of DHC in relation to urban tissue.*
+
+
+—————————————————————
+##### NOTES
 #### Diversity as a statistical dispersion
 
 ##### Diversity in urban morphology
@@ -71,8 +161,6 @@ Another approach grounds the character on the statistical distribution of all me
 - *synthesis of all*
 - *discuss diversity in homogeneity and order (many small units..) vs measurable diversity*
 - *conclude*
-
-##### NOTES
 
 ../../00_Core/06_Identification of urban tissues/03_Characters tests/Diversity as statistical dispersion/Diversity as statistical dispersion.md
 
@@ -228,23 +316,6 @@ While thinking about those scales, it is important to understand that all values
 ###### Data preprocessing
 To minimise errors, it is crucial to run momepy analysis on preprocessed data set. UK OS data (building layer, all of them) are not ready for analysis as they are often split into more elements e.g. one building consists of more shapes and I have no idea what to tell the script to resolve this issue, because different parts of the buildings doesn't even have a common attribute (like Vienna for example) so it is not possible to easily dissolve shapes. In order to prepare this data layer for analysis, some change of topology has to happen, but I have no clue what should be the process. Poor quality of cadastral layer excludes its use (which could be great). To partially overcome this issue, it might be necessary to work with non-uk data (Prague, Vienna...).
 
-##### Generating blocks
-Blocks are generated based on the street network and morphological tessellation. Because the street network obtained from open data portal is capturing car-based network, it sometimes does not connect where it should. This should be fixed.
-
-In the case of Prague, using original street network I have generated 9428 blocks, out of which 1839 were "unusual". (19.5%)
-
-	bdkSec > 500 or bskCom < 0.2 or bskCon <0.76 or bskERI < 0.7 or bskShI <0.5  
-
-After that I fixed the street network so it snapped to itself and closed gaps in street network - if the 20m extension of line intersects street network - snap. If the 70 extension of line intersects boundary of built-up area (defined by tessellation), snap. 
-
-The result gave me 9800 blocks and 1092 unusual (11%). 10% of unusual blocks are randomly selected and assessed whether they are correct blocks or incorrect. Based on that, the approximate error is estimated.
-
-Out of 109 randomly selected blocks, 76 were marked as correct representation of block, 33 as incorrect. Based on that, the **estimated error is 3.4%**. That includes blocks which were incorrect before the network snapping as well as blocks which were falsely identified by the snapping.
-
-Additionally, there should be a subchapter talking about exceptions which momepy is not able to capture (Krizikova, Karlin, Nabrezi Karluv most).
-
-###### Problem with blocks in modernist structure
-As block is defined by street, it is expecting that street is major divider of space and was there first. In modernist structures, street is often designed as a way though the area, in the middle of what we could see as morphological piece (or block). We are effectively trying to define something which does not exist. **WHAT IS THE CONSEQUENCE OF THIS???**
 
 ##### DHC recognition
 Instead of straightforward cluster analyisis, we might identify significant clusters based on spatial autocorrelation. DHC could be identified as a specific combination of those significant clusters???
