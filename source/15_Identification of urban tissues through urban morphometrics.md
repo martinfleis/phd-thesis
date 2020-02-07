@@ -1,6 +1,6 @@
 # Identification of urban tissues through urban morphometrics
-*link back to theory in chapter 4*
-*the aim of this chapter is abc*
+*intro as a link back to theory in chapter 4 and 6 reintroducing morphometrics and numerical taxonomy*
+*the aim of this chapter is to develop a morphometric method able to distinguish distinct types of urban tissues*
 *this chapter goes to aim by (slight contents overview)*
 
 ## Principles of systematic morphometric description
@@ -16,8 +16,8 @@
 ### Principle of DHC recognition
 *DHC recognition is using the principles we know from numerical taxonomy, but in a specific way*
 *characters are of dual nature due to the nature of urban form - one big exception*
-*primary characters are those focusing on elements and their relationships in absolute values*
-*patterned characters are capturing the central tendency*
+***primary** characters are those focusing on elements based on relational model and their relationships*
+***patterned** characters are capturing the central tendency*
 *patterned characters are then used as an input for clustering aiming to distinguish DHC*
 *following sections detail the principle*
 
@@ -25,7 +25,8 @@
 *going back to chapter 3 for a resource*
 
 #### Primary characters
-*primary characters are those (define), link to relational model*
+*primary characters are those (define), link to relational model* 
+> Primary: Occurring or existing first in a sequence of events; belonging to the beginning or earliest stage of something; first in time (OED)
 *there is a large number of possible characters, but the set needs to be specific, non-overlapping etc.*
 
 ##### Principles of character selection and definition
@@ -39,6 +40,7 @@
 ##### Identified set of primary characters
 *based on the principles, following characters compose the final set of primary characters*
 *LARGE TABLE OF CHARACTERS WITH FORMULAS, ignore definitions*
+*conclude primary characters*
 
 #### Patterned characters
 *primary characters could be abrupt and do not necessarily capture patterns as they are*
@@ -51,8 +53,8 @@
 *Interquartile mean (def) is used because…*
 
 ##### Diversity as a statistical dispersion
-*apart from central tendency, we need to understand the diversity of values within 3 steps*
-*diversity on continuous values is statistical dispersion*
+*apart from central tendency, we need to understand the diversity of values within the immediate context of each building*
+*diversity on continuous values could be seen as statistical dispersion*
 *there are multiple ways of measuring dispersion, many were analysed*
 *three main (largely correlated) groups are there - absolute, unitless, binned*
 *absolute are these*
@@ -63,9 +65,10 @@
 ###### Selected diversity characters 
 *interquartile range definition*
 *interdecile Theil definition*
-*Simpson diversity index definition*
+*Simpson diversity index definition, bin issue and solution*
 *Each of the primary characters is represented by its local central tendency and local diversity (using all 3 characters)*
-*Conclude characters*
+*Conclude patterned characters*
+*conclude all characters*
 
 ### Gaussian clustering
 *Once we have a description of individual elements, we have to cluster them to identify DHC*
@@ -82,11 +85,11 @@
 *Scikit-learn implementation is used, for detail see REF.*
 
 #### Dimensionality issue
-*As resulting morphometric description of each building/cell has ~300 values, with 140 000 buildings, we are facing 'dimensionality curse'.*
+*As resulting morphometric description of each building/cell has ~300 values, we are facing 'dimensionality curse'.*
 *possible reduction of dimensionality (PCA, Factor analysis).*
 *PCA and how it works*
 *Tested PCA results - 95% and ~160, ~30 and 65%*
-*We'll have to deal with it and employ a bit more computational power, data are too cleaned.*
+*We'll have to deal with it and employ a bit more computational power, data are too cleaned to be reduced to PC.*
 
 #### Levels of DHC resolution and its scalability
 *Introduce discussion on the resolution of DHC (number of clusters) and scalability of method (exponential growth of resource needs as case study area grows).*
@@ -117,13 +120,13 @@
 
 ##### Subclustering
 *sometimes our cluster are too big and we want better resolution*
-*clusters defined by lowest score can still be splitter as the dataset is rich, when appropriate*
+*clusters defined by the lowest score can still be splitter as the dataset is rich, when appropriate*
 *iteration of the clustering method on a sample of one (stable) cluster*
 *relation to other clusters is different and has to be interpreted as such*
-*the other way, joining clusters to larger groups will be discussed in the next chapter*
+*the other way, joining clusters to larger groups, will be discussed in the next chapter*
 
 ### Data preprocessing
-*Before doing any of these steps, we have to make sure that our data are good enough*
+*Before doing any of these steps, we have to make sure that our data are good enough to represent morphometric elements*
 *sometimes we need to preprocess data to have them in a correct shape*
 
 #### The common issues with input data
@@ -145,6 +148,9 @@
 	*representing morphology, not transport*
 	*definition of what is street and what is not (lanes)*
 *transport-based network is fairly available, there are ways (not 100% though) how to generate morphological out of it*
+*conclude preprocessing*
+
+*conclude methodology*
 
 ## DHC recognition | Case study Prague
 *Application of the whole methodology to the case study of Prague*
@@ -165,6 +171,7 @@
 *BIC gradient*
 *TT distance*
 *Interpretation of score*
+*map and its (basic, as detailed is in Ch8) interpretation*
 
 #### Sampled data
 *Score*
@@ -188,7 +195,7 @@
 
 ## DHC as an urban tissue
 *morphometric characters certainly help in description of urban tissues*
-*clustering helps make sense out of it, even though the procedure its not straightforward*
+*clustering helps make sense out of it*
 *DHC is a numerical, morphometric statistical proxy of urban tissue*
 *Clustering is non-deterministic, so boundaries are not fixed, rather indicative.*
 *It is not a ground truth and the meaning and relation of clusters has to be interpreted before any further steps*
