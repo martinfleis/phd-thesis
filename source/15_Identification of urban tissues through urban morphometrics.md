@@ -25,7 +25,7 @@
 *going back to chapter 3 for a resource*
 
 #### Primary characters
-*primary characters are those (define), link to relational model* 
+*primary characters are those (define), link to relational model*
 > Primary: Occurring or existing first in a sequence of events; belonging to the beginning or earliest stage of something; first in time (OED)
 *there is a large number of possible characters, but the set needs to be specific, non-overlapping etc.*
 
@@ -62,7 +62,7 @@
 *binned are that*
 *Analysis of selection as an annexe*
 
-###### Selected diversity characters 
+###### Selected diversity characters
 *interquartile range definition*
 *interdecile Theil definition*
 *Simpson diversity index definition, bin issue and solution*
@@ -105,6 +105,7 @@
 *We use BIC, BIC gradient and TT distance due to…*
 *Interpretation of scores is another question*
 *we can go with lower number of clusters to maximise stability of procedure (may incur under-fitting) or with the smallest BIC (might be overfitted). However, as the next step is hierarchical clustering, we can use its help in interpretation of smaller clusters.*
+- [thoughts only] score is always only indicative, it will not give us a one final answer. There are generally two options - go for conservative clustering (elbow), which might be the best idea in this case, or go for the true minimum. However, there is a clear possibility of overfitting and the minimum can be influenced by the penalisation of BIC. Conservative clustering (15 clusters in this case) will likely need sub-clustering to get a better detail.
 
 ###### Stability of procedure
 *There is a certain effect of randomness in the process, so clustering comes with a confidence interval*
@@ -171,7 +172,7 @@
 *BIC gradient*
 *TT distance*
 *Interpretation of score*
-*map and its (basic, as detailed is in Ch8) interpretation*
+*map and its (basic, as detailed is in Ch8) interpretaion*
 
 #### Sampled data
 *Score*
