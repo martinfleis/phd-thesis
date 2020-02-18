@@ -17,8 +17,8 @@
 *DHC recognition is using the principles we know from numerical taxonomy, but in a specific way*
 *characters are of dual nature due to the nature of urban form - one big exception*
 ***primary** characters are those focusing on elements based on relational model and their relationships*
-***patterned** characters are capturing the central tendency*
-*patterned characters are then used as an input for clustering aiming to distinguish DHC*
+***contextualised** characters are capturing the central tendency*
+*contextualised characters are then used as an input for clustering aiming to distinguish DHC*
 *following sections detail the principle*
 
 ### Morphometric characters
@@ -42,9 +42,9 @@
 *LARGE TABLE OF CHARACTERS WITH FORMULAS, ignore definitions*
 *conclude primary characters*
 
-#### Patterned characters
+#### Contextualised characters
 *primary characters could be abrupt and do not necessarily capture patterns as they are*
-*To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their 'patterned' versions*
+*To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their contextualised versions*
 *That is calculation of central tendency and diversity characters for each one of them within 3 topological steps on MT. These characters will then be used within clustering algorithm itself.*
 
 ##### Local central tendency
@@ -67,7 +67,7 @@
 *interdecile Theil definition*
 *Simpson diversity index definition, bin issue and solution*
 *Each of the primary characters is represented by its local central tendency and local diversity (using all 3 characters)*
-*Conclude patterned characters*
+*Conclude contextualised characters*
 *conclude all characters*
 
 ### Gaussian clustering
@@ -160,8 +160,8 @@
 *illustration of primary characters on parts of Prague*
 - Few examples, rest in Appendix
 
-### Patterned characters
-*illustration of patterned characters esp. in relation to primary ones*
+### Contextualised characters
+*illustration of contextualised characters esp. in relation to primary ones*
 - Few examples, rest in Appendix?
 
 ### Clustering
