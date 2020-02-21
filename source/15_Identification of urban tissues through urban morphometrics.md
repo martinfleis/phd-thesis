@@ -188,8 +188,15 @@
 *note on probability of cluster assignment*
 *due to the richness of data, clusters are very well defined, there is probability but they are insignificant*
 
-#### Compact Prague subcluster illustration
-*Sub-clustering question test on compact urban form (perimeter blocks)*
+#### Subcluster illustration
+*Sub-clustering question test on compact urban form (perimeter blocks and modernism)*
+
+##### Compact Prague 
+*BIC and others*
+*Map*
+*Interpretation*
+
+##### Modersnist Prague 
 *BIC and others*
 *Map*
 *Interpretation*
