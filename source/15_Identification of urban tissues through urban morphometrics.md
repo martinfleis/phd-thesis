@@ -1,33 +1,45 @@
 # Identification of urban tissues through urban morphometrics
 *intro as a link back to theory in chapter 4 and 6 reintroducing morphometrics and numerical taxonomy*
 *the aim of this chapter is to develop a morphometric method able to distinguish distinct types of urban tissues*
-*this chapter goes to aim by (slight contents overview)*
+
+The aim of this chapter is to provide theoretical and practical grounds to the novel method allowing automatic detection of distinct types of urban tissues. Similar research has been done before (REF), but it was never linked to the coherent theory of morphometrics and numerical taxonomy, nor it was both rich in terms of number of characters used within a model and the spatial extent (see Chapter 3). Following pages present a method which aims to be both inclusive as per morphometric characters and at the same time automatised and efficient to allow for examination of large datasets spanning across metropolitan regions.
+
+Following chapter will introduce key principles of systematic morphometric description, which will be later applied to the methodology. Then it will outline the basis for the recognition of distinct homogenous clusters (DHC), from the selection and definition of morphometric characters to unsupervised classification using Gaussian Mixture Model clustering. Methodological proposition will be later tested on the case of Prague, Czechia. 
 
 ## Principles of systematic morphometric description
 *Restate principles of numerical taxonomy in biology*
+In the context of the whole research, theory of numerical taxonomy is applied twice - in the DHC recognition and then in development of a taxonomy (Chapter 8).
+
 *Link to the urban form and this specific methodology*
 *Systematic methodology means that it is…*
 *Comprehensive methodology means that it is…*
 *This method is trying to be both by…*
 
 ## Methodological proposition
-*intro - method introduces several steps to get to DHC recognition*
+
+The detection of DHCs within their spatial context is not simple nor straightforward process. The design of the method consist of several steps outlined in the following section. The first step is definition of principles of DHC recognition which are then followed  as subsequent steps through the rest of the method design, and consequently reflected in the structure of the section. 
 
 ### Principle of DHC recognition
-*DHC recognition is using the principles we know from numerical taxonomy, but in a specific way*
-*characters are of dual nature due to the nature of urban form - one big exception*
-***primary** characters are those focusing on elements based on relational model and their relationships*
-***contextualised** characters are capturing the central tendency*
-*contextualised characters are then used as an input for clustering aiming to distinguish DHC*
-*following sections detail the principle*
+
+Recognition of DHCs is based on the principles we know from numerical taxonomy, but is a slightly specific way. In biology, the issue of individual delimitation is non-existent. Single individual of selected species is usually well defined in space (e.g., a bird), however in urban form this distinction is not so simple. Hence, the methodology which is used in biology needs to be adapted, while keeping the fundamental principles in place. The specificity is in the shift of the scale. While previous chapters identified urban tissue as *individual* of urban form, at this stage we pretend that this role holds duality building-tessellation cell as the smallest entity of urban form. The whole DHC recognition is then based on the assumption that entities recognised as a part of the same cluster (*species*) are, in fact, elements of the single urban tissue (where continuous) or of multiple individuals of the same kind of urban tissue (where discontinuous). 
+
+Another difference between traditional method outlined by numerical taxonomy and the one adapted for the purpose of DHC recognition is the nature of morphometric characters. While in biology, each individual is usually measured independently of the rest (REF), that is not viable for urban form. The overall aim is to identify built-up patterns within urban fabric. However, the urban form itself is full of exceptions form the pattern. Individual plots follow different development process and are in some cases amalgamated or split. That does not happen tot he rest of the same tissue at the same time (while it might or might not later), causing the constant emergence of exceptions from the pattern. To overcome the issue of exceptions, proposed method is working with two kinds of characters - primary and contextualised.
+
+The primary characters are those focusing on the individual elements  and their relationships as identified in a relational model (Chapter 6). Typical example could be building height or area. Both are specific to each individual building and in the context of plots with internal construction, buildings in the head and the back of the plot will have significantly different values.
+
+As primary characters by definition do not describe the pattern but rather its individual elements, they should not be used within pattern detection algorithms. The second kind of characters, contextualised, has been designed specifically to turn values captured by primary characters into values describing the central tendency in the area - describing the pattern.  As such, they can be used as an input for clustering aiming to distinguish DHCs.
+
+Finally, the data captured by contextualised characters are used to cluster individual building-tessellation cell entities to statistically homogenous clusters each capturing distinct kind of urban tissue. 
+
+Following section will detail the use of primary characters, contextualised characters and the clustering method itself.
 
 ### Morphometric characters
-*going back to chapter 3 for a resource*
+The main scope of this research is not to develop new morphometric characters (even though there are some), but to use existing knowledge in urban morphometrics and combine it in a complex coherent framework. The chapter 3 mapped in detail the existing characters used across the field and the resulting database and classification is the basis for selection and definition of primary characters and to some extent even contextualised characters. 
 
 #### Primary characters
-*primary characters are those (define), link to relational model*
-> Primary: Occurring or existing first in a sequence of events; belonging to the beginning or earliest stage of something; first in time (OED)
-*there is a large number of possible characters, but the set needs to be specific, non-overlapping etc.*
+As briefly outlined above, primary characters describe different elements and their relationships as are identified within the relational model of urban form. Adapting the definition of the term *primary* from Oxford English Dictionary (REF), we can define primary characters witting the context of DHC recognition as *characters occurring first in a sequence of methodological steps capturing individual features of urban form elements and their basic relations*. The link to the relational model is crucial here as it defines which relations are meant and later reflected in the whole recognition model.
+
+Chapter 3 shows that there is a large number of characters which could be, in theory, used within the model. However, the selected set of characters needs to have specific nature. The information captured should be non-overlapping, each of them should describe different unrelated feature of urban form to avoid clustering result distortion towards features occurring multiple times. For that reason, specific principles of characters selection were defined.
 
 ##### Principles of character selection and definition
 *To select set of primary characters, following principles are followed.*
@@ -37,15 +49,21 @@
 *cleaning of the selection (check with rules above)*
 *full details of the steps are in Annex 2*
 
+The process of selection itself starting form the database retrieved from chapter 3 and details of each decision which characters should be part of the final set and why is available as Annex 2. Following section describes the final set only.
+
 ##### Identified set of primary characters
-*based on the principles, following characters compose the final set of primary characters*
-*LARGE TABLE OF CHARACTERS WITH FORMULAS, ignore definitions*
-*conclude primary characters*
+Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For detailed description of each character and its implementation please refer to the original reference and to the documentation and code of momepy.
+
+*LARGE TABLE OF CHARACTERS WITH FORMULAS AND REFERENCES*
+
+The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.[^The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.] The set is non-overlapping and does not contain logically correlated characters. As such, it should provide unbiased and non-skewed description of each of the elements. 
 
 #### Contextualised characters
-*primary characters could be abrupt and do not necessarily capture patterns as they are*
-*To follow the principles of DHC recognition, most of the characters tested above has to be expressed using their contextualised versions*
-*That is calculation of central tendency and diversity characters for each one of them within 3 topological steps on MT. These characters will then be used within clustering algorithm itself.*
+Looking at the primary characters and their spatial distribution, they could be really abrupt and do not necessarily capture urban patterns as they are (even though all capture some patterns as per spatial autocorrelation). Two illustrations of such an abrupt change and the weak pattern description are XXX (fig) and YYY (fig). [TODO: ADD EXAMPLES AND THEIR DESCRIPTION]
+
+To become useful for pattern detection within DHC recognition model, most of the characters defined above has to be expressed using their contextualised versions. *Context* here is defined as neighbourhood of each tessellation cell within 3 topological steps on MT. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis). Contextualised character is then capturing a central tendency or a distribution of a primary character within a set context.
+
+Within this method, four types of contextualised characters are proposed. One capturing a local central tendency and three capturing the various kinds of diversity of values within the context. For each of the primary characters, each of the contextualised is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextualised characters.
 
 ##### Local central tendency
 *central tendency is, local central tendency is …*
