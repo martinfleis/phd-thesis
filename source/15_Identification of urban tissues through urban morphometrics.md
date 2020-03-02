@@ -54,7 +54,23 @@ The process of selection itself starting form the database retrieved from chapte
 ##### Identified set of primary characters
 Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For detailed description of each character and its implementation please refer to the original reference and to the documentation and code of momepy.
 
-*LARGE TABLE OF CHARACTERS WITH FORMULAS AND REFERENCES*
+\newpage
+
+----------------------------------------------------------------
+Column 1            Column 2                Column 3
+--------------      -------------------     -------------------
+Row 1               0.1                     0.2
+
+Row 2               0.3                     0.3
+
+Row 3               0.4                     0.4      
+
+Row 4               0.5                     0.6
+
+----------------------------------------------------------------
+
+Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{cahracters_table}
+
 
 The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is non-overlapping and does not contain logically correlated characters. As such, it should provide unbiased and non-skewed description of each of the elements. 
 
@@ -111,14 +127,19 @@ Complete analysis of selected measured is available in an appendix XXX. Within d
 
 Differences between tested dimensionless measures are very minor with selection from Theil index, Gini index and Coefficient of Variation, all based on ID or IQ values. Due to tis definition, CoV will tends to infinity when the mean value tends to zero, being very sensitive to changes of mean. Theil index and Gini index are both used to asses inequality, but Theil index, unlike Gini, is decomposable to within-group inequality and between-group differences, making it more suitable for spatial analysis than Gini index would be. ID values used within Theil index are better as the resulting analysis is more sensitive, while outlier effect is still minimal. ID captures, for example, inner structures of blocks better than IQ, where such a structures might be filtered out. In fact, it may help distinguishing between blocks with and without internal buildings, hence second contextualised character will be *interdecile Theil index*. 
 
-I terms of Simpson's diversity index, due to the fact that most of the values follow power-law (or similar exponential) distribution within the whole dataset, binning method has to acknowledge that. For that reason, HeadTail Break are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
+I terms of Simpson's diversity index, due to the fact that most of the values follow power-law (or similar exponential) distribution within the whole dataset, binning method has to acknowledge that. For that reason, HeadTail Breaks are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
 
+The final selection of contextualised characters is then composed of four distinct uncorrelated characters. Local central tendency is captured by *interquartile mean (IQM)* and describe the most representative value. Then there are three characters describing the distribution of values within the local context. *Interquartile range (IQR)* as dimensional character of diversity captures the range of values around IQM, capturing where the values mostly lie. *Interdecile Theil index (IDT)* describes the equality of distribution of values and *Simpson's diversity index (SDI)* captures the presence of various classes of values within the context. Together, these four characters have a potential to describe spatial distribution of morphometric values within a set context.
 
-*Each of the primary characters is represented by its local central tendency and local diversity (using all 3 characters)*
-*Conclude contextualised characters*
-*conclude all characters*
+After linking together primary and contextualised characters, each of the primary 74 characters is represented by all four contextualised, based on the values measured within three topological steps on morphological tessellation around each building. That gives 296 contextualised characters in total, the set which is spatially autocorrelated by definition and hence can be used within clustering method to identify distinct homogenous clusters. The fact that all input data for clustering are measured using this *cookie-cutter* method ensures that spatial clusters should be geographically coherent and mostly continuous. Such a nature of data allows use of spatially unconstrained clustering methods. That is important as spatially constrained clustering is less developed and mostly unfit for datasets of the size this research works with. 
+
+To sum up, after selection of primary morphometric characters from literature and their adaptation to fit *relational model of urban form*, the set of 74 characters is established to cover wide range of descriptive features capturing urban form configuration from dimensions of individual elements, through spatial distribution to diversity. To describe a central tendency in the area capturing morphological patterns, rather than description of individual elements, four contextualised characters are introduced. These, combined, have a potential to capture the nature of each of the primary characters and its behaviour in the immediate spatial context. Thanks to their autocorrelated design, contextualised characters can then be fed into the unsupervised machine learning procedure aiming to distinguish distinct homogenous clusters.
+
+\newpage
 
 ### Gaussian clustering
+
+
 *Once we have a description of individual elements, we have to cluster them to identify DHC*
 *General principle of clustering aka unsupervised machine learning*
 *Short overview of available methods and differences in their application*
@@ -134,8 +155,11 @@ I terms of Simpson's diversity index, due to the fact that most of the values fo
 *Non-deterministic nature of GMM*
 
 #### Dimensionality issue
-*As resulting morphometric description of each building/cell has ~300 values, we are facing 'dimensionality curse'.*
+The morphometric description of each building/cell has 296 values (each for each contextualised character). In the case of Prague, composed of approximately 140,000 buildings, it means that clustering has to deal with more than 40,000,000 data points (140,000 buildings * 296 characters). That is a significant number, which is not only demanding in terms of computational power, but also tricky in terms of statistics itself. The high dimensionality of the dataset (each character is a dimension in a hyperspace) may come with a *curse of dimensionality*. That means that even though there is the value in additional data (additional dimensions), it may affect results in a negative way. The high-dimensional hyperspace tends to become inflated (bigger), which in turn may render clusters very sparse. Individual data points are further away and density-based, or distance-based clusterings (GMM is distance-based) may struggle to correctly identify them as Euclidean distances between pairs of points on sparse high-dimensional data would be of little difference, rendering clustering extremely unstable and insignificant. However, that is not always the case as it depends on the internal structure of the dataset and relations between dimensions.
+
 *possible reduction of dimensionality (PCA, Factor analysis).*
+One way how to deal with large number of characters is a reduction of dimensionality. HERE
+
 *PCA and how it works*
 *Tested PCA results - 95% and ~160, ~30 and 65%*
 *We'll have to deal with it and employ a bit more computational power, data are too cleaned to be reduced to PC.*
