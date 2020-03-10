@@ -42,7 +42,7 @@ As briefly outlined above, primary characters describe different elements and th
 Chapter 3 shows that there is a large number of characters which could be, in theory, used within the model. However, the selected set of characters needs to have specific nature. The information captured should be non-overlapping, each of them should describe different unrelated feature of urban form to avoid clustering result distortion towards features occurring multiple times. For that reason, specific principles of characters selection were defined.
 
 ##### Principles of character selection and definition
-*To select set of primary characters, principles have to be set to have a valid set in the end.*
+***THIS SECTIONS NEEDS SIGNIFICANT CHANGES***
 The idea of morphometric recognition of DHC is based on numerical taxonomy and the selection of morphometric characters then build on the principles used within selection of taxonomic characters in biology, as defined by @sneath1973. Building on the biological experience brings  methodological grounds to the selection and it is expected that a final set of characters selected according to these rules will provide the description of urban form suitable for a recognition of DHC. However, the validity of the set is still only hypothetical, unlike the validity of individual characters which is tested throughout the selection process.
 
 Selection strategy is tied to the classification of morphometric characters into categories as defined in chapter 3 and, more importantly, to the relational model of urban form. There are three top-level aims of the of the selected set of primary characters. The set should:
@@ -98,24 +98,32 @@ Logically correlated characters should be omitted, otherwise the feature which i
 
 5. **Eliminate ineffective characters** 
 
-Due to the nature of the analysis, working with large-scale data or even big data in some cases, the process of measuring has to be computationally effective. Some of the characters are not easily measurable, and it has to be evaluated whether the value of the characters would balance the difficulty of coding and / or computational demand. Examples of such characters could be those based on axial maps or topological skeleton.
+Due to the nature of the analysis, working with large-scale data or even big data in some cases, the process of measuring has to be computationally effective. Some of the characters are not easily measurable, and it has to be evaluated whether the value of the characters would balance the difficulty of implementation and / or computational demand. Examples of such characters could be those based on axial maps or topological skeleton.
 
-6. **Add characters where are clear gaps** (diversity, plot-level Voronoi cell). Because I am using morphological cells the smallest scale spatial unit in a scope previously unused, there is a range of characters which had to be adapted from original plot-based to cell-based. The database of characters also showed imbalance of different categories and gaps in the measuring of diversity. New taxonomic characters have to be implemented to cover those gaps and provide coherent description of urban form. This part of the research is still ongoing.
+6. **Add characters where are clear gaps** 
 
-7. **Exclude invariant characters**. Some characters might be invariant over the entire sample of OTU's. Those should not be included as they are not bearing any taxonomic value. However, this exclusion is an ongoing process, because it depends on actual measured values.
+(diversity, plot-level Voronoi cell). Because I am using morphological cells the smallest scale spatial unit in a scope previously unused, there is a range of characters which had to be adapted from original plot-based to cell-based. The database of characters also showed imbalance of different categories and gaps in the measuring of diversity. New taxonomic characters have to be implemented to cover those gaps and provide coherent description of urban form. This part of the research is still ongoing.
 
-8. **Limit empirical correlation** When we have the evidence that more than one factor affects two correlated characters within a study, regardless of whether this evidence comes from within study or from outside, we would include both characters; otherwise we would employ only one. We assume that at least some independent sources of the variation in any empirical correlation, unless we have reason to believe otherwise.
+7. **Exclude invariant characters**. 
 
-9. **Exclude characters which does not have the ability to capture patterns**. Test capability of each character to capture spatial patterns by measuring spatial autocorrelation as global Moran’s I. Those without sufficient level of autocorrelation should be excluded as they do not bear any value in the process of identification of DHC.
+Some characters might be invariant over the entire sample of OTU's. Those should not be included as they are not bearing any taxonomic value. However, this exclusion is an ongoing process, because it depends on actual measured values.
 
-10. **Balance scalarity and uniqueness of values**. The set of taxonomic characters has to be balanced regarding the scale as well as *uniqueness* of values. Some of the initially identified characters are possible to measure on different scales (street, block, vicinity). Due to the logical correlations between them, only one has to be used. The selection is trying to use the most appropriate in terms of the meaning of the character (which might be more suitable to street edge than block of vicinity for example). It also aims to limit the characters with limited uniqueness of values. Because the values are always stored on the smallest scale, the values of characters measured on the block scale are shared among all elements in the block. The intention is to limit those characters to minimum.
+8. **Limit empirical correlation** 
 
-*full details of the steps are in Annex 2*
+When we have the evidence that more than one factor affects two correlated characters within a study, regardless of whether this evidence comes from within study or from outside, we would include both characters; otherwise we would employ only one. We assume that at least some independent sources of the variation in any empirical correlation, unless we have reason to believe otherwise.
 
-The process of selection itself starting form the database retrieved from chapter 3 and details of each decision which characters should be part of the final set and why is available as Annex 2. Following section describes the final set only.
+9. **Exclude characters which does not have the ability to capture patterns**. 
+
+Test capability of each character to capture spatial patterns by measuring spatial autocorrelation as global Moran’s I. Those without sufficient level of autocorrelation should be excluded as they do not bear any value in the process of identification of DHC.
+
+10. **Balance scalarity and uniqueness of values**. 
+
+The set of taxonomic characters has to be balanced regarding the scale as well as *uniqueness* of values. Some of the initially identified characters are possible to measure on different scales (street, block, vicinity). Due to the logical correlations between them, only one has to be used. The selection is trying to use the most appropriate in terms of the meaning of the character (which might be more suitable to street edge than block of vicinity for example). It also aims to limit the characters with limited uniqueness of values. Because the values are always stored on the smallest scale, the values of characters measured on the block scale are shared among all elements in the block. The intention is to limit those characters to minimum.
+
+The process of selection itself starting from the database retrieved from chapter 3 is available as Annex 2. It includes details of each decision on which characters should be part of the final set and why. Following section describes the final set only.
 
 ##### Identified set of primary characters
-Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For detailed description of each character and its implementation please refer to the original reference and to the documentation and code of momepy.
+Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For detailed description of each character and its implementation please refer to the original referred work and to the documentation and code of momepy, which contains Python-based implementation of each character.
 
 \newpage
 
@@ -200,32 +208,44 @@ To sum up, after selection of primary morphometric characters from literature an
 
 \newpage
 
-### Gaussian clustering
+### Identification of DHC
+The actual identification of distinct homogenous clusters of urban form is in principle statistical clustering of buildings with similar information about itself and its context. Moreover, to derive DHC, such clusters needs to be contiguous and internally homogenous.
 
+Contiguity is not easy to accomplish as spatially constrained clustering methods, which are designed to be contiguous and take into account spatial relationship of clustered elements, like Skater REF or Max-p Region Problem REF are computationally inefficient, which is multiplied by the size of the datasets used within this research. They essentially would not be able to crunch the amount of data. Second option how to include spatial dimension in clustering is actual inclusion of x and y coordinates of each object (in case of building likely x and y coordinates of building centroids). The geographical coordinates would then become another two dimensions in the dataset. This solution might work if the number of dimensions is low and two additional characters could make a significant effect. As the dataset of contextualised characters is in composed of 296 dimensions, simple inclusion of two other might not make much of a difference and not ensure any spatial contiguity.
 
-*Once we have a description of individual elements, we have to cluster them to identify DHC*
-*General principle of clustering aka unsupervised machine learning*
-*Short overview of available methods and differences in their application*
+The solution of the contiguity issue is, in fact, built in the design of contextualised characters. As their measuring follows location-based manner, so called *cookie-cutter* method of spatial aggregation, all characters are actually significantly spatially autocorrelated by design\footnote{Median I is 0.77, St.Dev 0.12, with values ranging between 0.42 (Square Clustering of Street Network Theil Index) and 0.98 (Gross Density Interquartile Mean) all with *p < 0.001*. Complete Spatial Autocorrelation analysis is available as Appendix XX}. There is a significant overlap between areas used for computation of contextualised characters of two neighbouring cells that indirectly ensured contiguity of clustering. However, this solution may result in less defined boundaries between two clusters and every edge of the cluster needs to be interpreted as fuzzy rather than defined.
+
+The general principle of clustering, i.e. unsupervised machine learning is using the learning data (which in case of clustering is often the whole dataset, but can be sampled) to iteratively determine the optimal division of datapoints into homogenous clusters and then applying learned model to the whole data to predict to which cluster each element belongs. In terms of probabilistic methods, this prediction can have associated probability that chosen cluster is the correct one and have the probability of belonging to every other cluster.
+
+Current progress in machine learning brings various methods to choose from. Every clustering method follows different principles and is able to identify different kinds of clusters. The most common is most likely *k*-means clustering REF and its derivatives (*k*-medoid, *k*-median or Gaussian mixture models). The algorithm divides observations into predefined *k* clusters based on the nearest mean value to minimise within-cluster variance based on squared Euclidean distances between observations. As a result, clusters tend to be of a similar size. In the case of urban form, it is unlikely that each urban typology is equally present, rendering the use of *k*-means as unfit for the purpose. It is expected that cluster will be on unequal size and also of unequal density - clusters capturing rigid patterns will be more densely packed than those capturing more diverse areas. The clustering algorithm needs to take into account all these requirements stemming from the specificity of urban morphometric data. Moreover, every building is by definition part of some urban tissue, which could be very heterogenous, meaning that algorithms expecting and identifying noise (in this case buildings which do not belong to any cluster) in the data  like DBSCAN REF, HDBSCAN REF or OPTICS REF are not ideal either.
 
 #### Gaussian Mixture Model clustering
 *introduction of Gaussian Mixture Model clustering and explanation of its selection and potential issues*
+Clustering method which does reflect the nature of the problem is Gaussian Mixture Model (GMM), which is a probabilistic derivative of *k*-means, but unlike the *k*-means itself it does not rely on squared Euclidean distances only. 
+
 *relation to k-means*
 > k-means clustering tends to find clusters of comparable spatial extent, while the expectation-maximization mechanism allows clusters to have different shapes. (https://en.wikipedia.org/wiki/K-means_clustering)
 *definition based on gaussians*
-*probabilistic (soft clustering); given a data point x, what is the probability it came from Gaussian k*
+
+GMM is probabilistic clustering, which means that it defines *k* clusters and their expected underlying Gaussian distributions and then predicts the probability that each observation belongs to each cluster. The exemplar observation *A* can then belong to cluster *1* with the probability *0.6*, to cluster *2* with the probability *0.35* and to clusters *3 - 9* with probability *<0.01*, considering 9-component-GMM. 
+
 *Expectation — Maximization algorithm*
-*Scikit-learn implementation is used, for detail see REF.*
-*Non-deterministic nature of GMM*
+
+Due to the fact that in the first step of GMM, the seed points are placed randomly, this placement might affect the resulting model. This specificity makes GMM non-deterministic clustering, which means that each run will likely result in (slightly) different clusters. To ensure the stability of the clustering, it has to be done repeatedly in several initialisations of which the best should be used. 
+
+Within this research, an `sklearn.mixture.GaussianMixture()` implementation of GMM within open-source python package scikit-learn v.0.22 (REF) is used. Further details on the exact algorithm are available in scikit-learn documentation and code. 
+
 
 #### Dimensionality issue
 The morphometric description of each building/cell has 296 values (each for each contextualised character). In the case of Prague, composed of approximately 140,000 buildings, it means that clustering has to deal with more than 40,000,000 data points (140,000 buildings * 296 characters). That is a significant number, which is not only demanding in terms of computational power, but also tricky in terms of statistics itself. The high dimensionality of the dataset (each character is a dimension in a hyperspace) may come with a *curse of dimensionality*. That means that even though there is the value in additional data (additional dimensions), it may affect results in a negative way. The high-dimensional hyperspace tends to become inflated (bigger), which in turn may render clusters very sparse. Individual data points are further away and density-based, or distance-based clusterings (GMM is distance-based) may struggle to correctly identify them as Euclidean distances between pairs of points on sparse high-dimensional data would be of little difference, rendering clustering extremely unstable and insignificant. However, that is not always the case as it depends on the internal structure of the dataset and relations between dimensions.
 
-*possible reduction of dimensionality (PCA, Factor analysis).*
-One way how to deal with large number of characters is a reduction of dimensionality. HERE
+One way how to deal with large number of characters is a reduction of dimensionality. Two of the most applied statistical methods to reduce number of dimensions of data are Factor analysis (FA) REF and Principal compoment analysis (PCA) REF. Both are aiming to describe the dataset using the smaller number of *factors* or *principal components* (essentially dimensionless variables hard to interpret). The key concept allowing the generation of meaningful clusters and effective reduction of dimension which is used in both is correlation of original variables. That causes an issue in reduction of used morphometric dataset as it is designed to limit empirical correlation, hence FA and PCA are expected to be not very effective in reduction. 
 
-*PCA and how it works*
-*Tested PCA results - 95% and ~160, ~30 and 65%*
-*We'll have to deal with it and employ a bit more computational power, data are too cleaned to be reduced to PC.*
+The preliminary tests of PCA on the complete dataset of contextualised characters shows that to retain at least 95% of variance, one need at least 147 principal components (Figure \ref{pca}). That is a significant reduction, but the ideal number of dimensions is approximately 30-50, so the reduction is clearly not good enough. Using 30 principal components, the retained variance drops to 69%, for 59 components the value would be 78%. Because there is no set acceptable rate of explained variance needed, without validation data it is not possible to determine acceptable number of components. The results might or might not offer helpful reduction of dimension. 
+
+![Principal Component Analysis results on the contextualised characters (n=296) on Prague data. Red line marks *optimal* 0.95 explained variance, green line denotes 147 principal components as a first value reaching 0.95. \label{pca}](source/figures/ch7/pca_graph.pdf "PCA results on the contextualised characters on Prague data"){ width=100% }
+
+Difference between 296 dimensions of original dataset and 160 dimensions to keep at least 95% of variance might offer reduce computational demands, but at the same time complicates interpretation of clusters where each of the 147 components is a black box without a morphological meaning. It is expected that GMM will be able to handle 296 dimension, even though the computation might require more resources. The decision for the purpose of this research is to skip dimensionality reduction, unless GMM proves to struggle to identify clusters. In the further development of the method, it may be helpful to employ PCA, however that is left for future exploration.
 
 #### Levels of DHC resolution and its scalability
 *Introduce discussion on the resolution of DHC (number of clusters) and scalability of method (exponential growth of resource needs as case study area grows).*
@@ -340,7 +360,7 @@ Having data layer correctly representing building footprints is crucial from two
 *Map*
 *Interpretation*
 
-##### Modersnist Prague 
+##### Modernist Prague 
 *BIC and others*
 *Map*
 *Interpretation*

@@ -26,6 +26,7 @@ help:
 
 pdf:
 	pandoc "$(INPUTDIR)"/*.md \
+	--filter pandoc-shortcaption \
 	-o "$(OUTPUTDIR)/thesis.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
 	--template="$(STYLEDIR)/template.tex" \
