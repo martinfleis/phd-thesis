@@ -142,6 +142,13 @@ Row 4               0.5                     0.6
 
 Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{cahracters_table}
 
+| Col 1 | Col2 | Col3 |
+|:--|:--|:--|
+| R1 | 0 | 1 |
+| r2 | 0 | 2 |
+| r3 | 0 | 3 |
+
+Table: This is the table caption2. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{caaable}
 
 The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is non-overlapping and does not contain logically correlated characters. As such, it should provide unbiased and non-skewed description of each of the elements. 
 
@@ -150,7 +157,20 @@ Looking at the primary characters and their spatial distribution, they could be 
 
 To become useful for pattern detection within DHC recognition model, most of the characters defined above has to be expressed using their contextualised versions. *Context* here is defined as neighbourhood of each tessellation cell within 3 topological steps on MT. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis). Contextualised character is then capturing a central tendency or a distribution of a primary character within a set context.
 
-Within this method, four types of contextualised characters are proposed. One capturing a local central tendency and three capturing the various kinds of diversity of values within the context. For each of the primary characters, each of the contextualised is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextualised characters.
+Within this method, four types of contextualised characters are proposed. One capturing a local central tendency and three capturing the various kinds of diversity of values within the context. For each of the primary characters, each of the contextualised is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextualised characters. Test Fig \ref{fig:testfig}.
+
+\newpage
+\thispagestyle{empty}
+\newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
+\begin{figure}[h]
+	\makebox[\linewidth]{
+		\includegraphics[width=\textwidth]{source/figures/ch7/tst.png}
+	}
+	\caption[Short version caption test]{Looogn version caption text test}
+	\label{fig:testfig}
+\end{figure}
+\restoregeometry
+
 
 ##### Local central tendency
 Statistics knows central tendency as a measure of a typical value for a probabilistic distribution [Weisberg H.F (1992) Central Tendency and Variability, Sage University Paper Series on Quantitative Applications in the Social Sciences, ISBN 0-8039-4007-6 p.2]. Having a set of data of unknown distribution, central tendency aims to simplify the whole set into one representative number. In the case of morphometric characters, we can measure central tendency of values of a single character across the whole case study, but that would not give us much information. As contextualised characters are defined on three topological steps, it is proposed to measure *local central tendency*, thus a value unique for each building measured as a typical within its immediate context.
@@ -292,6 +312,8 @@ The relation of sub-clusters to other than parental cluster is different than be
 The other way, aggregating clusters together based on their similarly will be discussed in the next chapter 8.
 
 Either way, it is crucial to acknowledge that clustering is always based on the actual structure of the used data. That means that the result of clustering is always local. DHCs identified in Prague using solely Prague-based data would not be equal to DHCs identified in Amsterdam using Amsterdam-based data only. The structure of both datasets determines what is the optimal division and as both structures are different, the optimal division is done along different lines. It is expected that results will be comparable as optimal DHC should reflect optimal urban tissues, but there will always be certain misalignment of clusters. Chapter 8 will test whether the misalignment is significant or not to further explore the link between two local clustering models.
+
+*conclude clustering*
 
 ### Data preprocessing
 Before doing any of these steps, it is fundamental to ensure that data are good enough to represent morphological/morphometric elements. That could be an issue for both building and street network layers, so there are cases when the data needs to be prepared for morphometric analysis. The preprocessing can be in some cases automatised, in other, unfortunately, manual or at least semi-manual to have the data in the correct shape in the end.

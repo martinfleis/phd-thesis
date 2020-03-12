@@ -1,0 +1,76 @@
+# In-text image
+
+![Long caption under img](source/figures/ch7/pca_graph.pdf "Short caption"){#fig:testfig}
+
+
+# Full page image
+
+\newpage
+\thispagestyle{empty}
+\newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
+\begin{figure}[h]
+	\makebox[\linewidth]{
+		\includegraphics[width=\textwidth]{source/figures/ch7/tst.png}
+	}
+	\caption[Short version caption test]{Looogn version caption text test}
+	\label{fig:testfig}
+\end{figure}
+\restoregeometry
+
+# Figure reference
+
+\ref{fig:testfig}
+
+
+# Citation examples:
+
+`[@almazan2012]` (Almazán & Nakajima 2012)
+`[see @almazan2012]` (see Almazán & Nakajima 2012)
+`[@almazan2012, pp.33-34]` (Almazán & Nakajima 2012, pp.33–34)
+`@almazan2012` Almazán & Nakajima (2012)
+`@almazan2012 [p.2]` Almazán & Nakajima (2012, p.2)
+`[-@almazan2012]` (2012)
+
+From Zotero export as Better BibTeX
+
+
+# New page
+
+\newpage
+
+
+# Table
+
+----------------------------------------------------------------
+Column 1            Column 2                Column 3
+--------------      -------------------     -------------------
+Row 1               0.1                     0.2
+
+Row 2               0.3                     0.3
+
+Row 3               0.4                     0.4      
+
+Row 4               0.5                     0.6
+
+----------------------------------------------------------------
+
+Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{ref_id}
+
+
+OR
+
+| Col 1 | Col2 | Col3 |
+|:--|:--|:--|
+| R1 | 0 | 1 |
+| r2 | 0 | 2 |
+| r3 | 0 | 3 |
+
+
+# Footnote
+
+\footnote{Complete results of the analysis are available as an Appendix XXX.}
+
+
+# Insert PDF/PNG
+
+\includepdf{image.pdf}
