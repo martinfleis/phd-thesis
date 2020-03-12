@@ -5,6 +5,7 @@ and add the centred logo
 -->
 
 \begin{titlepage}
+    \newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
     \begin{center}
 
         \vspace*{2.5cm}
@@ -45,4 +46,5 @@ and add the centred logo
         % Except where otherwise noted, content in this thesis is licensed under a Creative Commons Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. Copyright 2020, Martin Fleischmann.
 
     \end{center}
+    \restoregeometry
 \end{titlepage}
