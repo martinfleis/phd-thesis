@@ -11,7 +11,7 @@ and add the centred logo
         \vspace*{2.5cm}
 
         \huge
-        This is the title of the thesis
+        The Urban Atlas: Foundation of a Morphometric Taxonomy of Urban Form
 
         \vspace{1.5cm}
 
