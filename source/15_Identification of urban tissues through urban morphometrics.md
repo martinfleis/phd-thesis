@@ -771,7 +771,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt molli
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
 
+
+![TITLE](source/figures/ch7/relation_0.pdf "Short caption"){#fig:relation_0 width=70%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 ![TITLE](source/figures/ch7/PRG_cluster_comparison_1.png "Short caption"){#fig:PRG_cluster_comparison_1 width=100%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/relation_1.pdf "Short caption"){#fig:relation_1 width=70%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
 
@@ -779,7 +788,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt molli
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
 
+
+![TITLE](source/figures/ch7/relation_3.pdf "Short caption"){#fig:relation_3 width=70%}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 ![TITLE](source/figures/ch7/PRG_cluster_comparison_4.png "Short caption"){#fig:PRG_cluster_comparison_4 width=100%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+
+![TITLE](source/figures/ch7/relation_cluster15.pdf "Short caption"){#fig:relation_cluster15 width=40%}
+
 
 Differences:
 - some are non-existent, like 15 (split between 2 and 4, 9), losing a bit of detail. however, differences are not big and sampled clustetring could be as well used. It is just a minor change of resolution
