@@ -731,6 +731,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt molli
 
 ![TITLE](source/figures/ch7/PRG_cluster_detail_19.png "Short caption"){#fig:PRG_cluster_detail_19 width=100%}
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
 
 #### Sampled data
 
@@ -778,22 +779,59 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt molli
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
 
+![TITLE](source/figures/ch7/PRG_cluster_comparison_4.png "Short caption"){#fig:PRG_cluster_comparison_4 width=100%}
+
+Differences:
+- some are non-existent, like 15 (split between 2 and 4, 9), losing a bit of detail. however, differences are not big and sampled clustetring could be as well used. It is just a minor change of resolution
+	- s2 is 10 and 14
+	- s6 is 0 (more) and 8 (less)
+	- s9 11 and 15 (less)
+	- s10 is 4 and 7
+
+TODO: add full data to appendix (relation_sampled-complete, relation_complete-sampled)
+- sometimes mostly joined two cluster together, sometimes reshuffled among 3 (cluster 15 is s2,4,9, eqaully)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+
 #### Probability of cluster (change)
 *note on probability of cluster assignment*
 *due to the richness of data, clusters are very well defined, there is probability but they are insignificant*
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 #### Subcluster illustration
 *Sub-clustering question test on compact urban form (perimeter blocks and modernism)*
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 ##### Compact Prague
-*BIC and others*
-*Map*
-*Interpretation*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/PRG_cluster5_BIC.pdf "Short caption"){#fig:PRG_cluster5_BIC width=50%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/PRG_subcluster5.png "Short caption"){#fig:PRG_subcluster5 width=100%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 
 ##### Modernist Prague
-*BIC and others*
-*Map*
-*Interpretation*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/PRG_cluster12_BIC.pdf "Short caption"){#fig:PRG_cluster12_BIC width=50%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/PRG_subcluster12.png "Short caption"){#fig:PRG_subcluster12 width=100%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
+![TITLE](source/figures/ch7/PRG_subcluster12_detail.pdf "Short caption"){#fig:PRG_subcluster12_detail width=100%}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt mollis erat quis varius. Phasellus eu justo non urna efficitur pharetra nec sed neque. Proin vestibulum eros tellus, eu mollis ex lacinia a. Ut erat ante, euismod id placerat et, ultricies ac justo. Mauris non sagittis est, sed tincidunt dolor. Proin scelerisque iaculis nibh, non molestie justo semper at. Duis id aliquam metus, eu volutpat magna. Quisque porta metus id odio blandit, a egestas augue semper. Vestibulum dapibus vulputate ligula ac tincidunt. Integer porta, mauris vel porttitor posuere, ante neque tristique nisl, in faucibus enim erat quis enim. Sed at.
+
 
 ## DHC as an urban tissue
 *morphometric characters certainly help in description of urban tissues*
