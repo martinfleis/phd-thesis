@@ -200,7 +200,7 @@ where $D$ is the deviation of angle of corner $c_{blg_i}$ from 90 degrees.
 
 (@eq_ssbERI) $ERI_{blg} =  \sqrt{{a_{blg}} \over {a_{blgB}}} * {p_{blgB} \over p_{blg}}$
 
-where $a_{blgB}$ is area of minimal rotated bounding rectangle of a building (MBR) footprint and $p_{blgB}$ its perimeter of MBR. It is a measure of shape complexity identified by @Basaraner2017 as the shape characters with the best performance.
+where $a_{blgB}$ is area of minimal rotated bounding rectangle of a building (MBR) footprint and $p_{blgB}$ its perimeter of MBR. It is a measure of shape complexity identified by @basaraner2017 as the shape characters with the best performance.
 
 12. **Elongation of building** is denoted as
 
@@ -210,9 +210,386 @@ where $l_{blgB}$ is length of MBR and $w_{blgB}$ is width of MBR. It captures th
 
 13. **Centroid - corner distance deviation of building** is denoted as
 
-(@eq_ssbCCD) $CCD_{blg} =  
+(@eq_ssbCCD) $CCD_{blg} =  \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(ccd_{i}-\bar{ccd}\right)^{2}}$
 
-TODO
+where $ccd_i$ is a distance between centroid and corner $i$ and $\bar{ccd}$ is mean of all distances. It captures the variety of shape. As corner is considered vertex with angle < 170º to reflect potential circularity of object and topological imprecision of building polygon.
+
+14. **Centroid - corner mean distance of building** is denoted as
+
+(@eq_ssbCCM) $CCM_{blg} =\frac{1}{n}\left(\sum_{i=1}^{n} ccd_{i}\right)$
+
+where $ccd_i$ is a distance between centroid and corner $i$. It is a character measuring dimension of the object dependent on its shape  [@schirmer2015].
+
+*Spatial distribution* of a single building is captured by following three characters:
+
+15. **Solar orientation of building** is denoted as
+
+(@eq_stbOri) $Ori_{blg} = | o_{blgB} - 45 |$
+
+where $o_{blgB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions. There are multiple ways of capturing orientation of a polygon. As reported by @yan2007, @duchene2003 assessed five different options (longest edge, weighted bisector, wall average, statistical weighting, bounding rectangle) and concluded bounding rectangle as the most appropriate. Deviation from cardinal directions is used to avoid sudden changes between square-like objects.
+
+16. **Street alignment of building** is denoted as 
+
+(@eq_stbSAl) $SAl_{blg} = |Ori_{blg} - Ori_{edg}|$
+
+where $Ori_{blg}$ is a solar orientation of building and $Ori_{edg}$ is a solar orientation of street edge. It reflects the relationship between building and its street, whether it is facing the street directly or indirectly [@schirmer2015].
+
+17. **Cell alignment of building** is denoted as 
+
+(@eq_stbCeA) $CAl_{blg} = |Ori_{blg} - Ori_{cell}|$
+
+where $Ori_{cell}$ is a solar orientation of tessellation cell. It reflects the relationship between a building and its cell.
+
+These seventeen characters are capturing aspects of individual building (topological context 0). Following are measuring aspects of tessellation cells on the same level.
+
+18. **Longest axis length of tessellation cell** is denoted as
+
+(@eq_sdcLAL) $LAL_{cell} = d_{cellC}$
+
+where $d_{cellC}$ is a diameter of minimal circumscribed circle around the tessellation cell polygon. The axis itself does not have to be fully within the polygon. It could be seen as a proxy of plot depth for tessellation-based analysis.
+
+19. **Area of tessellation cell** is denoted as
+
+(@eq_sdcAre)  $a_{cell}$  
+
+and defined as an area covered by a tessellation cell footprint in m^2^.
+
+20. **Circular compactness of tessellation cell** is denoted as
+
+(@eq_sscCCo)  $CCo_{cell} = \frac{a_{cell}}{a_{cellC}}$
+
+where $a_{cellC}$ is area of minimal enclosing circle. It captures the relation of tessellation cell footprint shape to its minimal enclosing circle, illustrating the similarity of a shape and circle.
+
+21. **Equivalent rectangular index of tessellation cell** is denoted as
+
+(@eq_sscERI) $ERI_{cell} =  \sqrt{{a_{cell}} \over {a_{cellB}}} * {p_{cellB} \over p_{cell}}$
+
+where $a_{cellB}$ is area of minimal rotated bounding rectangle of a tessellation cell (MBR) footprint and $p_{cellB}$ its perimeter of MBR. It is a measure of shape complexity identified by @Basaraner2017 as a shape character of the best performance.
+
+22. **Solar orientation of tessellation cell** is denoted as
+
+(@eq_stcOri) $Ori_{cell} = | o_{cellB} - 45 |$
+
+where $o_{cellB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions.
+
+23. **Street alignment of building** is denoted as 
+
+(@eq_stcSAl) $SAl_{cell} = |Ori_{cell} - Ori_{edg}|$
+
+where $Ori_{cell}$ is a solar orientation of tessellation cell and $Ori_{edg}$ is a solar orientation of street edge. It reflects the relationship between tessellation cell and its street, whether it is facing the street directly or indirectly.
+
+24. **Coverage area ratio of tessellation cell** is denoted as
+
+(@eq_sicCAR) $CAR_{cell} = a_{blg} / a_{cell}$
+
+where $a_{blg}$ is an area of building and $a_{cell}$ is an area of related tessellation cell [@schirmer2015]. Coverage area ratio (CAR) is one of the commonly used characters capturing *intensity* of development. However, the definitions vary based on the spatial unit.
+
+25. **Floor area ratio of tessellation cell** is denoted as
+
+(@eq_sicFAR) $FAR_{cell} = fa_{blg} / a_{cell}$
+
+where $fa_{blg}$ is a floor area of building and $a_{cell}$ is an area of related tessellation cell. Floor area could be computed based on the number of levels or using approximation based on building height.
+
+Following characters measure aspect related to street segment.
+ 
+26. **Length of street segment** is denoted as 
+
+(@eq_sdsLen) $l_{edg}$
+
+and defined as a length of a `LineString` geometry in metres [@dibble2017; @gil2012].
+
+27. **Width of a street profile** is denoted as 
+
+(@eq_sdsSPW) $w_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} w_{i}\right)$
+
+where $w_{i}$ is width of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value. In case of open-ended street, 50 metres is used as a perception-based proximity limit [@araldi2019].
+
+28. **Height of a street profile** is denoted as 
+
+(@eq_sdsSPH) $h_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} h_{i}\right)$
+
+where $h_{I}$ is mean height of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value [@araldi2019].
+
+29. **Height/width ratio of a street profile** is denoted as 
+
+(@eq_sdsSPR) $HWR_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} \frac{h_{i}}{w_{i}}\right)$
+
+where $h_{I}$ is mean height of a street section i and $w_{i}$ is width of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value [@araldi2019].
+
+30. **Openness of a street profile** is denoted as 
+
+(@eq_sdsSPO) $Ope_{sp} = 1 - \frac{\sum hit}{2\sum sec}$
+
+where $\sum hit$ is sum of section lines (left and right sides separately) intersecting buildings and $\sum sec$ total number of street sections. Algorithm generates street sections every 3 meters alongside the street segment.
+
+31. **Width deviation of a street profile** is denoted as
+
+(@eq_sdsSWD) $wd_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(w_{i}-w_{sp}\right)^{2}}$
+
+where $w_{i}$ is width of a street section i and $w_{sp}$ is mean width. Algorithm generates street sections every 3 meters alongside the street segment.
+
+32. **Height deviation of a street profile** is denoted as
+
+(@eq_sdsSHD) $hd_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(h_{i}-h_{sp}\right)^{2}}$
+
+where $h_{i}$ is height of a street section i and $h_{sp}$ is mean height. Algorithm generates street sections every 3 meters alongside the street segment.
+
+33. **Linearity of a street segment** is denoted as
+
+(@eq_sssLin) $Lin_{edg} = \frac{l_{eucl}}{l_{edg}}$
+
+where $l_{eucl}$ is Euclidean distance between end points of a street segment and $l_{edg}$ is a street segment length. It captures the deviation of a segment shape from a straight line. Adapted from @araldi2019.
+
+34. **Area covered by a street segment** is denoted as
+
+(@eq_sdsAre) $a_{edg} = \sum_{i=1}^{n} a_{cell_i}$
+
+where $a_{cell_i}$ is area of tessellation cell $i$ belonging to the street segment. It captures the area which is likely served by each segment.
+
+35. **Buildings per meter of a street segment** is denoted as
+
+(@eq_sisBpM) $BpM_{edg} = \frac{\sum blg}{l_{edg}}$
+
+where $\sum blg$ is a number of buildings belonging to a street segment and $l_{edg}$ is a length of a street segment. It reflects the granularity of development along each segment.
+
+The last character measured on topological distance 0 is based on street node.
+
+36. **Area covered by a street node** is denoted as
+
+(@eq_sddAre) $a_{node} = \sum_{i=1}^{n} a_{cell_i}$
+
+where $a_{cell_i}$ is area of tessellation cell $i$ belonging to the street node. It captures the area which is likely served by each node.
+
+Characters 37 and above take into account more than a single element, reflecting the relationship between them in a set context.
+
+37. **Shared walls ratio of adjacent buildings** is denoted as
+
+(@eq_mtbSWR) $SWR_{blg} = \frac{p_{blg_{shared}}}{p_{blg}}$
+
+where $p_{blg_{shared}}$ is a length of a perimeter shared with adjacent buildings and $p_{blg}$ is a perimeter of a buildings. It captures the amount of wall space facing the open space [@hamaina2012a].
+
+38. **Alignment of neighbouring buildings** is denoted as
+
+(@eq_mtbAli) $Ali_{blg} = \frac{1}{n} \sum_{i=1}^{n} |Ori_{blg} - Ori_{blg_{i}}|$
+
+where $Ori_{blg}$ is the solar orientation of a building and $Ori_{blg_{i}}$ is the solar orientation of building $i$ on a neighbouring tessellation cell. It calculates the mean deviation of solar orientation of buildings on adjacent cells from a building. Adapted from @hijazi2016.
+
+39. **‌Mean distance to neighbouring buildings** is denoted as
+
+(@eq_mtbNDi) $NDi_{blg} = \frac{1}{n} \sum_{i=1}^{n} d_{blg, blg_i}$
+
+where $d_{blg, blg_i}$ is a distance between building and building $i$ on a neighbouring tessellation cell. Adapted from @hijazi2016. It captures the average proximity to other buildings.
+
+40. **Weighted neighbours of tessellation cell** is denoted as
+
+(@eq_mtcWNe) $WNe_{cell} = \frac{\sum cell_n}{p_{cell}}$
+
+where $\sum cell_n$ is a number of cell neighbours and $p_{cell}$ is a perimeter of a cell. It reflects granularity of morphological tessellation.
+
+41. **Area covered by neighbouring cells** is denoted as
+
+(@eq_mdcAre) $a_{cell_n} = \sum_{i=1}^{n} a_{cell_i}$
+
+where $a_{cell_i}$ is area of tessellation cell $i$ within topological distance 1. It captures the scale of morphological tessellation.
+
+42. **Reached cells by neighbouring segments** is denoted as
+
+(@eq_misRea) $RC_{edg_n} = \sum_{i=1}^{n} cells_{edg_i}$
+
+where $cells_{edg_i}$ is number of tessellation cells on segment $i$ within topological distance 1. It captures accessible granularity.
+
+43. **Reached cells by neighbouring segments** is denoted as
+
+(@eq_mdsAre) $a_{edg_n} = \sum_{i=1}^{n} a_{edg_i}$
+
+where $a_{edg_i}$ is an area covered by a street segment $i$ within topological distance 1. It captures accessible area.
+
+44. **Degree of a street node** is denoted as 
+
+(@eq_mtdDeg) $deg_{node_i} = \sum_{j} edg_{i j}$
+
+where $edg_{i j}$ is an edge of a street network between node $i$ and node $j$. It reflects the basic degree centrality.
+
+45. **Mean distance to neighbouring nodes from a street node** is denoted as 
+
+(@eq_mtdMDi) $MDi_{node} = \frac{1}{n} \sum_{i=1}^{n} d_{node, node_i}$
+
+where $d_{node, node_i}$ is a distance between node and node $i$ within topological distance 1. It captures the average proximity to other nodes.
+
+46. **Reached cells by neighbouring nodes** is denoted as
+
+(@eq_midRea) $RC_{node_n} = \sum_{i=1}^{n} cells_{node_i}$
+
+where $cells_{node_i}$ is number of tessellation cells on node $i$ within topological distance 1. It captures accessible granularity.
+
+47. **Reached area by neighbouring nodes** is denoted as
+
+(@eq_midAre) $a_{node_n} = \sum_{i=1}^{n} a_{node_i}$
+
+where $a_{node_i}$ is an area covered by a street node $i$ within topological distance 1. It captures accessible area.
+
+48. **Number of courtyards	of adjacent buildings** is denoted as
+
+(@eq_libNCo) $NCo_{blg_{adj}}$
+
+where $NCo_{blg_{adj}}$ is a number of interior rings of a polygon composed of footprints of adjacent buildings [@schirmer2015].
+
+49. **Perimeter wall length of adjacent buildings** is denoted as
+
+(@eq_ldbPWL) $p_{blg_{adj}}$
+
+where  $p_{blg_{adj}}$ is a length of exterior ring of a polygon composed of footprints of adjacent buildings. 
+
+50. **Mean inter-building distance	between neighbouring buildings** is denoted as
+
+(@eq_ltbIBD) $IBD_{blg} = \frac{1}{n} \sum_{i=1}^{n} d_{blg, blg_i}$
+
+where $d_{blg, blg_i}$ is a distance between building and building $i$ on a tessellation cell within topological distance 3. Adapted from @caruso2017. It captures the average proximity between buildings.
+
+51. **‌Building adjacency	 of neighbouring buildings** is denoted as
+
+(@eq_ltcBuA) $BuA_{blg} = \frac{\sum blg_{adj}}{\sum blg}$
+
+where $\sum blg_{adj}$ is a number of joined built-up structures within topological distance 3 and $\sum blg$ is a number of building within topological distance 3. Adapted from @vanderhaegen2017.
+
+52. **Gross floor area ratio of neighbouring tessellation cells** is denoted as
+
+(@eq_licGDe) $GFAR_{cell} = \frac{\sum_{i=1}^{n} FAR_{cell_i}}{\sum_{i=1}^{n} a_{cell_i}}$
+
+where $FAR_{cell_i}$ is a floor area ratio of tessellation cell $i$ and $a_{cell_i}$ is an area of tessellation cell $i$ within topological distance 3. Based on @dibble2017.
+
+53. **Weighted reached blocks of neighbouring tessellation cells** is denoted as
+
+(@eq_ltcWRB) $WRB_{cell} = \frac{\sum blk}{\sum_{i=1}^{n} a_{cell_i}}$
+
+where $\sum blk$ is a number of blocks within topological distance 3 and $a_{cell_i}$ is an area of tessellation cell $i$ within topological distance 3.
+
+54. **Area of a block** is denoted as
+
+(@eq_ldkAre)  $a_{blk}$
+
+and defined as an area covered by a block footprint in m^2^.
+
+55. **Perimeter of building** is denoted as
+
+(@eq_ldkPer) $p_{blk}$
+
+and defined as lengths of the block polygon exterior in m.
+
+56. **Circular compactness of a block** is denoted as
+
+(@eq_lskCCo)  $CCo_{blk} = \frac{a_{blk}}{a_{blkC}}$
+
+where $a_{blkC}$ is area of minimal enclosing circle. It captures the relation of block footprint shape to its minimal enclosing circle, illustrating the similarity of a shape and circle.
+
+57. **Equivalent rectangular index of a block** is denoted as
+
+(@eq_lskERI) $ERI_{blk} =  \sqrt{{a_{blk}} \over {a_{blkB}}} * {p_{blkB} \over p_{blk}}$
+
+where $a_{blkB}$ is area of minimal rotated bounding rectangle of a block (MBR) footprint and $p_{blkB}$ its perimeter of MBR. 
+
+58. **Compactness-weighted axis of a block** is denoted as
+
+(@eq_lskCWA) $CWA_{blk} = d_{blkC} \times\left(\frac{4}{\pi}-\frac{16 (a_{blk})}{p_{blk}^{2}}\right)$
+
+where $d_{blkC}$ is a diameter of minimal circumscribed circle around the block polygon, $a_{blk}$ is area of block and $p_{blk}$ is a perimeter of a block. It is a proxy of permeability of an area.[@feliciotti2018]
+
+59. **Solar orientation of a block** is denoted as
+
+(@eq_ltkOri) $Ori_{blk} = | o_{blkB} - 45 |$
+
+where $o_{blkB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions.
+
+60. **Weighted neighbours of a block** is denoted as
+
+(@eq_ltkWNB) $wN_{blk} = \frac{\sum blk_n}{p_{blk}}$
+
+where $\sum blk_n$ is a number of block neighbours and $p_{blk}$ is a perimeter of a block. It reflects granularity of a mesh of blocks.
+
+61. **‌Weighted cells of a block** is denoted as 
+
+(@eq_likWBB) $wC_{blk} = \frac{\sum cell}{a_{blk}}$
+
+where $\sum cell$ is number of cells composing a block and a_{blk} is an area of a block. It captures granularity of each block.
+
+62. **Meshedness of a street network** is denoted as 
+
+(@eq_ldcMes) $Mes_{node}= \frac{e-v+1}{2 v-5}$
+
+where $e$ is a number of edges in a subgraph and $v$ is the number of nodes in a subgraph [@feliciotti2018]. A subgraph is defined as a network within topological distance 5 around a node.
+
+63. **Mean segment length of a street network** is denoted as 
+
+(@eq_ldsMSL) $MSL_{edg} = \frac{1}{n} \sum_{i=1}^{n} l_{edg_i}$
+
+where $l_{edg_i}$ is a length of a street segment $i$ within a topological distance 3 around a segment.
+
+64. **Cul-de-sac length of a street network** is denoted as
+
+(@eq_ldsCDL) $CDL_{node} = \sum_{i=1}^{n} l_{edg_i}, \text { if }edg_i \text { is cul-de-sac}$
+
+where $l_{edg_i}$ is a length of a street segment $i$ within a topological distance 3 around a node.
+
+65. **Reached cells by a street network segments** is denoted as
+
+(@eq_ldsRea) $RC_{edg} = \sum_{i=1}^{n} cells_{edg_i}$
+
+where $cells_{edg_i}$ is number of tessellation cells on segment $i$ within topological distance 3. It captures accessible granularity.
+
+66. **Node density of a street network** is denoted as
+
+(@eq_lddNDe) $D_{node} = \frac{\sum node}{\sum_{i=1}^{n} l_{edg_i}}$
+
+where $\sum node$ is a number of nodes within a subgraph and $l_{edg_i}$ is a lengths of a segment $i$ within a subgraph. A subgraph is defined as a network within topological distance 5 around a node.
+
+67. **Reached cells by a street network nodes** is denoted as
+
+(@eq_lddRea) $RC_{node} = \sum_{i=1}^{n} cells_{node_i}$
+
+where $cells_{node_i}$ is number of tessellation cells on node $i$ within topological distance 3. It captures accessible granularity.
+
+68. **Reached area by a street network nodes** is denoted as
+
+(@eq_lddARe) $a_{node_{net}} = \sum_{i=1}^{n} a_{node_i}$
+
+where $a_{node_i}$ is an area covered by a street node $i$ within topological distance 3. It captures accessible area.
+
+69. **Proportion of cul-de-sacs within a street network** is denoted as
+
+(@eq_linPDE) $pCD_{node} = \frac{\sum_{i=1}^{n} node_i, \text { if }deg_{node_i} = 1}{\sum_{i=1}^{n} node_i}$
+
+where $node_i$ is a node whiting topological distance 5 around a node. Adapted from [@boeing2017a].
+
+70. **Proportion of 3-way intersections within a street network** is denoted as
+
+(@eq_linP3W) $p3W_{node} = \frac{\sum_{i=1}^{n} node_i, \text { if }deg_{node_i} = 3}{\sum_{i=1}^{n} node_i}$
+
+where $node_i$ is a node whiting topological distance 5 around a node. Adapted from [@boeing2017a].
+
+71. **Proportion of 4-way intersections within a street network** is denoted as
+
+(@eq_linP4W) $p4W_{node} = \frac{\sum_{i=1}^{n} node_i, \text { if }deg_{node_i} = 4}{\sum_{i=1}^{n} node_i}$
+
+where $node_i$ is a node whiting topological distance 5 around a node. Adapted from [@boeing2017a].
+
+72. **Weighted node density of a street network** is denoted as
+
+(@eq_linWID) $wD_{node} = \frac{\sum_{i=1}^{n} deg_{node_i} - 1}{\sum_{i=1}^{n} l_{edg_i}}$
+
+where $deg_{node_i}$ is a degree of a node $i$ within a subgraph and $l_{edg_i}$ is a length of a segment $i$ within a subgraph. A subgraph is defined as a network within topological distance 5 around a node.
+
+73. **Local closeness centrality of a street network** is denoted as
+
+(@eq_lcnClo) $lCC_{node} = \frac{n - 1}{\sum_{v=1}^{n-1} d(v, u)}$
+
+where $d(v, u)$ is the shortest-path distance between $v$ and $u$, and $n$ is the number of nodes within a subgraph. A subgraph is defined as a network within topological distance 5 around a node.
+
+74. **Square clustering of a street network** is denoted as
+
+(@eq_xcnSCl) $sCl_{node} = \frac{\sum_{u=1}^{k_{v}} \sum_{w=u+1}^{k_{v}} q_{v}(u, w)}{\sum_{u=1}^{k_{v}} \sum_{w=u+1}^{k_{v}}\left[a_{v}(u, w)+q_{v}(u, w)\right]}$
+
+where $q_v(u,w)$ are the number of common neighbours of $u$ and $w$ other than $v$ (ie squares), and $a_v(u,w) = (k_u - (1+q_v(u,w)+\theta_{uv}))(k_w - (1+q_v(u,w)+\theta_{uw}))$,
+where $\theta_{uw} = 1$ if $u$ and $w$ are connected and 0 otherwise [@PhysRevE.72.056127].
 
 ADD KEY TO CHARACTERS IDS
 
