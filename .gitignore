@@ -116,3 +116,5 @@ Exports/
 run/
 .DS_store
 output/
+output/thesis.docx
+output/thesis.pdf
