@@ -1,43 +1,40 @@
 # Identification of urban tissues through urban morphometrics
-The concept of urban tissue introduced in the previous chapter is fundamental for the understanding of the structure of cities we live in, but at the same time a bit elusive in what *distinct* in the definition actually means. How much distinct two parts of the urban fabric needs to be to become different tissues? Who makes the decision and based on what ground? While some have partial answers to these questions (REF), one still remains. How to consistently identify urban tissues across metropolitan areas in an automatised, algorithmic way.
+The concept of urban tissue introduced in the previous chapter is fundamental for the understanding of the structure of cities we live in but at the same time a bit elusive in what *distinct* in the definition means. How much distinct two parts of the urban fabric needs to be to become different tissues? Who makes the decision and based on what ground? While some have partial answers to these questions (REF), one remains unanswered. How to consistently identify urban tissues across metropolitan areas in an automatised, algorithmic way?
 
-The aim of this chapter is to provide theoretical and practical grounds to the novel method allowing automatic detection of distinct types of urban tissues. While similar research has been done before (REF), it was never linked to the coherent theory of morphometrics and numerical taxonomy, nor it was both rich in terms of number of characters used within a model and the spatial extent (see Chapter 3). Following pages present a method which aims to be both inclusive as per morphometric characters and at the same time automatised and efficient to allow for examination of large datasets spanning across metropolitan regions.
+This chapter aims to provide theoretical and practical grounds to the method of automatic detection of distinct types of urban tissues. While similar research has been done before (REF), it was never linked to the coherent theory of morphometrics and numerical taxonomy, nor it was both inclusive in terms of a spectrum of characters used within a model and the spatial extent (see Chapter 3). Following pages present a method which aims to be inclusive in these terms and at the same time automatised and efficient to allow for examination of large datasets spanning across metropolitan regions.
 
-Following chapter will introduce key principles of systematic morphometric description, which will be later applied to the methodology. Then it will outline the basis for the recognition of distinct homogenous clusters (DHC), from the selection and definition of morphometric characters to unsupervised classification using Gaussian Mixture Model clustering. Methodological proposition will be later tested on the case of Prague, Czechia.
+In the context of the whole research, theory of numerical taxonomy is applied twice - in the DHC recognition and then in the development of a taxonomy (Chapter 8). This chapter builds on the idea of morphometrics, the idea based on the hypothesis that it is possible to classify *individuals* based on the measured features of their form. However, the hypothesis of this chapter cannot follow this statement *per se*, due to the complicated nature of the term *individual* in the urban morphology. In turn, it is hence assumed that we can identify individuals (in the sense of urban tissue) based on the similarity of morphometric characterisation of their fundamental parts. The initial morphometric assessment then focuses on the description of the form of individual elements, which is later used to identify distinct physiognomically homogenous clusters of urban form, i.e., urban tissues.
 
-## Principles of systematic morphometric description
-In the context of the whole research, theory of numerical taxonomy is applied twice - in the DHC recognition and then in development of a taxonomy (Chapter 8). This chapter builds on the idea of morphometrics, the idea stating that it is possible to classify *individuals* based on the measured feature of their form. However, the hypothesis of this chapter cannot follow this statement *per se*, due to the complicated nature of the term *individual* in the urban morphology. In turn, it is hence assumed that we are able to identify individuals (in a sense of urban tissue) based on the similarity of morphometric characterisation of their fundamental parts. Initial morphometric assessment then focuses on the description of the form of individual elements, which is later used to identify distinct physiognomically homogenous clusters of urban form, i.e., urban tissues.
+To develop a robust model, the method of description needs to be both systematic, i.e., being methodological and replicable, and comprehensive, i.e., being inclusive, capturing the broad scope of aspects. This method is trying to be both by proposing clear rules of character selection, by unbiased inclusion of a wide range of morphometric characters based on the relational model of urban form and characters' classification system, hence providing both cross-scale and structural complexity of urban form and by providing tools to measure them using `momepy` Python toolkit.
 
-To develop a robust model, the methodology of description needs to be both systematic, i.e., being methodological and replicable, and comprehensive, i.e., being inclusive, capturing the wide scope of features. This method is trying to be both by proposing clear rules of character selection and providing tools to measure them using `momepy` and by unbiased inclusion of wide range of morphometric characters based on relational model of urban form and characters' classification system, hence providing both scalar and structural complexity of urban form.
+Following chapter will outline the basis for the recognition of distinct homogenous clusters (DHC), from the selection and definition of morphometric characters to unsupervised classification using Gaussian Mixture Model clustering. The methodological proposition will be later tested in the case of Prague, Czechia.
 
 ## Methodological proposition
-
-The detection of DHCs within their spatial context is not simple nor straightforward process. The design of the method consist of several steps outlined in the following section. The first step is definition of principles of DHC recognition which are then followed  as subsequent steps through the rest of the method design, and consequently reflected in the structure of the section.
+The automatic detection of urban tissues, or in the context of this work morphometric DHCs, consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the machine learning algorithm detecting DHCs. The structure of the method is reflected in the structure of the following sections.
 
 ### Principle of DHC recognition
 
-Recognition of DHCs is based on the principles we know from numerical taxonomy, but is a slightly specific way. In biology, the issue of individual delimitation is non-existent. Single individual of selected species is usually well defined in space (e.g., a bird), however in urban form this distinction is not so simple. Hence, the methodology which is used in biology needs to be adapted, while keeping the fundamental principles in place. The specificity is in the shift of the scale. While previous chapters identified urban tissue as *individual* of urban form, at this stage we pretend that this role holds duality building-tessellation cell as the smallest entity of urban form. The whole DHC recognition is then based on the assumption that entities recognised as a part of the same cluster (*species*) are, in fact, elements of the single urban tissue (where continuous) or of multiple individuals of the same kind of urban tissue (where discontinuous).
+Recognition of DHCs is based on the principles we know from numerical taxonomy but in a specific way. In biology, especially zoology, the issue of delimitation of an individual is non-existent. A single individual of selected species is usually well defined in space (e.g., a bird), but in urban morphology, this distinction is not so simple as that. Hence, the methodology which is used in biology needs to be adapted, while keeping the fundamental principles in place.
 
-Another difference between traditional method outlined by numerical taxonomy and the one adapted for the purpose of DHC recognition is the nature of morphometric characters. While in biology, each individual is usually measured independently of the rest (REF), that is not viable for urban form. The overall aim is to identify built-up patterns within urban fabric. However, the urban form itself is full of exceptions form the pattern. Individual plots follow different development process and are in some cases amalgamated or split. That does not happen tot he rest of the same tissue at the same time (while it might or might not later), causing the constant emergence of exceptions from the pattern. To overcome the issue of exceptions, proposed method is working with two kinds of characters - primary and contextual.
+While previous chapters identified urban tissue as an *individual* of urban form, at this stage, we pretend that this role holds a dual feature building-tessellation cell as the smallest entity of urban form. The whole DHC recognition is then based on the assumption that features recognised as a part of the same cluster (*species*) are, in fact, elements of the single urban tissue (where continuous) or of multiple individuals of the same kind of urban tissue (where discontinuous).
 
-The primary characters are those focusing on the individual elements  and their relationships as identified in a relational model (Chapter 6). Typical example could be building height or area. Both are specific to each individual building and in the context of plots with internal construction, buildings in the head and the back of the plot will have significantly different values.
+Another difference between traditional method outlined by numerical taxonomy and the one adjusted for DHC recognition is the nature of morphometric characters. While in biology, each individual is usually measured independently of the rest (REF), that is not suited for the shifted scale method. The overall aim is to identify built-up patterns within the urban fabric. However, the urban form itself is full of exceptions from the pattern. Individual plots follow the different development process and are in some cases amalgamated or split REF. That does not happen to the rest of the same tissue at the same time (while it might or might not later), causing the constant emergence of exceptions from the pattern. The proposed method is working with two kinds of characters - primary and contextual to overcome the issue of exceptions.
 
-As primary characters by definition do not describe the pattern but rather its individual elements, they should not be used within pattern detection algorithms. The second kind of characters, contextual, has been designed specifically to turn values captured by primary characters into values describing the central tendency in the area - describing the pattern.  As such, they can be used as an input for clustering aiming to distinguish DHCs.
+The primary characters are those focusing on the individual elements and their relationships as identified in the relational model (Chapter 6). These are mostly following what a character would be in biology. A typical example could be building height or area. Both are specific to each building. In the context of plots with subsequent internal development, buildings in the head and the tail of the plot might have significantly different values, i.e. exceptions from a continuous pattern.
 
-Finally, the data captured by contextual characters are used to cluster individual building-tessellation cell entities to statistically homogenous clusters each capturing distinct kind of urban tissue.
+As primary characters, by definition, do not describe the pattern but rather its elements, they are not optimal input for pattern detection algorithms. The second type of characters, contextual, has been designed specifically to turn values captured by primary characters into values describing the central tendency in the area - to describe the pattern. As such, they can be used as an input for the unsupervised classification method aiming to distinguish DHCs. In the end, the data captured by contextual characters are used to cluster individual building-tessellation cell entities to statistically homogenous clusters, each capturing distinct kind of urban tissue.
 
-Following section will detail the use of primary characters, contextual characters and the clustering method itself.
+The following section will detail the use of primary characters, contextual characters and the clustering method itself.
 
 ### Morphometric characters
-The main scope of this research is not to develop new morphometric characters (even though there are some), but to use existing knowledge in urban morphometrics and combine it in a systematic framework providing a complex description of urban form. The chapter 3 mapped in detail the existing characters used across the field and the resulting database and classification is the basis for selection and definition of primary characters and to some extent even contextual characters.
+The main scope of this research is not to develop new morphometric characters (even though there are some to fill the gaps), but to use existing knowledge in urban morphometrics and combine it in a systematic framework providing a comprehensive description of urban form. Chapter 3 mapped in detail the existing characters used across the field and the resulting database XREF and classification is the basis for selection and definition of primary characters and to some extent, even contextual characters.
 
 #### Primary characters
-As briefly outlined above, primary characters describe different elements and their relationships as are identified within the relational model of urban form. Building on the definition of the term *primary* from Oxford English Dictionary (REF), we can define primary characters witting the context of DHC recognition as *characters occurring first in a sequence of methodological steps capturing individual features of urban form elements and their basic relations*. The link to the relational model is crucial here as it defines which relations are meant and later reflected in the whole recognition model.
+Primary characters describe different elements and their relationships as are identified within the relational model of urban form. Building on the definition\footnote{"Occurring or existing first in a sequence of events; belonging to the beginning or earliest stage of something; first in time." REF} of the term *primary* from Oxford English Dictionary (REF), we can define primary characters within the context of DHC recognition as *characters occurring first in a sequence of methodological steps capturing individual features of urban form elements and their fundamental relations*. The link to the relational model is crucial here as it defines which relations are meant and later reflected in the whole recognition model.
 
-Chapter 3 shows that there is a large number of characters which could be, in theory, used within the model. However, the selected set of characters needs to have specific nature. The information captured should be non-overlapping, each of them should describe different unrelated feature of urban form to avoid clustering result distortion towards features occurring multiple times. For that reason, specific principles of characters selection were defined.
+Chapter 3 shows that there is a large number of characters which could be, in theory, used within the model. However, the selected set of characters needs to have a specific nature. The information captured by the set should be non-overlapping, and each of the characters should describe a different unrelated aspect of urban form to avoid distortion of clustering results towards aspects occurring multiple times, among others. For that reason, specific principles of characters selection were defined.
 
 ##### Principles of character selection and definition
-***THIS SECTIONS NEEDS SIGNIFICANT CHANGES***
 The idea of morphometric recognition of DHC is based on numerical taxonomy and the selection of morphometric characters then build on the principles used within selection of taxonomic characters in biology, as defined by @sneath1973. Building on the biological experience brings  methodological grounds to the selection and it is expected that a final set of characters selected according to these rules will provide the description of urban form suitable for a recognition of DHC. However, the validity of the set is still only hypothetical, unlike the validity of individual characters which is tested throughout the selection process.
 
 Selection strategy is tied to the classification of morphometric characters into categories as defined in chapter 3 and, more importantly, to the relational model of urban form. There are three top-level aims of the of the selected set of primary characters. The set should:
@@ -62,7 +59,7 @@ In this case in the context of the relational model, these are:
 
 Urban form is composed of multiple elements, hence all fundamental ones should be captured. Here the attempt is to use as little of input data as possible, to extend the applicability of the whole model. Other elements (e.g., plot, open space, greenery) could be included and the resulting model would likely be more precise, but the availability of such data is limited. This research uses only the three elements of urban form defined in the relational model (coming from two data sources as MT is generated) hence this aim is focused on these only.
 
-3. **‌Capture scalar complexity of urban form by covering all meaningful topological scales**
+3. **‌Capture cross-scale complexity of urban form by covering all meaningful topological scales**
 
 Relational model defines four topological scales:
 
@@ -71,7 +68,7 @@ Relational model defines four topological scales:
 - large
 - extralarge
 
-For the purpose of DHC recognition, not all of them are equally meaningful, as the spatial extent of DHC is usually restricted and *extralarge* topological scale then likely spans across multiple DHCs, rendering most of the characters occurring on that scale unhelpful. However, S, M and L are all relevant for the scale of DHC and should all be represented. The city and its urban form is composed of nested complexities (REF) occurring on different scales. Capturing them all together within the single model allows description of scalar complexity needed for complex and systematic morphometric characteristics of built-up patterns.
+For the purpose of DHC recognition, not all of them are equally meaningful, as the spatial extent of DHC is usually restricted and *extralarge* topological scale then likely spans across multiple DHCs, rendering most of the characters occurring on that scale unhelpful. However, S, M and L are all relevant for the scale of DHC and should all be represented. The city and its urban form is composed of complexities (REF) occurring on different scales. Capturing them all together within the single model allows description of cross-scale complexity needed for systematic morphometric characteristics of built-up patterns.
 
 To fulfil the aims, relational model comes to help with defined subsets as a combinations of elements and scales, combining second and third aim into a single solution. Each of the subsets represent specific relations between specific elements, hence covering all subsets will help the pursuit of complex description. Then, having subsets, meaningful characters for each subset should be identified. The following procedure directly builds on the @sneath1973 to determine a methodical approach to selection of the final set of morphometric characters. Steps of selection and elimination should follow this sequence:
 
@@ -81,11 +78,11 @@ The starting point should be a wide range of characters used within relevant lit
 
 2. **Select characters using data intended to be used within each subset**
 
-Not all characters are based on the same data sources used within this research and relational model. Some can be adapted (e.g., morphological cell can be, in some cases, used instead of plot), but some are based on the different sources of data. Characters which could not be used within subsets of relational model are then excluded from the initial selection.
+Not all characters are based on the same data sources used within this research and relational model (see Chapter 6 for details). Some can be adapted (e.g., morphological cell can be, in some cases, used instead of plot), but some are based on the different sources of data. Characters which could not be used within subsets of relational model are then excluded from the initial selection.
 
 3. **Adapt characters to fit the framework**
 
-Those characters which are applicable, but are not readily available to be used within relational model should be adapted to fit the framework. It comprises mostly translation of plot-based characters to cell-based and metric-based characters into topology-based. Adaptation should be done with a sense of the meaning of each character which should not be significantly changed, otherwise is foundation in literature would be questionable and should be seen as a newly developed character.
+Those characters which are applicable, but are not readily available to be used within relational model should be adapted to fit the framework. It comprises mostly translation of plot-based characters to cell-based and metric-based characters into topology-based. Adaptation should be done with a sense of the meaning of each character which should not be significantly changed, otherwise is foundation in literature would be questionable and a character should be seen as a newly developed one.
 
 4. **Eliminate logical correlations**
 
@@ -93,15 +90,15 @@ Logically correlated characters should be omitted, otherwise the feature which i
 
 5. **Eliminate ineffective characters**
 
-Due to the nature of the analysis, working with large-scale data or even big data in some cases, the process of measuring has to be computationally effective. Some of the characters are not easily measurable, and it has to be evaluated whether the value of the characters would balance the difficulty of implementation and / or computational demand. Examples of such characters could be those based on axial maps or topological skeleton.
+Due to the nature of the analysis, working with large-scale data or even big data in some cases, the process of measuring has to be computationally efficient. Some of the characters are not easily measurable, and it has to be evaluated whether the value of the characters would balance the difficulty of implementation and / or computational demand. Examples of such characters could be those based on expensive generative elements like axial maps or topological skeleton, or characters which implementation details are improperly document in literature.
 
-6. **Add characters where are clear gaps**
+6. **Add characters to minimise gaps in subsets**
 
-(diversity, plot-level Voronoi cell). Because I am using morphological cells the smallest scale spatial unit in a scope previously unused, there is a range of characters which had to be adapted from original plot-based to cell-based. The database of characters also showed imbalance of different categories and gaps in the measuring of diversity. New taxonomic characters have to be implemented to cover those gaps and provide coherent description of urban form. This part of the research is still ongoing.
+The database of characters showed imbalance of different categories and pointed out gaps especially in the measuring of diversity. Moreover, the relational model brings some subsets which are often overlooked in existing literature. While the overall balance between subsets and categories is only theoretical and would not reflect different nature and importance of different subsets, each of them should be sufficiently covered to capture complex phenomenon of urban form structure. That may involve development of new characters.
 
 7. **Exclude invariant characters**.
 
-Some characters might be invariant over the entire sample of OTU's. Those should not be included as they are not bearing any taxonomic value. However, this exclusion is an ongoing process, because it depends on actual measured values.
+Some characters might be invariant over the entire sample. Those should not be included as they are not bearing any morphometric value. However, this exclusion is an ongoing process, because it depends on actual measured values. Moreover, the invariance in one sample of data does not mean that the character overall is not valuable. Consider example of courtyard area within a building. That will show variance in Mediterranean historical context, but invariance in US sprawled urban tissues. If the study does not aim to be comparable across different contexts, characters like this should be excluded. However, if the study expects later inclusion of additional data, it may be more tricky to actually select those which should be eliminated. Such a decision needs to be done base don the complete data which will be used within the study.
 
 8. **Limit empirical correlation**
 
@@ -109,114 +106,96 @@ When we have the evidence that more than one factor affects two correlated chara
 
 9. **Exclude characters which does not have the ability to capture patterns**.
 
-Test capability of each character to capture spatial patterns by measuring spatial autocorrelation as global Moran’s I. Those without sufficient level of autocorrelation should be excluded as they do not bear any value in the process of identification of DHC.
+Some characters may show random-like spatial distribution, meaning that the geographical location have no relationship to the actual value. These characters do not have the value within this framework as they are not able to describe spatial pattern. To test capability of each character to capture such patterns is used spatial autocorrelation analysis based on global Moran’s I (REF Anselin). Those characters without a significant autocorrelation should be excluded as they do not bear any value in the process of identification of DHC.
 
 10. **Balance scalarity and uniqueness of values**.
 
 The set of taxonomic characters has to be balanced regarding the scale as well as *uniqueness* of values. Some of the initially identified characters are possible to measure on different scales (street, block, vicinity). Due to the logical correlations between them, only one has to be used. The selection is trying to use the most appropriate in terms of the meaning of the character (which might be more suitable to street edge than block of vicinity for example). It also aims to limit the characters with limited uniqueness of values. Because the values are always stored on the smallest scale, the values of characters measured on the block scale are shared among all elements in the block. The intention is to limit those characters to minimum.
 
-The process of selection itself starting from the database retrieved from chapter 3 is available as Annex 2. It includes details of each decision on which characters should be part of the final set and why. Following section describes the final set only.
+The process of selection itself starting from the database retrieved from chapter 3 is available as Annex 2. It includes details of each decision on which characters should be part of the final set and why. Following section describes the final set of 74 primary characters only.
 
 ##### Identified set of primary characters
-Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For the implementation details please refer to the original referred work and to the documentation and code of momepy, which contains Python-based implementation of each character.
+Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For the implementation details please refer to the original referred work and to the documentation and code of momepy, which contains Python-based implementation of each character. On top of the definition and related formulas below, classification of characters and references are in the table XXX.
 
-The most simple of the characters are those capturing *dimensions* of buildings:
-
-**TODO: ADD UNITS TO ALL**
-
-1. **Area of building** is denoted as
+1. **Area of a building** is denoted as
 
 (@eq_sdbAre)  $a_{blg}$
 
-and defined as an area covered by a building footprint in m^2^.
+and defined as an area covered by a building footprint in m^2^ .
 
-2. **Height of building** is denoted as
+2. **Height of a building** is denoted as
 
 (@eq_sdbHei) $h_{blg}$
 
-and defined as building height in m measured optimally as weighted mean height (in case of buildings with multiple parts of different height). It is a required input value not measured within the morphometric assessment itself. The character based on the data provided by IPR Prague is illustrated on figure \ref{fig:sdbHei}.
+and defined as building height in m measured optimally as weighted mean height (in case of buildings with multiple parts of different height). It is a required input value not measured within the morphometric assessment itself.
 
-3. **Volume of building** is denoted as
+3. **Volume of a building** is denoted as
 
 (@eq_sdbVol)  $v_{blg} = a_{blg}\times h_{blg}$
 
 and defined as building footprint multiplied by its height in m^3^.
 
-4. **Perimeter of building** is denoted as
+4. **Perimeter of a building** is denoted as
 
 (@eq_sdbPer) $p_{blg}$
 
 and defined as the sum of lengths of the building exterior walls in m.
 
-5. **Courtyard area of building** is denoted as
+5. **Courtyard area of a building** is denoted as
 
 (@eq_sdbCoA)  $a_{blg_c}$
 
 and defined as the sum of areas of interior holes in footprint polygons in m^2^.
 
-\newpage
-\thispagestyle{empty}
-\newgeometry{left=2cm,bottom=2cm,top=1cm,right=2cm}
-\begin{figure}[h]
-	\makebox[\linewidth]{
-		\includegraphics[width=\textwidth]{source/figures/ch7/sdbHei_detail.png}
-	}
-	\caption[Detail of height of building character]{Character height of building  within central part of Prague as provided by IPR Prague. The distribution is truncated of extremes and captures only the visible area.}
-	\label{fig:sdbHei}
-\end{figure}
-\restoregeometry
-
-Further characters capture *shape* of buildings in both two and three dimensions (considering approximate building height as the third dimension):
-
-6. **Form factor of building** is denoted as
+6. **Form factor of a building** is denoted as
 
 (@eq_ssbFoF)  $FoF_{blg} = \frac{a_{blg}}{v_{blg}^{\frac{2}{3}}}$.
 
-It captures three-dimensional shape characteristic of a building envelope unbiased by the building size [@bourdic2012].
+It captures three-dimensional unitless shape characteristic of a building envelope unbiased by the building size [@bourdic2012].
 
-7. **Volume to façade ratio of building** is denoted as
+7. **Volume to façade ratio of a building** is denoted as
 
 (@eq_ssbVFR)  $VFR_{blg} = \frac{v_{blg}}{p_{blg}\times h_{blg}}$.
 
-It captures another aspect of three-dimensional shape of a building envelope distinguishing building types adapted from @schirmer2015. It can be seen as a proxy of a volumetric compactness.
+It captures unit aspect of three-dimensional shape of a building envelope distinguishing building types adapted from @schirmer2015. It can be seen as a proxy of a volumetric compactness.
 
-8. **Circular compactness of building** is denoted as
+8. **Circular compactness of a building** is denoted as
 
 (@eq_ssbCCo)  $CCo_{blg} = \frac{a_{blg}}{a_{blgC}}$
 
 where $a_{blgC}$ is area of minimal enclosing circle. It captures the relation of building footprint shape to its minimal enclosing circle, illustrating the similarity of a shape and circle [@dibble2017].
 
-9. **Corners count of building** is denoted as
+9. **Corners of a building** is denoted as
 
 (@eq_ssbCor)  $Cor_{blg} = \sum_{i=1}^{n}{c_{blg}}$
 
 where $c_{blg}$ is defined as a vertex of building exterior shape with angle between adjacent line segments $\leq$ 170 degrees. Uses only external shape (`shapely.geometry.exterior`), courtyards are not included. Character is adapted from [@steiniger2008] to exclude non-corner-like vertices.
 
-10. **Squareness of building** is denoted as
+10. **Squareness of a building** is denoted as
 
 (@eq_ssbSqu) $Squ_{blg} =  \frac{\sum_{i=1}^{n} D_{c_{blg_i}}}{n}$
 
-where $D$ is the deviation of angle of corner $c_{blg_i}$ from 90 degrees.
+where $D$ is the deviation of angle of corner $c_{blg_i}$ from 90 degrees and $n$ is a number of corners.
 
-11. **Equivalent rectangular index of building** is denoted as
+11. **Equivalent rectangular index of a building** is denoted as
 
 (@eq_ssbERI) $ERI_{blg} =  \sqrt{{a_{blg}} \over {a_{blgB}}} * {p_{blgB} \over p_{blg}}$
 
 where $a_{blgB}$ is area of minimal rotated bounding rectangle of a building (MBR) footprint and $p_{blgB}$ its perimeter of MBR. It is a measure of shape complexity identified by @basaraner2017 as the shape characters with the best performance.
 
-12. **Elongation of building** is denoted as
+12. **Elongation of a building** is denoted as
 
 (@eq_ssbElo) $Elo_{blg} =  \frac{l_{blgB}}{w_{blgB}}$
 
 where $l_{blgB}$ is length of MBR and $w_{blgB}$ is width of MBR. It captures the ratio of shorter to longer dimension of MBR to indirectly capture the deviation of the shape from a square [@schirmer2015].
 
-13. **Centroid - corner distance deviation of building** is denoted as
+13. **Centroid - corner distance deviation of a building** is denoted as
 
 (@eq_ssbCCD) $CCD_{blg} =  \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(ccd_{i}-\bar{ccd}\right)^{2}}$
 
 where $ccd_i$ is a distance between centroid and corner $i$ and $\bar{ccd}$ is mean of all distances. It captures the variety of shape. As corner is considered vertex with angle < 170º to reflect potential circularity of object and topological imprecision of building polygon.
 
-14. **Centroid - corner mean distance of building** is denoted as
+14. **Centroid - corner mean distance of a building** is denoted as
 
 (@eq_ssbCCM) $CCM_{blg} =\frac{1}{n}\left(\sum_{i=1}^{n} ccd_{i}\right)$
 
@@ -224,19 +203,19 @@ where $ccd_i$ is a distance between centroid and corner $i$. It is a character m
 
 *Spatial distribution* of a single building is captured by following three characters:
 
-15. **Solar orientation of building** is denoted as
+15. **Solar orientation of a building** is denoted as
 
 (@eq_stbOri) $Ori_{blg} = | o_{blgB} - 45 |$
 
 where $o_{blgB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions. There are multiple ways of capturing orientation of a polygon. As reported by @yan2007, @duchene2003 assessed five different options (longest edge, weighted bisector, wall average, statistical weighting, bounding rectangle) and concluded bounding rectangle as the most appropriate. Deviation from cardinal directions is used to avoid sudden changes between square-like objects.
 
-16. **Street alignment of building** is denoted as 
+16. **Street alignment of a building** is denoted as 
 
 (@eq_stbSAl) $SAl_{blg} = |Ori_{blg} - Ori_{edg}|$
 
 where $Ori_{blg}$ is a solar orientation of building and $Ori_{edg}$ is a solar orientation of street edge. It reflects the relationship between building and its street, whether it is facing the street directly or indirectly [@schirmer2015].
 
-17. **Cell alignment of building** is denoted as 
+17. **Cell alignment of a building** is denoted as 
 
 (@eq_stbCeA) $CAl_{blg} = |Ori_{blg} - Ori_{cell}|$
 
@@ -244,57 +223,57 @@ where $Ori_{cell}$ is a solar orientation of tessellation cell. It reflects the 
 
 These seventeen characters are capturing aspects of individual building (topological context 0). Following are measuring aspects of tessellation cells on the same level.
 
-18. **Longest axis length of tessellation cell** is denoted as
+18. **Longest axis length of a tessellation cell** is denoted as
 
 (@eq_sdcLAL) $LAL_{cell} = d_{cellC}$
 
 where $d_{cellC}$ is a diameter of minimal circumscribed circle around the tessellation cell polygon. The axis itself does not have to be fully within the polygon. It could be seen as a proxy of plot depth for tessellation-based analysis.
 
-19. **Area of tessellation cell** is denoted as
+19. **Area of a tessellation cell** is denoted as
 
 (@eq_sdcAre)  $a_{cell}$  
 
 and defined as an area covered by a tessellation cell footprint in m^2^.
 
-20. **Circular compactness of tessellation cell** is denoted as
+20. **Circular compactness of a tessellation cell** is denoted as
 
 (@eq_sscCCo)  $CCo_{cell} = \frac{a_{cell}}{a_{cellC}}$
 
 where $a_{cellC}$ is area of minimal enclosing circle. It captures the relation of tessellation cell footprint shape to its minimal enclosing circle, illustrating the similarity of a shape and circle.
 
-21. **Equivalent rectangular index of tessellation cell** is denoted as
+21. **Equivalent rectangular index of a tessellation cell** is denoted as
 
 (@eq_sscERI) $ERI_{cell} =  \sqrt{{a_{cell}} \over {a_{cellB}}} * {p_{cellB} \over p_{cell}}$
 
 where $a_{cellB}$ is area of minimal rotated bounding rectangle of a tessellation cell (MBR) footprint and $p_{cellB}$ its perimeter of MBR. It is a measure of shape complexity identified by @Basaraner2017 as a shape character of the best performance.
 
-22. **Solar orientation of tessellation cell** is denoted as
+22. **Solar orientation of a tessellation cell** is denoted as
 
 (@eq_stcOri) $Ori_{cell} = | o_{cellB} - 45 |$
 
 where $o_{cellB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions.
 
-23. **Street alignment of building** is denoted as 
+23. **Street alignment of a building** is denoted as 
 
 (@eq_stcSAl) $SAl_{cell} = |Ori_{cell} - Ori_{edg}|$
 
 where $Ori_{cell}$ is a solar orientation of tessellation cell and $Ori_{edg}$ is a solar orientation of street edge. It reflects the relationship between tessellation cell and its street, whether it is facing the street directly or indirectly.
 
-24. **Coverage area ratio of tessellation cell** is denoted as
+24. **Coverage area ratio of a tessellation cell** is denoted as
 
-(@eq_sicCAR) $CAR_{cell} = a_{blg} / a_{cell}$
+(@eq_sicCAR) $CAR_{cell} = \frac{a_{blg}}{a_{cell}}$
 
 where $a_{blg}$ is an area of building and $a_{cell}$ is an area of related tessellation cell [@schirmer2015]. Coverage area ratio (CAR) is one of the commonly used characters capturing *intensity* of development. However, the definitions vary based on the spatial unit.
 
-25. **Floor area ratio of tessellation cell** is denoted as
+25. **Floor area ratio of a tessellation cell** is denoted as
 
-(@eq_sicFAR) $FAR_{cell} = fa_{blg} / a_{cell}$
+(@eq_sicFAR) $FAR_{cell} = \frac{fa_{blg}}{a_{cell}}$
 
 where $fa_{blg}$ is a floor area of building and $a_{cell}$ is an area of related tessellation cell. Floor area could be computed based on the number of levels or using approximation based on building height.
 
 Following characters measure aspect related to street segment.
  
-26. **Length of street segment** is denoted as 
+26. **Length of a street segment** is denoted as 
 
 (@eq_sdsLen) $l_{edg}$
 
@@ -382,7 +361,7 @@ where $Ori_{blg}$ is the solar orientation of a building and $Ori_{blg_{i}}$ is 
 
 where $d_{blg, blg_i}$ is a distance between building and building $i$ on a neighbouring tessellation cell. Adapted from @hijazi2016. It captures the average proximity to other buildings.
 
-40. **Weighted neighbours of tessellation cell** is denoted as
+40. **Weighted neighbours of a tessellation cell** is denoted as
 
 (@eq_mtcWNe) $WNe_{cell} = \frac{\sum cell_n}{p_{cell}}$
 
@@ -448,7 +427,7 @@ where  $p_{blg_{adj}}$ is a length of exterior ring of a polygon composed of foo
 
 where $d_{blg, blg_i}$ is a distance between building and building $i$ on a tessellation cell within topological distance 3. Adapted from @caruso2017. It captures the average proximity between buildings.
 
-51. **‌Building adjacency	 of neighbouring buildings** is denoted as
+51. **‌Building adjacency of neighbouring buildings** is denoted as
 
 (@eq_ltcBuA) $BuA_{blg} = \frac{\sum blg_{adj}}{\sum blg}$
 
@@ -472,7 +451,7 @@ where $\sum blk$ is a number of blocks within topological distance 3 and $a_{cel
 
 and defined as an area covered by a block footprint in m^2^.
 
-55. **Perimeter of building** is denoted as
+55. **Perimeter of a block** is denoted as
 
 (@eq_ldkPer) $p_{blk}$
 
@@ -514,7 +493,7 @@ where $\sum blk_n$ is a number of block neighbours and $p_{blk}$ is a perimeter 
 
 where $\sum cell$ is number of cells composing a block and a_{blk} is an area of a block. It captures granularity of each block.
 
-62. **Meshedness of a street network** is denoted as 
+62. **Local meshedness of a street network** is denoted as 
 
 (@eq_ldcMes) $Mes_{node}= \frac{e-v+1}{2 v-5}$
 
@@ -532,7 +511,7 @@ where $l_{edg_i}$ is a length of a street segment $i$ within a topological dista
 
 where $l_{edg_i}$ is a length of a street segment $i$ within a topological distance 3 around a node.
 
-65. **Reached cells by a street network segments** is denoted as
+65. **Reached cells by street network segments** is denoted as
 
 (@eq_ldsRea) $RC_{edg} = \sum_{i=1}^{n} cells_{edg_i}$
 
@@ -544,13 +523,13 @@ where $cells_{edg_i}$ is number of tessellation cells on segment $i$ within topo
 
 where $\sum node$ is a number of nodes within a subgraph and $l_{edg_i}$ is a lengths of a segment $i$ within a subgraph. A subgraph is defined as a network within topological distance 5 around a node.
 
-67. **Reached cells by a street network nodes** is denoted as
+67. **Reached cells by street network nodes** is denoted as
 
 (@eq_lddRea) $RC_{node} = \sum_{i=1}^{n} cells_{node_i}$
 
 where $cells_{node_i}$ is number of tessellation cells on node $i$ within topological distance 3. It captures accessible granularity.
 
-68. **Reached area by a street network nodes** is denoted as
+68. **Reached area by street network nodes** is denoted as
 
 (@eq_lddARe) $a_{node_{net}} = \sum_{i=1}^{n} a_{node_i}$
 
@@ -593,66 +572,82 @@ where $d(v, u)$ is the shortest-path distance between $v$ and $u$, and $n$ is th
 where $q_v(u,w)$ are the number of common neighbours of $u$ and $w$ other than $v$ (ie squares), and $a_v(u,w) = (k_u - (1+q_v(u,w)+\theta_{uv}))(k_w - (1+q_v(u,w)+\theta_{uw}))$,
 where $\theta_{uw} = 1$ if $u$ and $w$ are connected and 0 otherwise [@PhysRevE.72.056127].
 
-ADD KEY TO CHARACTERS IDS
+TABLE HERE
 
-The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is non-overlapping and does not contain logically correlated characters. As such, it should provide unbiased and non-skewed description of each of the elements.
+The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is a result of identification process proposed above. As such, it should provide unbiased and non-skewed description of each of the elements.
 
 #### Contextual characters
-Looking at the primary characters and their spatial distribution, they could be really abrupt and do not necessarily capture urban patterns as they are (even though all capture some patterns as per spatial autocorrelation). Two illustrations of such an abrupt change and the weak pattern description are XXX (fig) and YYY (fig). [TODO: ADD EXAMPLES AND THEIR DESCRIPTION]
+Looking at the primary characters and their spatial distribution, they could be really abrupt and do not necessarily capture urban patterns as we would like them to (even though all capture some patterns as per spatial autocorrelation). 
 
-To become useful for pattern detection within DHC recognition model, most of the characters defined above has to be expressed using their contextual versions. *Context* here is defined as neighbourhood of each tessellation cell within 3 topological steps on MT. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis). Contextual character is then capturing a central tendency or a distribution of a primary character within a set context.
+To become useful for pattern detection within DHC recognition model which does not employ direct spatial constraints, most of the characters defined above has to be expressed using their contextual versions. *Context* here is defined as a neighbourhood of each tessellation cell within three topological steps on morphological tessellation. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing a balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis). 
 
-Within this method, four types of contextual characters are proposed. One capturing a local central tendency and three capturing the various kinds of diversity of values within the context. For each of the primary characters, each of the contextual is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextual characters. Test Fig \ref{fig:testfig}.
-
-\newpage
-\thispagestyle{empty}
-\newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
-\begin{figure}[h]
-	\makebox[\linewidth]{
-		\includegraphics[width=\textwidth]{source/figures/ch7/tst.png}
-	}
-	\caption[Short version caption test]{Within this method, four types of contextual characters are proposed. One capturing a local central tendency and three capturing the various kinds of diversity of values within the context. For each of the primary characters, each of the contextual is then calculated and then used within clustering algorithm itself.}
-	\label{fig:testfig}
-\end{figure}
-\restoregeometry
-
+Within this method, four types of contextual characters are proposed. One capturing a local central tendency and three capturing the properties of the distribution of values within the context. For each of the primary characters, each of the contextual is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextual characters.
 
 ##### Local central tendency
-Statistics knows central tendency as a measure of a typical value for a probabilistic distribution [Weisberg H.F (1992) Central Tendency and Variability, Sage University Paper Series on Quantitative Applications in the Social Sciences, ISBN 0-8039-4007-6 p.2]. Having a set of data of unknown distribution, central tendency aims to simplify the whole set into one representative number. In the case of morphometric characters, we can measure central tendency of values of a single character across the whole case study, but that would not give us much information. As contextual characters are defined on three topological steps, it is proposed to measure *local central tendency*, thus a value unique for each building measured as a typical within its immediate context.
+Statistics knows central tendency as a measure of a typical value for a probabilistic distribution [@weisberg1992central, p.2]. Having a set of data of unknown distribution, central tendency aims to simplify the whole set into one representative number. In the case of morphometric characters, we can measure central tendency of values of a single character across the whole case study, but that would not give us much information. As contextual characters are defined on three topological steps, it is proposed to measure *local central tendency*, thus a value unique for each building measured as a typical within its immediate context.
 
 Commonly used measures of central tendency are mean, median or mode. Each of them fits a different purposes. To use arithmetic mean to determine central values, underlying distribution should not be skewed, otherwise outliers may significantly affect the resulting value. Mode is, by definition, not suitable for continuous variables like those obtained in primary characters. Median is the most robust of all, measuring the middle value. However, the robustness comes at a cost - the distribution is not reflected at all. Another option is to find a middle ground between easily distorted mean and robust median using truncated mean. Instead of computing arithmetic mean of the whole distribution, we can work with interquartile (smallest and largest 25% are omitted) or interdecile (smallest and largest 10% are omitted) range to minimise the outlier effect on the mean.  
 
-The distribution of values of individual characters vary and in some cases tends to be skewed. As shown in Appendix XXX analysing the difference between mean, interdecile mean, interquartile mean and median (being equal to extremely truncated mean) on a selection of 8 characters, it is clear, that majority of data is rather asymmetric, causing volatility of mean, which should not be used in such cases. The question is then limited to the distinction between median and truncated means (leaving aside midhinge and similar estimators). The data indicate, that the difference between median and interquartile mean is minimal (but still present, e.g., in the case of *shared walls ratio*). As interquartile mean uses more information than median, while being similarly robust to outliers, this research settles on implementation of interquartile mean as a measure of local central tendency.
+The distribution of values of individual characters vary and in some cases tends to be skewed. As shown in Appendix XXX analysing the difference between mean, interdecile mean, interquartile mean and median (being equal to extremely truncated mean) on a selection of 8 characters, it is clear, that majority of data is rather asymmetric, causing volatility of mean, which should not be used in such cases. The question is then limited to the distinction between median and truncated means (leaving aside midhinge and similar estimators). The data indicate, that the difference between median and interquartile mean is minimal (but still present, e.g., in the case of *shared walls ratio*). As interquartile mean uses more information than median, while being similarly robust to outliers, this research settles on implementation of interquartile mean as a measure of local central tendency, denoted as
 
-##### Diversity as a statistical dispersion
-Apart from local central tendency, which aims to capture representative value, it is fundamental to understand how the actual distribution of values within the context looks like. In other words, to capture the diversity of each of the characters. While discussion on importance of  diversity has been central to urban discourse since the era of Jane Jacobs (REF), as shown in the chapter 3, there is not very wide range of characters actually measuring diversity and focus mostly on Simpson's diversity index, originally developed for categorical, not continuous variables and hence relies on pre-defined “bins” (classes of values). For example, @bobkova2017a use this index to measure the diversity of plot sizes, but their binning into intervals based on the actual case-specific values makes the comparability of outcomes limited: if we apply the same formula to another place, we will get different binning. This appears to be a rather ubiquitous problem in applying the Simpson’s diversity index, i.e., it is necessary to set a finite set of pre-established bins prior to undertaking the analysis. However despite the need for urban morphology analysis to produce comparable outcomes, it is difficult to ensure specific descriptiveness to “universal” predefined bins. The use of the Simpson’s diversity index in ecology is encouraged [@jost2006] because ecologists have a finite number of groups enabling them to pre-define all bins appropriately (moreover, bins are usually not defined on a continuous numerical scale), however this is not often the case in urban morphology. The Simpson's diversity index and similar based on binning  provide values specific to individual cases where binning was set and has to be interpreted as such.
+(@eq_iqm) $IQM_{ch} = \frac{2}{n} \sum_{i=\frac{n}{4}+1}^{\frac{3 n}{4}} ch_{i}$,
 
-Recent literature shows that we now have alternative ways to measure the diversity of morphological characters. @caruso2017 applied the Local Index of Spatial Autocorrelation (LISA) in a form of local Moran’s I, defined as “the weighted product of the difference to the mean of the value of a variable at a certain observation and the same difference for all other observations, with more weight given to the observations in close spatial proximity.“ [@caruso2017, p.84] LISA aims to identify clusters of similar values in space, describing their similarity or dissimilarity, which could be seen as a proxy for diversity, but due to limited number of significant categories (4), its application is limited and rather reductionist.
+where $ch$ is selected primary character. Formula assumes sorted values. 
 
-Another approach grounds the diversity character on the statistical distribution of all measured values and compares it to the ideal distribution. One example is a test whether such distribution follows the principle of the Power Law used by @salat2017, but that is a not straightforward measurement, especially if the distribution is of different shape. Another is an application of the Gini index initially used to measure inequality or entropy-based indices. In the case of diversity, the more unequal the distribution is, the more diverse. Since none of these measurements requires pre-defined grouping, they resolve the problem of binning highlighted above with reference to the Simpson’s diversity index.
+##### Properties of a distribution
+Apart from local central tendency (in the geographical context sometimes present in literature also as a moving window average), which aims to capture representative value, it is fundamental to understand how the actual distribution of values within the *context* looks like. 
 
-Moreover, diversity of continuous variables could be seen as a statistical dispersion, i.e., the ratio to which the distribution is stretched (wide distribution) or squeezed (narrow distribution). Together with central tendency, dispersion is often used to describe the distribution.
+That could be approached in multiple ways. Three notable are 1) capturing the *diversity* of values within the local context, 2) measuring the *statistical dispersion* of values, and 3) measuring *similarity of a target and an actual distribution* of values, like in the case of inequality.
 
-There are multiple ways of measuring dispersion. The most used are probably standard deviation, range or interquartile range as examples of *dimensional* (resulting value have the same units as initial character) measures. Other options would be *dimensionless* (resulting values have no units) and to include Simpson's diversity index mentioned above, *binned* measures. To understand their properties and behaviour on the real morphometric data, wide selection of most relevant from each group is analysed as a way of selecting the most appropriate measures of dispersion/diversity to be used as contextual characters.
+While discussion on importance of diversity has been central to urban discourse since the era of Jane Jacobs (REF), there is not very wide range of characters actually measuring diversity. The research focus mostly on Simpson's diversity index, originally developed for categorical, not continuous variables and hence relying on pre-defined “bins” (classes of values). For example, @bobkova2017a use this index to measure the diversity of plot sizes, but their binning into intervals based on the actual case-specific values makes the comparability of outcomes limited: if we apply the same formula to another place, we will get different binning and different results. This appears to be a rather ubiquitous problem in applying the Simpson’s diversity index, i.e., it is necessary to set a finite set of pre-established bins prior to undertaking the analysis. However despite the need for urban morphometric analysis to produce comparable outcomes, it is difficult to ensure specific descriptiveness to “universal” predefined bins. The use of the Simpson’s diversity index in ecology is encouraged [@jost2006] because ecologists have a finite number of groups enabling them to pre-define all bins appropriately (moreover, bins are usually not defined on a continuous numerical scale), however this is not often the case in urban morphology. The Simpson's diversity index and similar characters based on binning provide values specific to individual cases where binning was set and has to be interpreted as such.
 
-Dimensional measures of dispersion are the most common as they are generally easy to understand and interpret. Similarly to measure of central tendency, all van be measure on the full range of values or on limited, usually again as interquartile (IQ) or interdecile (ID) range. In the analysis are included *standard deviation (SD)*, *range*, and *absolute deviations (median - MAD, average - AAD)*. Both standard deviation and range is measured for IQ, ID and unrestricted range of values. Dimensionless measures are not expressed in the same units as original characters, so while dimensional measure of dispersion for building area will be in meters, dimensionless will have no units (the values are relative). Included are *coefficient of variation (CoV)*, *quartile coefficient of dispersion (QCoD)*, *Gini index*, and *Theil index * (a special case of the generalised entropy index). In terms of binned measures, the key question is not which one should be used, either Simpson's diversity index as in @bobkova2017a or Gini-Simpson diversity index as in Feliciotti (REF), but how to define binning as that can significantly affect the resulting diversity values. For that reason, Simpson's diversity is tested using *natural breaks* REF (number of classes is based on the Goodness of Absolute Deviation Fit (GADF)), *Head Tail breaks* [@jiang2013] Goodness of Absolute Deviation Fit and *quantiles* (5 and 10 bins). Details of the implementation of each are in table \ref{diversity_table} below. The reason for inclusion of Simpson's diversity index, even though it may not be fully comparable across cases is the fact that DHC recognition is always local, always case-specific. However, using the values in further profiling and comparison of clusters across cases (identified separately) might lead to misleading results.
+Recent literature shows that there might be alternative ways to measure the diversity of morphological characters. @caruso2017 applied the Local Index of Spatial Autocorrelation (LISA) in a form of local Moran’s I, defined as “the weighted product of the difference to the mean of the value of a variable at a certain observation and the same difference for all other observations, with more weight given to the observations in close spatial proximity.“ [@caruso2017, p.84] LISA aims to identify clusters of similar values in space, describing their similarity or dissimilarity, which could be seen as a proxy for diversity, but due to limited number of significant categories (4), its application in this context is limited and rather reductionist.
 
-*ADD Description of characters*
+The second approach is to measure statistical dispersion, i.e., the ratio to which the distribution is stretched (wide distribution) or squeezed (narrow distribution). Together with the central tendency, dispersion is often used to describe the basic properties of distributions.
 
-Using four morphometric characters as test data - building area, building height, covered area ratio and floor area ratio, all potential measures of diversity listed in table \ref{diversity_table} were measured on three topological steps around each building. Second steps was a visual assessment of resulting maps to eliminate those unfit for pattern recognition, either for relative randomness of result or significant outlier effect (typically present in measures based on unrestricted range of values) (figure XXX). Then was built a correlation matrix of remaining measures for each of the characters and assessed to identify potential overlaps and uniqueness of values. Illustrative correlation matrix\footnote{Complete results of the analysis are available as an Appendix XXX.} based on building area (figure XXX) indicates that intra-group correlation is significant, while correlation between groups less so, suggesting that each of the groups capture different information. For that reason, it might be worth identifying the most suitable of each group and using all three of them as contextual characters to obtain rich description of underlying distribution of values.
+There are multiple ways of measuring dispersion. The most used are probably standard deviation, range or interquartile range as examples of *dimensional* (resulting value have the same units as initial character) measures. Dimensional measures of dispersion are the most common as they are generally easy to understand and interpret. Similarly to measure of central tendency, all can be measured on the full range of values or on a limited one, usually again as interquartile (IQ) or interdecile (ID) range. Dimensionless measures are not expressed in the same units as original characters, so while dimensional measure of dispersion for building area will be in meters, dimensionless will have no units (the values are relative). Among dimensionless measures are coefficient of variation (CoV) or quartile coefficient of dispersion (QCoD).
 
-###### Selected diversity characters
-Complete analysis of selected measured is available in an appendix XXX. Within dimensional measures, IQ range and IQ SD are better in capturing boundaries between types of development and are robust to outliers. Interquartile range was used by @dibble2017 and is easier to interpret, hence has been chosen as a representative of the dimensional category to be used as contextual character.
+The third approach focuses on the comparison of an actual distribution and the ideal distribution. One example is a test whether such a distribution follows the principle of the Power Law used by @salat2017. However, that is a not a straightforward measurement, especially if the distribution is of a different shape it is hard to quantify the relationship. Specific distribution is also an embedded in the Gini index REF normally used to measure inequality or indirectly in entropy-based indices like Theil index of inequality (a special case of the generalised entropy index) REF.
 
-Differences between tested dimensionless measures are very minor with selection from Theil index, Gini index and Coefficient of Variation, all based on ID or IQ values. Due to tis definition, CoV will tends to infinity when the mean value tends to zero, being very sensitive to changes of mean. Theil index and Gini index are both used to asses inequality, but Theil index, unlike Gini, is decomposable to within-group inequality and between-group differences, making it more suitable for spatial analysis than Gini index would be. ID values used within Theil index are better as the resulting analysis is more sensitive, while outlier effect is still minimal. ID captures, for example, inner structures of blocks better than IQ, where such a structures might be filtered out. In fact, it may help distinguishing between blocks with and without internal buildings, hence second contextual character will be *interdecile Theil index*.
+###### Comparison of potential characters
+To understand their properties and behaviour on the real morphometric data, wide selection of the most relevant characters from each group is analysed as a way of selecting the most appropriate ones to be used as contextual characters.
 
-I terms of Simpson's diversity index, due to the fact that most of the values follow power-law (or similar exponential) distribution within the whole dataset, binning method has to acknowledge that. For that reason, HeadTail Breaks are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
+In terms of diversity measures, the key question is not which one should be used, either Simpson's diversity index as in @bobkova2017a or Gini-Simpson diversity index as in Feliciotti (REF), but how to define binning as that can significantly affect the resulting diversity values. For that reason, Simpson's diversity is tested using *natural breaks* REF (number of classes is based on the Goodness of Absolute Deviation Fit (GADF)REF), *Head Tail breaks* [@jiang2013] and *quantiles* (5 and 10 bins).
 
-The final selection of contextual characters is then composed of four distinct uncorrelated characters. Local central tendency is captured by *interquartile mean (IQM)* and describe the most representative value. Then there are three characters describing the distribution of values within the local context. *Interquartile range (IQR)* as dimensional character of diversity captures the range of values around IQM, capturing where the values mostly lie. *Interdecile Theil index (IDT)* describes the equality of distribution of values and *Simpson's diversity index (SDI)* captures the presence of various classes of values within the context. Together, these four characters have a potential to describe spatial distribution of morphometric values within a set context.
+Dimensional characters capturing dispersion included in comparison are *standard deviation (SD)*, *range*, and *absolute deviations (median - MAD, average - AAD)*. Both standard deviation and range is measured for IQ, ID and unrestricted range of values. Included dimensionless characters are *coefficient of variation (CoV)*, *quartile coefficient of dispersion (QCoD)*.
+
+The last group is represented by both *Gini index*, and *Theil index *, both measured for IQ, ID and unrestricted range of values.
+ 
+The reason for inclusion of Simpson's diversity index, even though it may not be fully comparable across cases is the fact that DHC recognition is always local, always case-specific. However, using the values in further profiling and comparison of clusters across cases (identified separately) might lead to misleading results.
+
+Using four morphometric characters as test data - *area of a building*, *height of a building*, *coverage area ratio of tessellation cell* and *floor area ratio of tessellation cell*, all potential contextual characters listed above are measured on three topological steps around each building. Resulting spatial distribution are visually assessed to eliminate those unfit for pattern recognition, either for relative randomness of result or significant outlier effect (typically present in measures based on unrestricted range of values). Finally, a correlation matrix is used to identify potential overlaps and uniqueness of values leading to the selection of optimal contextual characters. 
+
+###### Resulting selection of contextual characters
+Whilst the complete results of analysis are available as Appendix XXX, the main conclusions are as follows.
+
+Due to the fact that most of the values follow exponential (power-law or similar) distribution within the whole dataset, binning method for Simpson's diversity index has to acknowledge that. For that reason, HeadTail Breaks are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those characters which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
+  
+Within measures of statistical dispersion, IQ range and IQ SD are better in capturing boundaries between types of development and are robust to outliers. Interquartile range was used by @dibble2017 and is easier to interpret. Due to its definition, CoV will tends to infinity when the mean value tends to zero, being very sensitive to changes of mean.
+
+Theil index and Gini index are both used to asses inequality, but Theil index, unlike Gini, is decomposable to within-group inequality and between-group differences REF, making it more suitable for spatial analysis than Gini index would be. ID values used within Theil index are better that other ranges as the resulting analysis is more sensitive, while outlier effect is still minimal. ID captures, for example, inner structures of blocks better than IQ, where such a structures might be filtered out. In fact, it may help distinguishing between blocks with and without internal buildings.
+
+The final selection of contextual characters is then composed of four distinct uncorrelated characters. Local central tendency is captured by *interquartile mean (IQM)* and describe the most representative value.  Local measure of statistical dispersion is represented by *Interquartile range (IQR)* as dimensional character which expresses the range of values around IQM, indicating where the values mostly lie. IQR is denoted as
+
+(@eq_iqr) $IQR_{ch} = Q3_{ch} - Q1_{ch}$,
+
+where $Q3_{ch}$ is third quartile of selected primary character and $Q1_{ch}$ first quartile. Formula assumes sorted values. *Interdecile Theil index (IDT)* denoted as
+
+(@eq_theil) $IDT_{ch} = \sum_{i=1}^n \left( \frac{ch_i}{\sum_{i=1}^n ch_i} \ln \left[ N \frac{ch_i}{\sum_{i=1}^n ch_i}\right] \right)$,
+
+where $ch$ is selected primary character, and describes the (in)equality of distribution of values. Finally, *Simpson's diversity index (SDI)* denotes as 
+
+(@eq_simpson) $SDI_{ch} = \frac{\sum_{i=1}^{R} n_{i}\left(n_{i}-1\right)}{N(N-1)}$,
+
+where $R$ is richness expressed as number of bins, $n_i$ is the number of features the $i$th type and $N$ is the total number of features. It captures the presence of various classes of values. Together, these four characters have a potential to describe spatial distribution of morphometric values within a set context.
 
 After linking together primary and contextual characters, each of the primary 74 characters is represented by all four contextual, based on the values measured within three topological steps on morphological tessellation around each building. That gives 296 contextual characters in total, the set which is spatially autocorrelated by definition and hence can be used within clustering method to identify distinct homogenous clusters. The fact that all input data for clustering are measured using this *cookie-cutter* method ensures that spatial clusters should be geographically coherent and mostly continuous. Such a nature of data allows use of spatially unconstrained clustering methods. That is important as spatially constrained clustering is less developed and mostly unfit for datasets of the size this research works with.
 
-To sum up, after selection of primary morphometric characters from literature and their adaptation to fit *relational model of urban form*, the set of 74 characters is established to cover wide range of descriptive features capturing urban form configuration from dimensions of individual elements, through spatial distribution to diversity. To describe a central tendency in the area capturing morphological patterns, rather than description of individual elements, four contextual characters are introduced. These, combined, have a potential to capture the nature of each of the primary characters and its behaviour in the immediate spatial context. Thanks to their autocorrelated design, contextual characters can then be fed into the unsupervised machine learning procedure aiming to distinguish distinct homogenous clusters.
+Importance of the proper selection of morphometric characters and the effect it may have on the overall results in not debatable. To minimise the potential error in selection, a robust method described above is employed starting from the selection of primary morphometric characters from literature and their adaptation to fit *relational model of urban form*. The resulting set of 74 characters is established to cover wide range of descriptive features capturing urban form configuration from dimensions of individual elements, through spatial distribution to diversity. To describe a local central tendency and variation in the area capturing morphological patterns, rather than description of individual elements, four contextual characters are introduced. These, combined, have a potential to capture the nature of each of the primary characters and its behaviour in the immediate spatial context. Thanks to their autocorrelated design, contextual characters can then be fed into the unsupervised machine learning procedure aiming to distinguish distinct homogenous clusters.
 
 \newpage
 
@@ -705,7 +700,7 @@ The preliminary tests of PCA on the complete dataset of contextual characters sh
 Difference between 296 dimensions of original dataset and 160 dimensions to keep at least 95% of variance might offer reduce computational demands, but at the same time complicates interpretation of clusters where each of the 147 components is a black box without a morphological meaning. It is expected that GMM will be able to handle 296 dimension, even though the computation might require more resources. The decision for the purpose of this research is to skip dimensionality reduction, unless GMM proves to struggle to identify clusters. In the further development of the method, it may be helpful to employ PCA, however that is left for future exploration.
 
 #### Levels of DHC resolution and its scalability
-The ideal outcome of DHC recognition is each cluster as a distinct urban tissue. However, the definition of urban tissue does not specify the threshold when two similar parts of the city are still the same tissue type and when they become different one. This issue is actually mirrored in the clustering method. The ideal outcome of clustering is the optimal number of clusters based on the actual structure of the observed data. That might not be straightforward to determine as better-looking clustering (from the statistical, not visual perspective) might be just overfitted. Moreover, the relation between resulting clusters and urban tissues is always questionable as there is no ground truth for either of them. Detecting 5 large cluster in the whole Prague would likely be based on under-fitted model and cluster would not represent urban tissues in traditional sense, but their aggregations. On the other hand, detecting 100 would likely represent over-fitted model and each cluster would be only a part of a tissue. It is expected that statistically optimal number of clusters should be close to what we would normally call urban tissue, however this link require further interpretative work, which should happen based on taxonomy of DHC to allow scalar flexibility. For that reason, this section focuses on the first part, i.e. detection of optimal number of clusters, and section XX in following chapter 8 discuss the relationship between tissue and DHC in detail.
+The ideal outcome of DHC recognition is each cluster as a distinct urban tissue. However, the definition of urban tissue does not specify the threshold when two similar parts of the city are still the same tissue type and when they become different one. This issue is actually mirrored in the clustering method. The ideal outcome of clustering is the optimal number of clusters based on the actual structure of the observed data. That might not be straightforward to determine as better-looking clustering (from the statistical, not visual perspective) might be just overfitted. Moreover, the relation between resulting clusters and urban tissues is always questionable as there is no ground truth for either of them. Detecting 5 large cluster in the whole Prague would likely be based on under-fitted model and cluster would not represent urban tissues in traditional sense, but their aggregations. On the other hand, detecting 100 would likely represent over-fitted model and each cluster would be only a part of a tissue. It is expected that statistically optimal number of clusters should be close to what we would normally call urban tissue, however this link require further interpretative work, which should happen based on taxonomy of DHC to allow scale-dependent flexibility. For that reason, this section focuses on the first part, i.e. detection of optimal number of clusters, and section XX in following chapter 8 discuss the relationship between tissue and DHC in detail.
 
 ##### Number of components
 Gaussian Mixture Model clustering requires, similarly to k-means, specification of number of components of the model (i.e., clusters) prior clustering. However, that number is usually not known, especially in the case of urban form. Assumptions can be made based on the expert knowledge, but that would limit the application and unsupervised nature of the whole process and go essentially against the prepositions set in chapter 5.
