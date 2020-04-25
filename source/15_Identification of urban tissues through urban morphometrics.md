@@ -115,7 +115,7 @@ The set of taxonomic characters has to be balanced regarding the scale as well a
 The process of selection itself starting from the database retrieved from chapter 3 is available as Annex 2. It includes details of each decision on which characters should be part of the final set and why. Following section describes the final set of 74 primary characters only.
 
 ##### Identified set of primary characters
-Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For the implementation details please refer to the original referred work and to the documentation and code of momepy, which contains Python-based implementation of each character. On top of the definition and related formulas below, classification of characters and references are in the table XXX.
+Based on the principles described in the section above, following morphometric characters compose the final set of primary characters. For the implementation details please refer to the original referred work and to the documentation and code of momepy, which contains Python-based implementation of each character. On top of the definition and related formulas below, classification of characters and references are in the Appendix XXX.
 
 1. **Area of a building** is denoted as
 
@@ -201,21 +201,19 @@ where $ccd_i$ is a distance between centroid and corner $i$ and $\bar{ccd}$ is m
 
 where $ccd_i$ is a distance between centroid and corner $i$. It is a character measuring dimension of the object dependent on its shape  [@schirmer2015].
 
-*Spatial distribution* of a single building is captured by following three characters:
-
 15. **Solar orientation of a building** is denoted as
 
 (@eq_stbOri) $Ori_{blg} = | o_{blgB} - 45 |$
 
 where $o_{blgB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions. There are multiple ways of capturing orientation of a polygon. As reported by @yan2007, @duchene2003 assessed five different options (longest edge, weighted bisector, wall average, statistical weighting, bounding rectangle) and concluded bounding rectangle as the most appropriate. Deviation from cardinal directions is used to avoid sudden changes between square-like objects.
 
-16. **Street alignment of a building** is denoted as 
+16. **Street alignment of a building** is denoted as
 
 (@eq_stbSAl) $SAl_{blg} = |Ori_{blg} - Ori_{edg}|$
 
 where $Ori_{blg}$ is a solar orientation of building and $Ori_{edg}$ is a solar orientation of street edge. It reflects the relationship between building and its street, whether it is facing the street directly or indirectly [@schirmer2015].
 
-17. **Cell alignment of a building** is denoted as 
+17. **Cell alignment of a building** is denoted as
 
 (@eq_stbCeA) $CAl_{blg} = |Ori_{blg} - Ori_{cell}|$
 
@@ -253,7 +251,7 @@ where $a_{cellB}$ is area of minimal rotated bounding rectangle of a tessellatio
 
 where $o_{cellB}$ is an orientation of the longest axis of bounding rectangle in a range 0 - 45. It captures the deviation of orientation from cardinal directions.
 
-23. **Street alignment of a building** is denoted as 
+23. **Street alignment of a building** is denoted as
 
 (@eq_stcSAl) $SAl_{cell} = |Ori_{cell} - Ori_{edg}|$
 
@@ -272,32 +270,32 @@ where $a_{blg}$ is an area of building and $a_{cell}$ is an area of related tess
 where $fa_{blg}$ is a floor area of building and $a_{cell}$ is an area of related tessellation cell. Floor area could be computed based on the number of levels or using approximation based on building height.
 
 Following characters measure aspect related to street segment.
- 
-26. **Length of a street segment** is denoted as 
+
+26. **Length of a street segment** is denoted as
 
 (@eq_sdsLen) $l_{edg}$
 
 and defined as a length of a `LineString` geometry in metres [@dibble2017; @gil2012].
 
-27. **Width of a street profile** is denoted as 
+27. **Width of a street profile** is denoted as
 
 (@eq_sdsSPW) $w_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} w_{i}\right)$
 
 where $w_{i}$ is width of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value. In case of open-ended street, 50 metres is used as a perception-based proximity limit [@araldi2019].
 
-28. **Height of a street profile** is denoted as 
+28. **Height of a street profile** is denoted as
 
 (@eq_sdsSPH) $h_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} h_{i}\right)$
 
 where $h_{I}$ is mean height of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value [@araldi2019].
 
-29. **Height/width ratio of a street profile** is denoted as 
+29. **Height to width ratio of a street profile** is denoted as
 
 (@eq_sdsSPR) $HWR_{sp} = \frac{1}{n}\left(\sum_{i=1}^{n} \frac{h_{i}}{w_{i}}\right)$
 
 where $h_{I}$ is mean height of a street section i and $w_{i}$ is width of a street section i. Algorithm generates street sections every 3 meters alongside the street segment and measures mean value [@araldi2019].
 
-30. **Openness of a street profile** is denoted as 
+30. **Openness of a street profile** is denoted as
 
 (@eq_sdsSPO) $Ope_{sp} = 1 - \frac{\sum hit}{2\sum sec}$
 
@@ -305,13 +303,13 @@ where $\sum hit$ is sum of section lines (left and right sides separately) inter
 
 31. **Width deviation of a street profile** is denoted as
 
-(@eq_sdsSWD) $wd_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(w_{i}-w_{sp}\right)^{2}}$
+(@eq_sdsSWD) $wDev_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(w_{i}-w_{sp}\right)^{2}}$
 
 where $w_{i}$ is width of a street section i and $w_{sp}$ is mean width. Algorithm generates street sections every 3 meters alongside the street segment.
 
 32. **Height deviation of a street profile** is denoted as
 
-(@eq_sdsSHD) $hd_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(h_{i}-h_{sp}\right)^{2}}$
+(@eq_sdsSHD) $hDev_{sp} = \sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(h_{i}-h_{sp}\right)^{2}}$
 
 where $h_{i}$ is height of a street section i and $h_{sp}$ is mean height. Algorithm generates street sections every 3 meters alongside the street segment.
 
@@ -333,15 +331,11 @@ where $a_{cell_i}$ is area of tessellation cell $i$ belonging to the street segm
 
 where $\sum blg$ is a number of buildings belonging to a street segment and $l_{edg}$ is a length of a street segment. It reflects the granularity of development along each segment.
 
-The last character measured on topological distance 0 is based on street node.
-
 36. **Area covered by a street node** is denoted as
 
 (@eq_sddAre) $a_{node} = \sum_{i=1}^{n} a_{cell_i}$
 
 where $a_{cell_i}$ is area of tessellation cell $i$ belonging to the street node. It captures the area which is likely served by each node.
-
-Characters 37 and above take into account more than a single element, reflecting the relationship between them in a set context.
 
 37. **Shared walls ratio of adjacent buildings** is denoted as
 
@@ -379,19 +373,19 @@ where $a_{cell_i}$ is area of tessellation cell $i$ within topological distance 
 
 where $cells_{edg_i}$ is number of tessellation cells on segment $i$ within topological distance 1. It captures accessible granularity.
 
-43. **Reached cells by neighbouring segments** is denoted as
+43. **Reached area by neighbouring segments** is denoted as
 
 (@eq_mdsAre) $a_{edg_n} = \sum_{i=1}^{n} a_{edg_i}$
 
 where $a_{edg_i}$ is an area covered by a street segment $i$ within topological distance 1. It captures accessible area.
 
-44. **Degree of a street node** is denoted as 
+44. **Degree of a street node** is denoted as
 
 (@eq_mtdDeg) $deg_{node_i} = \sum_{j} edg_{i j}$
 
 where $edg_{i j}$ is an edge of a street network between node $i$ and node $j$. It reflects the basic degree centrality.
 
-45. **Mean distance to neighbouring nodes from a street node** is denoted as 
+45. **Mean distance to neighbouring nodes from a street node** is denoted as
 
 (@eq_mtdMDi) $MDi_{node} = \frac{1}{n} \sum_{i=1}^{n} d_{node, node_i}$
 
@@ -419,7 +413,7 @@ where $NCo_{blg_{adj}}$ is a number of interior rings of a polygon composed of f
 
 (@eq_ldbPWL) $p_{blg_{adj}}$
 
-where  $p_{blg_{adj}}$ is a length of exterior ring of a polygon composed of footprints of adjacent buildings. 
+where  $p_{blg_{adj}}$ is a length of exterior ring of a polygon composed of footprints of adjacent buildings.
 
 50. **Mean inter-building distance	between neighbouring buildings** is denoted as
 
@@ -467,7 +461,7 @@ where $a_{blkC}$ is area of minimal enclosing circle. It captures the relation o
 
 (@eq_lskERI) $ERI_{blk} =  \sqrt{{a_{blk}} \over {a_{blkB}}} * {p_{blkB} \over p_{blk}}$
 
-where $a_{blkB}$ is area of minimal rotated bounding rectangle of a block (MBR) footprint and $p_{blkB}$ its perimeter of MBR. 
+where $a_{blkB}$ is area of minimal rotated bounding rectangle of a block (MBR) footprint and $p_{blkB}$ its perimeter of MBR.
 
 58. **Compactness-weighted axis of a block** is denoted as
 
@@ -487,19 +481,19 @@ where $o_{blkB}$ is an orientation of the longest axis of bounding rectangle in 
 
 where $\sum blk_n$ is a number of block neighbours and $p_{blk}$ is a perimeter of a block. It reflects granularity of a mesh of blocks.
 
-61. **‌Weighted cells of a block** is denoted as 
+61. **‌Weighted cells of a block** is denoted as
 
 (@eq_likWBB) $wC_{blk} = \frac{\sum cell}{a_{blk}}$
 
 where $\sum cell$ is number of cells composing a block and a_{blk} is an area of a block. It captures granularity of each block.
 
-62. **Local meshedness of a street network** is denoted as 
+62. **Local meshedness of a street network** is denoted as
 
 (@eq_ldcMes) $Mes_{node}= \frac{e-v+1}{2 v-5}$
 
 where $e$ is a number of edges in a subgraph and $v$ is the number of nodes in a subgraph [@feliciotti2018]. A subgraph is defined as a network within topological distance 5 around a node.
 
-63. **Mean segment length of a street network** is denoted as 
+63. **Mean segment length of a street network** is denoted as
 
 (@eq_ldsMSL) $MSL_{edg} = \frac{1}{n} \sum_{i=1}^{n} l_{edg_i}$
 
@@ -525,7 +519,7 @@ where $\sum node$ is a number of nodes within a subgraph and $l_{edg_i}$ is a le
 
 67. **Reached cells by street network nodes** is denoted as
 
-(@eq_lddRea) $RC_{node} = \sum_{i=1}^{n} cells_{node_i}$
+(@eq_lddRea) $RC_{node_{net}} = \sum_{i=1}^{n} cells_{node_i}$
 
 where $cells_{node_i}$ is number of tessellation cells on node $i$ within topological distance 3. It captures accessible granularity.
 
@@ -572,14 +566,12 @@ where $d(v, u)$ is the shortest-path distance between $v$ and $u$, and $n$ is th
 where $q_v(u,w)$ are the number of common neighbours of $u$ and $w$ other than $v$ (ie squares), and $a_v(u,w) = (k_u - (1+q_v(u,w)+\theta_{uv}))(k_w - (1+q_v(u,w)+\theta_{uw}))$,
 where $\theta_{uw} = 1$ if $u$ and $w$ are connected and 0 otherwise [@PhysRevE.72.056127].
 
-TABLE HERE
-
 The final set is 74 morphometric characters spanning across the subsets of relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is a result of identification process proposed above. As such, it should provide unbiased and non-skewed description of each of the elements.
 
 #### Contextual characters
-Looking at the primary characters and their spatial distribution, they could be really abrupt and do not necessarily capture urban patterns as we would like them to (even though all capture some patterns as per spatial autocorrelation). 
+Looking at the primary characters and their spatial distribution, they could be really abrupt and do not necessarily capture urban patterns as we would like them to (even though all capture some patterns as per spatial autocorrelation).
 
-To become useful for pattern detection within DHC recognition model which does not employ direct spatial constraints, most of the characters defined above has to be expressed using their contextual versions. *Context* here is defined as a neighbourhood of each tessellation cell within three topological steps on morphological tessellation. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing a balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis). 
+To become useful for pattern detection within DHC recognition model which does not employ direct spatial constraints, most of the characters defined above has to be expressed using their contextual versions. *Context* here is defined as a neighbourhood of each tessellation cell within three topological steps on morphological tessellation. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing a balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Annex XXX for sectional diagram analysis).
 
 Within this method, four types of contextual characters are proposed. One capturing a local central tendency and three capturing the properties of the distribution of values within the context. For each of the primary characters, each of the contextual is then calculated and then used within clustering algorithm itself. The resulting set of used characters is then composed of 4 times 74 characters, giving 296 individual contextual characters.
 
@@ -592,10 +584,10 @@ The distribution of values of individual characters vary and in some cases tends
 
 (@eq_iqm) $IQM_{ch} = \frac{2}{n} \sum_{i=\frac{n}{4}+1}^{\frac{3 n}{4}} ch_{i}$,
 
-where $ch$ is selected primary character. Formula assumes sorted values. 
+where $ch$ is selected primary character. Formula assumes sorted values.
 
 ##### Properties of a distribution
-Apart from local central tendency (in the geographical context sometimes present in literature also as a moving window average), which aims to capture representative value, it is fundamental to understand how the actual distribution of values within the *context* looks like. 
+Apart from local central tendency (in the geographical context sometimes present in literature also as a moving window average), which aims to capture representative value, it is fundamental to understand how the actual distribution of values within the *context* looks like.
 
 That could be approached in multiple ways. Three notable are 1) capturing the *diversity* of values within the local context, 2) measuring the *statistical dispersion* of values, and 3) measuring *similarity of a target and an actual distribution* of values, like in the case of inequality.
 
@@ -617,16 +609,16 @@ In terms of diversity measures, the key question is not which one should be used
 Dimensional characters capturing dispersion included in comparison are *standard deviation (SD)*, *range*, and *absolute deviations (median - MAD, average - AAD)*. Both standard deviation and range is measured for IQ, ID and unrestricted range of values. Included dimensionless characters are *coefficient of variation (CoV)*, *quartile coefficient of dispersion (QCoD)*.
 
 The last group is represented by both *Gini index*, and *Theil index *, both measured for IQ, ID and unrestricted range of values.
- 
+
 The reason for inclusion of Simpson's diversity index, even though it may not be fully comparable across cases is the fact that DHC recognition is always local, always case-specific. However, using the values in further profiling and comparison of clusters across cases (identified separately) might lead to misleading results.
 
-Using four morphometric characters as test data - *area of a building*, *height of a building*, *coverage area ratio of tessellation cell* and *floor area ratio of tessellation cell*, all potential contextual characters listed above are measured on three topological steps around each building. Resulting spatial distribution are visually assessed to eliminate those unfit for pattern recognition, either for relative randomness of result or significant outlier effect (typically present in measures based on unrestricted range of values). Finally, a correlation matrix is used to identify potential overlaps and uniqueness of values leading to the selection of optimal contextual characters. 
+Using four morphometric characters as test data - *area of a building*, *height of a building*, *coverage area ratio of tessellation cell* and *floor area ratio of tessellation cell*, all potential contextual characters listed above are measured on three topological steps around each building. Resulting spatial distribution are visually assessed to eliminate those unfit for pattern recognition, either for relative randomness of result or significant outlier effect (typically present in measures based on unrestricted range of values). Finally, a correlation matrix is used to identify potential overlaps and uniqueness of values leading to the selection of optimal contextual characters.
 
 ###### Resulting selection of contextual characters
 Whilst the complete results of analysis are available as Appendix XXX, the main conclusions are as follows.
 
 Due to the fact that most of the values follow exponential (power-law or similar) distribution within the whole dataset, binning method for Simpson's diversity index has to acknowledge that. For that reason, HeadTail Breaks are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those characters which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
-  
+
 Within measures of statistical dispersion, IQ range and IQ SD are better in capturing boundaries between types of development and are robust to outliers. Interquartile range was used by @dibble2017 and is easier to interpret. Due to its definition, CoV will tends to infinity when the mean value tends to zero, being very sensitive to changes of mean.
 
 Theil index and Gini index are both used to asses inequality, but Theil index, unlike Gini, is decomposable to within-group inequality and between-group differences REF, making it more suitable for spatial analysis than Gini index would be. ID values used within Theil index are better that other ranges as the resulting analysis is more sensitive, while outlier effect is still minimal. ID captures, for example, inner structures of blocks better than IQ, where such a structures might be filtered out. In fact, it may help distinguishing between blocks with and without internal buildings.
@@ -639,11 +631,13 @@ where $Q3_{ch}$ is third quartile of selected primary character and $Q1_{ch}$ fi
 
 (@eq_theil) $IDT_{ch} = \sum_{i=1}^n \left( \frac{ch_i}{\sum_{i=1}^n ch_i} \ln \left[ N \frac{ch_i}{\sum_{i=1}^n ch_i}\right] \right)$,
 
-where $ch$ is selected primary character, and describes the (in)equality of distribution of values. Finally, *Simpson's diversity index (SDI)* denotes as 
+where $ch$ is selected primary character, and describes the (in)equality of distribution of values. Finally, *Simpson's diversity index (SDI)* denotes as
 
 (@eq_simpson) $SDI_{ch} = \frac{\sum_{i=1}^{R} n_{i}\left(n_{i}-1\right)}{N(N-1)}$,
 
 where $R$ is richness expressed as number of bins, $n_i$ is the number of features the $i$th type and $N$ is the total number of features. It captures the presence of various classes of values. Together, these four characters have a potential to describe spatial distribution of morphometric values within a set context.
+
+For the clarity in terms of classification of contextual characters, IQM inherits the category from the parental primary character, while IQR, IDT and SDI all fall into *diversity* category.
 
 After linking together primary and contextual characters, each of the primary 74 characters is represented by all four contextual, based on the values measured within three topological steps on morphological tessellation around each building. That gives 296 contextual characters in total, the set which is spatially autocorrelated by definition and hence can be used within clustering method to identify distinct homogenous clusters. The fact that all input data for clustering are measured using this *cookie-cutter* method ensures that spatial clusters should be geographically coherent and mostly continuous. Such a nature of data allows use of spatially unconstrained clustering methods. That is important as spatially constrained clustering is less developed and mostly unfit for datasets of the size this research works with.
 
@@ -652,20 +646,19 @@ Importance of the proper selection of morphometric characters and the effect it 
 \newpage
 
 ### Identification of DHC
-The actual identification of distinct homogenous clusters of urban form is in principle statistical clustering of buildings with similar information about itself and its context. Moreover, to derive DHC, such clusters needs to be contiguous and internally homogenous.
+The actual identification of distinct homogenous clusters of urban form is in principle statistical clustering of building / tessellation cell features with similar information about itself and its context. Moreover, to derive DHC, such clusters needs to be contiguous and internally homogenous.
 
 Contiguity is not easy to accomplish as spatially constrained clustering methods, which are designed to be contiguous and take into account spatial relationship of clustered elements, like Skater REF or Max-p Region Problem REF are computationally inefficient, which is multiplied by the size of the datasets used within this research. They essentially would not be able to crunch the amount of data. Second option how to include spatial dimension in clustering is actual inclusion of x and y coordinates of each object (in case of building likely x and y coordinates of building centroids). The geographical coordinates would then become another two dimensions in the dataset. This solution might work if the number of dimensions is low and two additional characters could make a significant effect. As the dataset of contextual characters is in composed of 296 dimensions, simple inclusion of two other might not make much of a difference and not ensure any spatial contiguity.
 
-The solution of the contiguity issue is, in fact, built in the design of contextual characters. As their measuring follows location-based manner, so called *cookie-cutter* method of spatial aggregation, all characters are actually significantly spatially autocorrelated by design\footnote{Median I is 0.77, St.Dev 0.12, with values ranging between 0.42 (Square Clustering of Street Network Theil Index) and 0.98 (Gross Density Interquartile Mean) all with *p < 0.001*. Complete Spatial Autocorrelation analysis is available as Appendix XX}. There is a significant overlap between areas used for computation of contextual characters of two neighbouring cells that indirectly ensured contiguity of clustering. However, this solution may result in less defined boundaries between two clusters and every edge of the cluster needs to be interpreted as fuzzy rather than defined.
+The solution of the contiguity issue is, in fact, built in the design of contextual characters. As their measuring follows location-based manner, so called *cookie-cutter* method of spatial aggregation, all characters are actually significantly spatially autocorrelated by design\footnote{Median of Moran's I is 0.77, St.Dev 0.12, with values ranging between 0.42 (Square Clustering of Street Network Theil Index) and 0.98 (Gross Density Interquartile Mean) all with *p < 0.001*. Complete Spatial Autocorrelation analysis is available as Appendix XX}. There is a significant overlap between areas used for computation of contextual characters of two neighbouring cells that indirectly ensures contiguity of clustering. However, this solution may result in less defined boundaries between two clusters and every edge of the cluster needs to be interpreted as fuzzy rather than defined. Certain mitigation of over-smoothing of boundaries is embedded in the design of contextual characters as they are mostly based on truncated values, which not only eliminate outlier effect, but also result in more defined boundaries.
 
 The general principle of clustering, i.e. unsupervised machine learning is using the learning data (which in case of clustering is often the whole dataset, but can be sampled) to iteratively determine the optimal division of observed data into homogenous clusters and then applying learned model to the whole data to predict to which cluster each element belongs. In terms of probabilistic methods, this prediction can have associated probability that chosen cluster is the correct one and have the probability of belonging to every other cluster.
 
-Current progress in machine learning brings various methods to choose from. Every clustering method follows different principles and is able to identify different kinds of clusters. The most common is most likely *k*-means clustering REF and its derivatives (*k*-medoid, *k*-median or Gaussian mixture models). The algorithm divides observations into predefined *k* clusters based on the nearest mean value to minimise within-cluster variance based on squared Euclidean distances between observations. As a result, clusters tend to be of a similar size. In the case of urban form, it is unlikely that each urban typology is equally present, rendering the use of *k*-means as unfit for the purpose. It is expected that cluster will be on unequal size and also of unequal density - clusters capturing rigid patterns will be more densely packed than those capturing more diverse areas. The clustering algorithm needs to take into account all these requirements stemming from the specificity of urban morphometric data. Moreover, every building is by definition part of some urban tissue, which could be very heterogenous, meaning that algorithms expecting and identifying noise (in this case buildings which do not belong to any cluster) in the data  like DBSCAN REF, HDBSCAN REF or OPTICS REF are not ideal either.
+Current progress in machine learning brings various methods to choose from. Every clustering method follows different principles and is able to identify different kinds of clusters. The most common is most likely *k*-means clustering REF and its derivatives (*k*-medoid, *k*-median or Gaussian mixture models). The algorithm divides observations into predefined *k* clusters based on the nearest mean value to minimise within-cluster variance based on squared Euclidean distances between observations REF. As a result, clusters tend to be of a similar size. In the case of urban form, it is unlikely that each urban typology is equally present, rendering the use of *k*-means as unfit for the purpose. It is expected that cluster will be on unequal size and also of unequal density - clusters capturing rigid patterns will be more densely packed than those capturing more diverse areas. The clustering algorithm needs to take into account all these requirements stemming from the specificity of urban morphometric data. Moreover, every building is by definition part of some urban tissue, which could be very heterogenous, meaning that algorithms expecting and identifying noise (in this case buildings which do not belong to any cluster) in the data  like DBSCAN REF, HDBSCAN REF or OPTICS REF are not ideal either.
 
 #### Gaussian Mixture Model clustering
 
-Clustering method which does reflect the nature of the problem is Gaussian Mixture Model (GMM), which is a probabilistic derivative of *k*-means, but unlike the *k*-means itself it does not rely on squared Euclidean distances only. GMM is based on an assumption that each dimension of each cluster is represented by a Gaussian distribution, hence the cluster itself is defined by a mixture of Gaussians.
-
+Clustering method which does reflect the nature of the problem is Gaussian Mixture Model (GMM), a probabilistic derivative of *k*-means. Unlike the *k*-means itself it does not rely on squared Euclidean distances only. GMM is based on an assumption that each dimension of each cluster is represented by a Gaussian distribution, hence the cluster itself is defined by a mixture of Gaussians.
 
 To illustrate the behaviour in a visual way, take the following example (figure \ref{fig:artificial_data}) of a two dimensional dataset with 4 known clusters. The clusters are of unequal size, density and shape. Because we do not know what properties will have DHC in hyperspace, it is safe to assume that they could be similarly complicated.
 
@@ -689,9 +682,9 @@ Within this research, an `sklearn.mixture.GaussianMixture()` implementation of G
 
 
 #### Dimensionality issue
-The morphometric description of each building/cell has 296 values (each for each contextual character). In the case of Prague, composed of approximately 140,000 buildings, it means that clustering has to deal with more than 40,000,000 data points (140,000 buildings * 296 characters). That is a significant number, which is not only demanding in terms of computational power, but also tricky in terms of statistics itself. The high dimensionality of the dataset (each character is a dimension in a hyperspace) may come with a *curse of dimensionality*. That means that even though there is the value in additional data (additional dimensions), it may affect results in a negative way. The high-dimensional hyperspace tends to become inflated (bigger), which in turn may render clusters very sparse. Individual data points are further away and density-based, or distance-based clusterings (GMM is distance-based) may struggle to correctly identify them as Euclidean distances between pairs of points on sparse high-dimensional data would be of little difference, rendering clustering extremely unstable and insignificant. However, that is not always the case as it depends on the internal structure of the dataset and relations between dimensions.
+The morphometric description of each building/cell has 296 values (each for each contextual character). In the case of Prague, composed of approximately 140,000 buildings, it means that clustering has to deal with more than 40,000,000 data points (140,000 buildings * 296 characters). That is a significant number, which is not only demanding in terms of computational power, but also tricky in terms of statistics itself. The high dimensionality of the dataset (each character is a dimension in a hyperspace) may come with a *curse of dimensionality*. That means that even though there is the value in additional data (additional dimensions), it may affect results in a negative way. The high-dimensional hyperspace tends to become inflated (bigger), which in turn may render clusters very sparse. Individual data points are further away and density-based, or distance-based clusterings (GMM is distance-based) may struggle to correctly identify them, because Euclidean distances between pairs of points on sparse high-dimensional data would be of little difference, rendering clustering extremely unstable and insignificant. However, that is not always the case as it depends on the internal structure of the dataset and relations between dimensions.
 
-One way how to deal with large number of characters is a reduction of dimensionality. Two of the most applied statistical methods to reduce number of dimensions of data are Factor analysis (FA) REF and Principal compoment analysis (PCA) REF. Both are aiming to describe the dataset using the smaller number of *factors* or *principal components* (essentially dimensionless variables hard to interpret). The key concept allowing the generation of meaningful clusters and effective reduction of dimension which is used in both is correlation of original variables. That causes an issue in reduction of used morphometric dataset as it is designed to limit empirical correlation, hence FA and PCA are expected to be not very effective in reduction.
+One way how to deal with large number of characters is a reduction of dimensionality. Two of the most applied statistical methods to reduce number of dimensions of data are Factor analysis (FA) REF and Principal component analysis (PCA) REF. Both are aiming to describe the dataset using the smaller number of *factors* or *principal components* (essentially dimensionless variables hard to interpret). The key concept allowing both the generation of meaningful clusters and effective reduction of dimension is correlation of original variables. That causes an issue in reduction of used morphometric dataset as it is designed to limit empirical correlations, hence FA and PCA are expected to be not very effective in reduction.
 
 The preliminary tests of PCA on the complete dataset of contextual characters shows that to retain at least 95% of variance, one need at least 147 principal components (Figure \ref{fig:pca_graph}). That is a significant reduction, but the ideal number of dimensions is approximately 30-50, so the reduction is clearly not good enough. Using 30 principal components, the retained variance drops to 69%, for 59 components the value would be 78%. Because there is no set acceptable rate of explained variance needed, without validation data it is not possible to determine acceptable number of components. The results might or might not offer helpful reduction of dimension.
 
@@ -705,31 +698,31 @@ The ideal outcome of DHC recognition is each cluster as a distinct urban tissue.
 ##### Number of components
 Gaussian Mixture Model clustering requires, similarly to k-means, specification of number of components of the model (i.e., clusters) prior clustering. However, that number is usually not known, especially in the case of urban form. Assumptions can be made based on the expert knowledge, but that would limit the application and unsupervised nature of the whole process and go essentially against the prepositions set in chapter 5.
 
-The way around is to estimate the ideal number of components based on the goodness of fit of the model for each of them. That essentially means that the GMM is trained multiple times based on range of feasible options of number of components and each of the models is then assessed against the whole dataset (how well are clusters distinguished). The assessment is of a quantitative statistical nature, keeping the method relatively unsupervised. The only input researcher needs to make at this stage is an interpretation of the resulting values and the curve of goodness of fit to specify the number of components for the final clustering.
+The way around is to estimate the ideal number of components based on the goodness of fit of the model for each of them. That essentially means that the GMM is trained multiple times based on range of feasible options of number of components and each of the models is then assessed against the whole dataset (to determine how well are clusters distinguished). The assessment is of a quantitative statistical nature, keeping the method relatively unsupervised. The only input researcher needs to make at this stage is an interpretation of the resulting values and the curve of goodness of fit to specify the number of components for the final clustering.
 
 ###### Goodness of fit
-The goodness of fit measures a fit of a trained model to a set of observations (e.g., the original dataset)REF. It describes how consistent is the distribution of clustered model to the distribution of the whole dataset, to put it in simple words. With K-means clustering is often used silhouette method REF, which could in theory be used with GMM as well. DEFINE Another option is measuring average log-likelihood score DEFINE, which is SOMETHING. However, the optimal method for GMM is Bayesian information criterion (BIC), a model based partly on likelihood function. Unlike similar Akaike information criterion, BIC implements penalisation for high number of clusters trying to mitigate possible overfitting of the model.
+The goodness of fit measures a fit of a trained model to a set of observations (e.g., the original dataset)REF. It describes how consistent is the distribution of clustered model to the distribution of the whole dataset. With K-means clustering is often used silhouette method REF, which could in theory be used with GMM as well. Another option is measuring average log-likelihood score REF. However, the optimal method for GMM is Bayesian information criterion (BIC), a model based partly on likelihood function. Unlike similar Akaike information criterion, BIC implements penalisation for high number of clusters trying to mitigate possible overfitting of the model.
 
-In practice, BIC is measured for each trained model based on the original data. The lowest the BIC is, the better the model represent original data.
+In practice, BIC is measured for each trained model based on the input data. The lowest the BIC is, the better the model represent original data.
 
 The interpretation of the goodness of fit score is not question of comparing the numbers only, but understanding the resulting curve. In theory, the lower the BIC score is the better the model fits the original data. However, it has to be kept in mind that there is a certain confidence interval and that BIC itself penalises higher number of clusters. The optimal number is not always the one which reaches the lowest BIC score, especially if the score is within the confidence interval of other options. The aim of the clustering is to simplify the whole dataset into the smallest number of meaningful clusters, but not too small. Hence in the situation with multiple options within the same confidence interval, we should select the first significant minimum,REF i.e. the smallest number of components which has its mean score within the confidence interval of the numerically best fit.
 
-In the ideal case, the BIC curve would reach the minimum for an optimal number of clusters and then start growing again making the interpretation relatively straightforward. However, due to the possibility of overfitting, the curve may not culminate, but only change the gradient. In such cases, the gradient itself should be analysed and as optimum should be selected number of components before the flattening of the gradient.
+In the ideal case, the BIC curve would reach the minimum for an optimal number of components and then start growing again making the interpretation relatively straightforward. However, due to the possibility of overfitting, the curve may not culminate, but only change the gradient. In such cases, the gradient itself should be analysed and as optimum should be selected number of components before the flattening of the gradient.
 
 ###### Stability of procedure
-Non-deterministic nature of GMM means that each of the trials should be repeated multiple times to understand what is the confidence interval of possible outcomes. Testing each number of components only once might lead to incorrect interpretation of results. The ideal situation is to compute multiple runs (the higher the number, the better the result) of each option and plotting the confidence interval to help with the interpretation later. To better understand the magnitude of the effect, model should be trained multiple times and resulting BIC score should be reported for each of them. The same should happen during the final clustering based on selected number of components - model should be initialised repeatedly and the best of the resulting models should be kept and used.
+Non-deterministic nature of GMM means that each of the trials should be repeated multiple times to understand what is the confidence interval of possible outcomes. Testing each number of components only once might lead to incorrect interpretation of results. The ideal situation is to compute multiple runs (the higher the number, the better the result) of each option and plot the confidence interval to help with the interpretation later. To better understand the magnitude of the effect, model should be trained multiple times and resulting BIC score should be reported for each of them. The same should happen during the final clustering based on selected number of components - model should be initialised repeatedly and the best of the resulting models should be kept and used.
 
 The result of clustering is never exactly the same, especially with the amount of the data this research is using. There is a certain variability, but that is mostly represented by unstable boundaries between clusters rather that significant results in clusters themselves. The boundaries should never be interpreted as a fixed line, there is always certain degree of fuzziness, which could be captured by overlay of resulting clusters form multiple models of same parameters.
 
 ##### Sample-based clustering
-As the dataset grows, it may become increasingly impossible to run clustering on the whole dataset, especially if we want our data with meaningful confidence interval. The calculation of dimensions between components of the model in hyperspace of 296 dimensions is a demanding task requiring time and computational power. While data for Prague (~140 000 features) could be processed on a desktop with modern multi-core processors within days (multiple options with a confidence interval, not a single run), that is not true for larger metropolitan areas where number of feature can reach millions. The data like this can be run in a same way on cloud-based services providing significantly more computational power and servers tailored to data analysis, but this solution can be costly.
+As the dataset grows, it may become increasingly impossible to train clustering on the whole dataset, especially if we want our data with meaningful confidence interval. The calculation of dimensions between components of the model in hyperspace of 296 dimensions is a demanding task requiring time and computational power. While data for Prague (~140 000 features) could be processed on a desktop with modern multi-core processors within days (multiple options with a confidence interval, not a single run), that is not true for larger metropolitan areas where number of feature can reach millions. The data like this can be run in a same way on cloud-based services providing significantly more computational power and servers tailored to data analysis, but this solution can be costly.
 
 For that reason, it might be worth training the method on sampled data before classifying the whole dataset. Instead of using all features to train the model, randomly samples subset could be used as a training set for GMM, which, once fitted, could be used to classify the whole dataset. This solution lowers computational demands as the number of features used in the learning process is smaller, but there are also issues with it. The random sample should reflect the structure of the whole dataset to provide results comparable with GMM trained on the whole dataset. However, that is never fully true. The larger the sample is, the more similar to the whole data is, but at the same time the effect of sampling on computation is becoming less significant. Even larger samples may, in some cases, miss smaller clusters present in the full-data clustering as features composing these cluster would not be present in the sample (the smaller the cluster, the higher the probability than it will be missed in the sample).
 
-The decision whether train GMM on the full of sampled data should reflect the balance between what is ideal (full) and what is possible in certain conditions. The different options of sample-based clustering are tested and compared to the default clustering in following section, to assess the behaviour of sample-based clustering in the case of Prague. The behaviour will be likely different at different places as the real structure and distribution of values affects the sampling-effect. Places with more diverse structure and number of smaller cases will be probably affected more than places with homogenous structure where the likelihood of proper sampling of all clusters is higher.
+The decision whether train GMM on the full or sampled data should reflect the balance between what is ideal (full) and what is possible in certain conditions. The different options of sample-based clustering are tested and compared to the default clustering in following section, to assess the behaviour of sample-based clustering in the case of Prague. The behaviour will be likely different at different places as the real structure and distribution of values affects the sampling-effect. Places with more diverse structure and number of smaller cases will be probably affected more than places with homogenous structure where the likelihood of proper sampling of all clusters is higher.
 
 ##### Sub-clustering
-There are situations when resulting clustering is not refined enough for the purpose of the specific analysis. There are simply too big and one may want a better resolution of clustering. One way to do it is to iteratively cluster individual already identified clusters, i.e to don sub-clustering of existing clusters.
+There are situations when resulting clustering is not refined enough for the purpose of the specific analysis. The components are simply too big and one may want a better resolution of clustering. One way to do it is to iteratively cluster individual already identified clusters, i.e to do sub-clustering of existing clusters.
 
 The morphometric dataset is rich in information, so if there is an assumption that a cluster should be divided, it is expected that the difference will be reflected in the data. The reason why it did not split the cluster in two initially is that such a difference is not significant from the perspective of the whole datasets, but it may be significant on a local scale. So when it is appropriate, the same data used for initial DHC recognition can be used again only on the sample belonging to one of the clusters.
 
@@ -739,25 +732,25 @@ The other way, aggregating clusters together based on their similarly will be di
 
 Either way, it is crucial to acknowledge that clustering is always based on the actual structure of the used data. That means that the result of clustering is always local. DHCs identified in Prague using solely Prague-based data would not be equal to DHCs identified in Amsterdam using Amsterdam-based data only. The structure of both datasets determines what is the optimal division and as both structures are different, the optimal division is done along different lines. It is expected that results will be comparable as optimal DHC should reflect optimal urban tissues, but there will always be certain misalignment of clusters. Chapter 8 will test whether the misalignment is significant or not to further explore the link between two local clustering models.
 
-*conclude clustering*
+Selection of clustering model itself and its parameters affects the results of identification of urban tissues significantly. To avoid unexpected results, the decision has to be made based on detail theoretical considerations of what the behaviour of morphometric datasets likely is. While many of its properties are still unknown, based on the assumptions outlined in this sections, it is believed that GMM, in combination with BIC for determination of number of GMM components, has a capacity to identify distinct homogenous clusters as a proxy of urban tissues.
 
 ### Data preprocessing
 Before doing any of these steps, it is fundamental to ensure that data are good enough to represent morphological/morphometric elements. That could be an issue for both building and street network layers, so there are cases when the data needs to be prepared for morphometric analysis. The preprocessing can be in some cases automatised, in other, unfortunately, manual or at least semi-manual to have the data in the correct shape in the end.
 
-While each dataset coming from different source is specific hence the cleaning procedure needs to be tailored to each source, there are some common issues which are not unique to specific datasets. Following section outlines these common issues and how to resolve them or at least minimise the error under the significant level. As the method described above is error-prone due to the design of contextual characters, the data do not have to be perfect all the time. However there are cases where even contextual character can be significantly affected and skew the result of clustering.
+While each dataset coming from different source is specific hence the cleaning procedure needs to be tailored to each source, there are some common issues which are not unique to specific datasets. Following section outlines these common issues and ways of resolving them or at least minimising the error under the significant level. As the method described above is robust due to the design of contextual characters, the data do not have to be perfect all the time. However there are cases where even contextual character can be significantly affected and skew the result of clustering.
 
 #### Preprocessing of buildings
 *ADD ILLUSTRATIVE FIGURES HERE AND BELOW*
 
 Having data layer correctly representing building footprints is crucial from two reasons as it not only affect morphometric characters based on buildings, but also morphological tessellation and consequently characters based on morphological cells, which in the end are all contextual characters. There are several aspects which needs to be fulfilled - topological correctness, consistency in detail, representation of individual buildings and building height attribute presence. Overall, it is expected to have a building data representing Level of Detail 1 (LoD1) REF Bilejcki.
 
-Topological correctness ensures that geometry represent the actual relationship between buildings on the ground. There are characters measuring continuity of a perceived wall in a joined buildings or shared walls ratio which require building polygons to be correctly snapped together when two buildings touch. In that case it is expected that neighbouring polygons will share vertices and boundary segments. There should not be a gap between polygons when there is none in reality and vice versa. Also, polygons must not overlap at any case as that would cause significant disruption of tessellation geometry.
+Topological correctness ensures that geometry represent the actual relationship between buildings on the ground. There are characters measuring continuity of a perceived wall in a joined buildings or shared walls ratio which require building polygons to be correctly snapped together when two buildings touch. In that case it is expected that neighbouring polygons will share vertices and boundary segments. There should not be a gap between polygons when there is none in reality and vice versa. Also, polygons must not overlap at any case as that could cause significant disruption of tessellation geometry.
 
 The building detail should be consistent across the dataset and represent optimal approximation of building shape based on LOD specification as proposed by REF Bilejcki. The approximation should represent LOD1.1 (no details, but shape is kept) or LOD 1.2 (minor details), building shapes should not be overly detailed nor overly simplified. In the case of inconsistency, simplification of more detailed shapes needs to be done before morphometric assessment.
 
-Each polygon has to represent a single building. There are datasets (often of remote sensing origin) capturing all structures which are joined by any means as a single polygon. Such a data do not represent the morphological truth on the grounds. Their preprocessing is complicated as it requires splitting of existing geometries according to additional dataset. The second extreme is the opposite situation, when a single building is represented by multiple polygons. These usually represent different height levels, through routes or similar features. If these polygons, representing parts of buildings, have a common ID which allows joining them together to get a single polygon representing a single buildings, the preprocessing of such a data is only a simple dissolution. However, there are many cases when this ID is missing and correct pre-processing require either clever algorithms understand which polygon belongs to which or laborious manual work.
+Each polygon has to represent a single building. There are datasets (often of remote sensing origin) capturing all structures which are joined by any means as a single polygon. Such data do not represent the morphological truth on the ground. Their preprocessing is complicated as it requires splitting of existing geometries according to additional dataset. The second extreme is the opposite situation, when a single building is represented by multiple polygons. These usually represent different height levels, through routes or similar features. If these polygons, representing parts of buildings, have a common ID which allows joining them together to get a single polygon representing a single buildings, the preprocessing of such a data is only a simple dissolution. However, there are many cases when this ID is missing and correct pre-processing require either clever algorithms understand which polygon belongs to which or laborious manual work.
 
-Certain number of primary and subsequently contextual characters uses building height attribute, which has to be present in original input dataset. The resolution should be able to capture the distinction between levels, further detailing is not significant. The input can be either in meters (optimal) or in number of storeys, which should then be represented as a metric approximation as characters expect height to be in meters.
+Certain number of primary and subsequently contextual characters uses building height attribute, which has to be present in original input dataset. The resolution should be able to capture the distinction between floor levels, further detailing is not significant. The input can be either in meters (optimal) or in number of storeys, which should then be represented as a metric approximation as characters expect height to be in meters.
 
 #### Preprocessing of street network
 Similar situation as with building layer is with street network. Incorrectly drawn street network may cause significant errors in morphometric results and consequently in clustering. There are three most important cases which needs to be checked before the analysis - topological correctness, morphological correctness and consistency in classification.
@@ -766,7 +759,7 @@ Topological correctness ensures that each street segments is represented by a si
 
 Moreover, street networks have to be morphologically correct, which means that geometries represent morphological connections, not other, usually transport-focused. That often mean simplifications of networks to eliminate transport geometries like roundabouts or similar types of junctions, or dual lines representing dual carriageways. In certain cases networks have to be snapped together, because due to traffic calming measures some junctions might not be connected when they should be.
 
-Finally, network needs to be consistently drawn in terms of inclusion of different levels of network hierarchy. The definition of what is street and should be included and what is minor connection and should not is crucial for comparability of results. *DEFINE PROPERLY WHAT IS STREET*
+Finally, network needs to be consistently drawn in terms of inclusion of different levels of network hierarchy. Hence the definition of what is considered as a street is a minor connection is crucial for comparability of results and should be included in any research.
 
 As per data availability, networks are widely availably. However, geometries mostly represent transport network and often do not follow ideal topological rules. The preprocessing to ensure that all three points above are fulfilled is hence necessary and can be partially automatised either using `momepy.network_false_nodes` or using methodology outlined by Krenz (REF pp.), using conventional GIS tools. However, there might be cases when more complicated procedures should be employed, either to ensure that algorithm is more precise or to include manual steps.
 
@@ -789,10 +782,8 @@ Buildings are in the role of a connecting elements and contain all identifiers. 
 
 `momepy` uses unique identifiers to efficiently link elements together without the need of repeating costly spatial operations for every relevant character.
 
-*conclude methodology*
-
 ## DHC recognition | Case study Prague
-The first trial of DHC recognition method outlined above is the case study of Prague, limited to its administrative boundary, which in the case of Prague extends the continuous built-up area and ensures that the edge effect cause by street network cutting is minimised (figure \ref{fig:prague_study_area}). Following section reports on each step of method in terms of both results and interpretation. The overall discussion on the method itself, its relevance and applicability is in chapter 9 and includes results of taxonomical analysis presented in chapter 8.
+The first trial of the proposed DHC recognition method outlined above is the case study of Prague, limited to its administrative boundary, which in the case of Prague extends the continuous built-up area and ensures that the edge effect cause by street network cutting is minimised (figure \ref{fig:prague_study_area}). Following section reports on each step of method in terms of both results and interpretation. The overall discussion on the method itself, its relevance and applicability is in chapter 9 and includes results of taxonomical analysis presented in chapter 8. The validation of results is included in chapter 8.
 
 ![Prague case study area, which matches the administrative boundaries. Data source © IPR Praha, CC BY-SA 4.0](source/figures/ch7/PRG_admin_boundary.png "Prague case study area"){#fig:prague_study_area width=100%}
 
@@ -801,17 +792,17 @@ Prague dataset after pre-processing contains 140 315 individual buildings, 22 50
 ### Primary characters
 The basis of the method lies with primary morphometric characters. These continuous variables describe individual aspects of fundamental elements and their combinations based on the relational model. Following the method, all 74 of them are measured in Prague and then linked to the building-tessellation unit according to the data model. All morphometric characters are measured using `momepy` classes using reproducible Jupyter notebook `XX_XXXXX` presented as an Appendix XXX.
 
-The results can be explored in two ways - 1) to assess a spatial distribution of values, and 2) to assess statistical distribution of values.
+The results of measured primary characters can be explored in two ways - 1) to assess a *spatial* distribution of values, and 2) to assess *statistical* distribution of values.
 
 #### Spatial distribution
 
-The spatial distribution of resulting values, i.e., spatial morphometric patterns, could be projected on maps and assessed visually to determine the character of such a pattern or statistically. Since the aim of measuring is, eventually, to identify homogenous areas defined by distinct patterns of spatial configuration, it is crucial that each of the characters capture local patterns. Statistically speaking, each of the characters needs to be spatially autocorrelated, which can be assessed using Moran's I (REF)\footnote{The same method has been used during the selection of primary characters to ensure that all do capture spatial patterns. See Annex 2 for details.}.
+The spatial distribution of resulting values, i.e., spatial morphometric patterns, could be projected on maps and assessed visually, to determine the character of such a pattern, or statistically. Since the aim of measuring is, eventually, to identify homogenous areas defined by distinct patterns of spatial configuration, it is crucial that each of the characters capture local patterns. Statistically speaking, each of the characters needs to be spatially autocorrelated, which can be assessed using Moran's I (REF)\footnote{The same method has been used during the selection of primary characters to ensure that all do capture spatial patterns. See Annex XXX for details.}.
 
-Based on the visual assessment, there are three types of characters within the measured set, represented by three examples below - 1) patterns with sudden changes, 2) smoothed continuous patterns, 3) visually unclear patters.
+Based on the visual assessment, there are three types of characters within the measured set, represented by three examples below - 1) patterns with sudden changes, 2) smooth continuous patterns, 3) visually unclear patters.
 
 ![Spatial distribution of shared walls ratio of adjacent buildings in the area of Prague's city centre and its surroundings. Figure illustrates clear spatial patterns with the presence of sudden changes.](source/figures/ch7/mtbSWR_map.pdf "Spatial distribution of shared walls ratio of adjacent buildings"){#fig:mtbSWR_map width=100%}
 
-Figure \ref{fig:mtbSWR_map} shows *shared walls ratio of adjacent buildings* in the part of Prague's city centre. There is a clear distinction between buildings having shared walls and those standing independently. The values show a relative homogeneity in the centre of the figure (Vinohrady), but high variability in some other places, especially in the Old Prague neighbourhood (top left). There are sudden changes in values on neighbouring tessellation cells. This pattern is not unique and it is somewhat expected for characters based on individual elements as these do not have a notion of contiguity. 
+Figure \ref{fig:mtbSWR_map} shows *shared walls ratio of adjacent buildings* in the part of Prague's city centre. There is a clear distinction between buildings having shared walls and those standing independently. The values show a relative homogeneity in the centre of the figure (Vinohrady), but high variability in some other places, especially in the Old Prague neighbourhood (top left). There are sudden changes in values on neighbouring tessellation cells. This pattern is not unique and it is somewhat expected for characters based on individual elements as these do not have a notion of contiguity.
 
 ![Spatial distribution of proportion of 4-way intersections of street network in the area of Prague's city centre and its surroundings. Figure illustrates clear continuous spatial patterns with unclear boundaries between low and high values.](source/figures/ch7/linP4W_map.pdf "Spatial distribution of proportion of 4-way intersections"){#fig:linP4W_map width=100%}
 
@@ -819,7 +810,7 @@ Second example on figure \ref{fig:linP4W_map} shows *proportion of 4-way interse
 
 ![Spatial distribution of equivalent rectangular index of tessellation cell in the area of Prague's city centre and its surroundings. Figure illustrates visually unclear spatial patterns.](source/figures/ch7/sscERI_map.pdf "Spatial distribution of equivalent rectangular index"){#fig:sscERI_map width=100%}
 
-The last, not very frequent though, is the example on figure \ref{fig:sscERI_map} showing visually unclear spatial distribution. The figure shows *‌equivalent rectangular index of tessellation cell* in the same area as before. To determine spatial patterns visually require a lot of effort and still, the results are questionable. This is one of the examples where one might want to exclude such character for apparent randomness of resulting values. However, visual assessment should not be used for such a decision as it is naturally arbitrary and biased based on the ability of a researcher to detect patterns. For that reason this work uses Moran's I index of spatial autocorrelation to determine whether a character captures meaningful spatial pattern or not. 
+The last, not very frequent though, is the example on figure \ref{fig:sscERI_map} showing visually unclear spatial distribution. The figure shows *‌equivalent rectangular index of tessellation cell* in the same area. To determine spatial patterns visually require a lot of effort and still, the results are questionable. This is one of the examples where one might want to exclude such character for apparent randomness of resulting values. However, visual assessment should not be used for such a decision, because it is naturally arbitrary and biased based on the ability of a researcher to detect patterns. For that reason this work uses Moran's I index of spatial autocorrelation to determine whether a character captures meaningful spatial pattern or not.
 
 Figure \ref{fig:sscERI_moran} below shows the value of Moran's I compared to reference distribution and a Moran scatterplot based on the contiguity of morphological tessellation. The I value for the whole Prague is 0.07, showing significant autocorrelation. It is not a high value, for a reference two previous example have I 0.387 and 0.912 respectively. However, it is still significant (the value itself is likely not within a reference distribution), meaning that even not visually clear, spatial pattern is still present. The whole set of character contains a couple of other examples similar to this one, but overall this situation is not a frequent one.
 
@@ -834,15 +825,15 @@ Statistical distributions of resulting values are also different, based on the n
 
 The first case, *‌circular compactness of tessellation cell* (top left), is slightly skewed Gaussian distribution with a minimum of values being in one of the extremes. It illustrates the range of characters with more or less distorted normal distribution. Median value tends to be in the middle of the range.
 
-The second case, *‌area covered by neighbouring cells* (top right), is tends to follow already mentioned exponential distribution, with a majority of values being in the lowest extreme and only a few in the highest. Median value tends to be close to the overall minimum.
+The second case, *‌area covered by neighbouring cells* (top right), tends to follow already mentioned exponential distribution, with a majority of values being in the lowest extreme and only a few in the highest. Median value tends to be close to the overall minimum.
 
-The third case, *‌width of a street profile* (bottom left), reflects certain rule of spatial organisation of cities. In this case we can see peaks around 22 and 35 metres, which are likely predominant street widths in the context of Prague. The minor peak at 50 meters is caused by the maximum value of the method resulting in 50 in case of open spaces. Median value tends to be in the middle of the distribution, but that is not the overall rule for all characters of similar type of distribution.
+The third case, *‌width of a street profile* (bottom left), reflects certain rule of spatial organisation of cities. In this case we can see peaks around 22 and 35 metres, which are likely predominant street widths in the context of Prague. The minor peak at 50 meters is caused by the maximum value of the defaulting to 50 metres in case of open spaces. Median value tends to be in the middle of the distribution, but that is not the overall rule for all characters of similar type of distribution.
 
-The last case, *degree of a street node* (bottom right), is specific as the results are always integer values with a limited range. These are a minority, apart from this example only those measuring number of corners. 
+The last case, *degree of a street node* (bottom right), is specific as the results are always integer values with a limited range. Cases like this are a minority. Apart from this example only those measuring number of corners show similar behaviour.
 
 These are not the only types of distributions in the set, but they illustrate the variability of morphometric characters.
 
-Descriptive summary values of all character are presented in the table \ref{primary_chars}. Note that units for each character are available in section XXX. 
+Descriptive summary values of all character are presented in the table \ref{primary_chars}. Note that units for each character are available in section XXX.
 
 | id     |         mean |          std |       min |          25% |          50% |          75% |          max |
 |:-------|-------------:|-------------:|----------:|-------------:|-------------:|-------------:|-------------:|
@@ -923,9 +914,9 @@ Descriptive summary values of all character are presented in the table \ref{prim
 
 Table: Overview of the primary morphometric values for the whole case study. Key to character IDs is available in table XXX. \label{primary_chars}
 
-Without exploring the table \ref{primary_chars} above in detail, it is worth pointing out two characters standing out - *courtyard area of building (sdbCoA)* and *‌number of courtyards of adjacent buildings (libNCo)*. Both are capturing similar concepts of closed courtyards (either in a single building or in a composite of adjacent buildings) and both are relatively invariant (min, 25%, 50% and 75% are all 0). While these might not be critical for identification of DHC in Prague, there are urban tissues, especially in warmer environments, characterised by these properties. This example illustrates the inclusiveness of a selected set of characters - it is not tailored to specific context.
+Without exploring the table \ref{primary_chars} above in detail, it is worth pointing out two characters standing out - *courtyard area of building (sdbCoA)* and *‌number of courtyards of adjacent buildings (libNCo)*. Both are capturing similar concepts of closed courtyards (either in a single building or in a composite of adjacent buildings) and both are relatively invariant (min, 25%, 50% and 75% are all 0). While these might not be critical for identification of DHC in Prague, there are urban tissues, especially in warmer environments, characterised by these properties. While the overall aim of this research is to be comparable, not tailored to specific context, these characters are still included.
 
-Figures \ref{fig:distplot1} - \ref{fig:distplot5} show histograms capturing the (truncated) distribution of all measured characters. Not the differences outlined above and overall variety of distributions.
+Figures \ref{fig:distplot1} - \ref{fig:distplot5} show histograms capturing the (truncated) distribution of all measured characters. Note the differences outlined above and overall variety of distributions.
 
 ![Histograms of characters 1-15 are showing the variety of distributions within the measured primary data. Histograms illustrate data within percentiles (5, 95) to avoid extreme skewing due to the presence of outliers. Data in table \ref{primary_chars} are presented complete for reference.](source/figures/ch7/distplot_15.pdf "Histograms of characters 1-15"){#fig:distplot1 width=100%}
 
@@ -938,11 +929,11 @@ Figures \ref{fig:distplot1} - \ref{fig:distplot5} show histograms capturing the 
 ![Histograms of characters 61-74 are showing the variety of distributions within the measured primary data. Histograms illustrate data within percentiles (5, 95) to avoid extreme skewing due to the presence of outliers. Data in table \ref{primary_chars} are presented complete for reference.](source/figures/ch7/distplot_74.pdf "Histograms of characters 61-74"){#fig:distplot5 width=100%}
 
 #### Statistical relationship of characters
-Understanding the relationship between measured character is in important aspect of morphometric assessment. As specified in the section XXX (selection of chars), characters should not include many empirical correlations. Collinear characters (those being correlated and reflecting the same concept) should not be present in the resulting data as they might skew the hyperspace and adversely affect the result of clustering. As characters do not follow always follow normal distribution, Spearman's rank correlation is used to assess the relationship between characters. The results are illustrated in the correlation matrix on figure \ref{fig:spearman_primary} below.
+Understanding the relationship between measured characters is an important aspect of morphometric assessment. As specified in the section XXX (selection of chars), characters should not include many empirical correlations. Collinear characters (those being correlated and reflecting the same concept) should not be present in the resulting data as they might skew the hyperspace and adversely affect the result of clustering. As characters do not follow always follow normal distribution, Spearman's rank correlation is used to assess the relationship between characters. The results are illustrated in the correlation matrix on figure \ref{fig:spearman_primary} below.
 
 ![Correlation matrix of Spearman's rho values capturing statistical relationship between resulting morphometric values of primary characters. With a few exceptions, the relationship is none or very weak.](source/figures/ch7/spearman_primary.pdf "Correlation matrix of primary characters"){#fig:spearman_primary width=100%}
 
-As expected (the set is designed in such a way), characters generally show minimal correlations, with a few exceptions. These are reflecting different concepts and are capturing different phenomena, which makes them admissible. 
+As expected (the set is designed in such a way), characters generally show minimal correlations, with a few exceptions. These are reflecting different concepts and are capturing different phenomena, which makes them admissible.
 
 Primary morphometric characters are the core of the method of identification of distinct homogenous clusters. Their selection to capture different complexities aspects of urban form results in a very heterogenous set of measured data showing variable spatial patterns as well as statistical distributions. However, this data are the direct input of the clustering procedure, but they are an input of calculation of contextual characters. The results of this consequent step are illustrated in the next section.
 
@@ -962,15 +953,15 @@ Figure \ref{fig:sdsSPW_meanIQ3_map} shows *interquartile mean of a width of a st
 
 ![Spatial distribution of interquartile range of a width of a street profile measured within 3 topological steps on morphological tessellation in the area of Prague’s city centre and its surroundings.](source/figures/ch7/sdsSPW_rangeIQ3_map.pdf "Spatial distribution of IQ range"){#fig:sdsSPW_rangeIQ3_map width=100%}
 
-Figure \ref{fig:sdsSPW_rangeIQ3_map} illustrates *interquartile range of a width of a street profile* measured within 3 topological steps on morphological tessellation. That reflects range of values, so it is a first proxy of diversity. In the example above it does divide places with either major street or generally wider streets from predominantly homogenous areas. The distribution of values is balanced, but truncated at 0 (range could not be negative). We can identify certain similarity with the patterns on previous figure \ref{fig:sdsSPW_meanIQ3_map}, because wider street (i.e., higher interquartile mean) causes bigger range, but the pattern are not identical.
+Figure \ref{fig:sdsSPW_rangeIQ3_map} illustrates *interquartile range of a width of a street profile* measured within 3 topological steps on morphological tessellation. That reflects range of values, so it is a proxy of statistical dispersion. In the example above it does divide places with either major street or generally wider streets from predominantly homogenous areas. The distribution of values is balanced, but truncated at 0 (range could not be negative). We can identify certain similarity with the patterns on previous figure \ref{fig:sdsSPW_meanIQ3_map}, because wider street (i.e., higher interquartile mean) causes bigger range, but the patterns are not identical.
 
 ![Spatial distribution of interdecile Theil index of a width of a street profile measured within 3 topological steps on morphological tessellation in the area of Prague’s city centre and its surroundings.](source/figures/ch7/sdsSPW_theilID3_map.pdf "Spatial distribution of Theil index"){#fig:sdsSPW_theilID3_map width=100%}
 
-Figure \ref{fig:sdsSPW_theilID3_map} illustrates *interdecile Theil index of a width of a street profile* measured within 3 topological steps on morphological tessellation. It is another character capturing diversity, this time based on inequality of distribution. The resulting map then shows as the most *unequal* area around Vaclavske sq. (darker red) where one street (in this case elongated square) is significantly different from the other. Previously highlight areas of wider streets are not so from the perspective of Theil index. The distribution has a long tail, somewhat typical for Theil index applied to morphometric characters.
+Figure \ref{fig:sdsSPW_theilID3_map} illustrates *interdecile Theil index of a width of a street profile* measured within 3 topological steps on morphological tessellation. The resulting map shows as the most *unequal* area around Vaclavske sq. (darker red) where one street (in this case elongated square) is significantly different from the other. Previously highlighted areas of wider streets are not so from the perspective of Theil index. The distribution has a long tail, somewhat typical for Theil index applied to morphometric characters.
 
 ![Spatial distribution of interdecile Simpson index of a width of a street profile measured within 3 topological steps on morphological tessellation in the area of Prague’s city centre and its surroundings.](source/figures/ch7/sdsSPW_simpson_map.pdf "Spatial distribution of Simpson index"){#fig:sdsSPW_simpson_map width=100%}
 
-The last contextual character, shown on figure \ref{fig:sdsSPW_simpson_map}, is *Simpson diversity index of a width of a street profile* measured within 3 topological steps on morphological tessellation. The values in this case are binned using Natural Breaks (*k=7*). It captures (inversely) similar information as Theil index, but that is not the rule. These two are, indeed, related as both capture diversity of values, but the relationship between them is not fixed as will be illustrated in the next section.
+The last contextual character, shown on figure \ref{fig:sdsSPW_simpson_map}, is *Simpson diversity index of a width of a street profile* measured within 3 topological steps on morphological tessellation. The values in this case are binned using Natural Breaks (*k=7*). It captures (inversely) similar information as Theil index, but that is not the rule. These two are somewhat related as both capture dispersion of values, but the relationship between them is not fixed as will be illustrated in the next section.
 
 Depending on the spatial distribution of primary characters, contextual pattern may be more similar to each other (like in the case above) or less similar. However, as illustrated in the chapter on primary characters, the visual assessment is not enough.
 
@@ -983,7 +974,7 @@ The first example, *circular compactness of tessellation cell* on figure \ref{fi
 
 ![Histograms of statistical distribution of contextual versions of area covered by neighbouring cells. Interquartile mean (top left), interquartile range (top right) interdecile Theil index (bottom left), Simpson index (bottom right).](source/figures/ch7/detail_mdcAre.pdf "Histograms of contextual area covered by cells"){#fig:detail_mdcAre width=100%}
 
-Initially exponential distribution of *area covered by neighbouring cells* remains exponential in both IQ mean and IQ range cases (figure \ref{fig:detail_mdcAre}). Theil index is also exponential, although the curve is not so unequal. Simpson index is significantly different from all three. The HeatTail binning used within the calculation is tailored to exponential distributions and resulting Simpson diversity is then relatively balanced across the values. The values 1 showing a big spike mean that the probability that any other value is within the same bin is 100%, hence no diversity in the area. It is typical for fairly homogenous compact urban tissues.
+Initially exponential distribution of *area covered by neighbouring cells* remains exponential in both IQ mean and IQ range cases (figure \ref{fig:detail_mdcAre}). Theil index is also exponential, although the curve is not so unequal. Simpson index is significantly different from all three. The HeadTail binning used within the calculation is tailored to exponential distributions and resulting Simpson diversity is then relatively balanced across the values. The values 1 showing a big spike mean that the probability that any other value is within the same bin is 100%, hence no diversity in the area. It is typical for fairly homogenous compact urban tissues.
 
 ![Histograms of statistical distribution of contextual versions of ‌width of a street profile. Interquartile mean (top left), interquartile range (top right) interdecile Theil index (bottom left), Simpson index (bottom right).](source/figures/ch7/detail_sdsSPW.pdf "Histograms of contextual width of a street"){#fig:detail_sdsSPW width=100%}
 
@@ -991,9 +982,9 @@ The third example, *‌width of a street profile* which was illustrated on maps 
 
 ![Histograms of statistical distribution of contextual versions of ‌ degree of a street node. Interquartile mean (top left), interquartile range (top right) interdecile Theil index (bottom left), Simpson index (bottom right).](source/figures/ch7/detail_mtdDeg.pdf "Histograms of contextual node degree"){#fig:detail_mtdDeg width=100%}
 
-Initially restricted values of *degree of a street node* remained present in IQ range (figure \ref{fig:detail_mtdDeg} but not in the other contextual characters. IQ mean is symmetrical with a large spike on 3, which is almost its median value. Theil index is very different from previous examples, and does not follow exponential distribution this time, while Simpson diversity index has two spikes on 0.5 and 1.0 and relative balance otherwise. 
+Initially restricted values of *degree of a street node* remained present in IQ range (figure \ref{fig:detail_mtdDeg} but not in the other contextual characters. IQ mean is symmetrical with a large spike on 3, which is almost its median value. Theil index is very different from previous examples, and does not follow exponential distribution this time, while Simpson diversity index has two spikes on 0.5 and 1.0 and relative balance otherwise.
 
-As the examples above indicates, the variety present in primary characters remained present, in a different way, in contextual characters as well. 
+As the examples above indicates, the variety present in primary characters remained present, in a different way, in contextual characters as well.
 
 #### Statistical relationship of characters
 The statistical relationship between contextual characters will directly influence results of clustering in next steps. For that reason, we should aim for minimisation of such relationship in terms of Spearman's rank correlation. As illustrated above, we may expect some relations, however only selective, affected by the nature of primary characters. Below (figure \ref{fig:spearman_conx}) is a correlation matrix of contextual characters for illustration of the measured relationship\footnote{Due to the large number of characters, matrix is not optimal for presentation in this form. Its high quality version is available in Appendix.}.
@@ -1036,7 +1027,7 @@ Gaussian Mixture Model clustering with 20 components is done using full covarian
 
 ```python
 from sklearn.mixture import GaussianMixture
-model = GaussianMixture(n_components=20, covariance_type="full", 
+model = GaussianMixture(n_components=20, covariance_type="full",
                         max_iter=200, n_init=5).fit(data)
 ```
 
@@ -1053,7 +1044,7 @@ The 20 cluster seems to be relatively well defined and based on the first observ
 	\makebox[\linewidth]{
 		\includegraphics[width=\textwidth]{source/figures/ch7/PRG_clusters_detail.pdf}
 	}
-	\caption[Short caption]{Long caption.}
+	\caption[Detail of spatial distribution of clusters]{Detail of spatial distribution of 20 clusters as identified by GMM based on complete data.}
 	\label{fig:PRG_clusters_detail}
 \end{figure}
 \restoregeometry
@@ -1147,14 +1138,14 @@ The last cluster, 19 illustrated on figure \ref{fig:PRG_cluster_detail_19} is in
 
 ![Example of cluster 19 and its surroundings within 1,5km buffer located on the eastern edge of the city.](source/figures/ch7/PRG_cluster_detail_19.png "Example of cluster 19"){#fig:PRG_cluster_detail_19 width=100%}
 
-From the overview is clear that some clusters are clearly very distinct like the historical core (11) or modernist estates (12), while others resemble each other as is the case of low-density single family clusters (0, 8, 13, 17). However, even between these seemingly similar clusters are recognisable differences. Numerical assessment of differences between clusters is part of the Chapter 8, to determine which characters are causing the distinction and understand the clusters based on their morphometric profiles. 
+From the overview is clear that some clusters are clearly very distinct like the historical core (11) or modernist estates (12), while others resemble each other as is the case of low-density single family clusters (0, 8, 13, 17). However, even between these seemingly similar clusters are recognisable differences. Numerical assessment of differences between clusters is part of the Chapter 8, to determine which characters are causing the distinction and understand the clusters based on their morphometric profiles.
 
 #### Sampled data
-Gaussian Mixture Model is an unsupervised machine learning procedure which means that it uses a training data on input to estimate the optimal clustering and then predicts the probability that each feature belongs to any of the components. That means that training data do not have to equal the data we want to classify. The GMM and especially the estimation of number of components, which does GMM repeatedly, could have relatively high computational demands as the size of the dataset grows. The Prague example, with 140,000 features took approximately 100 hours to measure all BIC values and do the final clustering on a desktop computer with 12-core Intel Xeon processor. Running larger areas at once may get unfeasible, it is hence critical to understand if the method can work with sampled data. 
+Gaussian Mixture Model is an unsupervised machine learning procedure which means that it uses a training data on input to estimate the optimal clustering and then predicts the probability that each feature belongs to any of the components. That means that training data do not have to equal the data we want to classify. The GMM and especially the estimation of number of components, which does GMM repeatedly, could have relatively high computational demands as the size of the dataset grows. The Prague example, with 140,000 features took approximately 60 hours to measure all BIC values and do the final clustering on a desktop computer with 12-core Intel Xeon processor. Running larger areas at once may get unfeasible, it is hence critical to understand if the method can work with sampled data.
 
-Sampled clustering would use randomly selected fraction of the data as a training set and then use it for prediction on the complete data. That might significantly reduce computational demands, because they rise exponentially with growing dataset, but at the same time might not provide useful results. Sampling procedure might miss some clusters entirely (none or very few features are included in the sample) or affect the results in other way. Following section tries to answer some of the questions comparing the clustering based on complete dataset with sampled one. 
+Sampled clustering would use randomly selected fraction of the data as a training set and then use it for prediction on the complete data. That might significantly reduce computational demands, because they rise exponentially with growing dataset, but at the same time might not provide useful results. Sampling procedure might miss some clusters entirely (none or very few features are included in the sample) or affect the results in other way. Following section tries to answer some of the questions comparing the clustering based on complete dataset with sampled one.
 
-##### Bayesian Information Criterion
+##### Sampled Bayesian Information Criterion
 Three versions of sampling are assessed - 10%, 25%, and 50% of the dataset. Because random sampling results in different samples each time, which could affected BIC, each option is sampled three times and GMM is run three times on each (in total 9 runs of GMM per option). To asses number of components, values from range 2 - 40 were tested. BIC is measured using the complete dataset. Simplified code below illustrates the principle.
 
 ```python
@@ -1162,8 +1153,8 @@ for s in range(3):
     sample = data.sample(sample_size)
     for n_components in range(2, 40):
         for i in range(3):
-            gmm = GaussianMixture(n_components=n_components, 
-                                  covariance_type="full", 
+            gmm = GaussianMixture(n_components=n_components,
+                                  covariance_type="full",
                                   max_iter=200)
             fitted = gmm.fit(sample)
             bic = gmm.bic(data)
@@ -1177,18 +1168,18 @@ Figure \ref{fig:PRG_sampled_BIC} shows a striking difference between results of 
 
 ![Bayesian Information Criterion score for sampled clustering excluding 0.1 sampled results. Shaded area reflects .95 confidence interval.](source/figures/ch7/PRG_sampled_BIC_no01.pdf "BIC score for sampled clustering without 0.1"){#fig:PRG_sampled_BIC_no01 width=100%}
 
-All two remaining options show similar curves as was already seen in the complete clustering. The bigger the sample is, the better results can GMM provide. One key difference between the samples is the resulting optimal number of components. It seems that the smaller the sample is, the sooner BIC curve culminates, which results is smaller number of optimal components. 0.25 sampling culminates at 11 components, 0.5 at 15 components and 1.0 (complete data) at already mentioned 20 components. The difference between 0.25 and 1.0 both in terms of BIC and optimal number of components is big, so it is questionable is such a small sample can provide any similar results.
+All two remaining options show similar curves as was already seen in the complete clustering. The bigger the sample is, the better results can GMM provide. One key difference between the samples is the resulting optimal number of components. It seems that the smaller the sample is, the sooner BIC curve culminates, which results is smaller number of optimal components. 0.25 sampling culminates at 11 components, 0.5 at 15 components and 1.0 (complete data) at already mentioned 20 components. The difference between 0.25 and 1.0 both in terms of BIC and optimal number of components is big, so it is questionable if such a small sample can provide any similar results.
 
-![Bayesian Information Criterion score for sampled clustering excluding 0.1 and 0.25 sampled results. Shaded area reflects .95 confidence interval.](source/figures/ch7/PRG_sampled_BIC_05_10.pdf "BIC score for sampled clustering without 0.1, 0.25""){#fig:PRG_sampled_BIC_05_10 width=100%}
+![Bayesian Information Criterion score for sampled clustering excluding 0.1 and 0.25 sampled results. Shaded area reflects .95 confidence interval.](source/figures/ch7/PRG_sampled_BIC_05_10.pdf "BIC score for sampled clustering without 0.1, 0.25"){#fig:PRG_sampled_BIC_05_10 width=100%}
 
 Figure \ref{fig:PRG_sampled_BIC_05_10} compares 0.5 and 1.0 sampling  only as the difference is not so dramatic. Unlike 1.0 sampling, where the point of culmination is not as clear, 0.5 culminates sooner and the curve starts ascending quicker. That makes the decision of optimum easier. Following the same principle as in previous case, the first significant minimum is 15 components. The BIC score overall is worse than in non-sampled case, but it is worth testing the similarity of actual DHC recognition.
 
-##### Distinct homogenous clusters
-Identification of distinct homogenous clusters based on sampled data (random sample 50%) using 15 components results in a spatial distribution of clusters illustrated on figure \ref{fig:PRG_sampled_clusters}. 
+##### Sampled distinct homogenous clusters
+Identification of distinct homogenous clusters based on sampled data (random sample 50%) using 15 components results in a spatial distribution of clusters illustrated on figure \ref{fig:PRG_sampled_clusters}.
 
 ![Spatial distribution of clusters based on sampled data (0.5) and 15 components within the whole study area.](source/figures/ch7/PRG_sampled_clusters.png "Spatial distribution of sampled clusters"){#fig:PRG_sampled_clusters width=100%}
 
-Visual assessment of clustering indicates that the DHCs seems to be meaningful and could be seen as a proxy of urban tissues. Due to the smaller number of components, some areas are showing less differentiation than in complete clustering, but the difference does not seems to be in terms of correctness or wrongness of one or the other clustering, but only in terms of the change of the resolution of results. 
+Visual assessment of clustering indicates that the DHCs seems to be meaningful and could be seen as a proxy of urban tissues. Due to the smaller number of components, some areas are showing less differentiation than in complete clustering, but the difference does not seems to be in terms of correctness or wrongness of one or the other clustering, but only in terms of the change of the resolution of results.
 
 ###### Comparison of sampled and complete clustering
 To understand what are the actual on-ground differences between two versions of clustering apart from the different number of components, three easy-to-interpret clusters are compared 1:1 and their composition and shape is assessed.
@@ -1215,17 +1206,17 @@ Even more similarity shows a comparison of large-scale modernist urban tissues (
 
 ![Composition of cluster 12 and sampled cluster 5 in relation to each other. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/ch7/relation_3.pdf "Composition of cluster 12 and sampled cluster 5"){#fig:relation_3 width=70%}
 
-The composition of clusters is, with a few exceptions equal (figure \ref{fig:relation_3}). The same features which belong to cluster 12 in complete clustering are labelled as cluster 5 in the sampled clustering and vice versa. 
+The composition of clusters is, with a few exceptions equal (figure \ref{fig:relation_3}). The same features which belong to cluster 12 in complete clustering are labelled as cluster 5 in the sampled clustering and vice versa.
 
 ![Comparison of the city centre focusing on cluster 15, which is not present in the sampled clustering.](source/figures/ch7/PRG_cluster_comparison_4.png "Comparison of the city centre focusing on cluster 15"){#fig:PRG_cluster_comparison_4 width=100%}
 
-Three examples above shows that there is a striking similarity between both results. However, there is a different number of clusters, so where is the difference? The example on figure \ref{fig:PRG_cluster_comparison_4} shows cluster 15 based on complete data, which does not have its counterpart in sampled clustering. Instead, it is split into three almost equal parts (figure \ref{fig:relation_cluster15}) each linked to another cluster. What was so-called transitional area between medieval core and historical compact city is no longer present. That by itself is likely not a big issue, but it illustrates the behaviour of sampled clustering with smaller number of components. It does not necessarily merge two similar clusters into one, but as some places split clusters into multiple pieces. GMM in this case sees different data and hence might exclude some smaller clusters. Because these might have been *in between* other, parts are now closer to one and other part closer to another cluster. The resulting clustering should then be seen as different perspective using different resolution, rather than coarser version of complete clustering.
+Three examples above shows that there is a striking similarity between both results. However, there is a different number of clusters, so where is the difference? The example on figure \ref{fig:PRG_cluster_comparison_4} shows cluster 15 based on complete data, which does not have its counterpart in sampled clustering. Instead, it is split into three almost equal parts (figure \ref{fig:relation_cluster15}) each linked to another cluster. What was so-called transitional area between medieval core and historical compact city is no longer present. That by itself is likely not a big issue, but it illustrates the behaviour of sampled clustering with smaller number of components. It does not necessarily merge two similar clusters into one, but at some places splits clusters into multiple pieces. GMM in this case sees different data and hence might exclude some smaller clusters. Because these might have been *in between* other, parts are now closer to one and other part closer to another cluster. The resulting clustering should then be seen as different perspective using different resolution, rather than coarser version of complete clustering.
 
 ![Composition of cluster 15 in relation to sampled clustering. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/ch7/relation_cluster15.pdf "Composition of cluster 15"){#fig:relation_cluster15 width=40%}
 
-Looking onto other clusters which do not have counterpart in sampled clustering (apart from 15, 2, 6, 9, and 10), none of them is *swallowed* by one larger cluster, all are split into two sampled clusters. Sometimes more equally (e.g., cluster 2 is equally split between 10 and 14), sometimes less equally (e.g., cluster 6 is more present in sampled 0 than sampled 8). This illustrates the probabilistic rather than hierarchical nature of GMM. Full comparison is available in Appendix XXX.*TODO: add full data to appendix (relation_sampled-complete, relation_complete-sampled)*
+Looking onto other clusters which do not have counterpart in sampled clustering (apart from 15, 2, 6, 9, and 10), none of them is *swallowed* by one larger cluster, all are split into two sampled clusters. Sometimes more equally (e.g., cluster 2 is equally split between 10 and 14), sometimes less equally (e.g., cluster 6 is more present in sampled 0 than sampled 8). This illustrates the probabilistic rather than hierarchical nature of GMM. Full comparison is available in Appendix XXX.
 
-Depends on the aim of the study, sampled clustering could likely be used instead of complete clustering, considering the fact that results based on samples smaller than 50% are not precise enough. However, for the optimal, detailed identification of distinct homogenous clusters, sampled clustering might provide sub-optimal results.
+Depends on the aim of the study, sampled clustering could likely be used instead of complete clustering, considering the fact that results based on samples smaller than 50% are not precise enough. However, for the ideal, detailed identification of distinct homogenous clusters, sampled clustering might provide sub-optimal results.
 
 #### Note on probability
 The Gaussian Mixture Model clustering is probabilistic, which means that each feature has predicted probability that it belongs to any of the components. What is shown on all maps and data above, is the cluster with the highest probability. In theory, it should be possible to work with secondary or tertiary labels for each feature, but the actual data on probability tell otherwise. The probability that features belong to any other than primary cluster tends to be insignificant. Only 89 out of 140,315 features have probability that they belong to any other than primary cluster bigger than 0.1. The reason behind it is likely related to the richness of the data and especially related dimensionality causing big differences in Euclidean distance between clusters. So while GMM is in theory probabilistic, in practice it provides a single primary label only.
@@ -1234,38 +1225,34 @@ The Gaussian Mixture Model clustering is probabilistic, which means that each fe
 The trial of sub-clustering, i.e., division of existing clusters, obtained using the complete dataset will be done on two of the original clusters, which are very different. The first example will focus on cluster 5, compact perimeter blocks, and the second on modernist belt of Prague labeled as cluster 12. The assumption behind sub-clustering is that the richness of the data may allow us to determine differences within the cluster. These are not significant from the perspective of the whole dataset, that is why they were not picked initially as independent clusters, but they might be significant internally.
 
 ##### Compact Prague
-The first case the cluster 5, which could be interpreted as urban tissue of compact rigid perimeter blocks. The reason for its selection is that due to the varied topography, these blocks has to react to steeper surface at some places and the perceptional character of such areas is different from those laying on the flat grounds. 
+The first case is the cluster 5, which could be interpreted as urban tissue of compact rigid perimeter blocks. The reason for its selection is that due to the varied topography. These blocks has to react to steeper surface at some places and the perceptional character of such areas is different from those laying on the flat grounds.
 
 Sub-clustering uses contextual data of individual features within the cluster and essentially performs the identification of DHCs once again, starting from determination of optimal number of components using BIC and consequent training of the model and prediction of labels.
 
-![TITLE](source/figures/ch7/PRG_cluster5_BIC.pdf "Short caption"){#fig:PRG_cluster5_BIC width=50%}
+![Bayesian information criterion score for cluster 5 sub-clustering to determine optimal number of components.](source/figures/ch7/PRG_cluster5_BIC.pdf "BIC for cluster 5"){#fig:PRG_cluster5_BIC width=50%}
 
-Bic shows that there's potential either 2 or even 3
+Bayesian Information Criterion illustrated on figure \ref{fig:PRG_cluster5_BIC} indicates that there is a scope for sub-clustering as both 2 and 3 components have better score than a single component. If the situation would be otherwise, and a single component would have the lowest BIC score, there would be no significant sub-clusters in the data and results of forced clustering would likely suffer from discontinuity. Following the rule of the first significant minimum, this trial works with 2 components.
 
-Bayesian Information Criterion illustrated on figure \ref{fig:PRG_cluster5_BIC} indicates that there is a scope for sub-clustering as both 2 and 3 components have better score than a single component. If the situation would be otherwise, and a single component would have the lowest BIC score, there would be no significant sub-clusters in the data and results of forced clustering would likely suffer from discontinuity. Following the rule of the first significant minimum, this trial works with 2 components. 
-
-![TITLE](source/figures/ch7/PRG_subcluster5.png "Short caption"){#fig:PRG_subcluster5 width=100%}
+![Spatial distribution of sub-clusters of cluster 5 marks the distinction between rigidly and distorted grids.](source/figures/ch7/PRG_subcluster5.png "Spatial distribution of sub-clusters of cluster 5"){#fig:PRG_subcluster5 width=100%}
 
 The result of sub-clustering of cluster 5 is shown on figure \ref{fig:PRG_subcluster5}. It feels fair to conclude, that newly identified sub-clusters have a meaning and distinguish between areas which are more rigidly gridded and those which tend to have grid distorted.
 
 ##### Modernist Prague
--second example is modernism because
+Second sub-clustering trial focus on large-scale modernist housing estates on the periphery of Prague. There is an assumption of inner differentiation of the relevant cluster 12 because each of these neighbourhoods has been designed and there were different authors and approaches in different places and periods of development. It is assumed that morphometric data should be able to reflect this difference.
 
-Second sub-clustering trial focus on large-scale modernist housing estates on the periphery of Prague. There is an assumption of inner differentiation of the relevant cluster 12 because each of these neighbourhoods has been designed and there were different authors and approaches in different places and periods of development. It is assumed that morphometric data should be able to reflect this difference. 
-
-![TITLE](source/figures/ch7/PRG_cluster12_BIC.pdf "Short caption"){#fig:PRG_cluster12_BIC width=50%}
+![Bayesian information criterion score for cluster 12 sub-clustering to determine optimal number of components.](source/figures/ch7/PRG_cluster12_BIC.pdf "BIC for cluster 12"){#fig:PRG_cluster12_BIC width=50%}
 
 BIC results on figure \ref{fig:PRG_cluster12_BIC} indicates that subdivision of the cluster is significantly better than a single group with all the options between 2 and 7 having lower score that one component. The first significant minimum in this case are 3 components.
 
-![TITLE](source/figures/ch7/PRG_subcluster12.png "Short caption"){#fig:PRG_subcluster12 width=100%}
+![Spatial distribution of sub-clusters of cluster 12 showing the different location of all three groups.](source/figures/ch7/PRG_subcluster12.png "Spatial distribution of sub-clusters of cluster 12"){#fig:PRG_subcluster12 width=100%}
 
 The map on the figure \ref{fig:PRG_subcluster12} shows the whole cluster 12 divided into three sub-clusters. Interesting case is the green group, located exclusively on the western edge of the study area. The fact that it is not present anywhere else indicates that sub-clustering indicates that results are not affected by randomness. Closer look at the differences as illustrated on the figure \ref{fig:PRG_subcluster12_detail} shows why these tissues are split in such a way. The green sub-cluster have large blocks and circular character, the red one tends to be a large-scale orthogonal configuration, while blue is smaller-scale more compact urban tissue.
 
-![TITLE](source/figures/ch7/PRG_subcluster12_detail.pdf "Short caption"){#fig:PRG_subcluster12_detail width=100%}
+![Comparison of examples of sub-clusters of cluster 12 illustrating the structural differences.](source/figures/ch7/PRG_subcluster12_detail.pdf "Comparison of examples of sub-clusters of cluster 12"){#fig:PRG_subcluster12_detail width=100%}
 
 Both examples above indicate that there is a scope for sub-clustering if the research using this method needs the more refined level of detail. As noted above, sub-clustering ability depends on the internal homogeneity of each cluster and it may not be possible in some cases. However, in cases where this possibility is available, results show meaningful patterns, enabled by the richness of the morphometric dataset.
 
 ## DHC as an urban tissue
-While the validation is left for the Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of distinct homogenous clusters has a potential. The outcome of Gaussian Mixture Model learning procedure does match the expectations of what DHC should be. The question remains what is the relation of this DHCs to the actual concept of urban tissues. 
+While the validation is left for the Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of distinct homogenous clusters has a potential. The outcome of Gaussian Mixture Model learning procedure does match the expectations of what DHC should be. The question remains what is the relation of this DHCs to the actual concept of urban tissues.
 
 While the term *urban tissue* is used in paragraphs above interchangeably with clusters, this link still needs to be studied especially through qualitative assessment of DHCs. Morphometric characters certainly help in description of urban tissues and clustering helps make sense out of it, but one should be aware that DHC is a numerical, morphometric statistical **proxy** of urban tissue, not its definition and replacement. GMM clustering is non-deterministic, so boundaries are not fixed, but rather indicative. It is not a ground truth (there is no ground truth at all in fact) and the meaning of clusters and relation between them has to be determined and interpreted before any further steps. The one approach how to do so is proposed in the next chapter.
