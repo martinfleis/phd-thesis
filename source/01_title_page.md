@@ -5,7 +5,7 @@ and add the centred logo
 -->
 
 \begin{titlepage}
-    \newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
+    \newgeometry{left=1cm,bottom=2cm,top=1cm,right=1cm}
     \begin{center}
 
         \vspace*{2.5cm}
@@ -35,7 +35,7 @@ and add the centred logo
 
         % Uncomment the following line
         % to add a centered university logo
-        % \includegraphics[width=0.4\textwidth]{style/univ_logo.eps}
+        \includegraphics[width=0.3 \textwidth]{style/univ_logo_s.eps}
 
         \normalsize
         Urban Design Studies Unit\\

@@ -1,5 +1,191 @@
-# Appendix 1: Contextual characters {.unnumbered}
-## Interquartile mean
+# Appendix 7: Supplementary material for identification of urban tissues {.unnumbered}
+
+\renewcommand\thefigure{A7.\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand\thetable{A7.\arabic{table}}
+\setcounter{table}{0}
+\pagestyle{plain}
+
+## 7.1 Process of selection of primary characters {.unnumbered}
+To be done.
+
+## 7.2 Classification of primary characters {.unnumbered}
+
+| notation          | index                                | element                         | category     | extent   |
+|:------------------|:-------------------------------------|:--------------------------------|:-------------|---------:|
+| $a_{blg}$         | area                                 | building                        | dimension    | S        |
+| $h_{blg}$         | height                               | building                        | dimension    | S        |
+| $v_{blg}$         | volume                               | building                        | dimension    | S        |
+| $p_{blg}$         | perimeter                            | building                        | dimension    | S        |
+| $a_{blg_c}$       | courtyard area                       | building                        | dimension    | S        |
+| $FoF_{blg}$       | form factor                          | building                        | shape        | S        |
+| $VFR_{blg}$       | volume to façade ratio               | building                        | shape        | S        |
+| $CCo_{blg}$       | circular compactness                 | building                        | shape        | S        |
+| $Cor_{blg}$       | corners                              | building                        | shape        | S        |
+| $Squ_{blg}$       | squareness                           | building                        | shape        | S        |
+| $ERI_{blg}$       | equivalent rectangular index         | building                        | shape        | S        |
+| $Elo_{blg}$       | elongation                           | building                        | shape        | S        |
+| $CCD_{blg}$       | centroid - corner distance deviation | building                        | shape        | S        |
+| $CCM_{blg}$       | centroid - corner mean distance      | building                        | shape        | S        |
+| $Ori_{blg}$       | solar orientation                    | building                        | distribution | S        |
+| $SAl_{blg}$       | street alignment                     | building                        | distribution | S        |
+| $CAl_{blg}$       | cell alignment                       | building                        | distribution | S        |
+| $LAL_{cell}$      | longest axis length                  | tessellation cell               | dimension    | S        |
+| $a_{cell}$        | area                                 | tessellation cell               | dimension    | S        |
+| $CCo_{cell}$      | circular compactness                 | tessellation cell               | shape        | S        |
+| $ERI_{cell}$      | equivalent rectangular index         | tessellation cell               | shape        | S        |
+| $Ori_{cell}$      | solar orientation                    | tessellation cell               | distribution | S        |
+| $SAl_{cell}$      | street alignment                     | tessellation cell               | distribution | S        |
+| $CAR_{cell}$      | coverage area ratio                  | tessellation cell               | intensity    | S        |
+| $FAR_{cell}$      | floor area ratio                     | tessellation cell               | intensity    | S        |
+| $l_{edg}$         | length                               | street segment                  | dimension    | S        |
+| $w_{sp}$          | width                                | street profile                  | dimension    | S        |
+| $h_{sp}$          | height                               | street profile                  | dimension    | S        |
+| $HWR_{sp}$        | height to width ratio                | street profile                  | shape        | S        |
+| $Ope_{sp}$        | openness                             | street profile                  | distribution | S        |
+| $wDev_{sp} $      | width deviation                      | street profile                  | diversity    | S        |
+| $hDev_{sp}$       | height deviation                     | street profile                  | diversity    | S        |
+| $Lin_{edg}$       | linearity                            | street segment                  | shape        | S        |
+| $a_{edg}$         | area covered                         | street segment                  | dimension    | S        |
+| $BpM_{edg}$       | buildings per meter                  | street segment                  | intensity    | S        |
+| $a_{node}$        | area covered                         | street node                     | dimension    | S        |
+| $SWR_{blg}$       | shared walls ratio                   | adjacent buildings              | distribution | S        |
+| $Ali_{blg}$       | alignment                            | neighbouring buildings          | distribution | S        |
+| $NDi_{blg}$       | mean distance                        | neighbouring buildings          | distribution | S        |
+| $WNe_{cell}$      | weighted neighbours                  | tessellation cell               | distribution | S        |
+| $a_{cell_n}$      | area covered                         | neighbouring cells              | dimension    | S        |
+| $RC_{edg_n}$      | reached cells                        | neighbouring segments           | intensity    | S        |
+| $a_{edg_n}$       | reached area                         | neighbouring segments           | dimension    | S        |
+| $deg_{node}$      | degree                               | street node                     | distribution | S        |
+| $MDi_{node}$      | mean distance to neighbouring nodes  | street node                     | dimension    | S        |
+| $RC_{node_n}$     | reached cells                        | neighbouring nodes              | intensity    | S        |
+| $a_{node_n}$      | reached area                         | neighbouring nodes              | dimension    | S        |
+| $NCo_{blg_{adj}}$ | number of courtyards                 | adjacent buildings              | intensity    | S        |
+| $p_{blg_{adj}}$   | perimeter wall length                | adjacent buildings              | dimension    | S        |
+| $IBD_{blg}$       | mean inter-building distance         | neighbouring buildings          | distribution | S        |
+| $BuA_{blg}$       | building adjacency                   | neighbouring buildings          | distribution | S        |
+| $GFAR_{cell}$     | gross floor area ratio               | neighbouring tessellation cells | intensity    | S        |
+| $WRB_{cell}$      | weighted reached blocks              | neighbouring tessellation cells | intensity    | S        |
+| $a_{blk}$         | area                                 | block                           | dimension    | S        |
+| $p_{blk}$         | perimeter                            | block                           | dimension    | S        |
+| $CCo_{blk}$       | circular compactness                 | block                           | shape        | S        |
+| $ERI_{blk}$       | equivalent rectangular index         | block                           | shape        | S        |
+| $CWA_{blk}$       | compactness-weighted axis            | block                           | shape        | S        |
+| $Ori_{blk}$       | solar orientation                    | block                           | distribution | S        |
+| $wN_{blk}$        | weighted neighbours                  | block                           | distribution | S        |
+| $wC_{blk}$        | weighted cells                       | block                           | intensity    | S        |
+| $Mes_{node}$      | local meshedness                     | street network                  | connectivity | M        |
+| $MSL_{edg}$       | mean segment length                  | street network                  | dimension    | S        |
+| $CDL_{node}$      | cul-de-sac length                    | street network                  | dimension    | S        |
+| $RC_{edg}$        | reached cells                        | street network                  | dimension    | S        |
+| $D_{node}$        | node density                         | street network                  | intensity    | M        |
+| $RC_{node_{net}}$ | reached cells                        | street network                  | dimension    | S        |
+| $a_{node_{net}}$  | reached area                         | street network                  | dimension    | S        |
+| $pCD_{node}$      | proportion of cul-de-sacs            | street network                  | connectivity | M        |
+| $p3W_{node}$      | proportion of 3-way intersections    | street network                  | connectivity | M        |
+| $p4W_{node}$      | proportion of 4-way intersections    | street network                  | connectivity | M        |
+| $wD_{node}$       | weighted node density                | street network                  | intensity    | M        |
+| $lCC_{node}$      | local closeness centrality           | street network                  | connectivity | M        |
+| $sCl_{node}$      | square clustering                    | street network                  | connectivity | L        |
+
+Table: Classification of primary characters. Grain is S for all characters. \label{prim_chars_clas}
+
+| notation          | reference           | id     |
+|:------------------|:--------------------|:-------|
+| $a_{blg}$         | [@hallowell2013]    | sdbAre |
+| $h_{blg}$         | [@schirmer2015]     | sdbHei |
+| $v_{blg}$         | [@yoshida2005]      | sdbVol |
+| $p_{blg}$         | [@vanderhaegen2017] | sdbPer |
+| $a_{blg_c}$       | [@schirmer2015]     | sdbCoA |
+| $FoF_{blg}$       | [@bourdic2012]      | ssbFoF |
+| $VFR_{blg}$       | [@yoshida2005]      | ssbVFR |
+| $CCo_{blg}$       | [@dibble2017]       | ssbCCo |
+| $Cor_{blg}$       | [@steiniger2008]    | ssbCor |
+| $Squ_{blg}$       | [@steiniger2008]    | ssbSqu |
+| $ERI_{blg}$       | [@basaraner2017]    | ssbERI |
+| $Elo_{blg}$       | [@steiniger2008]    | ssbElo |
+| $CCD_{blg}$       |                     | ssbCCD |
+| $CCM_{blg}$       | [@schirmer2015]     | ssbCCM |
+| $Ori_{blg}$       | [@schirmer2015]     | stbOri |
+| $SAl_{blg}$       | [@schirmer2015]     | stbSAl |
+| $CAl_{blg}$       |                     | stbCeA |
+| $LAL_{cell}$      |                     | sdcLAL |
+| $a_{cell}$        | [@hamaina2012a]     | sdcAre |
+| $CCo_{cell}$      |                     | sscCCo |
+| $ERI_{cell}$      |                     | sscERI |
+| $Ori_{cell}$      |                     | stcOri |
+| $SAl_{cell}$      |                     | stcSAl |
+| $CAR_{cell}$      | [@hamaina2013]      | sicCAR |
+| $FAR_{cell}$      | [@hamaina2013]      | sicFAR |
+| $l_{edg}$         | [@gil2012]          | sdsLen |
+| $w_{sp}$          | [@araldi2019]       | sdsSPW |
+| $h_{sp}$          | [@araldi2019]       | sdsSPH |
+| $HWR_{sp}$        | [@araldi2019]       | sdsSPR |
+| $Ope_{sp}$        | [@araldi2019]       | sdsSPO |
+| $wDev_{sp} $      | [@araldi2019]       | sdsSWD |
+| $hDev_{sp}$       | [@araldi2019]       | sdsSHD |
+| $Lin_{edg}$       | [@araldi2019]       | sssLin |
+| $a_{edg}$         |                     | sdsAre |
+| $BpM_{edg}$       |                     | sisBpM |
+| $a_{node}$        |                     | sddAre |
+| $SWR_{blg}$       | [@hamaina2012a]     | mtbSWR |
+| $Ali_{blg}$       | [@hijazi2016]       | mtbAli |
+| $NDi_{blg}$       | [@hijazi2016]       | mtbNDi |
+| $WNe_{cell}$      |                     | mtcWNe |
+| $a_{cell_n}$      |                     | mdcAre |
+| $RC_{edg_n}$      |                     | misRea |
+| $a_{edg_n}$       |                     | mdsAre |
+| $deg_{node}$      | [@boeing2018]       | mtdDeg |
+| $MDi_{node}$      |                     | mtdMDi |
+| $RC_{node_n}$     |                     | midRea |
+| $a_{node_n}$      |                     | midAre |
+| $NCo_{blg_{adj}}$ | [@schirmer2015]     | libNCo |
+| $p_{blg_{adj}}$   |                     | ldbPWL |
+| $IBD_{blg}$       | [@caruso2017]       | ltbIBD |
+| $BuA_{blg}$       | [@vanderhaegen2017] | ltcBuA |
+| $GFAR_{cell}$     | [@dibble2017]       | licGDe |
+| $WRB_{cell}$      |                     | ltcWRB |
+| $a_{blk}$         | [@dibble2017]       | ldkAre |
+| $p_{blk}$         | [@gil2012]          | ldkPer |
+| $CCo_{blk}$       | [@schirmer2015]     | lskCCo |
+| $ERI_{blk}$       | [@basaraner2017]    | lskERI |
+| $CWA_{blk}$       | [@feliciotti2018]   | lskCWA |
+| $Ori_{blk}$       | [@gil2012]          | ltkOri |
+| $wN_{blk}$        |                     | ltkWNB |
+| $wC_{blk}$        |                     | likWBB |
+| $Mes_{node}$      | [@feliciotti2018]   | lcdMes |
+| $MSL_{edg}$       |                     | ldsMSL |
+| $CDL_{node}$      |                     | ldsCDL |
+| $RC_{edg}$        |                     | ldsRea |
+| $D_{node}$        |                     | lddNDe |
+| $RC_{node_{net}}$ |                     | lddRea |
+| $a_{node_{net}}$  |                     | lddARe |
+| $pCD_{node}$      | [@lowry2014]        | linPDE |
+| $p3W_{node}$      | [@boeing2018]       | linP3W |
+| $p4W_{node}$      | [@boeing2018]       | linP4W |
+| $wD_{node}$       | [@dibble2017]       | linWID |
+| $lCC_{node}$      | [@porta2006]        | lcnClo |
+| $sCl_{node}$      |                     | xcnSCl |
+
+Table: Reference table for primary characters. Contains references to existing literature and to identifier of each character used within computational Jupyter notebooks. \label{prim_chars_ref}
+
+
+## 7.3 Sectional diagram analysis {.unnumbered}
+To be done.
+
+## 7.4 Analysis of local central tendency characters {.unnumbered}
+To be done.
+
+## 7.5 Contextual characters comparison {.unnumbered}
+To be done.
+
+## 7.6 Spatial autocorrelation of contextual characters {.unnumbered}
+To be done.
+
+## 7.7 Statistical overview of contextual characters results {.unnumbered}
+
+### Interquartile mean {.unnumbered}
+
 |                |         mean |          std |         min |          25% |          50% |          75% |          max |
 |:---------------|-------------:|-------------:|------------:|-------------:|-------------:|-------------:|-------------:|
 | stcOri |     18       |      6.8     |     0.12    |     13       |     18       |     23       |     42       |
@@ -89,7 +275,7 @@ Table: Overview of the contextual morphometric values of interquartile mean for 
 
 ![Histograms of interquartile mean for characters 61-74 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_74__meanIQ3.pdf "Histograms of contextual characters 61-74"){#fig:conxdistplot5 width=100%}
 
-## Interquartile range
+### Interquartile range {.unnumbered}
 |                 |         mean |          std |     min |         25% |         50% |          75% |          max |
 |:----------------|-------------:|-------------:|--------:|------------:|------------:|-------------:|-------------:|
 | stcOri |     14       |      7.4     | 0.013   |     8.8     |    14       |     19       |     45       |
@@ -179,7 +365,7 @@ Table: Overview of the contextual morphometric values of interquartile range for
 
 ![Histograms of interquartile range for characters 61-74 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_74__rangeIQ3.pdf "Histograms of contextual characters 61-74 (range)"){#fig:conxdistplot5range width=100%}
 
-## Interdecile Theil index
+### Interdecile Theil index {.unnumbered}
 |                 |    mean |    std |      min |     25% |     50% |     75% |   max |
 |:----------------|--------:|-------:|---------:|--------:|--------:|--------:|------:|
 | stcOri | 0.14    | 0.13   |  8.3e-08 | 0.059   | 0.11    | 0.19    | 2.2   |
@@ -269,7 +455,7 @@ Table: Overview of the contextual morphometric values of interdecile Theil index
 
 ![Histograms of interdecile Theil index for characters 61-74 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_74__theilID3.pdf "Histograms of contextual characters 61-74 (Theil)"){#fig:conxdistplot5Theil width=100%}
 
-## Simpson index
+### Simpson index {.unnumbered}
 |                |   mean |   std |   min |   25% |   50% |   75% |   max |
 |:---------------|-------:|------:|------:|------:|------:|------:|------:|
 | sdcLAL |   0.57 | 0.22  |  0.15 |  0.39 |  0.54 |  0.74 |     1 |
@@ -359,6 +545,13 @@ Table: Overview of the contextual morphometric values of Simpson index for the w
 
 ![Histograms of Simpson index for characters 61-74 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_74__simpson.pdf "Histograms of contextual characters 61-74 (Simpson)"){#fig:conxdistplot5Simpson width=100%}
 
-<!--
-![TITLE. ](source/figures/appendix_conx/spearman_conx.pdf "Short caption"){#fig:spearman_conx_hq width=100%}
---!>
+
+## 7.8 Correlation matrix of contextual characters {.unnumbered}
+
+	![TITLE. ](source/figures/appendix_conx/spearman_conx.pdf "Short caption"){#fig:spearman_conx_hq width=100%}
+
+Commented out, uncomment for final export.
+
+## 7.9 Structure of clusters of sampled and complete clustering {.unnumbered}
+
+To be done.

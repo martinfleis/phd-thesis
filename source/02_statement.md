@@ -12,5 +12,11 @@
 
 \textit{Date:}
 
+\vspace{2.5cm}
+
+\textit{Except where otherwise noted, content in this thesis is licensed under a Creative Commons Attribution 4.0 License (http://creativecommons.org/licenses/by/4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.}
+
+\textit{Copyright 2020, Martin Fleischmann.}
+
 \vspace*{\fill}
 \pagenumbering{gobble}

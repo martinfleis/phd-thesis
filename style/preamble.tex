@@ -104,7 +104,7 @@
 \raggedbottom
 
 % Set margins
-\usepackage[left=4cm,right=2.5cm,top=2cm,bottom=4cm,includehead,includefoot,headheight=15pt]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=4cm,includehead,includefoot,headheight=15pt]{geometry}
 % \setlength\parindent{0.4in} % indent at start of paragraphs (set to 0.3?)
 \setlength{\parskip}{9pt}
 
@@ -144,3 +144,7 @@
 
 % Produce landscape pages in a (mainly) portrait document.
 \usepackage{pdflscape}
+
+% Fix numbering of tables and figures in appendix
+\usepackage{chngcntr}
+\counterwithin{table}{chapter}
