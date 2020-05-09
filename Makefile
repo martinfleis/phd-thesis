@@ -105,4 +105,11 @@ chapter8:
 	--pdf-engine=xelatex \
 	--verbose
 
+docx7:
+	pandoc "$(INPUTDIR)"/15*.md \
+	-o "$(OUTPUTDIR)/chapter7.docx" \
+	--bibliography="$(BIBFILE)" \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--toc
+
 .PHONY: help pdf docx html tex chapter7 chapter8

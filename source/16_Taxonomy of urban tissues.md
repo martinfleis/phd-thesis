@@ -199,7 +199,7 @@ Centroid values. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisqu
 
 Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Long caption under img](source/figures/ch8/prg_dendrogram.pdf "Short caption"){#fig:prg_dendrogram width=100%}
+![Long caption under img](source/figures/ch8/200507_dendrogram.pdf "Short caption"){#fig:prg_dendrogram width=100%}
 
 Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
@@ -222,36 +222,27 @@ Branch interpretation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Compact](source/figures/ch8/PRG_hierarchical_branch_0.png "Short caption"){#fig:PRG_hierarchical_branch_0 width=100%}
+![dense disorder](source/figures/ch8/PRG_hierarchical_branch_1.png "Short caption"){#fig:PRG_hierarchical_branch_1 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Red](source/figures/ch8/PRG_hierarchical_branch_2.png "Short caption"){#fig:PRG_hierarchical_branch_2 width=100%}
+![dense](source/figures/ch8/PRG_hierarchical_branch_3.png "Short caption"){#fig:PRG_hierarchical_branch_3 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Pink](source/figures/ch8/PRG_hierarchical_branch_4.png "Short caption"){#fig:PRG_hierarchical_branch_4 width=100%}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
-
-
-![Grey](source/figures/ch8/PRG_hierarchical_branch_5.png "Short caption"){#fig:PRG_hierarchical_branch_5 width=100%}
+![low desnity](source/figures/ch8/PRG_hierarchical_branch_6.png "Short caption"){#fig:PRG_hierarchical_branch_6 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
 
-![Green](source/figures/ch8/PRG_hierarchical_branch_6.png "Short caption"){#fig:PRG_hierarchical_branch_6 width=100%}
+![traditional city](source/figures/ch8/PRG_hierarchical_branch_7.png "Short caption"){#fig:PRG_hierarchical_branch_7 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
 
-![Fringes + modernism (left side)](source/figures/ch8/PRG_hierarchical_branch_12.png "Short caption"){#fig:PRG_hierarchical_branch_12 width=100%}
+![Fringes (left side)](source/figures/ch8/PRG_hierarchical_branch_12.png "Short caption"){#fig:PRG_hierarchical_branch_12 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
-
-
-![Traditional city (right side)](source/figures/ch8/PRG_hierarchical_branch_14.png "Short caption"){#fig:PRG_hierarchical_branch_14 width=100%}
-
 
 Sum up. The rest on branches in appendix. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
@@ -399,7 +390,7 @@ Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus
 ###### tree
 Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Long caption under img](source/figures/ch8/AMS_dengrogram_n30.pdf "Short caption"){#fig:AMS_dengrogram_n30 width=100%}
+![Long caption under img](source/figures/ch8/200507_dengrogram_n30.pdf "Short caption"){#fig:AMS_dengrogram_n30 width=100%}
 
 Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
@@ -415,7 +406,7 @@ Few examples. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque l
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_3.png "Short caption"){#fig:AMS_hierarchical_branch_3 width=100%}
+![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_4.png "Short caption"){#fig:AMS_hierarchical_branch_4 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
@@ -423,11 +414,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultr
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_9.png "Short caption"){#fig:AMS_hierarchical_branch_9 width=100%}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
-
-![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_11.png "Short caption"){#fig:AMS_hierarchical_branch_11 width=100%}
+![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_10.png "Short caption"){#fig:AMS_hierarchical_branch_10 width=100%}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
@@ -443,7 +430,7 @@ Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus le
 
 Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
-![Long caption under img](source/figures/ch8/AMSPRG_dengrogram_mixed.pdf "Short caption"){#fig:AMSPRG_dengrogram_mixed width=100%}
+![Long caption under img](source/figures/ch8/200505_dengrogram_mixed.pdf "Short caption"){#fig:AMSPRG_dengrogram_mixed width=100%}
 
 Spatial distr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
 
