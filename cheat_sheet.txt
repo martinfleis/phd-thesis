@@ -74,3 +74,14 @@ OR
 # Insert PDF/PNG
 
 \includepdf{image.pdf}
+
+# Reference section
+
+# Introduction \label{introduction}
+
+As mentioned in section \ref{introduction}, different elements
+
+# Structure and writing
+
+First paragraph: creates a link back to the earlier parts of the thesis, in particular the previous chapter, to make it obvious why the chapter is needed.
+Second paragraph: states the aim of the chapter, what the reader learns from it and how it advances the overall goal.

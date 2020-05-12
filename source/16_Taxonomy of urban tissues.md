@@ -1,62 +1,72 @@
+\setcounter{chapter}{7}
+
 # Taxonomy of urban tissues
 
-The previous chapter proposes a method of identification of urban tissues within urban form using the proxy of a distinct homogenous cluster. These clusters can now be theoretically interpreted, in a biological sense, as individuals and studied as such. The core if the study of individuals of any species or entity is the classification, which in biology could take a shape of a taxonomic tree. Based on the propositions outlined in the chapter 4, biological analogy is taken further to propose a numerical taxonomy of urban form.
+The previous chapters introduced the framework implementing urban morphometrics on a metropolitan scale. Based on the selection of morphometric characters, it established a method of a complex description of urban form on the scale of individual buildings. As reported, derived information then enabled the identification of urban tissues within urban form using the proxy of a distinct homogenous cluster. Consequent results of the unsupervised clustering indicate the validity of DHCs in recognition of urban form patterns and the potential for both additional subdivision and upscaling of the model.
 
-Distinct homogenous clusters as proposed in the previous chapter are describing urban patterns, or *individuals*, which show varied degrees of similarity among themselves but the similarity itself is only perceived, not yet quantified. At the same time, all clusters are seen as equal without any further classification. Numerical taxonomy, as explained in chapter 4, offers a method tailored to the morphometric nature of this research.
+In this chapter, therefore, the observed clusters are employed in the role of input data and investigated from three perspectives - 1) conceptualisation of clusters as *individuals*, leading to the taxonomic classification, 2) validity of clusters as a proxy of urban tissues and 3) the transferability of the method to the different geographical context. 
 
-Along the classification, the method also needs to be validated. Visual assessment of DHCs indicates that the method is capable of producing meaningful results, but it that by itself does not serve as significant validation. Hence this chapter proposes several methods of validation of both identification of urban tissues and their classification. 
+This chapter relates back to chapter 4 and introduces numerical taxonomy of urban tissues. The resulting classification is subsequently validated together with initial clusters based on the study of its relationship to the supplementary, non-morphological data known to be descriptive of urban form. Finally, the case study of Amsterdam is included to examine the ability of the proposed morphometric framework to identify urban tissues in the context of another heterogenous historical city, although of very different patterns of development. 
 
-The structure of the following chapter is as follows. It first specifies the method of hierarchical clustering based on numerical taxonomy and applies it to existing clusters deriver in the chapter 7. Then it proposes validation of the identification procedure and hierarchical classification based on the relation of clusters to additional non-morphometric data. Furthermore, it tests geographical transferability of the method by identification of DHCs in the case of Amsterdams, Netherlands and examines extensibility of the method by using results from both Prague and Amsterdam within a single classification study.
+Structurally, this chapter is divided into two major parts, complemented by an introduction and conclusions. The introduction outlines the need for a classification of urban tissues (section \ref{need_taxonomy}) and bridges the theory of numerical taxonomy from chapter 4 to the context of distinct homogeneous clusters (section \ref{taxonomy_as_method}). Furthermore, it explains the importance of validation and two validation models used within this study (section \ref{need_validation}).
 
-## The need for a taxonomy and validation
+The two major parts are Methodological proposition (section \ref{method_prop8}) and Case studies (section \ref{case8}). The structure of the methodological section is reflected in the structure of case studies, having each part of the proposed method tested in the relevant part of the associated case studies section.  
 
-What is needed and why? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Methodological propositions firstly introduce the method of hierarchical clustering, leading to the taxonomy of urban tissues (section \ref{hierarch_method}). Moreover, the results are utilised in the next section \ref{meth_validation} establishing the method of validation of identified urban tissues and their taxonomy, using data on historical origin, land-use patterns and qualitative classification of urban areas. Finally, the second part of the section \ref{hierarch_method} brings in the another case study (Amsterdam) and presents the method of evaluation of transferability of the morphometric assessment of urban tissues. The evaluation focuses on the identification of distinct homogenous clusters, their hierarchical classification and combination of two geographically distinct datasets to a single taxonomy, examining the extensibility of the method. Following section \ref{case8} presents the results of proposed method applied to case studies in the same order and hierarchy of sections.
 
-Classification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+The final section (\ref{conclusion8}) of the chapter concludes the findings and prepares the foundation for chapter 9, synthesising and discussing the whole research.
 
-Validation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+## The need for a taxonomy and validation \label{need_taxonomy}
+
+What is needed and why? TEXT
+
+Classification. TEXT
+
+Validation. TEXT
 
 
-### Taxonomy as a classification method
-*Why taxonomy as a classification method* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+### Taxonomy as a classification method \label{taxonomy_as_method}
+*Why taxonomy as a classification method* TEXT
 
-*What would be its relation to typology.* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Resulting clusters can now be theoretically interpreted, in a conceptual sense, as individuals and studied as such. The core of the study of individuals of any species or entity is the classification, which in biology could take a shape of a taxonomic tree. Based on the propositions outlined in the chapter 4, biological analogy is taken further in this chapter, to propose a numerical taxonomy of urban form.
 
-*Perspective of using taxonomy* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+*What would be its relation to typology.* TEXT
 
-### Validation and applicability
-Why validate? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+*Perspective of using taxonomy* TEXT
 
-What does it mean validated? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+### Validation and applicability \label{need_validation}
+Why validate? TEXT
 
-Relations. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+What does it mean validated? TEXT
 
-Applicability elsewhere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Relations. TEXT
 
-Interoperability. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Applicability elsewhere. TEXT
 
-That will be all done. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Interoperability. TEXT
 
-## Methodological proposition
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+That will be all done. TEXT
 
-### hierarchical clustering
+## Methodological proposition \label{method_prop8}
+TEXT
+
+### hierarchical clustering \label{hierarch_method}
 How does HC works.
 
 Hierarchical clustering in case of urban tissues aims to develop a hierarchy of similarities between observations based on their morphometric profiles. We can generally distinguish two main principles, agglomerative and divisive. The former starts with the pool of observations each with its own cluster and identifies pairs of clusters while moving up the hierarchy. The latter does the opposite as it starts with a single cluster and iteratively divides it while moving down the hierarchy. Statistics offer a wide range of procedures for both principles, which description is out of scope of this research. The key decisions to be made are in the definition of distance between clusters and linkage criteria. 
 
 Each of the distinct homogenous clusters is represented by its centroid within the hyperspace. 
 
-Link to biology. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Link to biology. TEXT
 
-Link tissues of clusters? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Link tissues of clusters? TEXT
 
-*Ward's clustering based on cluster centroids* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+*Ward's clustering based on cluster centroids* TEXT
 
-### validation
+### validation \label{meth_validation}
 Validation of identification of DHC and consequent hierarchical clustering is done in two ways. The first one studies the relationship of resulting classification to additional non-morphometric data to verify whether the expected link between morphology and other aspects is present in the data. The second approach tests the applicability of the method outside of the initial case study. As the design and decision making behind it was based on the Prague dataset, it may have incurred context-specific features which limits the applicability of the method elsewhere. To ensure that this did not happen, the method should be applied to unrelated data and resulting classification should be examined to ensure that the results are comparable.
 
-#### relation to additional data
+#### relation to additional data \label{meth_validation_rel}
 Capturing the relation of proposed classification to additional data is an indirect validation method. There are theoretical grounds on which we can expect that the relation between urban form and other data exist and hence should be present in the classification as well. It is well known, that the urban patterns change based on the era in which they are built, meaning that there is a significant relation between urban types and their historical origin REF DIBBLE ALTERATIONS. Similar relation could be find with land use patterns and some other data. 
 
 However, such additional should not be seen as a ground truth for classification as it does not reflect the same concepts. The relation should be seen as indicative. 
@@ -152,17 +162,18 @@ However, the typology itself, considering above mentioned limitations, reflects 
 
 The data provided as polygons represented localities are spatially joined to buildings layer and features containing excluded types are removed from the data.
 
-#### transferability
-Why is transeferabliby validation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+#### transferability \label{transfer}
+Why is transeferabliby validation. 
 
-Why is trans. Important. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+The proposed method of identification of urban tissues is validated in the context of Prague using the methods above. However, that by itself does not ensure that the method is transferable and applicable elsewhere. Different geographical contexts, bringing various types of urban tissues, and their underlying spatial logic may be challenging for a method. The transferability of the method is a critical feature for its robustness and applicability. The method should show equal performance, in terms of identification of DHCs and consequent taxonomy, in additional case studies. TO DO TEXT ABOVE. IT IS BULLSHIT.
 
-How it will be done.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+
+How it will be done.TEXT
 
 ##### different case (AMS)
-Why Amsterdam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Why Amsterdam. TEXT
 
-###### Urban tissues of Amsterdam
+###### Urban tissues of Amsterdam \label{clus_ams}
 The first part of the analysis of Amsterdam is the identification of urban tissues allowing the method proposed in the chapter 7. Exactly the same set of primary and contextual characters is used within Gaussian Mixture Model clustering and related BIC analysis of number of components. For the details of the method refer to the previous chapter.
 
 What to do with it.???
@@ -170,7 +181,7 @@ What to do with it.???
 	- contiguity
 	- interpretation
 
-###### Hierarchical clustering in Amsterdam
+###### Hierarchical clustering in Amsterdam \label{taxo_ams}
 Similarly, method of hierarchical clustering proposed in section XXX is applied to the resulting DHCs. 
 
 What to do with it.???
@@ -178,35 +189,35 @@ What to do with it.???
 	- contiguity
 	- interpretation
 
-##### extensibility / compatibility
-Compatibility is …. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+##### extensibility / compatibility \label{extensibility}
+Compatibility is …. TEXT
 
-Two options. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Two options. TEXT
 
 
 ###### mixed
-Mixed. Biology link. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu. 
+Mixed. Biology link. TEXT 
 
-How - steps. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+How - steps. TEXT
 
-Comparison and interpretation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Comparison and interpretation. TEXT
 
-## Case studies - continuation of Prague, Amsterdam
-Reiterate situation with Prague. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+## Case studies - continuation of Prague, Amsterdam \label{case8}
+The case studies applying the methods proposed in this chapter are 1) continuation of the work on Prague presented in previous chapter, and 2) inclusion of continuous built-up area of Amsterdam, Netherlands. Amsterdam shares with Prague the richness of the historical development, bringing a diverse set of tissues, but its historical context and patterns of development are very different. Due to the data availability and the 
 
 ### hierarchical clustering
-Centroid values. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Centroid values. TEXT
 
-Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Tree. TEXT
 
 ![Long caption under img](source/figures/ch8/200507_dendrogram.pdf "Short caption"){#fig:prg_dendrogram width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_hierarchical_clusters.png "Short caption"){#fig:PRG_hierarchical_clusters width=100%}
 
 
-Branch interpretation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Branch interpretation. TEXT
 
 \newpage
 \thispagestyle{empty}
@@ -220,40 +231,40 @@ Branch interpretation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 \end{figure}
 \restoregeometry
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![dense disorder](source/figures/ch8/PRG_hierarchical_branch_1.png "Short caption"){#fig:PRG_hierarchical_branch_1 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![dense](source/figures/ch8/PRG_hierarchical_branch_3.png "Short caption"){#fig:PRG_hierarchical_branch_3 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![low desnity](source/figures/ch8/PRG_hierarchical_branch_6.png "Short caption"){#fig:PRG_hierarchical_branch_6 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 
 ![traditional city](source/figures/ch8/PRG_hierarchical_branch_7.png "Short caption"){#fig:PRG_hierarchical_branch_7 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 
 ![Fringes (left side)](source/figures/ch8/PRG_hierarchical_branch_12.png "Short caption"){#fig:PRG_hierarchical_branch_12 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
-Sum up. The rest on branches in appendix. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Sum up. The rest on branches in appendix. TEXT
 
 ### validation
-Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro. TEXT
 
 #### relation to additional data
-Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro. TEXT
 
 ##### origin
-Chi-square and Cramers V. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Chi-square and Cramers V. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_origin.png "Short caption"){#fig:PRG_origin width=100%}
 
@@ -282,177 +293,177 @@ Chi-square and Cramers V. Lorem ipsum dolor sit amet, consectetur adipiscing eli
 
 Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{ref_id}
 
-Composition. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Composition. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_origin_subplot.pdf "Short caption"){#fig:PRG_cluster_origin_subplot width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_branch_origin_subplot.pdf "Short caption"){#fig:PRG_branch_origin_subplot width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_11_origin_map.png "Short caption"){#fig:PRG_cluster_11_origin_map width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_5_origin_map.png "Short caption"){#fig:PRG_cluster_5_origin_map width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_12_origin_map_zoom.png "Short caption"){#fig:PRG_cluster_12_origin_map_zoom width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_13_origin_map_zoom.png "Short caption"){#fig:PRG_cluster_13_origin_map_zoom width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_compact_origin_map_zoom.png "Short caption"){#fig:PRG_cluster_compact_origin_map_zoom width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
 ##### land use
-Chi-square and Cramers V. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Chi-square and Cramers V. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_land_use.png "Short caption"){#fig:PRG_land_use width=100%}
 
-Composition. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Composition. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_landuse_subplot.pdf "Short caption"){#fig:PRG_cluster_landuse_subplot width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_branch_landuse_subplot.pdf "Short caption"){#fig:PRG_branch_landuse_subplot width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_branch0_landuse_map.png "Short caption"){#fig:PRG_cluster_branch0_landuse_map width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
 ##### qualitative typology
-Chi-square and Cramers V. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Chi-square and Cramers V. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_structure_sample.png "Short caption"){#fig:PRG_structure width=100%}
 
-Composition. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Composition. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_structure_subplot.pdf "Short caption"){#fig:PRG_cluster_structure_subplot width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_branch_structure_subplot.pdf "Short caption"){#fig:PRG_branch_structure_subplot width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/PRG_branch0_strucuture_map.png "Short caption"){#fig:PRG_branch0_strucuture_map width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
-Conclude additioal data section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude additioal data section. TEXT
 
 #### transferability
-Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro. TEXT
 
 ##### different case (AMS)
-Intro AMS case study. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro AMS case study. TEXT
 
-Chars not presented. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Chars not presented. TEXT
 
 ###### clusters
-BIC. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+BIC. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_bic.pdf "Short caption"){#fig:AMS_bic width=100%}
 
-Gradient. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Gradient. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_bic_gradient.pdf "Short caption"){#fig:AMS_bic_gradient width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_clusters.png "Short caption"){#fig:AMS_clusters width=100%}
 
-Detail. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Detail. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_clusters_detail.pdf "Short caption"){#fig:AMS_clusters_detail width=100%}
 
-Few examples. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Few examples. TEXT
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
 ###### tree
-Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Tree. TEXT
 
 ![Long caption under img](source/figures/ch8/200507_dengrogram_n30.pdf "Short caption"){#fig:AMS_dengrogram_n30 width=100%}
 
-Spatial distribution. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distribution. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_clusters_hierarchical.png "Short caption"){#fig:AMS_clusters_hierarchical width=100%}
 
-Detail. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Detail. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_clusters_hierarchical_detail.png "Short caption"){#fig:AMS_clusters_hierarchical_detail width=100%}
 
-Few examples. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Few examples. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_0.png "Short caption"){#fig:AMS_hierarchical_branch_0 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_4.png "Short caption"){#fig:AMS_hierarchical_branch_4 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_6.png "Short caption"){#fig:AMS_hierarchical_branch_6 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_10.png "Short caption"){#fig:AMS_hierarchical_branch_10 width=100%}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+TEXT
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
-Conclude AMS alone. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude AMS alone. TEXT
 
 ##### extensibility / compatibility
-Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro. TEXT
 
 ###### mixed
-Intro. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Intro. TEXT
 
-Tree. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Tree. TEXT
 
 ![Long caption under img](source/figures/ch8/200505_dengrogram_mixed.pdf "Short caption"){#fig:AMSPRG_dengrogram_mixed width=100%}
 
-Spatial distr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Spatial distr. TEXT
 
 ![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_PRG_detail.png "Short caption"){#fig:AMSPRG_clusters_mixed_H_PRG_detail width=100%}
 
 ![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_AMS_detail.png "Short caption"){#fig:AMSPRG_clusters_mixed_H_AMS_detail width=100%}
 
-Differences in branching. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Differences in branching. TEXT
 
 ![Long caption under img](source/figures/ch8/200505_dengrogram_flows-02.pdf "Short caption"){#fig:flows width=100%}
 
-Conclude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conclude. TEXT
 
-Conlcude extensibility. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Conlcude extensibility. TEXT
 
-## Validated! Yay!
-Conclude chapter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+## Validated! Yay! \label{conclusion8}
+Conclude chapter. TEXT
 
-Taxonomy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Taxonomy. TEXT
 
-Validation of Prague. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Validation of Prague. TEXT
 
-Extensibility. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+Extensibility. TEXT
 
-*What is the meaning of all of this? Head to the last chapter.* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus leo, ultrices eget semper eget, volutpat ac turpis. Nunc in mauris est. Donec in felis nisi. Donec id porttitor risus, sed tempor dolor. Cras facilisis neque justo, nec ornare urna tempor quis. Cras consequat gravida ante egestas euismod. Integer et mi fringilla arcu pulvinar dignissim sit amet sit amet urna. Maecenas pharetra odio libero, vel tempor ex suscipit vel. Ut pretium dignissim augue ac dapibus. Sed tincidunt ex justo, id cursus eros fringilla id. Sed vel congue justo. Pellentesque vel mattis erat. Nulla ultricies varius imperdiet. Aenean efficitur arcu eu.
+*What is the meaning of all of this? Head to the last chapter.* TEXT

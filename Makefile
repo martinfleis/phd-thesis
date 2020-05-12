@@ -52,6 +52,17 @@ tex:
 	--csl="$(STYLEDIR)/ref_format.csl" \
 	--latex-engine=xelatex
 
+tex6:
+	pandoc "$(INPUTDIR)"/14*.md \
+	-o "$(OUTPUTDIR)/thesis.tex" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--bibliography="$(BIBFILE)" \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+
 docx:
 	pandoc "$(INPUTDIR)"/*.md \
 	-o "$(OUTPUTDIR)/thesis.docx" \
@@ -72,6 +83,22 @@ html:
 	rm -rf "$(OUTPUTDIR)/source"
 	mkdir "$(OUTPUTDIR)/source"
 	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
+
+chapter6:
+	pandoc "$(INPUTDIR)"/14*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/chapter6.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
 
 chapter7:
 	pandoc "$(INPUTDIR)"/15*.md \
