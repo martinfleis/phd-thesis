@@ -149,3 +149,9 @@
 % Fix numbering of tables and figures in appendix
 \usepackage{chngcntr}
 \counterwithin{table}{chapter}
+
+% Table left alignment with fixed size
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
