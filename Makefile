@@ -155,4 +155,21 @@ docx7:
 	--csl="$(STYLEDIR)/ref_format.csl" \
 	--toc
 
+
+glossary:
+	pandoc "$(INPUTDIR)"/08*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/glossary.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 .PHONY: help pdf docx html tex chapter7 chapter8
