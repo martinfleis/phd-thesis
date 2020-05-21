@@ -13,7 +13,7 @@ Following chapter will outline the basis for the recognition of distinct homogen
 The automatic detection of urban tissues, or in the context of this work morphometric DHCs, consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the machine learning algorithm detecting DHCs. The structure of the method is reflected in the structure of the following sections.
 
 ### Principle of DHC recognition
-
+==REWRITE PRINCIPLE TO AVOID TAXONOMY IN IT AND KEEP ONLY MORPHOMETRICS==
 Recognition of DHCs is based on the principles we know from numerical taxonomy but in a specific way. In biology, especially zoology, the issue of delimitation of an individual is non-existent. A single individual of selected species is usually well defined in space (e.g., a bird), but in urban morphology, this distinction is not so simple as that. Hence, the methodology which is used in biology needs to be adapted, while keeping the fundamental principles in place.
 
 While previous chapters identified urban tissue as an *individual* of urban form, at this stage, we pretend that this role holds a dual feature building-tessellation cell as the smallest entity of urban form. The whole DHC recognition is then based on the assumption that features recognised as a part of the same cluster (*species*) are, in fact, elements of the single urban tissue (where continuous) or of multiple individuals of the same kind of urban tissue (where discontinuous).

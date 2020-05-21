@@ -37,6 +37,7 @@
 fuzzinness
 efficeincy - PCA, FA effects
 Atlas
+Number of components (BIC??)
 +
 
 ## Conclusions

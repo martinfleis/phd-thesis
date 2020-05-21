@@ -24,6 +24,8 @@
 ### Flexible parallel
 
 ### The case of individual
+- theoretical discussion and related flexibility
+- individual can be a cell, a tissue, or something else based on the question
 
 ## Transferability of concept of numerical taxonomy into urban morphology
 
