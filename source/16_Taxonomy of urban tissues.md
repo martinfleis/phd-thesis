@@ -1,10 +1,10 @@
 \setcounter{chapter}{7}
 
-# Taxonomy of urban tissues
+# Taxonomic relationships of urban tissues
 
 The previous chapters introduced the framework implementing urban morphometrics on a metropolitan scale. Based on the selection of morphometric characters, it established a method of a complex description of urban form on the scale of individual buildings. As reported, derived information then enabled the identification of urban tissues within urban form using the proxy of a distinct homogenous cluster. Consequent results of the unsupervised clustering indicate the validity of DHCs in recognition of urban form patterns and the potential for both additional subdivision and upscaling of the model.
 
-In this chapter, therefore, the observed clusters are employed in the role of input data and investigated from three perspectives - 1) conceptualisation of clusters as *individuals*, leading to the taxonomic classification, 2) validity of clusters as a proxy of urban tissues and 3) the transferability of the method to the different geographical context. 
+In this chapter, therefore, the observed clusters are employed in the role of input data and investigated from three perspectives - 1) conceptualisation of clusters as *individuals*, leading to the taxonomic classification, 2) validity of clusters as a proxy of urban tissues and 3) the transferability of the method to the different geographical context. ==+extensibility==
 
 This chapter relates back to chapter 4 and introduces numerical taxonomy of urban tissues. The resulting classification is subsequently validated together with initial clusters based on the study of its relationship to the supplementary, non-morphological data known to be descriptive of urban form. Finally, the case study of Amsterdam is included to examine the ability of the proposed morphometric framework to identify urban tissues in the context of another heterogenous historical city, although of very different patterns of development. 
 
@@ -30,6 +30,7 @@ However, the model of identification of urban tissues and their classification n
 To answer the first question, this section introduces a validation as an  assessment of relation of the DHCs and their classification to additional data, which are known to be linked to the form of cities. The significant relationship between them and proposed clustering and classification would therefore indicate their validity and the validity of the proposed method. The second question requires inclusion of another case study from a different geographical and historical context. DHCs and their classification identified in that case study should be internally valid and comparable with those identified in Prague. 
 
 ### Taxonomy as a classification method \label{taxonomy_as_method}
+==rename section to include conceptualisation of dhc as individual==
 
 Resulting clusters can be theoretically interpreted, in a conceptual sense, as individuals and studied as such. The core of the study of individuals of any species or entity is the classification, which in biology could take a shape of a taxonomic tree. Based on the propositions outlined in the chapter 4, biological analogy is taken further in this chapter, to propose a numerical taxonomy of urban form. The operational taxonomic unit (OTU) in this case is an urban tissue represented by the DHC. Each cluster as a while is considered as a single unit for the purpose of the classification. The principle of classification then follows the concepts of numerical taxonomy [@sneath1973] with only a minor adaptations related to the definition of taxonomic characters.
 
@@ -44,9 +45,13 @@ Why validate? TEXT
 
 What does it mean validated? TEXT
 
+#### Proxy
 Relations. TEXT
 
+#### Transferability
 Applicability elsewhere. TEXT
+
+### Extensibility
 
 Interoperability. TEXT
 
@@ -55,6 +60,9 @@ That will be all done. TEXT
 ## Methodological proposition \label{method_prop8}
 TEXT
 
+==should relate to taxonomy directly==
+==should include specification of OTU, Taxonomic characters, clustering method: direct link to specifications in the chapter 4==
+
 ### hierarchical clustering \label{hierarch_method}
 ==How does HC works.==
 
@@ -62,9 +70,13 @@ Hierarchical clustering in case of urban tissues aims to develop a hierarchy of 
 
 Each of the distinct homogenous clusters is represented by its centroid within the hyperspace. 
 
+==Refer to serra psarra obrien==
+
 Link to biology. ==TEXT AFTER CH4==
 
-*Ward's clustering based on cluster centroids* ==TEXT==
+1. *Ward's clustering based on cluster centroids* ==TEXT==
+2. *spatial distribution (map)*
+3. *Branches* 
 
 ### validation \label{meth_validation}
 Validation of identification of DHC and consequent hierarchical clustering is done in two ways. The first one studies the relationship of resulting classification to additional non-morphometric data to verify whether the expected link between morphology and other aspects is present in the data. The second approach tests the applicability of the method outside of the initial case study. As the design and decision making behind it was based on the Prague dataset, it may have incurred context-specific features which limits the applicability of the method elsewhere. To ensure that this did not happen, the method should be applied to unrelated data and resulting classification should be examined to ensure that the results are comparable.
@@ -77,7 +89,7 @@ However, such additional should not be seen as a ground truth for classification
 In this research, proposed classification will be compared with three datasets -  1) the period of historical origin of a place, 2) predominant land-use patterns, and 3) qualitative typology of urban form. All three will use the method of validation, based on a) statistical analysis using chi-square statistic and related Cramér's-V, b) compositional analysis focusing on the composition of each cluster in relation to the tested data, and c) visual assessment of spatial distribution to illustrate the behaviour of both compared data in space.
 
 ##### Analytical tools
-The detailed method of application of selected analytical tools is proposed below.
+The detailed method of application of selected analytical tools is proposed below. ==all based on contingency table==
 
 ###### Chi-square test of independence
 The proposed classification is a categorical variable by nature and all three datasets as well, including the historical origin which is presented as unevenly distributed eras rather than age. The chi-square test of independence of variables determines whether there is a significant relationship between two categorical variables based on a contingency table REF. The null hypothesis ($H_0$) and alternative hypothesis ($H_1$) of the analysis states that 
@@ -119,7 +131,7 @@ Table: Strength of association of two categorical variables based on Cramér's V
 ###### Compositional analysis
 Each of the clusters and each of the branches is then studied independently to understand what is its composition in relation to the validation data. The composition is captured as a relative frequency of counts of features within each of the validation classes. In other words, it analyses individual rows of a contingency table. The perfect relation would show a frequency of 1 for a single class within a cluster and 0 for every other class. No relation would be reflected by equal frequencies among the classes. Compositional analysis is aimed to provide more in-depth interpretative values that chi-square and Cramer's-V, but it does not state a significance.
 
-###### Spatial distribution 
+###### Visual assessment of spatial distribution 
 The visual assessment of spatial distribution overlays the boundaries defined by morphometric classification over the validation classes to determine spatial relationship visually. Alongside the compositional analysis, the visual assessment is meant to provide interpretative information, allowing better understanding of the relation between tested data. It does not provide any numerical results as it only links compositional analysis with the geographical context.
 
 ##### Validation data
@@ -172,11 +184,9 @@ The proposed method of identification of urban tissues is validated in the conte
 
 
 How it will be done.TEXT
-
-##### different case (AMS)
 Why Amsterdam. TEXT
 
-###### Urban tissues of Amsterdam \label{clus_ams}
+##### Urban tissues of Amsterdam \label{clus_ams}
 The first part of the analysis of Amsterdam is the identification of urban tissues allowing the method proposed in the chapter 7. Exactly the same set of primary and contextual characters is used within Gaussian Mixture Model clustering and related BIC analysis of number of components. For the details of the method refer to the previous chapter.
 
 What to do with it.???
@@ -184,7 +194,7 @@ What to do with it.???
 	- contiguity
 	- interpretation
 
-###### Hierarchical clustering in Amsterdam \label{taxo_ams}
+##### Hierarchical clustering in Amsterdam \label{taxo_ams}
 Similarly, method of hierarchical clustering proposed in section XXX is applied to the resulting DHCs. 
 
 What to do with it.???
@@ -192,19 +202,21 @@ What to do with it.???
 	- contiguity
 	- interpretation
 
-###### Validation of clustering in Amsterdam
+##### Validation of clustering in Amsterdam
 The resulting clusters in Amsterdam are validated using the method proposed in section \ref{meth_validation_rel} above, using a data on the historical origin of each building. In the case of the datasets obtained from REF, each building has assigned a year of its construction. Unlike in Prague, the year does not represent the data when the area/plot was first built-up, but the latest construction. Even though the data are not initially binned, only buildings constructed after year 1800 have a specific year. To ensure the compatibility of the data with those used in Prague and to avoid issues with pre-1800 periods, the origin dates are therefore binned into 11 groups following the classification of REF (website). The rest of the validation follows the method outlined in \ref{meth_validation_rel}.
 
-##### extensibility / compatibility \label{extensibility}
-Compatibility is …. TEXT
+#### Extensibility of the classification \label{extensibility}
+*Extensibility of the classification is crucial for further expansion of the database. Even though clusters and hierarchical classification may work in individual cases, the question is whether we can combine the results to single taxonomy. It tests the compatibility of the results and the potential issue with clustering being tied to a single context. We do not want that of course.* ==text==
 
-Two options, but one viable. TEXT
+Biology link. ==TEXT AFTER CH4==
 
-Mixed. Biology link. TEXT 
+*How - steps. The generation of the combined taxonomy is stratighforward as we just put clusters from both cases into a single bowl and to the wards classification. Then we have to assess how the resulting tree deviates from initial individual ones and how whether resulting branches actually capture similar tissues in both contexts. We do 1. Hierarchical classification, 2. Visual assessment, 3. Tree comparison and reshuffle analysis.* TEXT
 
-How - steps. TEXT
+*Comparison and interpretation. If the method is extensible and reflects the similarity across the contexts, we can do a lot of great and cool things, starting from the interpretation of the spatial distribution of branched clusters to plenty of stuff*. TEXT
 
-Comparison and interpretation. TEXT
+*Conclude methods*
+
+\newpage
 
 ## Case studies - continuation of Prague, Amsterdam \label{case8}
 The case studies applying the methods proposed in this chapter are 1) continuation of the work on Prague presented in previous chapter, and 2) inclusion of continuous built-up area of Amsterdam, Netherlands. Amsterdam shares with Prague the richness of the historical development, bringing a diverse set of tissues, but its historical context and patterns of development are very different. Due to the data availability and the 
@@ -236,7 +248,7 @@ Examining the dendrogram, we can highlight the different branches to understand 
 
 ![traditional city](source/figures/ch8/PRG_hierarchical_branch_7.png "Short caption"){#fig:PRG_hierarchical_branch_7 width=100%}
 
-On the other side lies *unorganised city*, even though the name might not be the optimal. It contains of both industrial and fringe areas as well as contemporary office parks. ==more==
+On the other side lies *unorganised city*, even though the name might not be the optimal. It contains of both industrial and fringe areas as well as contemporary office parks. Yellow branch is heterogenous unorganised but it may as well be linked to small density. The disorder here is the driver apparently. ==more==
 
 ![Fringes (left side)](source/figures/ch8/PRG_hierarchical_branch_12.png "Short caption"){#fig:PRG_hierarchical_branch_12 width=100%}
 
@@ -253,6 +265,8 @@ Further reading of the branching shows the bifurcation dividing medieval city fr
 ![dense disorder](source/figures/ch8/PRG_hierarchical_branch_1.png "Short caption"){#fig:PRG_hierarchical_branch_1 width=100%}
 
 Sum up. The rest on branches in appendix. ==TEXT==
+
+\newpage
 
 ### validation
 *This section talks about the results of validation, starting from the Prague case study and relation to additional data to validate clustering itself, through Amsterdam case study to assess the transferability of the whole method to combination of both cases examining the extensibility of the classification.*
@@ -418,7 +432,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 *Cramers-V value is 0.674, indicating high association. The association is the highest of all tested datasets. That is no surprise, as both layers (clusters and qualitative typology) are trying to describe the same aspects of the city. Considering the MAUP-related imprecision of QT dataset and error margin of clustering, we can consider clustering valid output.*
 ==text==
 
-*The relation is also clearly present in composition of each cluster with only difference of distinction between village and garden city typology. To be fair, that is poorly specified in the original dataset anyway and the difference is quite unclear as it mixes historical origin and ideology with the morphological description. So the difference between the two should be taken with care as it might just be misleading.*==text==
+*The relation is also clearly present in composition of each cluster with only difference of distinction between village and garden city typology. To be fair, that is poorly specified in the original dataset anyway and the difference is quite unclear as it mixes historical origin and ideology with the morphological description. So the difference between the two should be taken with care as it might just be misleading.* ==text==
 
 ![Long caption under img](source/figures/ch8/PRG_cluster_structure_subplot.pdf "Short caption"){#fig:PRG_cluster_structure_subplot width=100%}
 
@@ -434,13 +448,14 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 *Conclude additional data section. The aim of the section was to validate the results of clustering using additional data. The clusters would be seen as validated if they shown significant relationship to all tested layers. The results of the validation shows significance and moderate (origin) to high association (both land-use and QT) based on tests used. These results clearly indicates that the method of identification of urban tissues proposed in the previous chapter and related hierarchical classification of urban tissues are both reflecting the morphological reality and could be seen as a valid method of urban morphology.* ==TEXT==
 
+\newpage
+
 #### transferability
 *Even though the method is validated in the context of Prague, it is unclear whether it is transferable to other contexts. It was designed with universality in mind, so the hypothesis is that it should be Abel to capture similar level of information in other geographic and historical contexts as well. To test this hypothesis, the whole methodology is applied to the case study of Amsterdam, including one layer of validation using historical origin data.* ==TEXT==
 
-##### different case (AMS)
 *Amsterdam dataset tests not only the transferability of the method, but also its scalability. The number of buildings on the input of clustering is 252,385 compared to 140,315 buildings in Prague. The results of primary and contextual characters are not presented in the main body of the text and their distributions are available as Appendix XXX. The complete data are available in the data repository REF. Since the method is following the steps defined in sections 7XXX and 8XXX, results report the selection of optimal number of components, results of clustering and hierarchical classification.* ==text==
 
-###### clusters
+##### clusters
 *Bayesian Information Criterion shows different curve than we have seen in Prague case as it does not culminate to indicate the optimum. That is a situation which may happen with BIC and indicates overfitting of the model, which BIC is unable to correct.* ==TEXT==
 
 ![Long caption under img](source/figures/ch8/AMS_bic.pdf "Short caption"){#fig:AMS_bic width=100%}
@@ -460,71 +475,128 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 *Conclude. We wanted to try identification method in other place than Prague to make sure it works. Going though the same process, we can conclude that it does. However, the case also raised questions regarding the stability of the method of determination of number of components for Gaussian Mixture Model clustering as BIC curve did not culminate. That should be further explored in further research.*. ==TEXT==
 
-###### tree
-Tree. TEXT
+##### tree
+*The tree shows similar characteristics as we have seen in Prague, with the significant bifurcation into two branches and then consequent bifurcations lower in the tree distinguishing different rules of organisation.*. ==TEXT==
 
 ![Long caption under img](source/figures/ch8/200507_dengrogram_n30.pdf "Short caption"){#fig:AMS_dengrogram_n30 width=100%}
 
-Spatial distribution. TEXT
+*Spatial distribution shows what the branches actually mean. See the whole case study and its detail colorer according to the dendrogram. Again, each cluster has a different shade of the same color.*. TEXT
 
 ![Long caption under img](source/figures/ch8/AMS_clusters_hierarchical.png "Short caption"){#fig:AMS_clusters_hierarchical width=100%}
 
-Detail. TEXT
-
 ![Long caption under img](source/figures/ch8/AMS_clusters_hierarchical_detail.png "Short caption"){#fig:AMS_clusters_hierarchical_detail width=100%}
 
-Few examples. TEXT
-
-![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_0.png "Short caption"){#fig:AMS_hierarchical_branch_0 width=100%}
-
-TEXT
-
-![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_4.png "Short caption"){#fig:AMS_hierarchical_branch_4 width=100%}
-
-TEXT
+*The first bifurcation is analogous to one identified in Prague and divides the city to the organised and unorganised part. Organised is composed of predominantly residential use. The whole historical core, major parts of residential housing. However, there are major gaps between caused by the high presence of all sorts of industry and other uses as Amsterdam is historically port city. Another specific tissues which are part of this branch are linear developments along the roads on the periphery of the city.* ==text==
 
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_6.png "Short caption"){#fig:AMS_hierarchical_branch_6 width=100%}
 
-TEXT
-
 ![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_10.png "Short caption"){#fig:AMS_hierarchical_branch_10 width=100%}
 
-TEXT
+*The branch comprising the organised city splits into high density and low density in a similar manner as Prague's case does. High density is mostly historical core, in this case the one of Amsterdam and also Weesp on the east side if the city. Moreover, parts of the modern development on former port sites tends to show similar characteristics. Further bifurcation within lower density development is readable and follows sorts of the compactness and homogeneity of patterns, so we have nicely organised residential areas, their more heterogenous counterparts and fringe areas around compact  high density areas.* ==text==
 
-Conclude. TEXT
+![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_0.png "Short caption"){#fig:AMS_hierarchical_branch_0 width=100%}
 
-Conclude AMS alone. TEXT
+![Long caption under img](source/figures/ch8/AMS_hierarchical_branch_5.png "Short caption"){#fig:AMS_hierarchical_branch_4 width=100%}
 
-##### extensibility / compatibility
-Intro. TEXT
+*Conclude. Hierarchical taxonomy shows very similar character as was observed in Prague and visually works in a coherent way. It seems sage to conclude that the proposed method behaves in both cities in a similar way, which indicates its universality and transferability.* ==TEXT==
 
-###### mixed
-Intro. TEXT
+##### Validation using historical origin
+*One layer of validation based on additional data is tried in Amsterdam as well, in this case we have historical origin. Data are shown on the figure XXX. Keep in mind that the it captures the origin of individual buildings, not the time when it was first built. As with the data on origin for Prague, we can expect certain degree of association, but not full as not all patterns are time dependent. It will be done using the same method based on contingency table, chi-squared and Cramers.*
 
-Tree. TEXT
+![Long caption under img](source/figures/ch8/AMS_origin.png "Short caption"){#fig:AMS_origin width=100%}
+
+|   cluster |   1800 |   1850 |   1900 |   1930 |   1945 |   1960 |   1975 |   1985 | 1995 |   2005 |   2020 |
+|----------:|------------:|---------------:|---------------:|---------------:|---------------:|---------------:|---------------:|---------------:|---------------:|---------------:|---------------:|
+|         0 |         827 |              4 |           3012 |           2560 |            484 |            154 |             86 |            311 |            471 |           1048 |            854 |
+|         1 |           2 |              1 |             23 |            752 |            748 |           5678 |           5841 |           2048 |           5582 |           2136 |           3210 |
+|         2 |         761 |             10 |            625 |           2307 |            839 |            431 |            207 |            495 |            593 |            590 |            181 |
+|         3 |          14 |             21 |            116 |            584 |            251 |            381 |            546 |            385 |            337 |            460 |            328 |
+|         4 |          38 |              0 |            526 |           5743 |           2771 |             75 |              6 |              6 |             20 |             23 |              5 |
+|         5 |          80 |             52 |            698 |           4214 |           2126 |           2132 |           2034 |           1208 |            932 |            920 |            763 |
+|         6 |           6 |              4 |             83 |            821 |            490 |            679 |           1521 |            693 |           1993 |           1365 |           1287 |
+|         7 |           0 |              0 |              1 |              0 |              7 |            604 |           5455 |           3455 |           3282 |            503 |            367 |
+|         8 |          29 |              6 |             50 |             38 |             36 |            149 |            449 |            360 |            442 |            516 |            399 |
+|         9 |           4 |              6 |            136 |           3151 |           4444 |           5095 |           1579 |            578 |           1154 |            791 |           1279 |
+|        10 |           1 |              0 |             13 |            498 |            340 |           5379 |           3086 |            839 |           2949 |           1940 |           1796 |
+|        11 |         980 |              0 |           3526 |           4324 |            272 |             38 |             50 |            200 |            452 |            204 |             58 |
+|        12 |           2 |              0 |             35 |            272 |            114 |            252 |            630 |            178 |            718 |           1582 |           1267 |
+|        13 |        2815 |             41 |            287 |            462 |            170 |             42 |             57 |             68 |            124 |            121 |             23 |
+|        14 |          35 |             14 |            165 |           1525 |            911 |           2398 |           4149 |           1916 |           2511 |           1529 |           1305 |
+|        15 |          12 |              9 |            154 |            498 |            209 |            302 |            408 |            369 |            390 |            375 |            354 |
+|        16 |           0 |              0 |             23 |             19 |              0 |            277 |            321 |            171 |            136 |             65 |             93 |
+|        17 |          50 |             19 |            225 |            553 |            238 |            691 |           1578 |            998 |           1197 |           1228 |            962 |
+|        18 |          33 |              0 |            312 |           8359 |           3280 |            573 |             45 |            357 |            344 |            102 |             34 |
+|        19 |          14 |              0 |             16 |            270 |             37 |            208 |            499 |            504 |            560 |              9 |            145 |
+|        20 |           3 |              0 |              3 |             30 |             19 |             77 |           2031 |           4203 |           1475 |            325 |            167 |
+|        21 |          18 |             11 |             96 |            323 |             94 |            207 |            340 |            228 |            219 |            243 |            165 |
+|        22 |           1 |              0 |             83 |            152 |            317 |           1901 |           1108 |           1160 |           1023 |            709 |           1143 |
+|        23 |           0 |              0 |             11 |             10 |              2 |             12 |             51 |             84 |            158 |            158 |            117 |
+|        24 |           0 |              0 |              0 |           2696 |            942 |           2457 |            932 |            107 |           3806 |            768 |            624 |
+|        25 |          46 |             14 |            142 |           1459 |            796 |            632 |           1112 |            597 |            675 |            692 |            609 |
+|        26 |           1 |              1 |             38 |            229 |            164 |            344 |            569 |            315 |            329 |            371 |            228 |
+|        27 |          48 |             16 |            128 |            687 |            319 |            336 |            421 |            308 |            325 |            638 |            309 |
+|        28 |           0 |              0 |             31 |            255 |            155 |            685 |            859 |           2430 |           2032 |           1453 |            402 |
+|        29 |        2971 |             62 |            367 |            703 |            233 |             48 |             65 |            145 |            279 |             92 |             50 |
+
+Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis, venenatis fringilla turpis pretium. \label{ref_id}
+
+*Chi-square hypothesis is ==add==. Reported Chi-square results, based on the contingency table, assessing whether there is a significant relationship between two variables (origin and clustering), are $\chi^{2} (290, N=252385) = 312903.31, p < .001$, which indicates significant relationship.‌*==text==
+
+
+*Cramers-V value is 0.353, indicating moderate association. The value is almost the same as reported in Prague, indicating that the relationship of clustering to historical origin is consistent across both cases and it is not case-depenedent.*
+==text==
+
+*The further exploration of contingency table is excluded here as it the numerical values make the point.*
+
+*Conclude AMS alone. All results indicate the transferability of the method. Clusters good, classification good, validation results consistent. Overall great. We can say that the method is valid even from the perspective of transferability.* TEXT
+
+\newpage
+
+#### extensibility / compatibility
+*the last question which remains to be answered is whether these two cases are compatible with each other. On other words, whether we can build combined taxonomy and further extend it by adding other cases.* ==TEXT==
+
+*We simply mix 20 clusters from Prague with 30 from Amsterdam, all represented by their centroids, and do hierarchical clustering. The resulting tree then should classify similarity of clusters across both cities.* ==text==
+
+*The dendrogram from combined pool of clusters shows similar structure as both individual have, with a major bifurcation dividing unorganised/industrial areas from organised city. Further bifurcation of organised city splits into dense, compact city and the rest and then further into sub-types of development*. ==TEXT==
 
 ![Long caption under img](source/figures/ch8/200505_dengrogram_mixed.pdf "Short caption"){#fig:AMSPRG_dengrogram_mixed width=100%}
 
-Spatial distr. TEXT
+*Spatial distribution tells the same story as individual classifications. What is interesting here is the comparison of similar tissues across cities. There are some which are really close to each other.*. TEXT
 
 ![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_PRG_detail.png "Short caption"){#fig:AMSPRG_clusters_mixed_H_PRG_detail width=100%}
 
 ![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_AMS_detail.png "Short caption"){#fig:AMSPRG_clusters_mixed_H_AMS_detail width=100%}
 
-Differences in branching. TEXT
+*Look at the spatial distribution of the same major branches in both cities. It is a great tool to study their structure and compare them. Industrial areas are much larger in AMS due to its port nature. *==text==
+
+![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_PRG_branch_10 "Short caption"){#fig:AMSPRG_clusters_mixed_H_PRG_branch_10 width=100%}
+
+![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_AMS_branch_10 "Short caption"){#fig:AMSPRG_clusters_mixed_H_AMS_branch_10 width=100%}
+
+![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_PRG_branch_11 "Short caption"){#fig:AMSPRG_clusters_mixed_H_PRG_branch_11 width=100%}
+
+![Long caption under img](source/figures/ch8/AMSPRG_clusters_mixed_H_AMS_branch_11 "Short caption"){#fig:AMSPRG_clusters_mixed_H_AMS_branch_11 width=100%}
+
+*However, there are some differences in branching. The resulting tree reshuffled few of the clusters and slightly reorganised branches. This will likely happen when we add more cases until the taxonomy will stabilise.*. TEXT
 
 ![Long caption under img](source/figures/ch8/200505_dengrogram_flows-02.pdf "Short caption"){#fig:flows width=100%}
 
-Conclude. TEXT
+*Explain differences in branching in a detail*
+==needs some more work here==
+-
+-
+-
 
-Conlcude extensibility. TEXT
+*Conclude. There does not seem to be any issue with combining them. We may find this later using different cases of significantly different sizes (either smaller or larger) where it may happen that clusters represents different level of taxonomy*. ==TEXT==
+
+\newpage
 
 ## Validated! Yay! \label{conclusion8}
 Conclude chapter. TEXT
 
 Taxonomy. TEXT
 
-Validation of Prague. TEXT
+Validation. TEXT
 
 Extensibility. TEXT
 

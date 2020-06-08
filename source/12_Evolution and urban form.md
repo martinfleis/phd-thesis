@@ -1,41 +1,88 @@
-# Numerical taxonomy & ecological perspective
+# Numerical taxonomy
 
-* Evolutionary perspective in the context of urban design
-    * Biological as well as cultural
-    * Taxonomy
+_link back_
 
-- Explain the principles of evolution in the context of urban morphology
-- deifne viable analogies
-- use cultural evolution alongside with biological
-- introduce evolutionary approach to classification - cladistics, taxonomy
-- current views of evolution and cities (e.g. Marshall)
+_aim of the chapter_
 
-## Numerical taxonomy in biology
+_structure of the chapter_
 
-### Origins of numerical taxonomy and morphometrics
+## Learning from biology
+*morphometrics and numerical taxonomy as two concepts which may allow overcoming issues identified in previous two chapters*
 
-### Morphometrics in the age of DNA sequencing
+### Morphometrics as a descriptive tool
+*short introduction*
+*morphometrics as a descriptive tool*
+*description of the principles and applications (TBD)*
+==missing contents, research to be done==
+
+- traditional morphometrics
+- geometric morphometrics
+- outline analysis
+- tissue morphometrics (Histomorphometry)
+- other fields
+
+### Numerical taxonomy as a classification tool
+*what is it*
+
+#### Principles of numerical taxonomy
+*base this on Sneath and Sokal*
+
+##### Operational Taxonomic Unit
+
+##### Taxonomic characters
+
+##### Taxonomic resemblance
+
+##### Taxonomic structure
 
 ### Criticism of morphometrics and numerical taxonomy
 *based on literature, not mine :)*
 
-## Parallels between biological science and urban morphology (based on EEPUM)
-*Reiterating the discussion we had during three EEPUM workshops focusing on the question of finding parallel concepts between biology and UM, specifically aimed at the question what is the individual.*
-### Flexible parallel
-
-### The case of individual
-- theoretical discussion and related flexibility
-- individual can be a cell, a tissue, or something else based on the question
-
-## Transferability of concept of numerical taxonomy into urban morphology
+## Transferability of concepts into urban morphology
 
 ### Review of principles and their applicability
+#### Morphometrics
 
-### Critical assessment of Jacob Dibble's work
+#### Taxonomy
 
-### City as a community (based on EEPUM)
-*Discussion on the ecological community-based science applied to urban form as a possible way forward, if we are able to define communities and their composition.*
+##### Principles
+###### Operational Taxonomic Unit
+*OTU could be …*
+*direct link to chapter 2*
 
-### application of ecological perspective on the concept of a city as a complex adaptive system
+###### Taxonomic characters
+*direct link to chapter 3*
+
+###### Taxonomic resemblance and structure
+*==pick methods from literature==*
+
+
+### Critical assessment of preceding work
+
+*Proposed further research*
+- case study expansion
+	- he wanted more SA's I argue that it needs to be able to analyse whole fabric
+- metrics expansion
+	- completely agree
+- challenging SA
+
+#### Sanctuary area as OTU
+*non-homogeneity of SA*
+
+#### Selection of taxonomic characters
+*collinearity of characters*
+
+#### Limitation of the model
+*missing some aspects*
+
+
+
+### Unresolved questions
+- OTU
+- model
+- characters
+
+### sum up
+*conclude Dibble*
 
 ## Conclusions

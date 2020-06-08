@@ -29,6 +29,8 @@ To be revised, not these are just randomly dumped terms.
 \textbf{urban area} & The area covered by continuous urban development.\tabularnewline
 \textbf{urban form} & The physical characteristics that make up built-up areas, including the shape, size, density and configuration of settlements.\tabularnewline
 \textbf{urban tissue} & A distinct area of a settlement in all three dimensions, characterised by a unique combination of streets, blocks/plot series, plots, buildings, structures and materials and usually the result of a distinct process of formation at a particular time or period. \tabularnewline
+\textbf{urban fabric} & ==definition to fix difference between fabric and tissue based on Kropf==
+\tabularnewline
 
 & \tabularnewline
 

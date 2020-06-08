@@ -41,3 +41,7 @@ Number of components (BIC??)
 +
 
 ## Conclusions
+
+
+*The conclusions in your last chapter must respond to the aim from Chapter 1 and chapter 5*
+

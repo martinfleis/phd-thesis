@@ -4,7 +4,7 @@
 ## Introduction
 - Explain prior focus on quantitative morphology (link to introduction), but say that the chapters gives overview of all, with the focus on quantitative.
 
-## The need for the classification
+## Making sense of the world
 - *Why is classification important, what can it bring to the table, why should we bother doing it.*
 - What is classification
 	- a bit of definitions
@@ -13,16 +13,16 @@
 - Why is classification useful in general
 - Why is classification useful in urban morphology
 
-## Existing methods of classification of urban form
+## A brief history
 - *Literature review of existing methods of classification and its analysis and description of patterns within the field.*
 - Introduction
 
-### The history of classification attempts
 - *A brief overview of the history of classification of urban form focusing on its origins and early attempts. People like Lynch, Kostof.*
+
+### Qualitative approach
 - **Research TO DO**
 - link between history and qualitative
 
-### Qualitative
 - Traditional schools of urban morphology
 	- Conzen
 	- Muratori
@@ -48,15 +48,7 @@
 	- good source for link between form and soft data
 - **Research TO DO (a bit)**
 
-### Quantitative
-- introduction
-	- what does it mean quantitative method
-	- two major groups divided by the data source
-		- remote sensing — raster data
-		- morphometrics — vector data
-			- *morphometrics can in theory be done on remote sensing as well, so it might be better to use another term*
-
-#### Remote sensing
+### Remote sensing
 - Introduce RS
 	- satellite or aerial data, automatic (multi-spectral) image recognition, supervised ML
 - Units of analysis
@@ -73,7 +65,14 @@
 	- the aspect of resolution and data availability
 	- number of categories is generally low related to low number of actual indicators (like Copernicus)
 
-#### Urban Morphology (quantitative)
+## Quantitative classification
+- introduction
+	- what does it mean quantitative method
+	- two major groups divided by the data source
+		- remote sensing — raster data
+		- morphometrics — vector data
+			- *morphometrics can in theory be done on remote sensing as well, so it might be better to use another term*
+
 - *This is the key focus of the whole chapter, and the majority of scrutinised works fall into this category. The rest mentioned above and below is to draw a full picture, but it does not aim to provide an in-depth understanding, unlike this part.*
 - **Research TO DO - check recent papers, some might be included**
 - Introduce quantitative morphology

@@ -1,26 +1,31 @@
-# Measuring of urban form
+\setcounter{chapter}{2}
+
+\tableofcontents
+
+
+# Urban morphometrics and its terminological inconsistency
 
 
 _link back_
 
-_aim of the chapter_
-
-_structure of the chapter_
 
 In the age of urbanisation, urban planning and design still struggle to offer reliable models to address the challenges of the 21st century [@cuthbert2007urban; @romice2020masterplanning], while the discipline’s shift towards an evidence-based approach and a “new science of cities” is still in its infancy [@batty2012, p.S15]. Despite remarkable growth and progress, urban morphology (UM)—the area of urban studies that focuses on cities’ physical form, its patterns of change in time and relations with non-spatial dynamics—is no exception. In particular, two issues still hinder a quantitative approach to the analysis of urban form: first, the availability, quality and consistency of data across geographical regions; second, the discipline’s inherent difficulties to offer a rigorous and consistent definition of urban form, its fundamental components and the relationships between them. This paper offers a contribution towards the resolution of this second problem.
 
+_aim of the chapter_
 The high variety of measurable urban form characters, defined as *a characteristic (or feature) of one kind of urban form that distinguishes it from another kind* [adapted from @dibble2017; @sneath1973], used in urban morphology literature is fragmented across numerous unrelated sources, and despite several attempts to systematise it, [@larkham1991glossary; @caniggia2001architectural; @conzen2004thinking; @dibble2017] a comprehensive overview is still lacking. This gap of knowledge creates uncertainty as to which research areas are covered and which need further research. Moreover, terminology is not consistent nor univocal, resulting in weaker methodological compatibility and higher hurdles in comparing research outputs. According to @whitehand2012,
 
 > “comparative research is faced with a plethora of case studies that use different, or sometimes unspecified, definitions. […] In addition to problems of non-comparability of definitions, methods and concepts, differences between the sources of information employed need to be overcome” (p.60).
 
+_structure of the chapter_
 In this paper we: a) propose a coherent and comprehensive classification system of measurable urban form characters, and b) use this system to resolve current inconsistencies and redundancies and identify areas of weakness in existing literature. This work is meant to be preparatory to the future exploration of how to measure urban form in a way that is comprehensive, systematic and replicable.
 
-## Research method
+## Selection and systematisation of methods and characters
 
 In this section we present: 1) the criteria utilised to select relevant literature used to map the field of UM; 2) the process of systematization of such literature, which we then use to 3) identify, cross-compare, (re)define and 4) the re-classify urban form characters.
 
 As for our own terminology, terms such as “attribute”, “variable”, “measurement”, “metric”, “index”, “character”, “indicator” or “proxy” are often used interchangeably in urban morphology to signify the measurable feature of an object [@araldi2019; @bobkova2017; @dibble2017; @schirmer2015; @vanderhaegen2017]. In this paper we follow @dibble2017 where the term “character” defines “*a characteristic (or feature) of one kind of organism that will distinguish it from another kind*” @sneath1973. Here, however, “organism” refers to a distinct kind or type of urban form.  “Urban form” as a term has been used to loosely signify different aspects of space’s configuration in cities along with its use and agents, and is therefore a polysemic term, while in this work we refer exclusively to the physical components of urban space, i.e. the built-up fabric (blocks, streets, buildings…) and its fundamental spatial subdivision (plots) after @moudon1997.
 
+### Literature selection and systematisation
 To review the literature (figure \ref{fig:selection}), we selected sources that: a) explicitly undertake a *quantitative* examination of urban form characters\footnote{In some cases, the research focused both on physical and non-physical characteristics and was therefore included but only the physical part of the method was used in our analysis.}; b) include urban form characters that are not present in already selected sources, to avoid unnecessary duplication and overlapping.
 
 First, we looked at papers published in two leading journals of urban analytics and morphology: “Environment and Planning B” and “Urban Morphology”. From here, we extracted keywords, which we then used to identify a number of academic citation databases (Google Scholar, Scopus, Mendeley Search, ResearchGate, Taylor and Francis Online) and then undertook a wider snowballing exploration. The process of keyword search and snowballing was iterated whenever new inputs were found and adopted to ensures that the selection is rigorous and inclusive.
@@ -33,11 +38,12 @@ All selected papers were then classified according to: a) grain, i.e. the scale 
 
 For *grain*, we considered the basic spatial unit as the smallest element being measured, while for *extent*, we considered coverage as the total area of the case study analysed. Both are taken into account and then organised  from 1 (small) to 10 (large)\footnote{This classification is based on conceptual ranking rather than metric size: the building scale is smaller than the plot scale, in that the former is conceptually contained in the latter, even though in terms of sheer size some buildings may be larger than some plots.}. 
 
+### Classification of characters
 We then extracted individual urban form characters from the sources classified as above. Those influenced by non-morphological data, such as distance to the nearest bus stop [@song2007] or land use [@dibble2017], were excluded. 
 
 To overcome terminological inconsistencies among the urban form characters adopted in different studies\footnote{This phenomenon, occurring when the same urban form characters are presented under different names or different urban form characters under the same name, we call nicknaming.}, we comprehensively redefined them (see Section 4). On these new definitions, we then designed a classification framework of such characters, based on their nature and the spatial unit they belong to. Finally, we tested such framework in the classification of all urban form characters initially extracted from literature, discussed the emerging gaps and redundancies and suggested further developments.
 
-## Literature Review
+## A state of art
 
 While the existing literature on urban morphology shows a historical
 inclination towards qualitative methods [@dibble2015], through
@@ -66,8 +72,10 @@ Not surprisingly, studies on urban *growth* are mostly diachronic. Many publicat
 
 Crucial for the success of a comparative method is *complexity*. This is represented by both the cross-scale extent of the research, as reflected for example in the work of @song2007, later refined by @song2013 or @schirmer2015\footnote{In the figure 2, cross-scale research is listed at all relevant scales (as @schirmer2015).}, and the number of urban form characters measured (potential comprehensiveness). Still, over the whole set of 72 literature items selected, those measuring a number of urban form characters large enough to minimise biases and errors (i.e. > 25 urban form characters) is relatively rare (15%). Only recently, a few such comprehensive studies started to emerge [@bourdic2012; @dibble2017; @ewing2006; @oliveira2013; @schirmer2015], contributing to the growing area of urban morphometrics [@carneiro2010; @dibble2017; @feliciotti2017]. However, the sheer number of urban form characters scrutinised (comprehensiveness) does not necessarily ensure complexity, as many of them may be collinear and hence capture the same information.
 
-## Classification of urban form characters
+## Classification of morphometric characters
+==add a sentence==
 
+### Nomenclature
 The review of the 72 quantitative studies illustrated above produced a list of 465 individual measurable urban form characters: of these, many were duplicated or hidden under the same name (“nicknaming”), suggesting the persistence of significant nicknaming even in the quantitative area of urban morphology analysis. For example, the term “connectivity” is in some cases used to signify a broader group of urban form characters (usually related to network analysis) [@dibble2017], while in other cases is attributed to one single one of them, an yet with different meanings [@hillier1996; @lowry2014]; in some instances the term is used in both ways in the same study [@bourdic2012]. 
 
 Hence, we undertook a process of "character redefinition", and
@@ -117,6 +125,7 @@ comparable.
 
 \normalsize
 
+### Classification
 Having tackled the terminology issue, we developed a typology of urban
 form characters directly based on their name (which now captures their
 definition). This is a *"concept-based classification",* i.e. one
@@ -286,9 +295,10 @@ Popkin (2013)\tabularnewline
 \normalsize
 
 ## Interpretation
-The summative statistics of the complete Table of Urban Form Characters
-offers in-depth information into the current state of how terminology is
-defined and used in the field. The distribution of urban form characters
+The summative statistics of the complete Table of Urban Form Characters offers in-depth information into the current state of how terminology is defined and used in the field. 
+
+### Distribution of characters
+The distribution of urban form characters
 across the scales of extent shows a slight decline as we proceed from
 Small to Large scales, but the distribution is relatively balanced
 (figure \ref{fig:totals}b). In terms of the scale of grain, it is naturally skewed
@@ -365,6 +375,7 @@ certain types of urban form characters are abundant and might overlap or
 even lead to redundancy suggests that there is a general agreement on
 their value as descriptors of urban form.
 
+### Terminological inconsistency
 Finally, terminological inconsistency could be explained by two causes.
 On one hand, the current lack of a comprehensive framework for the
 systematisation and comparability of urban form characters~~,~~ on the
