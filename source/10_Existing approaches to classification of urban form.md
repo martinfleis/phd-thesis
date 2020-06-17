@@ -1,93 +1,92 @@
-# Existing approaches to classification of urban form
-6 000 words (if less, better)
+\setcounter{chapter}{1}
 
-## Introduction
-- Explain prior focus on quantitative morphology (link to introduction), but say that the chapters gives overview of all, with the focus on quantitative.
+\tableofcontents
+
+# Existing approaches to classification of urban form
+
+_link back_
+
+_aim of the chapter_
+Explain prior focus on quantitative morphology (link to introduction), but say that the chapters gives overview of all, with the focus on quantitative.
+
+_structure of the chapter_
 
 ## Making sense of the world
 - *Why is classification important, what can it bring to the table, why should we bother doing it.*
-- What is classification
-	- a bit of definitions
-	- different ways of making classification
-		- typology/taxonomy distinction **important**
-- Why is classification useful in general
-- Why is classification useful in urban morphology
 
-## A brief history
-- *Literature review of existing methods of classification and its analysis and description of patterns within the field.*
-- Introduction
+### Classification as a method
+*Classification is a polysemic term, so we first need to declutter it and define the terms as they will be used within this work.*
 
-- *A brief overview of the history of classification of urban form focusing on its origins and early attempts. People like Lynch, Kostof.*
+*The most simple definition of classification is "ordering of entities into groups or classes on the basis of their similarity" {REF Bailey p.1}. At the same time, classification is term used for both process and end result. ==add OED and some other defs, then say which def is used here==*
 
-### Qualitative approach
-- **Research TO DO**
-- link between history and qualitative
+*there are different ways of doing classification, depending on the structure of the result and on the method. We can also distinguish between unidimensional and multidimensional.*
 
-- Traditional schools of urban morphology
-	- Conzen
-	- Muratori
-	- Duany
-- City-based approaches (Portland, Berlin, Prague)
-- Spatial typology
-	- Kohout, a+t
-- The qualities of such approaches, their limits.
-  - **Research TO DO (a bit)**
-  - expert knowledge needed
-  - concepts based
-  - might be biased (not necessarily)
-  - good in interpretation, could be detailed
-  - time consuming, information demanding
-  - limited applicability
+*structurally there are two main groups -  flat and hierarchical. In some rare cases, we can have overlapping*
+	
+*methodologically, we can distinguish two key ways - conceptual classification and numerical classification.*
 
-### Mixed (predominantly non-morphological)
-- Socio-demography as a main branch
-- Additional (energy)
-- The qualities of such approaches, their limits
-	- capturing non-morphological classes
-	- good for specific purposes
-	- good source for link between form and soft data
-- **Research TO DO (a bit)**
+*Typology. Conceptual classification is called typology. It is multidimensional. Classes represent "concepts rather than empirical cases" REF p.5. It is qualitative classification*
 
-### Remote sensing
-- Introduce RS
-	- satellite or aerial data, automatic (multi-spectral) image recognition, supervised ML
-- Units of analysis
-	- patch
-	- block
-	- grid
-	- *add some figures as an illustration*
-- Number of categories
-	- 1 - 10
-- The qualities of such approaches, their limits
-	- possible extent
-	- only "visible" spectrum - roofs can make a lot of difference in RS but minimal in reality
-	- mostly supervised nature - you have to predefine ground truth
-	- the aspect of resolution and data availability
-	- number of categories is generally low related to low number of actual indicators (like Copernicus)
+*Taxonomy. Classification of empirical entities. Term can be again both process end result.*
 
-## Quantitative classification
-- introduction
-	- what does it mean quantitative method
-	- two major groups divided by the data source
-		- remote sensing — raster data
-		- morphometrics — vector data
-			- *morphometrics can in theory be done on remote sensing as well, so it might be better to use another term*
+*‌Numerical taxonomy vs. Cluster analysis vs. Unsupervised classification. In this work, taxonomy is used to describe the end result, while cluster analysis and unsupervised classification are interchangeable and describe the process, to clarify the situation a bit.*
 
-- *This is the key focus of the whole chapter, and the majority of scrutinised works fall into this category. The rest mentioned above and below is to draw a full picture, but it does not aim to provide an in-depth understanding, unlike this part.*
-- **Research TO DO - check recent papers, some might be included**
-- Introduce quantitative morphology
-- units of classification
-  - *Assessment based on the unit of classification and its placement on the scale.*
-  - gradient of scales
-  - from city scale to building and plot
-  - *do some quantitative assessment of the db*
-- number of classes
-  - generally low, in few cases higher
-  - *do some quantitative assessment of the db*
-- mention number of characters used for classification (scrutinised in the next chapter)
-- Synthesis of the corpus of works
-	- *taxonomic relations between types?*
-	- The qualities of such approaches, their limits
+*Since we are talking about unsupervised classification, it is worth noting that supervised classification is a bit different concept and it is rather labelling or classing. It is a tool to sort features into pre-defined categories, unlike all above, which encompass the determination of categories as well. Again, this is terminologic issue, but because it is not used in this work, we can leave it out. From the perspective of this work, it is not very useful.*
+
+*Bailey identifies ten fundamental advantages of classification*
+	- description
+	- reduction of complexity
+	- identification of similarities
+	- identification of differences
+	- capturing dimensions
+	- comparison of types
+	- the inventory and management of types
+	- types as criteria for measurement
+	- study of relationships
+	- versatility
+
+*All above are applicable in urban morphology as well, however, we have to deal with some complications.*
+- Classification in urban morphology
+	- question of time dimension (evolution, change)
+	- question of concepts
+	- question of empirical characters
+
+### Optimal classification model
+*what are we looking for - criteria of optimal classification ==link to intro==*
+*So there is a plethora of options. From the perspective of the aim and scope of this work, the optimal classification model should follow few simple rules.*
+- exhaustive, mutually exclusive, those are general rules
+- empirical, hierarchical, comprehensive, detailed, scalable
+
+## Significant concepts
+- *few concepts are quite established*
+- ==link those to the definitions above==
+
+### Land Cover
+*lc*
+*issues*
+
+### Local Climate Zones
+*lcz*
+*issues*
+
+### Urban Structural Types
+*ust*
+*various methods if their identification, from qualitative heuristics based on visual assessment () to ML models*
+*issues*
+
+*conclude (also in relation to un/supervised)*
+
+## Spectrum of classification models
+==mention issues along the way==
+==link those to the definitions above==
+*apart from these, there is a wide spectrum of models*
+
+### From city to plot level
+*go from city scale to building scale*
+
+### Multiple Fabric Assessment and Chalmers School
+*araldi*
+*chalmers*
 
 ## The gap in the systematic classification
 - lack of systematic classification based on the small-scale unit

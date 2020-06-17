@@ -15,26 +15,26 @@
 
 
 - A) interest in cities and its **urban patterns**
-```
-	- different perspectives on patterns
-		1. Relations (UF -> other aspects)
-			- alongside with the rising trend in such a research ==LINK to %==
-				- different purposes
-				- energy, walkability, quality of life, health, economy, cost
-				- sustainable development
-					- data-driven decision making
-		2. Classification
-			- classification/typology history
-				- patterns are of interest for long time
-					- Lynch
-					- planning-focus
-					- descriptive-focus
-						- qualitative
-						- data-driven
-					- reflection of the socio-economico-cultural conditions
-			- ==this is the only section which talks about the qualitative stuff==
+
+- different perspectives on patterns
+	1. Relations (UF -> other aspects)
+		- alongside with the rising trend in such a research ==LINK to %==
+			- different purposes
+			- energy, walkability, quality of life, health, economy, cost
+			- sustainable development
+				- data-driven decision making
+	2. Classification
+		- classification/typology history
+			- patterns are of interest for long time
+				- Lynch
+				- planning-focus
+				- descriptive-focus
+					- qualitative
+					- data-driven
+				- reflection of the socio-economico-cultural conditions
+		- ==this is the only section which talks about the qualitative stuff==
 			
-```
+
 
 - B) data era
 	- data-driven science
