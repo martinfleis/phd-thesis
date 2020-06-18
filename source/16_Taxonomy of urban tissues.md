@@ -40,6 +40,8 @@ The taxonomy results in the hierarchical tree capturing the relationship of clus
 
 Moreover, the tree itself should be expandable, allowing for a development of the *Atlas* of urban form in a way we already know from biology. Such an atlas is a theoretical ==more stuff here==.
 
+_Li at al as reference, Dong as reference_
+
 ### Validation and applicability \label{need_validation}
 Why validate? TEXT
 

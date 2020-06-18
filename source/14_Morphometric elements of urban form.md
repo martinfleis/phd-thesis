@@ -166,6 +166,7 @@ _We can use MT to build a relational model based on aerial contiguity & network 
 _Refer back to chapter 2 and discuss the reason why tissue is optimal_
 - _it reflects unconstrained morphological unit_
 - _tissue as OTU (link to Ch4 and Ch5)_ ==after ch4 is done==
+- _morphological regionalizaition (Oliveira)_
 
 ==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (here or in the next chapter)
 
