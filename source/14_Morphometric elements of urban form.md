@@ -17,31 +17,115 @@ _introduction to elements and models_
 
 _more paras_
 
+- this chapter will talk **only** about the analytical measurable representation of UF
+	- talk about the elements
+	- talk about the models
+
 ==add more content to this introduction==
 
-## Elements of urban form in the context of urban morphometrics
+### Elements of urban form in the context of urban morphometrics
+
+- we have fundamental elements
+- we have their aggregations
+	- the way we aggregate them matters
+
 *there are three fundamental and a range of other elements. Fundamental are abc, other are defghi.*
 
-### fundamental elements
+- there are different levels of specificity (kropf)
+	- relate to Dibble's CUEs
+		- Dibble used detailed specific CUEs
+
+	- open spaces
+		- polygons - can be on the level of plot
+	
+	- intra-building elements
+		- rooms, structures, materials
+
+	- Issue of availability
+	*the first issue *
+	==**problem** data are not available, we need to use as small number of resources as possible to keep morphometric method applicable==
+
+
+#### Fundamental morphometric elements
 ==_RESEARCH NEEDS TO BE DONE HERE_==
+==CUEs==
 ==add some illustrations here==
 
-#### Building
-*building is a building, cool right?*
+_fundamental morphometric elements are based on fundamental morphological elements. Kropf and Moudon talk about these three_
 
-#### Street
-*street is a space, it is a segment, it is a thing…*
+- Kropf's minimum elements
+
+```
+Movement       - tracks         - streets
+Local activity - core territory - plots (smallest spatial unit)
+Sleep          - shelter        - buildings
+```
+
+- "minimum elements that constitute the phenomena" Kropf 2017 p.38
+- relate to conzenian terminology
+- the same triage of tracks - core territory - shelter should be used in morphometrics as well as it captures the basic notion of urban form.
+
+_the difference between morphological and morphometric elements is that the latter are operational, measurable and represented as vector GIS data_
+
+It is fundamental to ensure that the actual data are good enough to represent morphometric elements. That could be an issue for all  types of elements, so there are cases when the data needs to be prepared for morphometric analysis. The pre-processing can be in some cases automatised, in other, unfortunately, manual or at least semi-manual to have the data in the correct shape in the end. ==adapt==
+
+While each dataset coming from a different source is specific; hence the cleaning procedure needs to be tailored to each source, there are some common issues which are not unique to specific datasets. The following section outlines these common issues and ways of resolving them or at least minimising the error under a significant level. As the method described above is robust due to the design of contextual characters, the data do not have to be perfect all the time. However, there are cases where even contextual character can be significantly affected and skew the result of clustering. ==adapt==
+
+##### Building
+*Buildings form the mass of urban form and are defined as ... . *
+- building is subsequent to development of plot, but since plot has no longer structuring role (levy) it should be considered separately
+- Dibble's def "permanent, built structure with some form of enclosure defining the borders of usable space" (Dibble 2016 p.102)
+
+*Depending on the required detail, building can be represented as 2D footprint, 2.5D footprint with height attribute or 3D model.*
+- illustrations - image, representation*
+- analytical representation of building is a footprint polygon with attributes / 3d model
+- figure ground plan is known application
+
+Having data layer representing building footprints correctly is crucial from two reasons as it affects not only morphometric characters based on buildings but also morphological tessellation and consequently characters based on morphological cells, which in the end are all contextual characters. There are several aspects which need to be fulfilled - topological correctness, consistency in detail, representation of individual buildings and building height attribute presence. Overall, it is expected to have a building data representing Level of Detail 1 (LoD1) [@biljecki2016].==adapt==
+
+Topological correctness ensures that geometry represents the actual relationship between buildings on the ground. There are characters measuring continuity of a perceived wall in a joined buildings or shared walls ratio which require building polygons to be correctly snapped together when two buildings touch. In that case, it is expected that neighbouring polygons will share vertices and boundary segments. There should not be a gap between polygons when there is none in reality and vice versa. Also, polygons must not overlap at any case as that could cause significant disruption of tessellation geometry.==adapt==
+
+The building detail should be consistent across the dataset and represent an optimal approximation of building shape based on LOD specification as proposed by @biljecki2016. The approximation should represent LOD1.1 (no details, but the shape is kept) or LOD 1.2 (minor details), building shapes should not be overly detailed nor overly simplified. In the case of inconsistency, simplification of more detailed shapes needs to be done before morphometric assessment.==adapt==
+
+==add LoD figure==
+
+Each polygon has to represent a single building. There are datasets (often of remote sensing origin) capturing all structures which are joined by any means as a single polygon. Such data do not represent the morphological truth on the ground. Their pre-processing is complicated as it requires splitting of existing geometries according to an additional dataset. The second extreme is the opposite situation, when a single building is represented by multiple polygons. These usually represent different height levels, through routes or similar features. If these polygons, representing parts of buildings, have a common ID which allows joining them together to get a single polygon representing a single building, the pre-processing of such a data is only a simple dissolution. However, there are many cases when this ID is missing, and correct pre-processing require either clever algorithms to understand which polygon belongs to which or laborious manual work.==adapt==
+
+A certain number of primary and subsequently contextual characters uses building height attribute, which has to be present in the original input dataset. The resolution should be able to capture the distinction between floor levels; further detailing is not significant. The input can be either in meters (optimal) or in a number of storeys, which should then be represented as a metric approximation as characters expect the height to be in meters.==adapt==
+
+##### Street
+*street is defined as multiple things, because we can understand it as a movement, as an area or as a network. Important aspect of street (network) is also junction aka node.*
 - street area
 - street segment
 - street node
 
-#### Plot
-*bit here and more below*
+*Depending on the definition, street is represented as:*
+- represented as area covered by street
+- as street network (centrelines)
+	- edges and nodes
+- could be represented by axial map
+- illustrations
+
+Similar pre-processing situation as with building layer is with a street network. Incorrectly drawn street network may cause significant errors in morphometric results and consequently in clustering. There are three most important cases which need to be checked before the analysis - topological correctness, morphological correctness and consistency in classification.
+
+Topological correctness ensures that each street segments is represented by a single `LineString` geometry, that neighbouring segments share end vertex and that geometry is not split if the segments intersect only on the projected plane and not in reality (typically multilevel communications, when one is on the bridge across the other so that projected intersection is not real intersection).
+
+Moreover, street networks have to be morphologically correct, which means that geometries represent morphological connections, not other, usually transport-focused. That often mean simplifications of networks to eliminate transport geometries like roundabouts or similar types of junctions, or dual lines representing dual carriageways. In certain cases, networks have to be snapped together, because due to traffic-calming measures, some junctions might not be connected when they should be.
+
+Finally, the network needs to be consistently drawn in terms of inclusion of different levels of network hierarchy. Hence the definition of what is considered as a street is a minor connection is crucial for comparability of results and should be included in any research.
+
+As per data availability, networks are widely availably. However, geometries mostly represent transport network and often do not follow ideal topological rules. The pre-processing to ensure that all three points above are fulfilled is hence necessary and can be partially automatised either using `momepy.network_false_nodes` or using methodology outlined by @krenz2018, using conventional GIS tools. However, there might be cases when more complicated procedures should be employed, either to ensure that the algorithm is more precise or to include manual steps.
+
+It is not complicated to find case studies offering the data in required quality and detail, but it is true that data of this level of precision are not available everywhere around the world. That is true, especially for building height parameters. Having all data, as outlined above, is the ideal situation, which will be tested in this research. In the real world, the situation might be less optimal than that, so pre-processing procedures have to be employed before performing the analysis itself. The case analysis using extremely sub-optimal data is available as Annexe X, outlining the work done on Grand Rapids, Michigan using building footprints not representing individual buildings and missing any height attributes.
+
+##### Spatial unit
+*The identification of a reliable, significant and universal spatial unit of analysis is of crucial importance.*
+
+###### Plot
 In traditional Urban Morphology, such unit of analysis is often the *plot*, considered to be the smallest meaningful unit of spatial subdivision and a fundamental component to understand the spatial structure of the ordinary fabric of urban settlements [@panerai2004; @porta2014] and their processes of formation and transformation in time [@whitehand1981]. 
 
-==write more and more stuff here==
+==REF Moudon==
 
-##### Issue of plot
 However, despite its significance, the plot remains a problematic construct. At *ontological* level, there is no agreement on *what exactly a plot is*: indeed, it has been variously defined as “*a land-use unit defined by boundaries on the ground*” [@conzen1969, p. 128], *a module* of the urban tissue constituted by a built-up area and its open pertinent area [@caniggia1979], a piece of property, subject to subdivision and amalgamation as a result of successive patterns of occupation [@moudon1986], or again, according to @bobkova2017a, as “*a basic unit of control*”, “*a fundamental link between spatial and non-spatial medium*”, “*a connection between built space and space of movement*” and “*the framework for building evolution over time*” (p. 47.5). And crucially, more often than not, these definitions may represent very different entities on the ground “*potentially leading to misinterpretation and so a somewhat obscured picture of the dynamics of urban form*” [@kropf1997, p.1].
 
 The second problem has to do with relevance and applicability of the plot to different urban contexts. In literature, plots have been predominantly used to study and characterise traditional urban tissues that having evolved incrementally at the plot level [@bobkova2017a; @conzen1969], are quintessentially plot-based [@panerai2004]. This is however not the case for urban forms that came about after the Second World War, which appear to respond to substantially different rules of organisation [@dibble2016; @feliciotti2018]. For these tissues, “*plots no longer have a structuring role*” [@levy1999 p.83], and hence can hardly be a suitable unit of analysis. While the process of identifying plots in traditional tissues is somewhat less controversial, the same is not true in contemporary ones (figure \ref{fig:glasgow}). 
@@ -54,50 +138,52 @@ Not all mapping agencies explicitly report plots and, even when they do, not all
 
 Given the aforementioned issues, and despite plots being still widely used in Urban Morphology to capture the “*pattern of human intention and activity*” [@kropf1997, p.5], they are ill-suited as basic unit for UMM applications.
 
-==**problem** plot is ill suited==
-
-##### Morphological tessellation
-==_option of tessellation (Hamaina, Usui, Schirmer)_==
+###### Morphological tessellation
+_one of the few alternatives proposed in literature is morphological tessellation_
+==intro== Morphological Tessellation (MT), a method of deriving a spatial unit of analysis, the Morphological Cell (MC), which is able to convey reliable, universal and meaningful plot-scale information and, at the same time, to minimise manual labour, subjective interpretation and data dependence. 
 
 ==rewrite this bit to make sense in the context==
 At the core of the proposed MT lies the *Voronoi tessellation* (VT), a method of geometric partitioning that from a planar set of *‘seeds’* generates a series of polygons, known as *Voronoi Cells* (VC). Each VC encloses the portion of the plane that is closer to its seed than to any other (figure \ref{fig:voro}), ideally representing its ‘*influence zone*’\footnote{The term Voronoi Tessellation can be used to describe both the process of partitioning space (method) and the geometric mesh it generates (output). In this text, the two meanings are used interchangeably.}.
 
 ![Voronoi tessellation based on randomised seeds. Each colour represents the area of one tessellation cell (influence zone). Dashed lines end in infinity](source/figures/ch6/voro.png "Voronoi tessellation based on randomised seeds"){#fig:voro width=50%}
 
-VT has been already used in relation to urban form, in the context of spatial clustering algorithms [@dogrusoz2007] and built-form geometry generalisation techniques [@ai2007; @basaraner2004; @li2004; @liu2014], or as input for image-based pattern recognition [@yu2017]. In recent years, VT was used to study the micro-scale properties of the urban fabric [@hamaina2012a; @hamaina2013] in order to produce a reliable method for urban form patterns’ recognition, which pioneered the generation of VC from building footprints. Later, Schirmer and Axhausen [-@schirmer2015; -@schirmer2019] devised a method to define “*influence zones*” around buildings using a “*topological skeleton*” of unbuilt space that is mathematically similar to VT. In parallel, Usui and Asami [-@usui2013; -@usui2017; -@usui2019] included the street network as an additional input alongside the building footprint to the VT algorithm, to mimic the plot structure of traditional Japanese urban fabrics.  Whilst the generated mesh shows remarkable similarity to the plot pattern, its main limitation is the inability to capture the spatial pattern of modernist (post WWII) urban tissues and the highly variable distance between building and street that is typical of such fabrics. On a similar vein, Araldi and Fusco [-@araldi2017; -@araldi2019] developed an approach based on VT and street segments to define a spatial unit based on the pedestrian point of view.
-In all these cases, the use of Voronoi tessellation helped to rigorously and reliably cluster components according to their configuration although, as pointed out by @usui2019, the relationship between VC and ‘conventional’ plots has never been directly tested to date. In this sense, the MT approach is to be intended as a continuation of this line of works, insofar it too utilises the VT procedure. However, unlike previous studies, this paper aims to provide a fully operational and replicable method by examining the details of the tessellation process and its parameters, and testing the similarity of morphometric characters as measured on both MC and plots through direct comparison.
-_unexplored_
+VT has been already used in relation to urban form, in the context of spatial clustering algorithms [@dogrusoz2007] and built-form geometry generalisation techniques [@ai2007; @basaraner2004; @li2004; @liu2014], or as input for image-based pattern recognition [@yu2017]. In recent years, MT was used to study the micro-scale properties of the urban fabric [@hamaina2012a; @hamaina2013] in order to produce a reliable method for urban form patterns’ recognition, which pioneered the generation of VC from building footprints. Later, Schirmer and Axhausen [-@schirmer2015; -@schirmer2019] devised a method to define “*influence zones*” around buildings using a “*topological skeleton*” of unbuilt space that is mathematically similar to MT. In parallel, Usui and Asami [-@usui2013; -@usui2017; -@usui2019] included the street network as an additional input alongside the building footprint to the VT algorithm, to mimic the plot structure of traditional Japanese urban fabrics.  Whilst the generated mesh shows remarkable similarity to the plot pattern, its main limitation is the inability to capture the spatial pattern of modernist (post WWII) urban tissues and the highly variable distance between building and street that is typical of such fabrics. On a similar vein, Araldi and Fusco [-@araldi2017; -@araldi2019] developed an approach based on VT and street segments to define a spatial unit based on the pedestrian point of view.
+In all these cases, the use of Voronoi tessellation helped to rigorously and reliably cluster components according to their configuration although, as pointed out by @usui2019, the relationship between MC and ‘conventional’ plots has never been directly tested to date. In this sense, the MT approach is to be intended as a continuation of this line of works, insofar it too utilises the VT procedure. However, unlike previous studies, this research aims to provide a fully operational and replicable method by examining the details of the tessellation process and its parameters, and testing the similarity of morphometric characters as measured on both MC and plots through direct comparison.
 
-### Additional elements
-- open spaces
-- axial line - sort of
+*yet, the potential and applicability of morphological tessellation is still unexplored.*
 
-- intra-building elements
-	- rooms, structures, materials
+#### Analytical aggregations
 
-### Issue of availability
-*the first issue *
-==**problem** data are not available, we need to use as small number of resources as possible to keep morphometric method applicable==
+Since urban morphology analysis aims to capture patterns of urban form, it must describe single elements (buildings, plots, morphological cells) as well as their spatial configurations and relationships. To do so, larger analytical units must be identified. Generally, we can distinguish two approaches to do so: area-based and location-based [@berghauserpont2014].
 
-### Analytical aggregations
-
-#### Area-based
+##### Area-based
 ==be super careful with critique Re MAUP here==
-Since urban morphology analysis aims to capture patterns of urban form, it must describe single elements (buildings, plots, morphological cells) as well as their spatial configurations and relationships. To do so, larger analytical units must be identified. Generally, we can distinguish two approaches to do so: area-based and location-based [@berghauserpont2014]. Area-based approaches divide space into preselected units, i.e. administrative boundaries [@gielen2017], abstract projected boundaries (typically grid) [@galster2001], or larger morphological structures such as a block [@gil2012] or a Sanctuary Area [@dibble2017]. However, such methods face two connected issues, together named “Modifiable Areal Unit Problem” (MAUP) [@openshaw1984]: scale issue (how big the area of aggregation should be) and aggregation issue (where should we draw its boundaries). Area-based approaches are prone to both of them, particularly the latter: a change of the boundary, for example the voting district, might affect the analysis’ results.
+ Area-based approaches divide space into preselected units, i.e. administrative boundaries [@gielen2017], abstract projected boundaries (typically grid) [@galster2001], or larger morphological structures such as a block [@gil2012] or a Sanctuary Area [@dibble2017]. However, such methods face two connected issues, together named “Modifiable Areal Unit Problem” (MAUP) [@openshaw1984]: scale issue (how big the area of aggregation should be) and aggregation issue (where should we draw its boundaries). Area-based approaches are prone to both of them, particularly the latter: a change of the boundary, for example the voting district, might affect the analysis’ results.
 
-*even though, some are present in literature*
-- street edge/plot series
-- block
-- vague neighbourhood
+*keeping in mind the issues, there is a significant scope to study morphological aggregations*
 
-- urban tissue, SA and similar stuff
-	- ==morphological region (Vitor's paper)==
+*going from the plot scale, we recognise street edge, block, street, resulting in either urban tissue if we follow one definition or in SA if we follow Mehaffy.*
 
-*while some are perfectly meaningful and MAUP is tiny (edge, block), some are suboptimal.*
-==_plus more_==
+*smallest aggregation is street edge, defined as ...*
+- illustration
 
-#### Location-based
-Location-based approaches generate analytical units independently for each source-element as a unique aggregation around it, typically at walking or driving distance, where distance is measured either along the street network (network distance) or an approximation of it (for example: as a crow flies). Therefore, the aggregated values are uniquely and consistently generated for each source-element (e.g. building), and the effect of arbitrary data aggregation is minimised, resolving MAUP’s aggregation issue. For this reason, literature, including the research presented in this paper, prefers location-based analytical units, as their nature partially resolves MAUP. The scale problem part of MAUP is present also in location-based methods, and it is up to the methodology adopted on a case-by-case base to limit its effect to a minimum.
+*then we have block, which Kropf calls plot series*
+- illustration
+	_The above highlights that while the block can unequivocally be defined as an aggregate of plots surrounded on all sides by street spaces, it is ambiguously related to those street spaces when taken as an isolated entity. A block can be either (1) the result of combining several plot series, each connected with a different single street, or (2) an aggregate of plots that may be connected to two or more streets. One way or the other, the block occupies the same level as the plot series in the generic structure, but as a resultant form (for this reason ‘blocks’ is set in square brackets in the diagrams)._ ==Kropf p.47==
+
+
+*then we can have street - various definitions*
+- illustrations
+
+*urban tissue could be seen as the largest form-related aggregation and literature focuses on this concept from several perspectives. We have tissue/fabric, morphological region and UST. While SA can sometimes overlap, it by definition captures different concept.*
+- ==morphological region (Vitor's paper), Kropf p.15, Araldi, etc.==
+- ==link back to classification ch2==
+- illustration
+
+*while some are perfectly meaningful and MAUP is tiny (edge, block), some are suboptimal (SA).*
+
+##### Location-based
+Location-based approaches generate analytical units independently for each source-element as a unique aggregation around it, typically at walking or driving distance, where distance is measured either along the street network (network distance) or an approximation of it (for example: as a crow flies). Therefore, the aggregated values are uniquely and consistently generated for each source-element (e.g. building), and the effect of arbitrary data aggregation is minimised, resolving MAUP’s aggregation issue. For this reason, literature, including the research presented in this work, prefers location-based analytical units, as their nature partially resolves MAUP. The scale problem part of MAUP is present also in location-based methods, and it is up to the methodology adopted on a case-by-case base to limit its effect to a minimum.
 
 Currently, morphological literature relies on a few methods to define an aggregation of units in a location-based manner. The most straightforward is based on simple Euclidean (as-crow-flies) distance from the elements of analysis (typically radius of 400 metres around a building) [@schirmer2015]. However, such an approach does not reflect the actual morphological situation on the ground. In some instances, such as in in traditional compact urban tissues, it can capture hundreds of buildings within 400 metres, but only a few in sparse modernist urban tissues, leading to fundamental differences in the amount of information captured, causing issues of comparability of such information.
 
@@ -107,11 +193,9 @@ Both Euclidean distance and metric reach methods cannot capture the change in th
 
 The third method present in literature is K-nearest neighbour (KNN) analysis, which is also based on Euclidean distance but using it differently. It defines aggregation as a set number of nearest neighbours, defined via as-crow-flies distance. Whilst only scarcely used in urban morphology [@liqiang2013], it has potential as such an approach might reflect changes in the granularity of urban tissues. However, due to the Euclidean definition of nearest neighbours, it cannot react to the detail of some spatial configurations (e.g., be able to detect linear patterns with natural boundaries between as features across the boundary might be closer than those within the pattern). Theoretically, KNN could be used together with reach analysis, joining both the ability to capture morphology represented by networks and scalability of KNN, but we are not aware of any research using this concept so far. However, it would still not resolve the issue of intra-block relationship.
 
-To sum up, literature currently offers two general approaches to aggregation – area-based and location-based. The first one is prone to both parts of MAUP, for which reason it is preferred to use location-based methods. Three location-based methods used in literature are Euclidean distance, metric reach and KNN. However, to date none of these methods is able to capture the structure of urban form which, for its complexity and variance, requires both morphological detailed definition and sensitivity to intra-block relationships.
-
 _ISUF_
 _zuirch_
-By the same token, it should be pointed out that the MCs do offer added values that are relevant on their own, regardless to their similarity to the plots. These have to do with the potential innovations – yet largely unexplored – which are triggered by the very nature of this geometry. For example, unlike other methods of urban form partitioning, the MT covers uniformly the totality of space within the set study area, allowing to capture the topology of contiguous space at the plot-level. Indeed, since all MCs are determined by adjacency, by using MT it is possible to think in terms of topological distance (set number of topological steps between cells) rather than geographic distance (set metric distance around elements, either “as the crow flies” or along the street network). Moreover, thinking in terms of topological distance as opposed to metric, the MT can be used to define new aggregated analytical units that are able to capture the immediate area of influence of a building on its surrounding fabric and, at the same time, of the surrounding fabric on the building. Indeed, since the size of each MCs depends on the granularity of the urban structure, the spatial representation of a set topological distance would be far smaller for a MC located in a fine-grained built-up area than for the same located in a coarse one (figure \ref{fig:contiguity_diagram}). Crucially, this is a kind of information that would not be possible to access with plots alone, which allows to reframe the very idea of ‘proximity’ by rethinking the relationship between scale and spatial meaning, thereby enhancing the ability to capture the context in UMM analysis.
+It should be pointed out that the MCs do offer added values that are relevant on their own in the context of aggregation, regardless to their similarity to the plots. These have to do with the potential innovations – yet largely unexplored – which are triggered by the very nature of this geometry. For example, unlike other methods of urban form partitioning, the MT covers uniformly the totality of space within the set study area, allowing to capture the topology of contiguous space at the plot-level. Indeed, since all MCs are determined by adjacency, by using MT it is possible to think in terms of topological distance (set number of topological steps between cells) rather than geographic distance (set metric distance around elements, either “as the crow flies” or along the street network). Moreover, thinking in terms of topological distance as opposed to metric, the MT can be used to define new aggregated analytical units that are able to capture the immediate area of influence of a building on its surrounding fabric and, at the same time, of the surrounding fabric on the building. Indeed, since the size of each MCs depends on the granularity of the urban structure, the spatial representation of a set topological distance would be far smaller for a MC located in a fine-grained built-up area than for the same located in a coarse one (figure \ref{fig:contiguity_diagram}). Crucially, this is a kind of information that would not be possible to access with plots alone, which allows to reframe the very idea of ‘proximity’ by rethinking the relationship between scale and spatial meaning, thereby enhancing the ability to capture the context in UMM analysis.
 
 ![Relationship between morphological cells of topological distance 2: the red geometry represents the adjacency network of neighbouring elements (buildings, MC) at topological distance 1 (adjacent neighbour of first order), while blue geometry represents the boundary of the aggregated analytical unit of topological distance 2 for each of the highlighted buildings. In the image, a fabric characterised by fewer and sparser buildings (b) generate larger cells and aggregated units compared to a denser and more compact fabric (a).](source/figures/ch6/contiguity_diagram.png "Relationship between morphological cells of topological distance two"){#fig:contiguity_diagram width=100%}
 
@@ -119,41 +203,50 @@ Thus, we present here a morphological tessellation, which is able to cover the b
 
 Topology captures the information on adjacency of neighbouring elements (cells) - two cells are neighbouring if they share at least one point (so-called Queen contiguity) or one segment (so-called Rook contiguity). It defines the proximity of elements in terms of the number of steps needed to get from each element A to each element B. Topological relationships can be of two types - unconstrained, if not limited by any other element than tessellation itself, and constrained, if the step between two neighbours is impeded by constraint (a block is the maximum number of topological steps from element without the need to cross the street network, while the street network is the constraint in this case). Thus, we can define an aggregation around each element based on a number of topological steps (topological reach) on the morphological tessellation, where aggregation defined by n steps includes all morphological cells which we can reach within x <= n steps. 
 
-## Models of urban form
+### Models of urban form
 *models which are linking these or some of these elements together. Does not include models based on a singular element; the key focus here on how are elements linked together.*
+
+- the way we link fundamental elements and their aggregations matters as well
+
+*analytical models of urban form are not often specified in literature, and mostly are only assumed.*
 
 ==_RESEARCH NEEDS TO BE DONE HERE_==
 
-### Hierarchical
-- Dibble, Feliciotti
-- Kropf
+#### Hierarchical models
+*two analytical models have been recently defined, Kropf's and Dibble's, both being hierarchical in nature. Which means that...*
 
-### Space Syntax
-- node
-- axial line
-- segment
+*Kropf model has urban tissue on top and rooms on the bottom. It is based on the combination of cannigian and conzenian theory. (REF Oliveira)*
 
-_more_
+*Dibble's hierarchical model has SA on top and plot on the bottom and focuses on morphometric assessment of SAs*
 
-### Alexander
+#### A City is not a Tree
+*Alexander points out that city does not work in a tree-like hierarchy, which is reflected in both models above, but as a semi-lattice of connections. However, none of these analytical models tends to reflect that and Alexander's own work on pattern language does not help in morphometric analysis.*
 
-*Alexander points out that city does not work in a tree-like hierarchy, which is reflected in all models above, but as a semi-lattice of connections. However, none of these analytical models tends to reflect that.*
+#### Relations between elements and their aggregations
+*Some models focus on specific elements of urban form, but elements from different approaches are usually not linked together.*
+- Node vs edge and their relation to other elements
 
-### Relations
-
-Node vs edge and their relation to other elements
-
+*While literature shows that there is a wide spectrum of elements and their aggregations useful for morphometric analysis, no method links then into a singular overarching model, which would in turn take a structure of semi-lattice instead of simple tree-like hierarchy.*
 ==**gap** no model joins links all these approaches into a singular model==
 
 
-## THEORY Relational model of urban form AND HYPOTHESIS
+## Theory of Relational Model of urban form
+*To put things forward, this research proposes relational model of urban form for urban morphometrics. At the same time, it rejects the idea of SA as OTU and assumes that urban tissue is the optimal OTU.*
 
-### Relational model as an analytical tool??
+### Relational model as an analytical tool
+_how to build a model based on that and relations, which is not strictly hierarchical?_
 
 _Relational model of urban form_
+*relational model acknowledges that there is an identifiable relation between all elements of urban form and their relations. As such, it accommodates all analytical aggregations into a singular model, linking all potential measurable characters to the smallest element.*
+- unlike models above, RM is analytical not conceptual or structural
+- the general concept of RM
+
+_within this research, RM is operationalised based on morphological tessellation. That is not the rule, but one interpretation and the same could be done with plots and different aggregation models._
+
+
+#### Tessellation-based relational model
 
 _is mt good unit?_
-_how to build a model based on that and relations, which is not strictly hierarchical?_
 _MT tested here, RM can be tested only in application, hence in next chapter ==LINK TO CH6 DISCUSSSION & INTRODUCTION==_
 
 _HYP_
@@ -162,20 +255,54 @@ _H aerial contiguity is better than any other aggregation model_ +test here (ISU
 _H network configuration is better than network reach_ +based on literature (SS)
 _We can use MT to build a relational model based on aerial contiguity & network configuration, limiting the data requeirements at the same time._ +tested in practice in Ch7
 
+##### Subsets of elements
+==revise==
+Subsets are combination of topological scales and fundamental elements. Overlap of characters from subsets, where each subset is representing different structural unit, gives overall characteristic of each duality building - cell which is the key for identification of DHC.
+
+Scale and subset is a set of relationships.
+
+###### Small/Single
+*topological distance 0*
+In the case of building and tessellation cell it captures individual character for each cell. In case of street segment and node, it captures value for segment or node which is then applied to each cell attached to it. 
+- building
+- tessellation cell
+- street segment
+- street node
+
+###### Medium
+*topological distance 1*
+In the case of building and tessellation cell it captures individual character for each cell derived from the relation to adjacent elements. In case of street segment and node, it captures value for segment or node which is then applied to each cell attached to it. 
+- adjacent buildings
+- neighbouring cells (queen)
+- neighbouring segments
+- linked nodes
+
+###### Large
+*topological distance 2-10*
+In the case of cells, it captures individual character for each cell derived from the relation to cells within set topological distance. In case of joined buildings and block, it is shared values among all elements within one structural unit. In case of street segment and node, it captures value for segment or node which is then applied to each cell attached to it. 
+- joined buildings
+- neighbouring cells (queen 2+)
+- block
+- segment step neighbours 2+
+- segment metric reach
+- node step neighbours 2+
+
 ### Urban tissue as a unit of urban form
 _Refer back to chapter 2 and discuss the reason why tissue is optimal_
 - _it reflects unconstrained morphological unit_
 - _tissue as OTU (link to Ch4 and Ch5)_ ==after ch4 is done==
 - _morphological regionalizaition (Oliveira)_
+- _heavily refer to literature which sees tissue as unit as well. Why SA is not a unit is in chapter 4_
 
-==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (here or in the next chapter)
+==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure represented by the relational analytical model of urban form in a form of homogenous clusters.*== (here or in the next chapter)
 
-## METHOD
+## Method of tessellation testing
+*this section tests the viability of morphological tessellation as a smallest unit based on its ability to substitute plot and topological aggregation compared to other options.*
 
-### test tessellation as a unit
-_ZURICH_
+### Tessellation as a unit
+*Tessellation method is first defined and then tested.*
 
-#### Morphological Tessellation: the method 
+#### Generation of Morphological Tessellation 
 Whenever observing a map or a satellite view of a city, the eye of the observer is caught by the existence of a fundamental relationship between buildings – their geometry and spatial configuration – and the plot pattern. This ‘*intuitive*’ relationship is the reason why approaches based on VT appear to *‘make sense*’ when applied to the urban form of cities: by partitioning the space into cells, they capture the way buildings relate to each other in space and, more precisely, give a spatial meaning to the “*morphological influence*” that each building exerts on its immediate spatial context [@usui2017]. This, in turn, implicitly captures how spatial configuration affects visibility, light penetration, ventilation, movement, etc. around each and every building [@hamaina2012].
 
 The main advantage of methods based on VT is the capacity to derive objective spatial partitions that are applicable to every type of urban tissue in a way independent from the researcher’s subjective interpretation. In addition, most of these methods [@hamaina2012a; @hamaina2013] require minimum data input, as they fundamentally rely on the polygon that describes the footprint of a building. Similarly, the proposed MT method only requires a polygon layer representing building footprints (figure \ref{fig:mt_method}a). From this, MT moves forward in five steps:
@@ -280,9 +407,7 @@ where $S C_{\text {match}}$ is the number of the elements belonging to the same 
 It must be noted that, for the statistical comparison of selected morphometric characters across the MT layers and the cadastral layer, these must correspond perfectly.  However, whilst there is a 1:1 match between MCs and *buildings*, the same does not apply to MCs and plots, as the latter may contain one building (single-building plots) or more than one (multi-building plot).  To resolve this issue, the building layer is used as a proxy between tessellation and cadastre and, therefore, all morphometric characters computed on both MCs and plots are associated to the building layer (i.e. each building is linked to the value of its MC and of the plot it sits on). However, to better understand the impact of ‘*single-building*’ and ‘*multi-building*’ plots (79% and 21% of all plots respectively), the three methods described above are applied to the whole dataset and, separately, for *single-building* and *multi-building* plots. In particular, we expected that *multi-building* plots, although important for their effect on the overall analysis, would hold limited comparative value for most of the assessed morphometric characters (perhaps with the only exclusion of covered area ratio and Gini index of CAR, which capture compatible concepts).
 
 
-### test tessellation contiguity as aggregation
-
-
+### Topological contiguity of tessellation as an aggregation model
 The definition of aggregated analytical units via the topology of morphological tessellation can overcome issues of the three methods described above and provide a more consistent way to understand the relationship between adjacent elements of urban form (in the case of buildings or morphological cells). This paper is testing this hypothesis in the case of Prague, Czechia.
 
 #### Comparing aggregation methods
@@ -309,10 +434,9 @@ The first variable is the number of neighbours captured. Neighbours represented 
 The second variable should represent the concept of geographical extent of aggregation, as it bears the information of the scale of each type of urban tissue and therefore could describe the ability of each method to adapt to the scale. Amongst the possible measurable variables are mean distance to neighbours, maximum distance to neighbours and area covered by aggregation. Because they all represent scale and extent of aggregation of elements (buildings, tessellation cells), we use only area covered to represent them all as it is the most straightforward one and easy to understand. The statistical distribution of covered area should represent the adaptability of aggregation method. For that reason, ideal outcome should have high standard deviation and high range of values, meaning that many different options (levels of granularity of urban form) are all captured. 
 
 
-## RESULTS
+## Results
 
-### test tessellation as a unit
-_ZURICH_
+### Tessellation as a unit
 
 #### Determination of optimal parameters of the MT algorithm
 The test performed on the selected inward offset ranges (from 0.1 to 1 meter) and discretisation intervals (from 0.05 to 5 meters) allowed to assess computational demand (i.e. number of discretisation points) and deviation of cell perimeter and area for each combination. In terms of computational demand, as shown in figure \ref{fig:tess_pts}, it appears that the discretisation segment length has an exponential effect on the number of generated points. For values below the mean (tail of the distribution), computational demand remains relatively stable, whilst for higher values (head of the distribution) it grows sharply, more than doubling at each step. Discretisation intervals ≥ 0.5m are therefore preferred as more computationally effective.
@@ -457,7 +581,7 @@ Then, comparison of distributions of covered area aims to test the adaptability 
 
 Even though there are differences between smaller and larger distances (4 steps / 9 steps and its equivalents), topologically defined aggregation seems to reflect desired outcomes (i.e. stability in number of elements captured and flexibility in metric values) in both statistical comparisons better than other tested methods. This finding is in line with the one we drew from small-scale case studies, indicating that topology of morphological tessellation is a valuable approach to be employed in morphological analysis.
 
-## DISCUSSION
+## Discussion
 _Also mention block = Generating blocks appendix_
 
 ### Teessellation in relation to plot
@@ -474,7 +598,7 @@ Whilst MT and MC appear to be promising new addition to the tools available for 
 
 Second, whilst it is true that a MT can be generated directly from a building layer alone, it cannot be created from any building layer, as this needs to comply to certain quality requirements. Notably, since the method sees every feature of GIS layer as an individual input for tessellation, it is important not to have buildings composed of multiple features each representing, for example, different heights or different parts of the same (as in the case of British Ordnance Survey). Similarly, it is important not to have different independent buildings collapsed into a single simplified feature (as in the case of vast portions of Open Street Maps).
 
-## CONCLUSIONS
+## Conclusions
 
 _zurich_
 Plots are commonly seen as the ideal spatial division for morphological analysis, but they also have their drawbacks, causing the limited applicability of plot-based methods and, more importantly, the reduced reliability of results obtained by employing them. The aim of this work is to address some of the issues characterising the definition of plot and plot boundaries, the availability and accessibility of plot data and the labour intensiveness of manually extracting reliable plot-level information, aspects that limit the potential of Urban Morphometrics. The need to objectively define a unit of analysis able to capture the smallest and arguably most fundamental level of spatial subdivision, and to develop a reliable and replicable method to generate and measure it, is the rationale behind the *Morphological Cell* (MC) unit and the *Morphological Tessellation* (MT) method. 
@@ -495,3 +619,5 @@ Currently, tools to generate a morphological tessellation and work with its topo
 Further research should focus on the question of the exact meaning and variation of topological distance and its definition for specific purposes. To date, the question of how many topological steps should be used for the analysis of urban form remains open. It is expected that it will vary depending on the scope of the research. 
 
 The morphological tessellation is a step towards achieving consistency in urban morphology in both definitions of the smallest spatial unit and analytical aggregation. The advantage of morphological tessellation is that it limits the data dependency as it is based on building footprints only and allows the elimination of subjectivity in the partitioning of space. Most importantly, it is context sensitive allowing the researcher to use the same method across different types of urban tissues whilst still get comparable information, much needed for reliable results of any statistical analysis.
+
+_as tessellation holds as a spatial unit, relational model will be used and tested in next chapters. keep going with the model to see if it holds in the actual work_
