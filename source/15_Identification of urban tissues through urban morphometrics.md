@@ -13,9 +13,9 @@ Following chapter will outline the basis for the recognition of distinct homogen
 The automatic detection of urban tissues, or in the context of this work morphometric DHCs, consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the machine learning algorithm detecting DHCs. The structure of the method is reflected in the structure of the following sections.
 
 ### Principle of DHC recognition
-==REWRITE PRINCIPLE TO AVOID TAXONOMY IN IT AND KEEP ONLY MORPHOMETRICS==
+==REWRITE PRINCIPLE TO AVOID TAXONOMY IN IT AND KEEP ONLY MORPHOMETRICS - NOT SO MUCH, BUT CHECK==
 
-==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (here or in the previous chapter - link anyway)
+==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (repeat and link to previous chapter)
 
 Recognition of DHCs is based on the principles we know from numerical taxonomy but in a specific way. In biology, especially zoology, the issue of delimitation of an individual is non-existent. A single individual of selected species is usually well defined in space (e.g., a bird), but in urban morphology, this distinction is not so simple as that. Hence, the methodology which is used in biology needs to be adapted, while keeping the fundamental principles in place.
 
@@ -571,7 +571,10 @@ where $\theta_{uw} = 1$ if $u$ and $w$ are connected and 0 otherwise [@PhysRevE.
 
 The final selection consists of 74 morphometric characters spanning across the subsets of the relational model and covering all categories, even though not equally.\footnote{The balance across categories within the specific set is not required as different categories offer different information relevant for different purposes.} The set is a result of the identification process proposed above. As such, it should provide an unbiased and non-skewed description of each of the elements.
 
+==Among these aspects, the completeness of the data set is of crucial importance. Completeness of characters is an illusion, since each single organism theoretically consists of an infinite number of characters. [@ohl2007]==
+
 #### Contextual characters
+==spatially lagged characters==
 Looking at the primary characters and their spatial distribution, they could be abrupt and do not necessarily capture urban patterns as we would like them to (even though all capture some patterns as per spatial autocorrelation).
 
 Most of the characters defined above have to be expressed using their contextual versions to become useful for pattern detection within DHC recognition model, which does not employ direct spatial constraints. *Context* here is defined as a neighbourhood of each tessellation cell within three topological steps on morphological tessellation. That covers approximately 40 nearest neighbours (median 40, standard deviation ~13.4 based on Prague) providing a balance between the spatial extent large enough to capture a pattern and at the same time small enough not to over-smooth boundaries between different patterns (see Appendix 7.3 for sectional diagram analysis).

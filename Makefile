@@ -84,6 +84,22 @@ html:
 	mkdir "$(OUTPUTDIR)/source"
 	cp -r "$(INPUTDIR)/figures" "$(OUTPUTDIR)/source/figures"
 
+titlepage:
+	pandoc "$(INPUTDIR)"/01*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/title.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 chapter2:
 	pandoc "$(INPUTDIR)"/10*.md \
 	--filter pandoc-shortcaption \

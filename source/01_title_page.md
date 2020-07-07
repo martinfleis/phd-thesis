@@ -33,7 +33,7 @@ and add the centred logo
 
         \vspace{0.8cm}
 
-        \includegraphics[width=0.3 \textwidth]{style/univ_logo_s.eps}
+        \includegraphics[width=0.3 \textwidth]{style/univ_logo_s.pdf}
 
         \normalsize
         Urban Design Studies Unit\\

@@ -19,52 +19,44 @@ _structure of the chapter_
 	*- from city to plot scale variety*
 	*- close work*
 *- the gap*
+*- ==1) what is the classification?, 2) how should it look like?, 3) how was it done so far?, 4) what is missing?==
 
 ## Making sense of the world
 - *Why is classification important, what can it bring to the table, why should we bother doing it.*
 
 ### Classification as a method
-*Classification is a polysemic term, so we first need to declutter it and define the terms as they will be used within this work.*
+Before we can talk about classification, it is necessary to declutter and define the term itself, as it is used in literature in multiple meanings. In his overview of the whole concept and its meanings, @bailey1994 defines classification as "*the ordering of entities into groups or classes on the basis of their similarity*" (p.1). At the same time, he notes that "*classification is both process and an end result*" (p.2). This can cause terminological confusion as in some situation ti might be unclear whether we refer to the resulting systematics or the procedure which generates one. This polysemic nature of the term itself is even VETSI if we explore the definition offered by Oxford English Dictionary (OED), as it comes with three relevant options:
 
-*The most simple definition of classification is "ordering of entities into groups or classes on the basis of their similarity" {REF Bailey p.1}. At the same time, classification is term used for both process and end result. ==add OED and some other defs, then say which def is used here==*
+- "*A systematic distribution, allocation, or arrangement of things in a number of distinct classes, according to shared characteristics or perceived or deduced affinities.*"
+- "*The action of classifying or arranging in classes, according to shared characteristics or perceived affinities*"
+- "*‌A category to which something is assigned; a class.*" REF
 
-*there are different ways of doing classification, depending on the structure of the result and on the method. We can also distinguish between unidimensional and multidimensional.*
+While first two coincide with the definition offered by @bailey1994, the last adds one more option - a class. To minimise the confusion, this research will refer to classification as process and end result, following Bailey's approach, always trying to specify which meaning is used. The last definition offered by OED will not be used within this research.
 
-*structurally there are two main groups -  flat and hierarchical. In some rare cases, we can have overlapping*
-	
-*methodologically, we can distinguish two key ways - conceptual classification and numerical classification.*
+Classification systems vary and can be systematised based on the different aspects of the resulting structure and on the method used in the process. The first distinction can be done based on the number of dimensions to *unidimensional* and *multidimensional*. Dimensions can be both numerical and categorical variables, where unidimensional numerical classification is also known as *binning* REF. ==EXAMPLE== The scope of this work is in multidimensional classification as single dimension does not have the explanatory power to describe the complexity of urban form.
 
-*Typology. Conceptual classification is called typology. It is multidimensional. Classes represent "concepts rather than empirical cases" REF p.5. It is qualitative classification*
+Looking at the structure of the classification results, we can talk about *flat* and *hierarchical* models. Flat models generally define all classes as equal and do not specify the relationship between them, either because it could not be specified or because the model does not focus on such aspect. And example is general land use classification, which is flat in the nature (residential use, commercial, industrial etc.) and relationship between different classes is conceptually complicated to define. Hierarchical models specify, either numerically or conceptually, relationship between different classes and hence offer certain level of flexibility of classification as their structure can be interpreted on multiple levels of resolution. That allows division of elements into two macro classes or multiple micro classes within the same system. Typical example is biological taxonomy of species, where different levels of resolution are represented by domains, kingdoms, families or species. Typical hierarchical classification is, compared to flat models, computationally or conceptually more challenging, but the flexibility which it brings (where applicable) is usually valuable. 
 
-*Taxonomy. Classification of empirical entities. Term can be again both process end result.*
+Methodologically, we can distinguish two key approaches - one is conceptual and other is numerical, or in other words, one is *typology* and the other is *taxonomy*. Typology is a conceptual classification, where resulting classes represent concepts, not empirical cases [@bailey1994; @marradi1990]. Which means that typologies can be seen as *qualitative classifications*, because there is generally no statistics involved. The land use case mentioned above is a good example of a typology. On the other side is taxonomy, which is quantitative classification, with classes being empirical entities [@bailey1994; @sneath1973]. As with the term classification, taxonomy is also used to describe both process and end result. Specific position has *numerical taxonomy* [sokal and sneath 1963], which is quantitative, algorithmic classification (more on numerical taxonomy is in section XXX==link ch4==). Conceptually, literature knows three terms for quantitative classification based on statistical analysis. One is mentioned numerical taxonomy. The other is term *cluster analysis*, describing the process of classification. As @bailey1994 points out, the methods of numerical taxonomy can generally be classified as clustering algorithms, making the numerical taxonomy in a sense of a process and cluster analysis "*virtually synonymous*" (p.7). To complicate things further, machine learning area uses term *unsupervised classification* for cluster analysis, but these two (together with *clustering*) are equal. Within this research, term taxonomy will be used to describe the end result only, while cluster analysis, clustering and unsupervised classification may be used interchangeably. \footnote{Since we are talking about unsupervised classification, it is worth noting that supervised classification is a bit different concept and it technically is rather labelling or classing. It is a tool to sort features into pre-defined categories, unlike all above, which encompass the determination of categories as well. Again, this is terminological issue, but because it is not used in this work, we can leave it out.}
 
-*‌Numerical taxonomy vs. Cluster analysis vs. Unsupervised classification. In this work, taxonomy is used to describe the end result, while cluster analysis and unsupervised classification are interchangeable and describe the process, to clarify the situation a bit.*
+The reasons why is classification useful has @bailey1994 summarised in ten fundamental advantages, which are all transferable to urban morphology and classification of spatial structure of cities. A classification is a tool for *description* (1), giving an overview of all classes within data, based on the same criteria. The classified data has *reduced complexity* (2) to a manageable extent. We cannot deal with all individual animals on Earth, but we can work with their taxonomy, significantly reducing the amount of information to deal with. Classification can be used to identify *similarities* (3) and *differences* (4) among cases. Identification of similarities allows us to treat all individuals of a single class of similar classes equally (e.g. *be aware of snakes* or *go shopping to commercial district*). On the other hand, we can distinguish subtle differences between rather similar entities (e.g. difference between venomous and non-venomous snakes is quite helpful). A classification, if done properly, is defined by *an exhaustive list of dimensions* (5) on which different classes are based. In such a case, the resulting classification can be very comprehensive, while capturing the relationships between classes and dimensions, which is useful for further analysis and profiling of classes. That allows quick, straightforward *comparison* (6) of classes from different parts of classification structure. Complete list of classes can serve as the *inventory* (7) for management purposes and allows the study of *relationships* (8) among dimensions, relative to the structure of the classification. Moreover, classes can be used as *criteria for measurement* (9), where one class is the criterion and assessed according to similarity with the criterion (e.g. *how close is snake A to a python?* or *how similar is neighbourhood A to Manhattan?*). Finally, classification may be very *versatile* (10), as it can represent both individual units under scrutiny and their location within property space, but also describe the whole sample of units. (pp.12 - 14).
 
-*Since we are talking about unsupervised classification, it is worth noting that supervised classification is a bit different concept and it is rather labelling or classing. It is a tool to sort features into pre-defined categories, unlike all above, which encompass the determination of categories as well. Again, this is terminologic issue, but because it is not used in this work, we can leave it out. From the perspective of this work, it is not very useful.*
-
-*Bailey identifies ten fundamental advantages of classification*
-	- description
-	- reduction of complexity
-	- identification of similarities
-	- identification of differences
-	- capturing dimensions
-	- comparison of types
-	- the inventory and management of types
-	- types as criteria for measurement
-	- study of relationships
-	- versatility
-
-*All above are applicable in urban morphology as well, however, we have to deal with some complications.*
-- Classification in urban morphology
-	- question of time dimension (evolution, change)
-	- question of concepts
-	- question of empirical characters
+==might need some ending?==
 
 ### Optimal classification model
-*what are we looking for - criteria of optimal classification ==link to intro==*
-*So there is a plethora of options. From the perspective of the aim and scope of this work, the optimal classification model (OCM) should follow few simple rules.*
-- exhaustive, mutually exclusive, those are general rules
-- empirical, hierarchical, comprehensive, detailed, scalable
+Classification model can follow multitude of pathways and can be defined based of various aspects for a plethora of purposes. However, the aims and scope of each research should drive the classification. Since this research aims to develop a data-driven method, its methodological nature should be a taxonomy. The *optimal classification model (OCM)* for the purpose of this research can be then defined based on following set of rules derived from definitions presented in the previous sections. Each of the existing models present in literature and outlined in the next section is then related to OCM. Furthermore, the specification of the model used within this study (see section ==XXX==) should directly reflect the rules in its fundamental design.
+
+The optima classification model of urban form should be:
+
+1. Exhaustive
+2. Mutually exclusive
+3. Empirical
+4. Hierarchical
+5. Comprehensive
+6. Detailed
+7. Scalable
+
+Exhaustive model covers all entities within the set, meaning that there should not be unlabelled cases in the resulting taxonomy. Mutual exclusivity ensures that no entity is at the same time member of more than one class to minimise ambiguities. Empirical nature ensures the data-driven nature of the classification limiting the potential bias in the derivation of *concepts* and dependency on the expert knowledge to assess each entity. Structurally, the model should be hierarchical to allow flexibility of its reading, unavailable for flat options. Comprehensiveness entails the number of dimensions, or descriptors, used to cluster entities. The selection of dimensions can be easily biased and negatively influence the resulting taxonomy. By implementing the large number of dimensions (trying to be as inclusive as possible), such a possibility can be effectively minimised [@sneath1973]. The classification of urban form should also be detailed in terms of spatial granularity, meaning that labels should be assigned to individual plots or buildings rather than districts or cities. Finally, the model should be scalable. This is both technical and conceptual requirement, which should ensure that the same model can be used to classify small town and large metropolitan areas.
 
 ## Spectrum of classification models
 - *There are two main branches of science focusing on urban form classification, which are surprisingly separated from each other - remote sensing and urban morphology. The diffusion between approaches is minimal, even thought conceptually focus on the same questions. ==explain scope ignoring purely qualitative methods==*
