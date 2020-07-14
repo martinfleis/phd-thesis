@@ -488,7 +488,7 @@ where $\sum blk_n$ is a number of block neighbours and $p_{blk}$ is a perimeter 
 
 (@eq_likWBB) $wC_{blk} = \frac{\sum cell}{a_{blk}}$
 
-where $\sum cell$ is a number of cells composing a block and a_{blk} is an area of a block. It captures the granularity of each block.
+where $\sum cell$ is a number of cells composing a block and $a_{blk}$ is an area of a block. It captures the granularity of each block.
 
 62. **Local meshedness of a street network** is denoted as
 

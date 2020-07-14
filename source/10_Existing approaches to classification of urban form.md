@@ -8,18 +8,16 @@ _link back_
 *The aim and key interest of this research as outlined in the introduction is classification of urban form.*
 
 _aim of the chapter_
-*Aim of this chapter is to understand various models of classification from theoretical perspective and review how they have been applied to urban form to date.* 
-*focus on quantitative morphology (link to introduction), but some detours are necessary to give a full picture*
+The aim of this chapter is to understand classification and its various models from theoretical perspective and review how are these model applied to urban form, either from the perspective of urban morphology or remote sensing. Following the scope of the work defined in the first chapter, the main focus is on quantitative method of urban morphology. However, some detours especially to the remote sensing field are necessary. Both to give a full picture of the possible approached and to break the existing firm barriers between the fields.
 
-_structure of the chapter_
-*- theory of classification*
-*- optimal classification model*
-*- spectrum of classification models used in literature*
-	*- recurring concepts*
-	*- from city to plot scale variety*
-	*- close work*
-*- the gap*
-*- ==1) what is the classification?, 2) how should it look like?, 3) how was it done so far?, 4) what is missing?==
+This chapter is structurally split into two main sections. The first one is outlining the general theory of classification, its principles and different models. That is directly reflected in the specification of hypothetical optimal model of classification of urban form, i.e. a set of principles which should a model fulfil to reflect the complexity of urban form. The second part of the chapter examines models of classification present in literature to day and compares them to the specified requirements. It first identifies three recurring concepts shared among a wide groups of researchers - Urban Structural Type, Land Cover classification and Local Climate Zones, and then focuses on the spectrum of works ranging from the metropolitan scales to the level of individual buildings (from the perspective of the unit). The two recent publications, which are seen to be the closest to fit all requirements are then examined in the bigger detail. The overview leads to the specific gap of the current methodology, as none of the published works fits the optimal model requirements.
+
+In short, following chapter answers four questions allowing this research to build on the existing knowledge:
+
+1. What is classification?
+2. How should it look like?
+3. How was it done to date?
+4. What is missing?
 
 ## Making sense of the world
 - *Why is classification important, what can it bring to the table, why should we bother doing it.*
@@ -37,7 +35,7 @@ Classification systems vary and can be systematised based on the different aspec
 
 Looking at the structure of the classification results, we can talk about *flat* and *hierarchical* models. Flat models generally define all classes as equal and do not specify the relationship between them, either because it could not be specified or because the model does not focus on such aspect. And example is general land use classification, which is flat in the nature (residential use, commercial, industrial etc.) and relationship between different classes is conceptually complicated to define. Hierarchical models specify, either numerically or conceptually, relationship between different classes and hence offer certain level of flexibility of classification as their structure can be interpreted on multiple levels of resolution. That allows division of elements into two macro classes or multiple micro classes within the same system. Typical example is biological taxonomy of species, where different levels of resolution are represented by domains, kingdoms, families or species. Typical hierarchical classification is, compared to flat models, computationally or conceptually more challenging, but the flexibility which it brings (where applicable) is usually valuable. 
 
-Methodologically, we can distinguish two key approaches - one is conceptual and other is numerical, or in other words, one is *typology* and the other is *taxonomy*. Typology is a conceptual classification, where resulting classes represent concepts, not empirical cases [@bailey1994; @marradi1990]. Which means that typologies can be seen as *qualitative classifications*, because there is generally no statistics involved. The land use case mentioned above is a good example of a typology. On the other side is taxonomy, which is quantitative classification, with classes being empirical entities [@bailey1994; @sneath1973]. As with the term classification, taxonomy is also used to describe both process and end result. Specific position has *numerical taxonomy* [sokal and sneath 1963], which is quantitative, algorithmic classification (more on numerical taxonomy is in section XXX==link ch4==). Conceptually, literature knows three terms for quantitative classification based on statistical analysis. One is mentioned numerical taxonomy. The other is term *cluster analysis*, describing the process of classification. As @bailey1994 points out, the methods of numerical taxonomy can generally be classified as clustering algorithms, making the numerical taxonomy in a sense of a process and cluster analysis "*virtually synonymous*" (p.7). To complicate things further, machine learning area uses term *unsupervised classification* for cluster analysis, but these two (together with *clustering*) are equal. Within this research, term taxonomy will be used to describe the end result only, while cluster analysis, clustering and unsupervised classification may be used interchangeably. \footnote{Since we are talking about unsupervised classification, it is worth noting that supervised classification is a bit different concept and it technically is rather labelling or classing. It is a tool to sort features into pre-defined categories, unlike all above, which encompass the determination of categories as well. Again, this is terminological issue, but because it is not used in this work, we can leave it out.}
+Methodologically, we can distinguish two key approaches - one is conceptual and other is numerical, or in other words, one is *typology* and the other is *taxonomy*. Typology is a conceptual classification, where resulting classes represent concepts, not empirical cases [@bailey1994; @marradi1990]. Which means that typologies can be seen as *qualitative classifications*, because there is generally no statistics involved. The land use case mentioned above is a good example of a typology. On the other side is taxonomy, which is quantitative classification, with classes being empirical entities [@bailey1994; @sneath1973]. As with the term classification, taxonomy is also used to describe both process and end result. Specific position has *numerical taxonomy* [sokal and sneath 1963], which is quantitative, algorithmic classification (more on numerical taxonomy is in section XXX==link ch4==). Conceptually, literature knows three terms for quantitative classification based on statistical analysis. One is mentioned numerical taxonomy. The other is term *cluster analysis*, describing the process of classification. As @bailey1994 points out, the methods of numerical taxonomy can generally be classified as clustering algorithms, making the numerical taxonomy in a sense of a process and cluster analysis "*virtually synonymous*" (p.7). To complicate things further, machine learning area uses term *unsupervised classification* for cluster analysis, but these two (together with *clustering*) are equal. Within this research, term taxonomy will be used to describe the end result only, while cluster analysis and clustering may be used interchangeably. Unsupervised classification is left only for occasions where it is needed. \footnote{Since we are talking about unsupervised classification, it is worth noting that supervised classification is a bit different concept and it technically is rather labelling or classing. It is a tool to sort features into pre-defined categories, unlike all above, which encompass the determination of categories as well. Again, this is terminological issue, but because it is not used in this work, we can leave it out.}
 
 The reasons why is classification useful has @bailey1994 summarised in ten fundamental advantages, which are all transferable to urban morphology and classification of spatial structure of cities. A classification is a tool for *description* (1), giving an overview of all classes within data, based on the same criteria. The classified data has *reduced complexity* (2) to a manageable extent. We cannot deal with all individual animals on Earth, but we can work with their taxonomy, significantly reducing the amount of information to deal with. Classification can be used to identify *similarities* (3) and *differences* (4) among cases. Identification of similarities allows us to treat all individuals of a single class of similar classes equally (e.g. *be aware of snakes* or *go shopping to commercial district*). On the other hand, we can distinguish subtle differences between rather similar entities (e.g. difference between venomous and non-venomous snakes is quite helpful). A classification, if done properly, is defined by *an exhaustive list of dimensions* (5) on which different classes are based. In such a case, the resulting classification can be very comprehensive, while capturing the relationships between classes and dimensions, which is useful for further analysis and profiling of classes. That allows quick, straightforward *comparison* (6) of classes from different parts of classification structure. Complete list of classes can serve as the *inventory* (7) for management purposes and allows the study of *relationships* (8) among dimensions, relative to the structure of the classification. Moreover, classes can be used as *criteria for measurement* (9), where one class is the criterion and assessed according to similarity with the criterion (e.g. *how close is snake A to a python?* or *how similar is neighbourhood A to Manhattan?*). Finally, classification may be very *versatile* (10), as it can represent both individual units under scrutiny and their location within property space, but also describe the whole sample of units. (pp.12 - 14).
 
@@ -56,13 +54,22 @@ The optima classification model of urban form should be:
 6. Detailed
 7. Scalable
 
-Exhaustive model covers all entities within the set, meaning that there should not be unlabelled cases in the resulting taxonomy. Mutual exclusivity ensures that no entity is at the same time member of more than one class to minimise ambiguities. Empirical nature ensures the data-driven nature of the classification limiting the potential bias in the derivation of *concepts* and dependency on the expert knowledge to assess each entity. Structurally, the model should be hierarchical to allow flexibility of its reading, unavailable for flat options. Comprehensiveness entails the number of dimensions, or descriptors, used to cluster entities. The selection of dimensions can be easily biased and negatively influence the resulting taxonomy. By implementing the large number of dimensions (trying to be as inclusive as possible), such a possibility can be effectively minimised [@sneath1973]. The classification of urban form should also be detailed in terms of spatial granularity, meaning that labels should be assigned to individual plots or buildings rather than districts or cities. Finally, the model should be scalable. This is both technical and conceptual requirement, which should ensure that the same model can be used to classify small town and large metropolitan areas.
+An *exhaustive* model covers all entities within the set, meaning that there should not be unlabelled cases in the resulting taxonomy. *Mutual exclusivity* ensures that no entity is at the same time member of more than one class to minimise ambiguities. *Empirical* nature ensures the data-driven nature of the classification limiting the potential bias in the derivation of *concepts* and dependency on the expert knowledge to assess each entity. Structurally, the model should be *hierarchical* to allow flexibility of its reading, unavailable for flat options. *Comprehensiveness* entails the number of dimensions, or descriptors, used to cluster entities. The selection of dimensions can be easily biased and negatively influence the resulting taxonomy. By implementing the large number of dimensions (trying to be as inclusive as possible), such a possibility can be effectively minimised [@sneath1973]. The classification of urban form should also be *detailed* in terms of spatial granularity, meaning that labels should be assigned to individual plots or buildings rather than districts or cities. Finally, the model should be *scalable*. This is both technical and conceptual requirement, which should ensure that the same model can be used to classify small town and large metropolitan areas. ==might expand a bit to add a sentence or two to each point==
+
+A classification model which would adhere to these seven principles is not currently available in the published literature. However, the spectrum of existing approaches is wide and all of the points have been addressed in various works. However, not all at the same time.
 
 ## Spectrum of classification models
-- *There are two main branches of science focusing on urban form classification, which are surprisingly separated from each other - remote sensing and urban morphology. The diffusion between approaches is minimal, even thought conceptually focus on the same questions. ==explain scope ignoring purely qualitative methods==*
+- *The diffusion between approaches is minimal, even thought conceptually focus on the same questions. ==explain scope ignoring purely qualitative methods==*
+
+There are two main branches of science focusing on urban form classification, which are surprisingly separated from each other - remote sensing and urban morphology. The diffusion between them is minimal, even thought both conceptually focus on the similar questions.  Urban morphologists tend to prefer to work with the elements of urban form directly and build the classification from the constituents parts of urban form upwards (as in @dibble2017). They need to identify buildings, plots or blocks first, identify the structural features, and then they describe and classify them. On the other hand, remote sensing research usually do not dwell into the detail of individual elements, but rather tries to capture the whole pattern directly (REF). The other approach is to extract the elements first, as in REF, but then  the methodology is essentially two-step, starting with remote sensing in the extraction part and finishing with morphological analysis of extracted elements in the second. Even though both fields approach the topic differently, there are some similar concepts, although currently unlinked.
+
+Following sections provide an overview of recurring concepts stemming mostly from the field of remote sensing, which is more established and organised than urban morphometrics, with links to more traditional morphological analysis. It does not include concepts derived from traditional qualitative urban morphology as it is not within the scope of this research.
+
 
 ### Recurring concepts
 - *Few concepts are quite established and worth exploring their characteristics.*
+
+Three partially linked concepts are recurring in the literature - Urban Structural Types (UST), Land Cover (LC) classification and Local Climate Zone (LCZ) classification.
 
 - ==link those to the definitions above==
 
@@ -102,13 +109,43 @@ Exhaustive model covers all entities within the set, meaning that there should n
 *lcz*
 *issues*
 *The example of typology, and inherits its limitations.*
-
+Taubenbock 2020
 ==mention issues along the way==
 ==link those to the definitions above==
 *apart from these, there is a wide spectrum of models*
 
 ### From city to plot level
-*Apart from recurring concepts, wide range of classification methods was proposed in urban morphology, ranging from typologies to taxonomies and from city to building scales.*
+Apart form these three recurring concepts, literature offers a wide selection of proposed methods of classification of urban form, especially within the field of urban morphology. The methods range from typologies to taxonomies and from city to buildings scales (as per the unit of analysis), therefore are of various relation to the OCM.
+
+==fix the order to make a bit of sense==
+
+Classification of whole cities is tangential to the scope of this research, but the work of XXX
+
+[@louf2014] hierarchical taxonomy of 131 cities based on their street network patterns. Characterisation based on block area and shape. The resulting dendrogram illustrating the classification is shown on figure \ref{fig:louf_dendro}. 
+
+![Dendrogram representing the structure of classification of cities by Louf and Barthelemy (2014, figure 4). Each bar represents a single case.](source/figures/ch2/louf_dendro.png "Dendrogram representing the structure of classification"){#fig:louf_dendro width=75%}
+
+[@schirmer2015] proposes classification on multiple levels, where the top one is on the level of municipality, even though the unit is a building defined by centrality and accessibility characters. While their proposal is for a "multiscale typology", methodologically purpose four flat taxonomies and do not relate one to the other. Their resulting "municipal typology" is illustrated on figure \ref{fig:schirmer_muni} below.  While all scales combined may be based on comprehensive information, the proposed model is not. ==may move to next section to Araldi and Meta?==
+
+![Four classes of Schirmer and Axhausen's (2015, figure 11) municipal-level classification mapped in the area of Zurich.](source/figures/ch2/schirmer_muni.png "Four classes of Schirmer and Axhausen municipal-level classification"){#fig:schirmer_muni width=75%}
+
+The scale of neighbourhood @schirmer2015 shares with @serra2018a, who are classifying neighbourhoods defined as "*circular areas of 1km radius*" (p.65)  characterised by 12 morphological indicators derived from street network, blocks and buildings. Resulting classification is hierarchical taxonomy of selected neighbourhoods, represented by a dendrogram on figure \ref{fig:serra}. In its current form classification is not exhaustive as it covers only pre-defined, yet overlapping neighbourhoods (figure \ref{fig:serra2}) and it is not known how would it scale to continuous classification of whole areas.  
+
+![Hierarchical classification of neighbourhoods proposed by Serra et al. (2018).](source/figures/ch2/serra.png "Hierarchical classification of neighbourhoods"){#fig:serra width=100%}
+
+![Geographical distribution of clusters of neighbourhoods proposed by Serra et al. (2018).](source/figures/ch2/serra2.png "Geographical distribution of clusters"){#fig:serra2 width=75%}
+
+Similar neighbourhood scale is used by @dibble2017, where the unit of classification is Sanctuary Area [@mehaffy2010]. Resulting classification is hierarchical taxonomy (figure \ref{fig:dibble}) based on the comprehensive set of morphometric characters. However, due to the selection of the basic unit it is not detailed and exhaustive. The method itself is time consuming [@dibble2016] and its proposed form not scalable. However, the work of @dibble2017 is building foundations of the science of urban morphometrics and will be further examined in section ==XXX chapter 4==.
+
+![Resulting dendrogram illustrating the classification of Sanctuary Areas by Dibble et al. (2017, figure 6, rotated). Notice the consistency of morphometric classification and historical origin of individual cases.](source/figures/ch2/dibble.png "Hierarchical classification of neighbourhoods"){#fig:dibble width=100%}
+
+Spacemate diagram by @berghauserpont2010 identifies six building types based on three measurable dimensions - Floor Space Index, Ground Space index and Open Space Ratio (figure \ref{fig:spacemate}). They propose the same method to be applied on the scale of building and on the scale of fabric. The method has a potential to be scalable and detailed, but not comprehensive as it is based on three characters only. Moreover, the classification, even though based on empirical values, is rather typology than taxonomy as it is based on nine pre-defined archetypes.
+
+![Spacemate diagram and building types on the scale of fabric. (Berghauser Pont and Haupt, 2010, figure 23)](source/figures/ch2/spacemate.png "Spacemate diagram and building types on the scale of fabric"){#fig:spacemate width=75%}
+
+Method proposed by @jochem2020 works on 100 grid and is based on building footprint data and 7 characters measured per grid cell. That resulted in 12 types (figure \ref{fig:jochem}) in the first and 5 in the consequent step. The method dependent on the arbitrary grid does not follow the natural composition of urban form and in some case might be unable to recognise certain linear tissues. Although scalable, as presented in the paper, the method is likely not comprehensive enough due to the small number of measurable character influencing the resulting classification.
+
+![Settlement types prediction in Kinshasa, Congo in the resolution of 12 types based on 100m grid. (Jochem et al., 2020, figure 3)](source/figures/ch2/jochem.png "Spacemate diagram and building types on the scale of fabric"){#fig:jochem width=75%}
 
 *go from city scale to building scale ==always say the relation typology/taxonomy and OCM requirements==*
 *most of these methods are typologies*
@@ -121,14 +158,25 @@ Exhaustive model covers all entities within the set, meaning that there should n
 
 *Chalmers developed typology based on empirical cases. Three different typologies, not really combined. Limited amount of characters. Data requirements.*
 
+==expand==
+
+While the paragraphs above provide a general overview of the state of the art, there are two recently published classification methods, which are the closest to OCM specification: the work on urban typologies presented by scholars at Chalmers University in a series of recent publications ==(Berghauser Pont and Olsson, 2017; Berghauser Pont et al., 2019; Berghauser Pont, Stavroulaki and Marcus, 2019; Bobkova, Berghauser Pont and Marcus, 2019)== and  the Multiple Fabric Assessment proposed by ==Araldi and Fusco (2019, 2017)==.
+The Chalmers School proposes to use three individual typologies of morphological elements: plots, streets and buildings. Each typology is defined through a handful of morphometric characters, thus making the outputs influenced by this particular selection. Compared to the optimal criteria above, their model is not hierarchical and, importantly, not comprehensive (due to the limited number of morphometric characters it uses).
+
+The work of ==Araldi and Fusco (2019, 2017)== proposes a classification of street segments from the pedestrian point of view, based on 20+ morphometric characters derived from street networks, building footprints and digital terrain model. The model is powerful in terms of top-level classification of urban form, however, similarly to the Chalmers’, it is not hierarchical (the relationship between the types is unknown) and still far from comprehensive (compared, e.g. to others which use greater number of characters such as ==Dibble et al. (2017)== with 207). The selection of street as the smallest unit is also a limitation as it assumes homogeneity of the urban form along the whole segment, which is rarely the case in urban contexts of almost all periods.
+
+
 ## The gap in the systematic classification
 *As shown, none of existing models is all empirical, hierarchical, comprehensive, detailed and scalable. Some are close, but none fits all criteria.*
 - lack of systematic classification based on the small-scale unit
 - gap in taxonomy (empirical cluster analysis)
 - gap in detailed classification (i.e. number of classes)
 
+As is shown from the previous section, none of the models fits OCM criteria. Generally we can see the lack of systematic quantitative classification which is *detailed*, based on the small scale elements as buildings or plots. Very few methods presented above are *hierarchical* in their structure, hence not reflecting inter-group relationships.  
 
-## Conclusion
-*Classification is polysemic term. This work focuses on a specific way of doing it, taxonomy, with specific requirements defining the optimal model.*
+## Summary
+Classification is a rich yet polysemic term, which needs specific definitions to resolve possible ambiguities. The ideal path is to use more specific terms describing conceptually different representations of classification, which in this case means utilisation of the term taxonomy as a methodologically quantitative classification. Even then, since taxonomy can stand for both procedure and the final result, the terminology needs more refinement. To resolve it, this research uses term taxonomy for the final result of the classification, while term cluster analysis for the procedure itself.
 
-*Existing models vary, from remote sensing models to typo-morphological, but none fulfils the all criteria. Some are close, but the gap is clear and wide.*
+The method itself brings a lot of valuable aspects. However, to ensure that all are present, the method for the classification of urban form should follow the principles of the Optimal Classification Model based on seven simple requirements. It should be *exhaustive, mutually exclusive, empirical, hierarchical, comprehensive, detailed* and *scalable.* None of the models present in literature fulfils all seven criteria to date. The rest of this research will focus on developing a novel method, which embeds all principles into its design to derive the taxonomy (i.e. quantitative classification) of urban form.
+
+Existing models for classification of urban form present in literature vary and spread across multiple dimensions, from different basic scales (from city to building), to different methodological prepositions (from remote sensing to typo-morphology). Across the field, all OCM criteria has been already met, however, not within a single model, making the gap clear and wide. 
