@@ -117,7 +117,7 @@ Taubenbock 2020
 ### From city to plot level
 Apart form these three recurring concepts, literature offers a wide selection of proposed methods of classification of urban form, especially within the field of urban morphology. The methods range from typologies to taxonomies and from city to buildings scales (as per the unit of analysis), therefore are of various relation to the OCM.
 
-==fix the order to make a bit of sense==
+==fix the order to make a bit of sense. Order based on years of publication.==
 
 Classification of whole cities is tangential to the scope of this research, but the work of XXX
 
@@ -145,7 +145,27 @@ Spacemate diagram by @berghauserpont2010 identifies six building types based on 
 
 Method proposed by @jochem2020 works on 100 grid and is based on building footprint data and 7 characters measured per grid cell. That resulted in 12 types (figure \ref{fig:jochem}) in the first and 5 in the consequent step. The method dependent on the arbitrary grid does not follow the natural composition of urban form and in some case might be unable to recognise certain linear tissues. Although scalable, as presented in the paper, the method is likely not comprehensive enough due to the small number of measurable character influencing the resulting classification.
 
-![Settlement types prediction in Kinshasa, Congo in the resolution of 12 types based on 100m grid. (Jochem et al., 2020, figure 3)](source/figures/ch2/jochem.png "Spacemate diagram and building types on the scale of fabric"){#fig:jochem width=75%}
+![Settlement types prediction in Kinshasa, Congo in the resolution of 12 types based on 100m grid. (Jochem et al., 2020, figure 3)](source/figures/ch2/jochem.png "Settlement types prediction in Kinshasa"){#fig:jochem width=75%}
+
+@song2007 are proposing classification of *neighbourhoods* defined as a 1/4 mile (approx. 400m) buffer around selected sites of new single family development. Using 21 characters, factor analysis and cluster analysis (K-means) they propose flat taxonomy of six clusters. By classification of 6788 homes into neighbourhood types, they illustrate the scalability of the model and potential for detailed assessment, as each site has its own neighbourhood defined in location-based manner (i.e. neighbourhoods are defined independently on each other and can overlap). However, 21 characters and focus on single family housing only does not ensure comprehensiveness of the model.
+
+@li2020 focus on classification of 83 blocks into hierarchical taxonomy on the basis of 11 indicators (figure \ref{fig:li}). On top of hierarchical clustering, authors also do K-means analysis, resulting in 5 types, although the relation between K-means clusters and hierarchal one seems to be left unexplored. The sample of blocks covers only a single small case study area, leaving the question of scalability unresolved.==link dong to li==
+
+![Hierarchical clustering of selected blocks and illustration of different types (rotated). (Li et al., 2020, figure 5)](source/figures/ch2/li.png "Hierarchical clustering of selected blocks and illustration of different types"){#fig:li width=90%}
+
+@dong2019 proposes classification of blocks into hierarchical taxonomy using convolutional autoencoder (CAE). The method rasterises the vector representation of block footprints to 64x64 pixels and uses neural network for image recognition to cluster them. Due to the necessity to keep data for autoencoder of the similar size, oversized and undersized cases were excluded, drawing the method not entirely exhaustive. Resulting hierarchical clustering (figure \ref{fig:dong}) identifies 16 clusters, but in a way which includes all cases, leaving some (approx 40%) unclassified. However, application of CAE is quite unique in the context of the rest of the field.
+
+![Hierarchical clustering of sample of blocks and illustration of different types (rotated). (Dong et al., 2019, figure 6)](source/figures/ch2/dong.png "Hierarchical clustering of sample of blocks"){#fig:dong width=90%}
+
+@gil2012 characterise streets and block using 25 quantitative characters and cluster them on the basis of K-means into six groups of blocks and four groups of streets. The case study are is covering two neighbourhoods of different origin and results indicate the potential of cluster analysis based on morphometric values in urban morphology. The method is one of the first which use historical origin as a method of validation of clustering and which results reflect expected distinction (figure \ref{fig:gil}).
+
+![Geographical distribution of block clusters and street clusters in two studied neighbourhoods. (Gil et al., 2012, figure 4)](source/figures/ch2/gil.png "Geographical distribution of block clusters"){#fig:gil width=90%}
+
+Classification method presented by @steiniger2008 uses a predefined typology of buildings and uses morphometric assessment to predict such a classification. In this sense, the authors provide the first assessment of validity of morphometrics in the context of classification of urban form, but the typology itself is not defined empirically. Of similar nature is research presented by @neidhart2004, @wurm2016 and @hartmann2016. Even though based on different set of indicators and data inputs, these three works illustrate the progress in labelling over the years.==labelling==
+
+@dogrusoz2007 attempt to classify urban form based on satellite imagery, via automatic extraction of building footprints and cluster analysis of the structure of minimum spanning tree between buildings. The resulting classification can determine whether neighbourhoods tend to be *organized* or *unorganized* as illustrated on figure \ref{fig:dogrusoz}.
+
+![Three steps of classification from satellite imagery, through detected building footprints to resulting classes. (Dogrusoz and Aksoy, 2007, figure 4)](source/figures/ch2/dogrusoz.png "Hierarchical clustering of sample of blocks"){#fig:dogrusoz width=90%}
 
 *go from city scale to building scale ==always say the relation typology/taxonomy and OCM requirements==*
 *most of these methods are typologies*
@@ -165,7 +185,7 @@ The Chalmers School proposes to use three individual typologies of morphological
 
 The work of ==Araldi and Fusco (2019, 2017)== proposes a classification of street segments from the pedestrian point of view, based on 20+ morphometric characters derived from street networks, building footprints and digital terrain model. The model is powerful in terms of top-level classification of urban form, however, similarly to the Chalmers’, it is not hierarchical (the relationship between the types is unknown) and still far from comprehensive (compared, e.g. to others which use greater number of characters such as ==Dibble et al. (2017)== with 207). The selection of street as the smallest unit is also a limitation as it assumes homogeneity of the urban form along the whole segment, which is rarely the case in urban contexts of almost all periods.
 
-
+==read Steiniger's literature section and extract some old papers==
 ## The gap in the systematic classification
 *As shown, none of existing models is all empirical, hierarchical, comprehensive, detailed and scalable. Some are close, but none fits all criteria.*
 - lack of systematic classification based on the small-scale unit

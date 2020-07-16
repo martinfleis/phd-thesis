@@ -1,4 +1,7 @@
 # Identification of urban tissues through urban morphometrics
+
+==On the one hand we assume and use Tobler’s Law of spatial autocorrelation (Tobler 1970) on a local scale. (Steiniger, 2008)==
+
 The concept of urban tissue introduced in the previous chapter is fundamental for the understanding of the structure of cities we live in but at the same time a bit elusive in what *distinct* in the definition means. How much distinct two parts of the urban fabric needs to be to become different tissues? Who makes the decision, and based on what ground? While some have partial answers to these questions [@kropf1996], one remains unanswered. How to consistently identify urban tissues across metropolitan areas in an automatised, algorithmic way?
 
 This chapter aims to provide theoretical and practical grounds to the method of automatic detection of distinct types of urban tissues. While similar research has been done before [@araldi2019; @berghauserpont2019; @bobkova2019; @schirmer2015], it was never linked to the coherent theory of morphometrics and numerical taxonomy, nor it was both inclusive in terms of a spectrum of characters used within a model and the spatial extent (see Chapter 3). Following pages present a method which aims to be inclusive in these terms and at the same time automatised and efficient to allow for examination of large datasets spanning across metropolitan regions.
