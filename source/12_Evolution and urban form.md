@@ -1,5 +1,6 @@
 \setcounter{chapter}{3}
 
+\tableofcontents
 
 # Numerical taxonomy
 
