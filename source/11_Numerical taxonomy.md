@@ -40,7 +40,7 @@ _structure of the chapter_
 
 *these approaches and development can inform urban morphometrics*
 
-### Numerical taxonomy as a classification tool
+### Numerical taxonomy as a classification tool \label{taxonomy_tool}
 *classification system based on morphometric data and numerical methods of systematisation. "The grouping by numerical methods of taxonomic units into taxa on the basis of their character states."*
 *developed by Sneath and Sokal*
 *distinction between phenetics (form-based classification) and cladistics (evolutionary branching)*

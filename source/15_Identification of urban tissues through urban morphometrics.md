@@ -1,4 +1,4 @@
-# Identification of urban tissues through urban morphometrics
+# Identification of tissue types through urban morphometrics
 
 ==On the one hand we assume and use Tobler’s Law of spatial autocorrelation (Tobler 1970) on a local scale. (Steiniger, 2008)==
 
@@ -15,7 +15,7 @@ Following chapter will outline the basis for the recognition of distinct homogen
 ## Methodological proposition
 The automatic detection of urban tissues, or in the context of this work morphometric DHCs, consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the machine learning algorithm detecting DHCs. The structure of the method is reflected in the structure of the following sections.
 
-### Principle of DHC recognition
+### Tissue type as a homogenous cluster
 ==REWRITE PRINCIPLE TO AVOID TAXONOMY IN IT AND KEEP ONLY MORPHOMETRICS - NOT SO MUCH, BUT CHECK==
 
 ==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (repeat and link to previous chapter)
@@ -1230,7 +1230,7 @@ The map on the figure \ref{fig:PRG_subcluster12} shows the whole cluster 12 divi
 
 Both examples above indicate that there is a scope for sub-clustering if the research using this method needs a more refined level of detail. As noted above, sub-clustering ability depends on the internal homogeneity of each cluster, and it may not be possible in some cases. However, in cases where this possibility is available, results show meaningful patterns, enabled by the richness of the morphometric dataset.
 
-## DHC as an urban tissue
+## DHC as an urban tissue type
 While the validation is left for Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of distinct homogenous clusters has a potential. The outcome of the Gaussian Mixture Model learning procedure does match the expectations of what DHC should be. The question remains what the relation of this DHCs to the actual concept of urban tissues is.
 
 While the term *urban tissue* is used in paragraphs above interchangeably with clusters, this link still needs to be studied especially through a qualitative assessment of DHCs. Morphometric characters certainly help in the description of urban tissues and clustering helps make sense out of it, but one should be aware that DHC is a numerical, morphometric statistical **proxy** of urban tissue, not its definition and replacement. GMM clustering is non-deterministic, so boundaries are not fixed, but rather indicative. It is not a ground truth (there is no ground truth at all in fact), and the meaning of clusters and relation between them has to be determined and interpreted before any further steps. The one approach on how to do so is proposed in the next chapter.

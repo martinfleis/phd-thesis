@@ -223,7 +223,7 @@ Biology link. ==TEXT AFTER CH4==
 ## Case studies - continuation of Prague, Amsterdam \label{case8}
 The case studies applying the methods proposed in this chapter are 1) continuation of the work on Prague presented in previous chapter, and 2) inclusion of continuous built-up area of Amsterdam, Netherlands. Amsterdam shares with Prague the richness of the historical development, bringing a diverse set of tissues, but its historical context and patterns of development are very different. Due to the data availability and the 
 
-### hierarchical clustering
+### Hierarchical clustering
 The centroid values of each DHC, obtained as a mean value of each morphometric character, are used a taxonomic characters within a Ward's hierarchical clustering. The values are not reported within this study but are available within a data repository (ADD). The resulting relationship between centroids, representing the relationship between identified urban tissues, is illustrated on the dendrogram on figure \ref{fig:prg_dendrogram}. The horizontal axis represent each individual DHC, while vertical axis capture the cophenetic distance, i.e. the similarity between observations. The lower the connection between two branches is, the more similar the tissues represented by these branches tend to be. The values under each connection represent the actual cophenetic distance of a connection and number of observations which belong to the link. The different branches of the tree are coloured to ease the interpretation of the tree itself and to provide the visual link between the dendrogram and the resulting spatial distribution of branches.
 
 ![Long caption under img](source/figures/ch8/200507_dendrogram.pdf "Short caption"){#fig:prg_dendrogram width=100%}
@@ -270,15 +270,15 @@ Sum up. The rest on branches in appendix. ==TEXT==
 
 \newpage
 
-### validation
+### Validation
 *This section talks about the results of validation, starting from the Prague case study and relation to additional data to validate clustering itself, through Amsterdam case study to assess the transferability of the whole method to combination of both cases examining the extensibility of the classification.*
 ==TEXT==
 
-#### relation to additional data
+#### Relation to additional data
 *Relation to additional data reflects the results of clustering and of hierarchical classification compared to the historical origin, land use patterns and qualitative typology of urban form. All these are assessed based on contingency table and visual assessment of spatial distributions. Contingency table is used to calculate Chi-square statistic, Cramer's V and to examine the composition of each cluster.*
 ==TEXT==
 
-##### origin
+##### Origin
 *Data for historical origin are on figure XXX. We can see few significant patterns which should be reflected in the clustering itself. However, not all differences in origin have their counterparts in differences in clustering, as there are patterns which are consistently built across time frames.*
 ==text==
 
@@ -344,7 +344,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 *Conclude. As far as it is possible to link these two aspects of form, origin and patterns, there is a significant connection validating the results of clustering and classification.* ==TEXT==
 
-##### land use
+##### Land use
 *Data for predominant land-use patterns are on figure XXX. There this and that patterns to look from. We do essentially focus on housing typology and industry in here as everything else was too scattered and was eliminated surging the definition of predominancy.* 
 
 ![Long caption under img](source/figures/ch8/PRG_land_use.png "Short caption"){#fig:PRG_land_use width=100%}
@@ -396,7 +396,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 *Conclude. These results are even better and shows that the relevance of both clustering and classification is high.* ==text==
 
-##### qualitative typology
+##### Municipal typology
 *Data for qualitative…..* 
 
 ![Long caption under img](source/figures/ch8/PRG_structure_sample.png "Short caption"){#fig:PRG_structure width=100%}
@@ -452,17 +452,17 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 \newpage
 
-#### transferability
+#### Transferability to other places
 *Even though the method is validated in the context of Prague, it is unclear whether it is transferable to other contexts. It was designed with universality in mind, so the hypothesis is that it should be Abel to capture similar level of information in other geographic and historical contexts as well. To test this hypothesis, the whole methodology is applied to the case study of Amsterdam, including one layer of validation using historical origin data.* ==TEXT==
 
 *Amsterdam dataset tests not only the transferability of the method, but also its scalability. The number of buildings on the input of clustering is 252,385 compared to 140,315 buildings in Prague. The results of primary and contextual characters are not presented in the main body of the text and their distributions are available as Appendix XXX. The complete data are available in the data repository REF. Since the method is following the steps defined in sections 7XXX and 8XXX, results report the selection of optimal number of components, results of clustering and hierarchical classification.* ==text==
 
-##### clusters
+##### Clusters
 *Bayesian Information Criterion shows different curve than we have seen in Prague case as it does not culminate to indicate the optimum. That is a situation which may happen with BIC and indicates overfitting of the model, which BIC is unable to correct.* ==TEXT==
 
 ![Long caption under img](source/figures/ch8/AMS_bic.pdf "Short caption"){#fig:AMS_bic width=100%}
 
-*In cases like this, it is recommended to follow different principle of identification of optimal number of components deriver from the gradient of the curve. Because the gradient changes (it is not linear), the optimal number could be derived from the gradient curve. The optimal number of then the smallest value on the stabilised gradient. Once it flattens, i.e. the change starts to become more linear, it is not expected that larger number of components will significantly improve the classification. For that reason, the number of components used for identification of distinct homogenous clusters in Amsterdam is derived from gradient curve as 30.*. ==TEXT==
+*In cases like this, it is recommended to follow different principle of identification of optimal number of components derived from the gradient of the curve. Because the gradient changes (it is not linear), the optimal number could be derived from the gradient curve. The optimal number of then the smallest value on the stabilised gradient. Once it flattens, i.e. the change starts to become more linear, it is not expected that larger number of components will significantly improve the classification. For that reason, the number of components used for identification of distinct homogenous clusters in Amsterdam is derived from gradient curve as 30.*. ==TEXT==
 
 
 ![Long caption under img](source/figures/ch8/AMS_bic_gradient.pdf "Short caption"){#fig:AMS_bic_gradient width=100%}
@@ -477,7 +477,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 *Conclude. We wanted to try identification method in other place than Prague to make sure it works. Going though the same process, we can conclude that it does. However, the case also raised questions regarding the stability of the method of determination of number of components for Gaussian Mixture Model clustering as BIC curve did not culminate. That should be further explored in further research.*. ==TEXT==
 
-##### tree
+##### Hierarchical tree
 *The tree shows similar characteristics as we have seen in Prague, with the significant bifurcation into two branches and then consequent bifurcations lower in the tree distinguishing different rules of organisation.*. ==TEXT==
 
 ![Long caption under img](source/figures/ch8/200507_dengrogram_n30.pdf "Short caption"){#fig:AMS_dengrogram_n30 width=100%}
@@ -554,7 +554,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 \newpage
 
-#### extensibility / compatibility
+#### Extensibility and compatibility
 *the last question which remains to be answered is whether these two cases are compatible with each other. On other words, whether we can build combined taxonomy and further extend it by adding other cases.* ==TEXT==
 
 *We simply mix 20 clusters from Prague with 30 from Amsterdam, all represented by their centroids, and do hierarchical clustering. The resulting tree then should classify similarity of clusters across both cities.* ==text==
@@ -593,7 +593,7 @@ Table: This is the table caption. Suspendisse blandit dolor sed tellus venenatis
 
 \newpage
 
-## Validated! Yay! \label{conclusion8}
+## Conclusions on taxonomy and validation \label{conclusion8}
 Conclude chapter. TEXT
 
 Taxonomy. TEXT
