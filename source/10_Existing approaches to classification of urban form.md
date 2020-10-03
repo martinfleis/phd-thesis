@@ -2,6 +2,13 @@
 
 \tableofcontents
 
+==ensure that terminology is precise and fixed==
+	==use "systematic" in titles==
+	==add a but of intro and reiterate motivation==
+  ==restate reasons why we go for quantitative only==
+  ==point out issues specifically - issue 1, issue 2==
+	  ==resolve some issue in thesis and get back to other in discussion== 
+
 # Existing approaches to classification of urban form
 
 To start the journey towards a taxonomy of urban form, we first need to look at the state of the art of the field. Hence, the aim of this chapter is to understand classification and its various models from theoretical perspective and review how are these model applied to urban form, either from the perspective of urban morphology or remote sensing. Following the scope of the work defined in the first chapter, the main focus is on quantitative method of urban morphology. However, some detours especially to the remote sensing field are necessary. Both to give a full picture of the possible approached and to break the existing firm barriers between the fields.

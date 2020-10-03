@@ -16,6 +16,16 @@ Following chapter will outline the basis for the recognition of distinct homogen
 The automatic detection of urban tissues, or in the context of this work morphometric DHCs, consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the machine learning algorithm detecting DHCs. The structure of the method is reflected in the structure of the following sections.
 
 ### Tissue type as a homogenous cluster
+
+### Urban tissue as a unit of urban form
+_Refer back to chapter 2 and discuss the reason why tissue is optimal_
+- _it reflects unconstrained morphological unit_
+- _tissue as OTU (link to Ch4 and Ch5)_ ==after ch4 is done==
+- _morphological regionalizaition (Oliveira)_
+- _heavily refer to literature which sees tissue as unit as well. Why SA is not a unit is in chapter 4_
+
+==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure represented by the relational analytical model of urban form in a form of homogenous clusters.*== (here or in the next chapter)
+
 ==REWRITE PRINCIPLE TO AVOID TAXONOMY IN IT AND KEEP ONLY MORPHOMETRICS - NOT SO MUCH, BUT CHECK==
 
 ==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*== (repeat and link to previous chapter)

@@ -167,3 +167,4 @@
 - define taxonomy of patterns
 - discuss, conclude
 
+==add a map of the work here==
