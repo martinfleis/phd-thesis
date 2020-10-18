@@ -66,6 +66,17 @@
 - define the model of capturing the relationship between elements and their aggregations 
 - define the role of urban tissue in relation to the model
 
+### OTU
+- Urban tissue is an optimal OTU
+- ==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*==
+- Urban tissue is a contiguous area of a single tissue type, i.e. a single cluster
+
+_Refer back to chapter 2 and discuss the reason why tissue is optimal_
+- _it reflects unconstrained morphological unit_
+- _tissue as OTU (link to Ch4 and Ch5)_ ==after ch4 is done==
+- _morphological regionalizaition (Oliveira)_
+- _heavily refer to literature which sees tissue as unit as well. Why SA is not a unit is in chapter 4_
+
 ### Identification of OTU in urban fabric
 
 *selection and definition of morphometric characters*
@@ -73,7 +84,7 @@
 - primary and contextual characters
 - selection of primary characters
 - selection of contextual characters
-*identification of OTU using unsupervised ML*
+*identification of OTU using cluster analysis*
 - clustering method (==justify selection==)
 	- ==move from ch7?==
 

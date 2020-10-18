@@ -11,6 +11,9 @@
 #### Placement of the research in the context of chapter 3
 +
 
+
+==Among these aspects, the completeness of the data set is of crucial importance. Completeness of characters is an illusion, since each single organism theoretically consists of an infinite number of characters. ==
+
 ## Applicability
 
 ### Applicability of Urban Morphometrics
@@ -56,3 +59,6 @@ Further research should focus on the question of the exact meaning and variation
 
 *The conclusions in your last chapter must respond to the aim from Chapter 1 and chapter 5*
 
+
+
+*Comparison and interpretation. If the method is extensible and reflects the similarity across the contexts, we can do a lot of great and cool things, starting from the interpretation of the spatial distribution of branched clusters to plenty of stuff*. TEXT
