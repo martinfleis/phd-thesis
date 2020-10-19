@@ -11,34 +11,28 @@ _aim of the chapter_
 _structure of the chapter_
 
 ## Learning from biology
-*morphometrics and numerical taxonomy as two concepts which may allow overcoming issues identified in previous two chapters*
-*this research aims to numerically describe urban form and classify it. Both these aims are in long term focus of biology, which uses morphometrics in description and numerical taxonomy in classification in the most advanced way. Even though current techniques like DNA sequencing bring better results, the whole concept of morphometrics and taxonomy is still valid, especially if we try to adapt it to urban form, where something like DNA sequencing is not possible.*
-*biology did a lot of work setting the scene and we should learn from it to avoid reinventing the wheel where the key principles hold.*
+From a conceptual point of view, this research builds on the previous of @dibble2017 (parts also published as @dibble2015 and dibble2016), which established the theory of urban morphometrics and made the first link between numerical taxonomy - a classification method used in primarily in biology - and urban morphology. Both morphometrics and numerical taxonomy have a long and rich history outside urban sciences and the core idea behind the Dibble's work, which is also applied to this research, is that urban form can be in its own way perceived as group of individual entities which can be consistently measured and numerically classified. In @dibble2017 authors demonstrated that the idea is viable and that the potential of urban morphometrics should be explored further.
+
+Researcher is biology did a lot of work setting the scene for morphometrics and we should learn from it to avoid reinventing the wheel, where the key principles hold.
 
 ### Morphometrics as a descriptive tool
-*short introduction*
-*the general definition of morphometrics is a quantitative analysis of form, i.e. size and shape (REF).*
-*morphometrics is as a descriptive tool which has the ability to determine the level of resemblance of different individuals, either of the same species or of different species.*
+Very generally speaking, morphometrics is a quantitative analysis of form, i.e. size and shape REF. In biology that usually refers to a size and shape of an individual, in which case morphometrics, as a descriptive tool has the ability to determine the level of resemblance of different individuals, either of the same species or of different species REF. Literature knows several branches of morphometrics, all conceptually similar, used for the similar purposes but based on different principles of what to measure and how. The two main approaches are traditional and geometric morphometrics.
 
-*biology knows several morphometric methods, used for the similar purpose, each based on different principles*
+Traditional or multivariate morphometrics is based on "the application of multivariate statistical methods to sets of variables" [@rohlf1993, p.129]. The variables used within the analysis normally represent widths, lengths and angles of features or distances between specific landmarks [@rohlf1993], hence containing little information about the actual geometry if the structure (REF Zelditch et al. 2004). The recreation of the original shape is not possible based on the used set of variables (REF Adams et al. 2004). Among the statistical techniques used within traditional morphometrics @rohlf1993 list principal component analysis, discriminant functions of canonical variate analysis. An example of measurements used within traditional morphometrics are shown on figure \ref{fig:morphom_fish}.
 
-- traditional morphometrics
-*multivariate morphometrics. "refers to the application of multivariate statistics to linear measurements and ratios" *
-*‌"Traditional morphometrics has been shown to have certain limitations when compared to geometric morphometrics. In the former, data consist of lengths, depths, and widths containing little information about the geometry of the structure being studied (Zelditch et al. 2004). Geometric relationships among the variables are not retained so that it is not possible to depict graphical representations of shape (Adams et al. 2004) In addition, overlap of variables occurs frequently, making it difficult to describe local shape changes. Within the traditional framework a formal distinction between size and shape is difficult, and little agreement is found among the many methods of size correction proposed (Klingenberg 1996, 1998; Zelditch et al. 2004).  https://academic.oup.com/jmammal/article/92/6/1395/961102"*
-*"Traditional morphometrics is the study of morphological variations between or within groups using multivariate statistical tools. Shape is defined by collecting and analyzing length measurements, counts, ratios, and angles.[1][2][6] The statistical tools are able to quantify the covariation within and between samples. Some of the typical statistical tools used for traditional morphometrics are: principal components, factor analysis, canonical variate, and discriminant function analysis. It is also possible to study allometry, which is the observed change in shape when there is change in size. However, there are problems pertaining to size correction since linear distance is highly correlated with size. There have been multiple methods put forth to correct for this correlation, but these methods disagree and can end up with different results using the same dataset. Another problem is linear distances are not always defined by the same landmarks making it difficult to use for comparative purposes.[2] For shape analysis itself, which is the goal of morphometrics, the biggest downside to traditional morphometrics is that it does not capture the complete variation of shape in space, which is what the measurements are supposed to be based on.[2][6] For example, if one tried to compare the length and width for an oval and tear drop shape with the same dimensions they would be deemed as the same using traditional morphometrics.[2] Geometric morphometrics tries to correct these problems by capturing more variability in shape. https://en.wikipedia.org/wiki/Geometric_morphometrics_in_anthropology"*
+![Example of the application of multivariate morphometrics. Overview of different morphometric measurements investigated in S.panijus (Siddik et al., 2016)](source/figures/ch4/morphom_fish.png "Example of the application of multivariate morphometrics"){#fig:morphom_fish width=75%}
 
-- geometric morphometrics
-*landmarks, semilandmarks, deformation grid*
-*‌concerns the development of coordinate-based methods begun in the 1970s (Bookstein 1991; Dryden and Mardia 1998; Zelditch et al. 2004) https://academic.oup.com/jmammal/article/92/6/1395/961102"*
-*"Geometric morphometrics methods capture the geometry of an object using coordinate-based data. A statistical theory of shape has been developed allowing “… the combined use of multivariate statistical methods and methods for the direct visualization in biological form” (Adams et al. 2004:6). https://academic.oup.com/jmammal/article/92/6/1395/961102"*
+The typical application of traditional morphometrics is *allometry*, the study of change of the shape with the change of the size. However, in biology, this method has certain limitation mostly related to the normalisation of the shape values affected by size [@breno2011].
 
-- outline analysis
-*coefficients of mathematical functions are fitted to points sampled along the outline - link to Cooper and others*
+The second major branch of morphometrics, which tries to overcome some limitations of the previous one is geometric morphometrics  [@rohlf1993], which focuses on the position of landmarks and semi-landmarks on the grid and its deformation (figure \ref{}). The description of both size and shape is though the series of coordinates either on 2D plane or in 3D space. 
 
-- tissue morphometrics (Histomorphometry) and other fields, Neuroimaging, Geomorphometrics
-==add some clear figures==
+![Example of the application of geometric morphometrics. Locations of the landmarks on a dorsal view of the skull and the relevant distortion of the grid.](source/figures/ch4/geom.png "Example of the application of geometric morphometrics"){#fig:morphom_fish width=75%}
 
-*these approaches and development can inform urban morphometrics*
+Geometric morphometric is heavily dependent on the shared landmarks features between individual in a study. Hence its possible application in urban context is difficult due to the complexity of urban form and the variety of patterns, making the definition of such shared landmark features very limited.
+
+Similar to geometric morphometric is an outline analysis, which is trying to fit mathematical functions to points sampled along the outline of the studies shape, an approach which has already been applied in urban morphology either to study the shape of settlements [@batty1987] or different aspects of street scape [@cooper2003; @cooper2005]. Furthermore, there are other branches of morphometrics (tissue morphometrics [@bodenstein1987growth], geomorphometrics [@coblentz2014quantitative], neuroimaging [@wang1994morphometric]) which are applying the same principles in their respective fields.
+
+All these approaches and methods can inform the development of *urban* morphometrics.
 
 ### Numerical taxonomy as a classification tool \label{taxonomy_tool}
 *classification system based on morphometric data and numerical methods of systematisation. "The grouping by numerical methods of taxonomic units into taxa on the basis of their character states."*
@@ -47,96 +41,66 @@ _structure of the chapter_
 "A basic attitude is strict **separation** of **phylogenetic** speculation from taxonomic procedure. ... The separation of overall similarity (phenetics) from evolutionary branching sequences (cladistics) is and important advance in taxonomic thinking." (p.9-10)
 *part of computational phylogenetics*
 
-#### Principles of numerical taxonomy
-*base this on Sneath and Sokal*
-*key principle is that the classification is operational and empirical ==explain==*
-*"‌operationalism implies that statements and hypotheses about nature be subject to meaningful questions; that is, those that can be tested by observation and experiment." (p.17)*
+One of the specific application of morphometric is the usage of measurements in classification of species, for which @sneath1973 use the term *numerical taxonomy* and define it as "*the grouping by numerical methods of taxonomic units into taxa on the basis of their character states*" [@sneath1973, p.XXX]. In biology, this requires a distinction between *phenetics* (overall similarity) and *cladistics* (evolutionary branching sequence).
 
-Repeatability and objectivity as principal aims.
+The key principle of numerical taxonomy is that it is a classification which is operational and empirical. As further explained by @sneath1973, "*operationalism implies that statements and hypotheses about nature be subject to meaningful questions; that is, those that can be tested by observation and experiment (p.17)*". That further assumes that numerical taxonomy as a method has a potential to be reproducible and replicable.
 
-(Taken directly from SS p.5)
+@sneath1973 define seven key principles of numerical taxonomy:
 
-1. The greater the content of information in the taxa of a classification and the more characters on which it is based, the better a given classification will be.
-2. A priori, every character is of equal weight in creating natural taxa.
-3. Overall similarity between any two entities is a function of their individual similarities in each of the many characters in which they are being compared.
-4. Distinct taxa can be recognised because correlations of characters differ in the groups of organisms under study.
-5. Phylogenetics inferences can be made from the taxonomic structures of a group and from character correlations, given certain assumptions about evolutionary pathways and mechanisms.
-6. Taxonomy is viewed and practiced as an empirical science.
-7. Classifications are based on phenetic similarity.
+1. *The greater the content of information in the taxa of a classification and the more characters on which it is based, the better a given classification will be.*
 
-In practice, there are four steps (again taken from SS p.5) ==make link between this and chapter 5 in chapter 5==
+Selection of morphometric characters which is used for classification is inherently biased. To limit such a bias as much as possible, we should employ as large number of characters as is possible (and meaningful) as long as it does not violate any other rule.
 
-1. Organisms and characters are chosen and recorded.
-2. The resemblances between organisms are calculated.
-3. Taxa are based upon these resemblances.
-4. Generalisations are made about the taxa (such as inferences about their phylogeny, choice of discriminatory characters, etc.) (Sneath and Sokal, p.5)
+2. *A priori, every character is of equal weight in creating natural taxa.‌* 
+
+Some of the classification models apply weighting, which means that character A is seen as more important than character B. However, this decision often introduces bias into the selection because the rules defining the weighting are often arbitrary. Furthermore, we do not a priori know which character will have the highest discriminatory power.
+
+3. *Overall similarity between any two entities is a function of their individual similarities in each of the many characters in which they are being compared.*
+
+In other words, when measuring similarity between two entities, all characters needs to be taken into account.
+
+4. *Distinct taxa can be recognised because correlations of characters differ in the groups of organisms under study.*
+
+Taxa, i.e. classes of numerical taxonomy, represent different groups of organisms or other entities under scrutiny. The relations between morphometric values within such taxa are different than relations to other taxa.
+
+5. *Phylogenetic inferences can be made from the taxonomic structures of a group and from character correlations, given certain assumptions about evolutionary pathways and mechanisms.*
+
+Phenetic information used to build a taxonomy is not able to reflect phylogeny entirely, but the difference between the true evolutionary development of species and that observed in phenetic taxonomy is often minimal. In an urban environment, that means that we might be able to, to a degree, trace historical origin in numerical taxonomy of urban form. 
+
+6. *Taxonomy is viewed and practiced as an empirical science.*
+
+Conceptual assumptions about observations should have no role in the taxonomy.
+
+7. *Classifications are based on phenetic similarity.*
+
+Phenetic similarity represented by the relations (e.g. correlation) between morphometric characters is the only aspect taken into account when building a classification.
 
 While the scope of this work is not to give a detailed overview of biological numerical taxonomy, there are four crucial concepts which needs to be understood before the application of numerical taxonomy to urban form - Operational Taxonomic Unit (OTU), taxonomic characters, taxonomic resemblance and taxonomic structure.
 
 ##### Operational Taxonomic Unit
-"Preliminary selection of specimens; based on rather few characters.
-This could be individuals, for establishing species, or species, for erecting higher taxa."
-"The logical fundamental unit in a large majority of instances is the individual organism."
-"At higher taxonomic levels representative specimens or averages of several individuals are employed for a taxon."
-"Taxon will therefore be an individual (or an average) standing for a race, a species, a genus or even a higher ranked taxon.
-Thus we shall employ taxonomic units of different categorical ranks as the entities to be grouped into more inclusive aggregates during classification.
-Operational taxonomic units (OTU’s), which are the lowest ranking taxa employed in a given study.
-To be totally consistent and rigorous, a taxonomic unit at any level should be based on individuals.
-(Sneath and Sokal, p. 68-69)"
-
+OTU is the lowest ranking taxa employed in a given study. In biology that is usually species representing by an individual (e.g. a single bird specimen). In some cases  OTUs can be species if the aim is to develop higher order taxa or other entities. Generally, OTU should be the fundamental unit in a large majority of instances. To ensure consistency and rigour, @sneath1973 suggest that in the case of biology, *"a taxonomic unit at any level should be based on individuals." (p.69)* Naturally, urban form does not offer a simple definition of individual and the question of optimal OTU needs to be studied.
 
 ##### Taxonomic characters
-*‌All kinds of characters are equally desirable: morphological, physiological, ethological, and sometimes even distributional ones.*
-***Taxonomic character** - "a characteristics (or feature) of one kind of organism that will distinguish it from another kind; or any attribute of a member of a taxon by which it differs or may differ from a member of a different taxon"p.71*
+Taxonomic character are in essence morphometric character used to derive numerical taxonomy. For the use in biology, it can be defined as "*a characteristics (or feature) of one kind of organism that will distinguish it from another kind; or any attribute of a member of a taxon by which it differs or may differ from a member of a different taxon*" [@sneath1973, p.71] For application on urban form, the term *organism* will refer to a set OTU.
 
-*"Meaningful estimates of resemblance can be made once there is agreement on what characters are to be admitted as relevant in taxonomy.*
-1. *Use all kinds of characters from all parts of the body and from all the stages of life cycle.*
-2. *Use all characters varying within the group studied, not merely conventional diagnostic characters."*
-
-*A systematic survey of all known characters, or the inclusion of all characters the investigator has been able to observe, should prevent bias.*
-
-*Which characters should be chosen as a basis for estimating the similarity between OTU’s?*
-1. *What biological factors do the characters represent?*
-2. *Are all characters of equal value and information on providing evidence on phenetic similarity?*
-
-*Numerical taxonomy measures similarity between the **phenomes** of OTU’s.* 
-***Phenome** - the total phenetic manifestations of the genome of an organism or a taxon.*
-*Cities are defined by phenotype, not genotype.*
-*Characters should be distributed as widely and evenly as possible over the organisms studied.*
-
-*Take as many characters as is feasible and distribute them as widely as is possible over the various body regions, life history stages, tissues, and levels of organisation of organisms.*
-
-***Equal weighting** is desirable.*
-
-*Before we can apply clustering, values has to be scaled to bear the equal weights in clustering. This scaling might be even  logarithmic*
-
-*Effect of environment*
-
-*The environment affects the phenotype*
-*We wish to separate environmental effects on the size from the effects on the shape.*
-*The phenotypic responses form a multidimensional response system*
-*Is a difference along the main street, like a presence of active frontage, just a response of phenotype to environment?*
+The critical step in the design of numerical taxonomy is the selection of taxonomic characters. The set of characters which is used can significantly affect the results of the analysis, therefore an extensive set of rules of selection should be defined and followed. The general principle should be driven by inclusivity - all available kinds of characters should be used. Furthermore, all characters which may bring a new information should be employed, the set should not follow a limited set of conventionally used analytical variables. The advice given by @sneath1973 says *"take as many characters as is feasible and distribute them as widely as is possible over the various body regions, life history stages, tissues, and levels of organisation of organisms" (p. XXX)* - again, the terminology refers to biology, but the principle should be translated to urban morphology. 
 
 ##### Taxonomic resemblance and structure
+Taxonomic resemblance, the similarity between OTUs, is determined using cluster analysis based on the resemblance matrix. Resemblance matrix consists of all morphometric values and all OTUs in the study. As a results, clusters, i.e. higher order taxa, are based on phenetic resemblances in an objective manner. 
 
-*Taxa are constructed through various techniques designed to disclose and summarise the structure of resemblance matrix (p.6)*
-*Numerical methods are collectively called **cluster analysis** - methods for establishing and defining clusters of mutually similar entities from the resemblance matrix.*
-*The cluster are generally based on phenetic resemblances only and have no necessary phyletic connotations.*
-*These methods permit the elimination of taxonomic groups in an **objective manner**, given a matrix of coefficients relationships.*
+The optimal interpretable outcome of numerical taxonomy is a hierarchical dendrogram merging lower order taxa into the higher order (fig. \ref{fig:dendrogram}). However, the methods of cluster analysis vary, even thought the tendency is to employ hierarchical methods. \footnote{That does not necessarily mean that flat clustering methods like K-means are not used. Although if the final output should be captured in a dendrogram, single layer of K-means clustering is not enough and other steps should be introduced.}
 
-*distribution of taxa in phenetic space*
-*clusters*
+![Example of dendroram using Ward’s method classification of 39 species of Mallomonas. (Feng and Xie, 2013)](source/figures/ch4/dendrogram.jpg "Example of dendroram using Ward’s method classification of 39 species of Mallomonas."){#fig:dendrogram width=50%}
 
-**mixture problem** - *when taxonomist assumes that sampled populations consist of a mixture that he first wishes to decompose into separate populations, which are then investigated further or are used as OTU's* ==link to chapter7. This is underlying theory.==
+Of a high relevance for urban form is a *mixture problem*. That happens "*when taxonomist assumes that sampled populations consist of a mixture that he first wishes to decompose into separate populations, which are then investigated further or are used as OTU's*" [@sneath1973, p.XXX]. If the OTU in place will be an aggregation was Sanctuary area in case of @dibble2017 or urban tissue, the sample may be composed of individual buildings which need to be first assigned into their respective SA/tissue. In that case, the OTU for taxonomy itself will be the *population of buildings* composing a morphological aggregation. ==link to chapter7. This is underlying theory.==
 
-*hierarchical clustering leading to the dendrograms*
 
 ### Criticism of morphometrics and numerical taxonomy
-"**Four major problems** of phenetic classification:
-1. Incongruence between classifications based on different parts of the body or different life history stages
-2. Differences in estimates of relationships produced by different similarity coefficients.
-3. Differences in interpreting relationships produced by different clustering methods
-4. The possible effect of parallelism and convergence on taxonomic judgements based on estimates of phenetic relationships."
+*"**Four major problems** of phenetic classification:*
+1. *Incongruence between classifications based on different parts of the body or different life history stages*
+2. *Differences in estimates of relationships produced by different similarity coefficients.*
+3. *Differences in interpreting relationships produced by different clustering methods*
+4. *The possible effect of parallelism and convergence on taxonomic judgements based on estimates of phenetic relationships."*
 
 *phyletic vs phenetic taxonomy*
 *whether a chosen sample of characters is sufficient p.423*
