@@ -6,6 +6,7 @@
 
 TODO:
 
+- [ ] OTU
 - [ ] references
 - [ ] revision of text
 	- [ ] ensure that relational framework comes through clear
@@ -132,6 +133,14 @@ It should be pointed out that the MCs do offer added values that are relevant on
 ![Relationship between morphological cells of topological distance 2: the red geometry represents the adjacency network of neighbouring elements (buildings, MC) at topological distance 1 (adjacent neighbour of first order), while blue geometry represents the boundary of the aggregated analytical unit of topological distance 2 for each of the highlighted buildings. In the image, a fabric characterised by fewer and sparser buildings (b) generate larger cells and aggregated units compared to a denser and more compact fabric (a).](source/figures/ch6/contiguity_diagram.png "Relationship between morphological cells of topological distance two"){#fig:contiguity_diagram width=100%}
 
 Topology captures the information on adjacency of neighbouring elements (cells) - two cells are neighbouring if they share at least one point (so-called Queen contiguity) or one segment (so-called Rook contiguity). It defines the proximity of elements in terms of the number of steps needed to get from each element A to each element B. Topological relationships can be of two types - unconstrained, if not limited by any other element than tessellation itself, and constrained, if the step between two neighbours is impeded by constraint (a block is the maximum number of topological steps from element without the need to cross the street network, while the street network is the constraint in this case). Thus, we can define an aggregation around each element based on a number of topological steps (topological reach) on the morphological tessellation, where aggregation defined by n steps includes all morphological cells which we can reach within x <= n steps. 
+
+#### Operational Taxonomic Unit as an aggregation
+
+- based on mixture problem, 
+- definition of population
+- definition of tissue
+- specification of OCM
+- OTU is urban tissue type as a specimen
 
 ### Analytical frameworks of urban form \label{frame}
 Analytical frameworks of urban form are conceptual schemas linking fundamental elements together for the purpose of morphological analysis. The way we link fundamental elements and their aggregations matters and frameworks are often not specified in literature, just assumed. 

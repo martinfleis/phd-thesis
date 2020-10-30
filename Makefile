@@ -100,6 +100,22 @@ titlepage:
 	--pdf-engine=xelatex \
 	--verbose
 
+chapter1:
+	pandoc "$(INPUTDIR)"/09*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/chapter1.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 chapter2:
 	pandoc "$(INPUTDIR)"/10*.md \
 	--filter pandoc-shortcaption \
@@ -136,6 +152,22 @@ chapter4:
 	pandoc "$(INPUTDIR)"/12*.md \
 	--filter pandoc-shortcaption \
 	-o "$(OUTPUTDIR)/chapter4.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+chapter5:
+	pandoc "$(INPUTDIR)"/13*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/chapter5.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
 	--template="$(STYLEDIR)/template.tex" \
 	--bibliography="$(BIBFILE)" 2>pandoc.log \

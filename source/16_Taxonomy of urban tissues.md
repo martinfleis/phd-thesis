@@ -8,6 +8,8 @@ TODO:
 - [ ] table references
 - [ ] text revision
 - [ ] references
+- [ ] extendability
+- [ ] 
 
 # Taxonomic relationships of urban tissues
 
@@ -210,6 +212,8 @@ The following section applies the methods and presents their results.
 
 ## Case studies - continuation of Prague, Amsterdam \label{case8}
 The case studies applying the methods proposed in this chapter are 1) continuation of the work on Prague presented in previous chapter, and 2) inclusion of continuous built-up area of Amsterdam, Netherlands. Amsterdam shares with Prague the richness of the historical development, bringing a diverse set of tissues, but its historical context and patterns of development are very different. 
+
+==overview of steps==
 
 ### Hierarchical clustering
 The centroid values of each cluster, obtained as a mean value of each morphometric character, are used a taxonomic characters within a Ward's hierarchical clustering. The values are not reported within this study but are available within a data repository (ADD). The resulting relationship between centroids, representing the relationship between identified urban tissues, is illustrated on the dendrogram on figure \ref{fig:prg_dendrogram}. The horizontal axis represent each individual cluster, while vertical axis capture the cophenetic distance, i.e. the similarity between observations. The lower the connection between two branches is, the more similar the tissues represented by these branches tend to be. The values under each connection represent the actual cophenetic distance of a connection and number of observations which belong to the link. The different branches of the tree are coloured to ease the interpretation of the tree itself and to provide the visual link between the dendrogram and the resulting spatial distribution of branches.

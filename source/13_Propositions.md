@@ -7,41 +7,64 @@
 
 *Positioning requires justification. For example, if you decide on a case-study approach, explain why, and justify your choice of specific case to study; if a long description of the case is needed, note that you will do this in a separate following chapter.*
 
-==always link back to previous chapters==
-==link to introduction (aim, context, problem)==
+The goal of chapters 2, 3 and 4 was to provide a necessary theoretical, conceptual and methodological background for the work proposed within this study. It is clear that the field of urban morphometrics is advancing in recent years in a fast pace. However, as shown in each of the chapters, there are still clear and wide gaps to fill.
 
-- ch2: classification is done in some ways, but something is always missing
-- ch3: measuring is done is some ways, but none is comprehensive and detailed enough
-- ch4: biology offers a method to do that properly
+Existing literature, as shown in the chapter 2, offers a various methods for classification of urban form. While approaches vary from simple duality *organised-unorganised* form based on remotely sensed data () to comprehensive small scale studies based on detailed manual digitisation of  urban form elements [@dibble2017], none of them is ideal. The optimal classification model, which consists of 7 principles (see section XXX) is not fully reflected in any of the existing proposals.
 
-- ch1: *synthesise in relation to aim, context and problem from ch1* 
+One of the potential pathway which could lead to better classification models is morphometrics and related numerical taxonomy stemming from the phenetic studies in biology. Conceptually, morphometrics itself is already well established in urban morphology (as shown in detail in chapter 4) and previous work of @dibble2017 showed the potential of application of numerical taxonomy as well. However, as shown in the chapter 3, the existing proposals bridging the two are not fully operational on a large scale and on unrestricted spatial units. The critical elements, an operational taxonomic unit, needs to be fully revisited to better reflect the nature of urban form and allow exhaustive analysis of metropolitan areas, rather than a specific carefully selected set of case studies.
 
-==write after background chapters are done==
+The related biological concept with may help with the issue of undefined OTU is a *mixture problem*. That arises when a taxonomist needs to identify populations within samples to then perform classification on a population level. The parallel in urban morphology is apparent. From a pool of fundamental units, i.e buildings, plots and streets [@moudon1997], morphologist needs to identify distinct patterns of form and classify those into a taxonomy.
 
-## Hypothesis & questions
-- *link to the statement of the problem*
-- *link to the aim and scope*
-- *link to the significance*
+Chapter 4 then provided a deep dive into urban morphometrics and existing methods of measuring of urban form. For the rest of the thesis, it is possible to draw three conclusions out of the chapter. First, although there is a rich pool of relevant studies, we often lack those which are at the same time granular and extensive, while providing comprehensive description of form. Second, the field has a nomenclature issue to tackle. The so called *nicknaming issue* prevents comparability and brings a layer of inconsistency hard to declutter without a detailed decomposition of each individual method to the level of characters' formulas. Last,  urban morphometrics can already measure an abundant number of characters covering all aspects of urban form. However, the focus is not very balanced and some categories of characters require a development of new approaches.
+ 
+## Hypothesis & research questions
+The aim of this work is to fill some of the gaps identified in previous chapters and develop a method of classification of urban form which reflects *optimal classification model* and follows principles of morphometrics and numerical taxonomy. The scope of the work is primarily technical, focused on reproducibility and replicability of quantitative science of urban morphology, eventually leading to the establishment of the atlas of urban form. However, in its nature the work is still exploratory. If the principles will hold, the work should pave the way for more robust implementations.
+
+The theoretical contribution lies in the revaluation of the bridge between numerical taxonomy and urban morphology previously proposed by @dibble2017. 
 
 ### Hypothesis
+Drawing on the background knowledge presented in previous chapters, the main hypothesis behind the proposals laid in the rest of the thesis is then as follows:
+
 > Methods of morphometrics and numerical taxonomy established in the classification of biological species can be applied in the context of urban morphology to lay foundations of numerical taxonomy of urban form.
 
-*that would… link to gaps from background and introduction*
+The rest of the thesis builds on the hypothesis and proposes an actual implementation of numerical taxonomy, which is later validated in chapter 8. The validation of the method then indicates whether the hypothesis should be proved or disproved, which in turn tells whether the application of numerical taxonomy in urban morphology is a viable direction of research.
  
 ### Research questions
+The process of verification of hypothesis needs to provide an answer to the main research question and a series of subsequent supplementary research questions. 
+
 #### Main research question
+The main research question (RQ) focus on the operationalisation of numerical taxonomy in the context of urban morphology:
 
-> How to adapt methods of numerical taxonomy to urban form?
- 
+> How to adapt methods of numerical taxonomy to study of urban form?
+
+Answering the question gives us enough ground to understand whether such adaptation provides meaningful information for further analysis of built environment. The task itself could then be subdivided into four supplementary research questions, which together outline the research proposal eventually answering the RQ.
+
 #### Supplementary research questions
+All four supplementary research questions (SRQ) focus on operationalisation of numerical taxonomy as a method based on urban morphometrics.
 
-- What are the fundamental morphometric elements and how to model their relationship? ==ch6==
-- What is the optimal Operational Taxonomic Unit of urban form and how to identify it in continuous urban fabric? ==ch6+7==
-	- ==the first part is rather theoretical and comes with the hypothesis [link to ch4 (Dibble critique)] that optimal OTU would be urban tissue==
-- What are the taxonomic characters describing urban form? ==ch7==
-- How to determine the taxonomic relationship between OTUs to derive taxa of urban form? ==ch8==
+The first question focus on the identification of features which at the same time form urban fabric and could be studied using morphometric methods and the connections between them:
 
-*a discussion of the properties that the innovation is expected to have (that is, what is it predicted to do?) and of criteria that it is intended to meet*
+> What are the fundamental morphometric elements and how to model their relationship?
+
+Chapter 6 is dedicated to answering the question.
+
+The second question builds on the previous and fills the gap identified in chapter 3. The question of OTU is critical as it directly affects very nature of the taxonomy. The question itself seeks an answer to both theoretical definition of the fundamental unit of urban form and the technical aspects of its delineation:
+
+> What is the optimal Operational Taxonomic Unit of urban form and how to identify it in continuous urban fabric?
+
+Since an OTU is the result of a population delineation (see *mixture problem*), it is necessarily an aggregation of fundamental morphometric elements. The overview of aggregation models is available in the chapter 6, together with a theoretical discussion and definition of OTU for this study. The delineation part is the content of the chapter 7.
+
+Morphometric assessment of any kind is based on morphometric characters, i.e. measurable aspects of elements used within the study. Their selection and implementation are the key drivers influencing the results of the analysis, hence it is necessary to give them enough attention and dedicate one SRQ to the topic:
+
+> What are the taxonomic characters describing urban form?
+
+The first part of the chapter 7 aims to provide answers, building on the database collected in the chapter 4.
+
+The final SRQ focus on the final aspect of creation of a numerical taxonomy, the quantification of similarity of OTUs:
+
+> How to determine the taxonomic relationship between OTUs to derive taxa of urban form?
+
+The method of numerical taxonomy in the context of urban form and related answers to the last question are part of the chapter 8.
 
 ## Methodological propositions
 - *describe method and say why this particular method*

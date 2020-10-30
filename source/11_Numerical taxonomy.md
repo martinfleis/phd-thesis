@@ -75,6 +75,8 @@ Conceptual assumptions about observations should have no role in the taxonomy.
 
 Phenetic similarity represented by the relations (e.g. correlation) between morphometric characters is the only aspect taken into account when building a classification.
 
+==principles vs concepts==
+
 While the scope of this work is not to give a detailed overview of biological numerical taxonomy, there are four crucial concepts which needs to be understood before the application of numerical taxonomy to urban form - Operational Taxonomic Unit (OTU), taxonomic characters, taxonomic resemblance and taxonomic structure.
 
 ##### Operational Taxonomic Unit
@@ -85,130 +87,81 @@ Taxonomic character are in essence morphometric character used to derive numeric
 
 The critical step in the design of numerical taxonomy is the selection of taxonomic characters. The set of characters which is used can significantly affect the results of the analysis, therefore an extensive set of rules of selection should be defined and followed. The general principle should be driven by inclusivity - all available kinds of characters should be used. Furthermore, all characters which may bring a new information should be employed, the set should not follow a limited set of conventionally used analytical variables. The advice given by @sneath1973 says *"take as many characters as is feasible and distribute them as widely as is possible over the various body regions, life history stages, tissues, and levels of organisation of organisms" (p. XXX)* - again, the terminology refers to biology, but the principle should be translated to urban morphology. 
 
-##### Taxonomic resemblance and structure
+##### Taxonomic resemblance and structure \label{res_struct}
 Taxonomic resemblance, the similarity between OTUs, is determined using cluster analysis based on the resemblance matrix. Resemblance matrix consists of all morphometric values and all OTUs in the study. As a results, clusters, i.e. higher order taxa, are based on phenetic resemblances in an objective manner. 
 
 The optimal interpretable outcome of numerical taxonomy is a hierarchical dendrogram merging lower order taxa into the higher order (fig. \ref{fig:dendrogram}). However, the methods of cluster analysis vary, even thought the tendency is to employ hierarchical methods. \footnote{That does not necessarily mean that flat clustering methods like K-means are not used. Although if the final output should be captured in a dendrogram, single layer of K-means clustering is not enough and other steps should be introduced.}
 
 ![Example of dendroram using Ward’s method classification of 39 species of Mallomonas. (Feng and Xie, 2013)](source/figures/ch4/dendrogram.jpg "Example of dendroram using Ward’s method classification of 39 species of Mallomonas."){#fig:dendrogram width=50%}
 
-Of a high relevance for urban form is a *mixture problem*. That happens "*when taxonomist assumes that sampled populations consist of a mixture that he first wishes to decompose into separate populations, which are then investigated further or are used as OTU's*" [@sneath1973, p.XXX]. If the OTU in place will be an aggregation was Sanctuary area in case of @dibble2017 or urban tissue, the sample may be composed of individual buildings which need to be first assigned into their respective SA/tissue. In that case, the OTU for taxonomy itself will be the *population of buildings* composing a morphological aggregation. ==link to chapter7. This is underlying theory.==
+Of a high relevance for urban form is the *mixture problem*. That happens "*when taxonomist assumes that sampled populations consist of a mixture that he first wishes to decompose into separate populations, which are then investigated further or are used as OTU's*" [@sneath1973, p.XXX]. If the OTU in place will be an aggregation was Sanctuary area in case of @dibble2017 or urban tissue, the sample may be composed of individual buildings which need to be first assigned into their respective SA/tissue. In that case, the OTU for taxonomy itself will be the *population of buildings* composing a morphological aggregation. ==link to chapter7. This is underlying theory.==
 
 
-### Criticism of morphometrics and numerical taxonomy
-*"**Four major problems** of phenetic classification:*
-1. *Incongruence between classifications based on different parts of the body or different life history stages*
-2. *Differences in estimates of relationships produced by different similarity coefficients.*
-3. *Differences in interpreting relationships produced by different clustering methods*
-4. *The possible effect of parallelism and convergence on taxonomic judgements based on estimates of phenetic relationships."*
+### Criticism of numerical taxonomy
+As any other classification, numerical taxonomy has its drawbacks and limitations, which should be carefully considered before its application. @sneath1973 name three major problems related to the phenetic classification of organisms of which all are relevant for urban morphology a well.
 
-*phyletic vs phenetic taxonomy*
-*whether a chosen sample of characters is sufficient p.423*
+The first one points out a possible dissimilarity of clusters based on morphometric characters obtained during different time periods. Those would be life stages for an animal, but could be seen as stages of development cycle in urban morphology. Phenetic description of OTUs would differ, potentially causing differences in taxonomy. While it is relatively simple to control such an issue in biology, capturing urban form in the same stage of development cycle is virtually impossible and such a limitation needs to be taken into the account in interpretation of resulting classification.
+
+The second and third problems are related and focus on a design of a cluster analysis. The selection of similarity coefficients between morphometric characters and selection of clustering method can both result in differences in identified relationships between OTUs and affect the interpretability of the classification. The actual method of classification should then be selected either as a result of a comparative analysis or based on the theoretical understanding of the data structure and the optimal clustering algorithm for the data.
+
+==conclude the section==
 
 ## Transferability of concepts into urban morphology
 
 ### Review of principles and their applicability
+
 #### Morphometrics
-==once written, match the key concepts==
+Morphometrics has a certain tradition in urban morphology, although the term itself is not established yet. There is a wide range of literature applying quantitative methods of characterisation of form, ranging from building dimensions REF to network-based characters REF and beyond REF. The detailed overview of a published work is available in a chapter 4. What can be concluded now, is that the principle of morphometrics, explicitly brought to urban morphology first by @carneiro2010 and then by @dibble2017, is applicable to urban form without many constraints. However, to ensure that the the set of morphometric characters used for a taxonomy of urban form is inclusive enough, detailed analysis of the potential of urban morphometrics and its current limits is required and provided in chapter 4.
 
-#### Taxonomy
-==once written, match the key concepts==
+#### Operational Taxonomic Unit
+From the theoretical perspective of a numerical taxonomy as a classification method, there is no reason to believe that is could not be applicable to urban morphology. From a practical perspective, it is necessary to discuss individual components of the procedure, namely Operational Taxonomic Unit (OTU).
 
+In biology, an OTU for taxonomy on the level of specimen is individual. However, in urban morphology we face the problem defining what is individual in cities. If we try to define an individual we’ll find following:
 
-##### Principles
-###### Operational Taxonomic Unit
-*OTU could be …*
-*direct link to chapter 2*
+* *a single person or thing, especially when compared to the group or set to which they belong* (Cambridge Dictionary)
+* *a single organism capable of independent existence* (Bilogical from Dictionary.com)
+* *a member of a compound organism or colony* (Biological from Dictionary.com)
+* *a particular being or thing as distinguished from a class, species, or collection* (Merriam-Webster)
+* *a single organism as distinguished from a group* (Merriam-Webster)
+* *a single, separate organism (animal or plant) distinguished from others of a same kind* (Biology-online.org)
 
-*Generally, OTU for taxonomy on the level of specimen is individual. We face the problem defining what is individual in cities. One may argue, that SA, but as we can see from the example above, it is at least very problematic. If we try to define an individual we’ll find following:*
-* *a single person or thing, especially when compared to the group or set to which they belong (Cambridge Dictionary)*
-* *a single organism capable of independent existence. (Bilogical from Dictionary.com)*
-* *a member of a compound organism or colony. (Biological from Dictionary.com)*
-* *a particular being or thing as distinguished from a class, species, or collection (Merriam-Webster)*
-* *a single organism as distinguished from a group (Merriam-Webster)*
-* *a single, separate organism (animal or plant) distinguished from others of a same kind. (Biology-online.org)*
+Morphological literature used various elements as unit of analysis, from a building REF or plot REF to sanctuary area REF or neighbourhood REF. However, none gives a definite answer on what is the individual, the smallest indivisible meaningful unit from which we could derive a taxonomy of urban form. The fact that settlements can grow from a single building, and are composed of buildings as (one of) fundamental elements (Moudon, 1997) may lead to an idea of building being an individual in the city. Alternatively, the same conclusion could be made about a plot. In such a case, a taxonomy of urban form focusing on classification of built form patterns is not examining the lowest taxa (buildings), but higher ranks. Which means that we have to deal with the mixture problem outlined in section \ref{res_struct}. We should then look at the problem in a similar way as biologists are looking at taxonomy at the level of population (put aside the fact that population in the case of cities still needs to be defined) or species level.
 
-*The fact that settlements can grow from one building, and are composed of buildings as (one of) fundamental elements (Moudon, 1997) leads me to the idea of building being an individual in the city. Therefore, taxonomy of urban form is not examining the lowest taxa (buildings), but higher ranks. It means that we should look at it in a similar way as biologists are looking at taxonomy at the level of population (put aside the fact that population in the case of cities still needs to be defined) or species level (rather than individual level forming species).*
+That moves the problem to a different terminological issue - how do we define a *species* of urban form. Biology knows several way of species definition, one based on the deviation of DNA code, other based on the ability of two individuals to interbreed. However, the definition which could be helpful in urban morphology is a phenetic one - *‌a taxonomic species based on morphologically similar populations located in a definite geographic area and morphologically distinct from other populations assigned to different species REF p.364*. In practice, phenetic species can be defined as "*the smallest cluster that can be recognised upon given criterion as being distinct from other clusters*". Which could be seen as a smallest cluster of buildings or plots, characterised by their form and spatial distribution and configuration, which is morphologically distinct from the other.
 
-*Problem of species definition*
-* *Phenetic species - a taxonomic species based on morphologically similar populations located in a definite geographic area and morphologically distinct from other populations assigned to different species. Such a species is essentially a phenetic one.*
-* *Biological species - groups of actually interbreeding populations which are reproductively isolated from other such groups; a community of cross-fertilising individuals linked together by bonds of mating and isolated reproductively from other species by barriers to mating.*
-	* *All of them are based on potential of interbreeding, a concept which is scientifically non-transferable to cities. The imitation doesn’t seem to be analogical enough.*
-	* *Moreover, those concepts are in practice nonoperational.*
-*The desirable fundamental taxonomic unit for taxonomy at the level of population would seem to be the phenetic species. (Sneath and Sokal, p.365)*
-
-*Phenetic definition can result from two alternatives.*
-*Species is*
-1. *The smallest (most homogenous) cluster that can be recognised upon some given criterion as being distinct from other clusters*
-2. *a phenetic group of a given diversity somewhat below subgenus category, whether or not it contains distinct sub-clusters*
-* ***it indicates the smallest distinct kind***
-*The worker who wishes to employ numerical taxonomic methods at population level will be inclined to use the first alternative (smallest distinct homogenous cluster) when sampling OTU’s to be employed in the study.*
-
-*Isn’t the taxonomical study of urban form actually analogy to taxonomy at population level? Aren’t cities populations of buildings as individuals? Therefore, the OTU for taxonomy of urban form should be the smallest distinct homogenous cluster.*
-
-*So, what should be used as OTU? It’s currently under investigation, but at this moment I propose use of the **smallest distinct physiognomically homogenous cluster (DHC)**. In short, DHC is formed by clustering method based on measurable characteristics.*
-
-*SA's Jacob used are basically DHC's as well, due to their homogeneity.*
-
-###### Taxonomic characters
-*direct link to chapter 3*
-==make link from chapters 7 and 8==
-
-*as shown in the previous chapter, there is a wide range of potential for morphometric characters*
-*their nature is different, but the essence is the same*
-*the key homologous characters need to be found etc.*
-
-###### Taxonomic resemblance and structure
-*==pick methods from literature ch2==*
-
-*determination of resemblance have been done before, even in the structural way (dibble, Serra)*
-*none very methodological and widely applicable though, all have some issues.*
-
+==link to chapter 5==
 
 ### Critical assessment of preceding work
+This work, as mentioned above, is a direct continuation of the previous research at Urban Design Studies Unit published as @dibble2017. The authors attempted to bridge urban morphology and numerical taxonomy, which means that they also provided conceptual analogy of crucial concepts and notably OTU.
 
-*Proposed further research*
-- case study expansion
-	- he wanted more SA's I argue that it needs to be able to analyse whole fabric
-- metrics expansion
-	- completely agree
-- challenging SA
+Following section will examine several aspects of preceding work and argue why some of the previous decisions need to be reevaluated.
 
 #### Sanctuary area as OTU
-*non-homogeneity of SA*
-*Why Sanctuary Area is not OTU?*
+As an OTU, @dibble2017 uses Sanctuary area (SA), defined as the portion of the urban tissue enclosed by main streets [@mehaffy2010]. However, such a decision comes with an inherent issue of potential internal heterogeneity. The SAs used in previous research were ideal cases, but cities are not composed on ideal cases only. The classification model should recognise what are cities composed of, which patterns and urban forms and systematise them. Which means that OTU needs to reflect such individual patterns, while a concept of SA applied to the whole city comes with a large portion of SAs which are internally heterogenous - composed of multiple patterns. In that case, results of classification would not reflect the true patterns of urban form but the way they coincide with each other. 
 
-*The existing approach of using Sanctuary Areas as an OTU is not viable. The SAs used in previous research were ideal cases, but cities are not composed on these ideal cases. The principal task of the systematics should be to recognise what are cities composed of, different characters, different urban forms. In the case of non-homogenous SA, which is substantial portion of SAs, the results would be misleading. The widely accepted fundamental elements of urban form are plots, block, streets (+ open spaces). Then why should we pretend that there is nothing below the level of SA?*
+Consider an illustrate example below, of a small town in Czechia. The whole fabric of the town is composed of few SAs. The working hypothesis @dibble2017 use is that it is composed of several classes of urban patterns as shown on figure \ref{fig:mile_tissue}\footnote{The identification of homogenous areas is purely perceptional, based on the personal knowledge of the place and visual interpretation of build form patterns. The map is for an illustrative purpose only.}.
 
-*Look at the example below. It’s a case of small town composed of few SAs. Thy hypothesis is, that it’s composed of several classes, as shown on figure below (the identification is currently purely perceptional, non-objective, but at the same time I’d say valid). In case of using SAs as an OTU, the distinction between different urban forms within this town would be impossible as these SAs are far from homogeneity. The problem with SAs is that their definition and identification is phylogenic process, its based on the process of development of settlement. The rest of the process is, however, the systematisation is based on purely phenetic attributes.*
+![Illustration of homogenous patterns of urban form in a town Milevsko, Czechia. The optimal goal of taxonomy would be to classify patterns as these.](source/figures/ch4/milevsko-02.png "Illustration of homogenous patterns of urban form in a town Milevsko, Czechia."){#fig:mile_tissue width=75%}
 
-*Therefore, I argue that Sanctuary Area doesn’t fit into the definition of an OTU ( [Taxonomic Evidence](evernote:///view/4164843/s38/cff90452-ea48-4c15-8f69-9a3d92fa274d/cff90452-ea48-4c15-8f69-9a3d92fa274d/) ), because an OTU is not taxa on any level of systematisation, and shouldn’t be used for general analysis outside safe selection of the best examples. In some cases, however, SA can be used as a validation of different method.*
+In case of using SAs as an OTU, the distinction between different urban patterns within this town would be impossible as these SAs are far from homogenous (figure \ref{fig:mile_sass}). The problem with SAs is that their definition and identification is essentially a phylogenic approach, it is based on the process of development of settlement. The rest of the classification is, however, a systematisation based on purely phenetic attributes. Therefore, I argue that Sanctuary Area does not fit into the definition of an OTU, because an SA is not taxa on any level of systematisation, and shouldn’t be used for general analysis outside safe selection of the best examples (like in the case of @dibble2017). 
 
-*Use of SA as OTU assumes that whole cities are in fact ideal according to ‘Emergent Neighbourhood Model’ (Mehaffy et al). Even the authors states that they are not (e.g. the three pathologies). While the concept of SA in this model perfectly works, in case of taxonomy it doesn’t.*
+![Illustration of sanctuary areas in a town Milevsko, Czechia. It is clear that SAs are composed of multiple heterogenous patterns and do not function as a unit of urban form which would be sensible to use as as OTU.](source/figures/ch4/milevsko-01.png "Illustration of sanctuary areas in a town Milevsko, Czechia."){#fig:mile_sass width=75%}
+
+Use of SA as OTU assumes that whole cities are in fact ideal according to ‘Emergent Neighbourhood Model’ [@mehaffy2010]. Even the authors states that they are not (e.g. the three pathologies). While the concept of SA in this model perfectly works, in case of taxonomy it does not.
+
+==switch images==
 
 #### Selection of taxonomic characters
-*collinearity of characters*
+While selecting morphometric characters used for classification, one should avoid empirical correlation of resulting values. That means the we should not include two or more characters capturing conceptually the same aspect of an OTU as such concept would be overrepresented in the set of characters and skew the result of cluster analysis (see section 7XX for detailed discussion). In the case of @dibble2017, the assessment of collinearity is missing and it is likely that there are characters which are collinear. The first indication is theoretical assessment of all characters, but the clear indication is their cost-benefit analysis (CBA). CBA results show that with only 9 variables out of 207, the classification model reached more than 90% accuracy. Such radical reduction of dimensionality would not be possible if the initial set of characters avoided correlated ones.
 
-*There is no assessment of collinearity of characters.*
+Therefore, the whole set of characters used within numerical taxonomy needs to be revised.
 
-#### Limitation of the model
-*missing some aspects*
-*hierarchical model of urban form based on SA is ignoring some aspects of urban form and hence could not be seen as comprehensive by default.*
+## Summary
+The chapter 2 provides an overview of models of classification of urban form, methodologically limiting it to quantitative approaches. The chapter 3 focuses on one specific method of classification - numerical taxonomy. The method which is well established in other field of research, notably biology where it originates, and which has undoubtedly potential to provide useful insights into urban morphology. 
 
+Numerical taxonomy is a purely quantitative classification based on morphometric assessment of taxonomic units. Morphometrics itself is present in urban morphology in recent years, although often not explicitly, but under the umbrella of quantitative urban morphology. The current expansion of data availability and enhancements in computational tools and environments allow us to generate rich morphometric description of urban form as is shown in detail in the next chapter. Principles of numerical taxonomy are slowly finding its way to urban morphology as well, but still lacking methodological comprehensiveness.
 
-### Unresolved questions
-- OTU
-*we do not know what the optimal OTU should be*
-*define key characteristics of such optimal OTU*
+The potential of morphometrics and numerical taxonomy in urban context is high as @dibble2017 previously shown. However, the transfer of the method from biology and other fields is not yet optimal as the previously proposed method was of an exploratory nature, which limits its further applicability.
 
-- model
-*we do not have comprehensive model of urban form*
-*define key characteristics of such a model*
+Numerical taxonomy of urban form therefore requires a detail study of each individual aspect of the method. Urban morphology will have to deal with several interconnected issues. The core issue lies with the identification of OTU, which will most likely be linked with a mixture problem. The OTU of urban form will be a *population* of fundamental elements, which needs to be identified first. Another important aspect which needs to be thoroughly revisited is the selection of morphometric characters used within the study to avoid collinearity issues and ensure complex description of patterns at the same time. The final task will lie in the actual method of numerical taxonomy. There is a variety of options how to derive phenetic relationship between OTUs which only some will be fit for the context of urban morphology.
 
-- characters
-*we do not know what should be measured*
-
-*"There are as yet no criteria for any absolute measure of taxonomic rank. We do not know how to decide whether a family of birds, for example, is equivalent phonetically to a family of insects." For cities, there should be independent taxonomic ranks. Origin of taxa is too different to use same.*
-
-
-## Conclusions
