@@ -1,170 +1,64 @@
 # Introduction
+Some cities grow, some shrink and some disappear. But all of them inevitably change, reflecting the ever-changing human society. We, people, have built our cities to accommodate our needs of shelter and social interaction. However, those needs were different 50 years ago than they are now and very different 500 or 5000 years ago. The historical, geographical and societal differences in our needs are imprinted in every small village, town, and metropolis, leaving distinct patterns of development behind. These changes in the way how we design our cities and how their urban form is materialised can be tracked, studied, and can later influence the environment we create for ourselves today. 
+
+This thesis aims to contribute to the knowledge of urban morphology, the study of human habitat [@moudon1997], by proposing a data-driven method of analysis and classification of urban form able to distinguish the physical imprints of our needs as patterns in built environment.
 
 ## Context of the study
-==title?==
-- *key issues, understand the many strands of concern, and be focused on one particular challenge*
-- *aware of the conventions in their community*
-- *Provide a brief history of the issues to date.*
-- *Situate your particular topic within the broad area of research.*
-- *Note that the field is changing, and more research is required on your topic.*
 
-==story:==
-==1) people are interested in urban patterns,== 
-==2) we are entering the era of data,==
-==3) data-driven pattern analysis==
+There are two different perspective when it comes to the study of patterns of development of cities. One tries to capture them to understand their influence on other aspects of life. The other tries to understand their inner logic and processes of their formation and transformation. Neither of them is new and both are deeply interconnected. 
 
+The study of relation to patterns of urban form is present in wide range of fields. Economists are interested in the effects of density [@ahlfeldt2019], social scientist may look into social mobility [@ewing2016] sustainability [@bramley2009urban] or include aspects of urban morphology into geodemographic classification models [@alexiou2016]. The role of form is widely present in energy consumption research [@ewing2008impact; @banister1997sustainable] or study of biodiversity [@tratalos2007urban; @andersson2014understanding]. The list could go on. What all have in common is an attempt to understand the consequence of planning decisions and hence influence the future shape of cities. What this perspective needs is a complex characterisation of urban form which does not limit it to one or few particular aspects easy to capture. For that it needs tools and methods which are universal enough and relatively easy to use and interpret [@boeing2020]. Urban morphology, an interdisciplinary study of urban form, focus on such characterisation. However, its tools and methods are not always optimal for the changing needs of today's research.
 
-- A) interest in cities and its **urban patterns**
+Urban morphology as a specific field of research was formally established in early 1960s in the works of MRG Conzen [@conzen1960], a geographer, and independently in the work of Saverio Muratori [@muratori1959studi], an architect. The stretch between geography and architecture is typical for urban morphology and forms the core of its interdisciplinarity. Since then the discipline expanded and proposed different approaches [@oliveira2016; @kropf2017], some positioned very far from the original qualitative works focused on processes and longitudinal aspects [@porta2006; @hillier1996; @batty1997; @batty1987]. The delineation of patterns of urban form has been studied from various angles, ranging from land use [@caniggia2001] to historical origin and geographical location [@conzen2004thinking], societal form [@thienel2013stadtewachstum], building regulations [@forster1972court] and architectural layout [@beresford1971back]. In recent years, the attempts are more often including computational geography, data science and purely quantitative description of form [@araldi2019; @berghauserpont2019; @dibble2017; @feliciotti2017; @li2020; @mottelson2020fine; @taubenbock2020; @usui2019]. Such approach, if turned into systematic and comprehensive method, could react to the needs outside the niche of urban morphology as resulting characterisation could have potential to be adopted by other fields seeking to understand the relation of form and other facets of life.
 
-```
-- different perspectives on patterns
-	1. Relations (UF -> other aspects)
-		- alongside with the rising trend in such a research ==LINK to %==
-			- different purposes
-			- energy, walkability, quality of life, health, economy, cost
-			- sustainable development
-				- data-driven decision making
-	2. Classification
-		- classification/typology history
-			- patterns are of interest for long time
-				- Lynch
-				- planning-focus
-				- descriptive-focus
-					- qualitative
-					- data-driven
-				- reflection of the socio-economico-cultural conditions
-		- ==this is the only section which talks about the qualitative stuff==
-```		
+The rise of data-driven approaches is not coincidental. Current era offers more abundant geographic data than any other before [@singleton2019]. Satellite imagery can now bring detailed data on the change of cities at almost real-time in a resolution of 50cm per pixel or less (REF Planet, Maxar). Governments and municipalities are increasingly releasing their mapping products under open licenses (REFS) and OpenStreetMap, the largest crowdsourced mapping project is enhancing its coverage and quality, making it a reliable source of data for morphological analysis (REFS from Boeing 2020). Data science tools to handle large geospatial datasets (REF) are readily available, together with general purpose algorithms helping to make sense of it (REF sklearn et al). The age of *Big Data* might enable to build better geographical models over space and time [@gonzalez2013big], but similarly to geography itself [@singleton2019], urban morphology needs to bring new methodological tools to stay increase its relevancy in digital times. 
+
+The combination of data abundance, new tools and urban morphology has a potential to deliver detailed analysis on unprecedented extent as scalable algorithms with a potential to handle *big data* can in theory analyse metropolitan and larger areas while keeping information on the granular level. 
 
 
-- B) data era
-	- data-driven science
-	- big data
-	- algorithms
-	- AI, ML
-	- current trends
-		- interest in GIS, RS, data
+## Problem statement
 
-- A+B) topic - data-driven description and classification of urban pattern
-	- large scale
-	- algorithmic
-	- objective
-	- comphrehensive
-	- scalable
-	- detailed
+Quantitative (big) data-driven methods are new in urban morphology and far from being matured. While network-based approaches like Space Syntax REF or Multiple Centrality Assessment REF have been around for more than ten years, including tools and abundance of publications, their scope is still limited. Recent additions building on the previous theories as Multiple Fabric Assessment REF or street, plot and building types by @berghauserpont2019a are trying to change the situation and expand existing scope, but there is still a long way towards comprehensiveness able to capture the complexity of urban form.
+
+In particular, a focus on delineation of homogenous patterns of development is relatively scarce. Published literature offers a small number of methods which are data-driven and able to work on large scale. If there are such methods, they are limited either in terms of classification detail (e.g. taubenbock) or granularity (e.g. jochem). Furthermore, although based on a large sample of features, methods are often based on a small number of variables, limiting the ability of the method to deal with (variable) selection bias and complex nature of urban patterns. Method which would delineate homogenous areas, systematically classify them and determine the relationship between different types are rare and lack some of the other aspects mentioned above.
+
+Classification of urban form patterns into meaningful, data-driven types is in its infancy. Literature either classify features into predefined types (REF), determine relations between cases (Serra, Dibble) or identify areas without further interaction (Araldi) between them. The key aspect which should be studied but it is not to date are relations between automatically recognised urban patterns capturing their similarity, dissimilarity and potentially even phylogenic affinity.
 
 
+## Aim and scope
+This thesis aims to propose a method of derivation of data-driven taxonomy of urban form patterns. Taxonomy is a specific type of classification which is built based on quantitative characterisation of samples, reflecting the relationship between all of them (see chapter 3 for details). Furthermore, the method should be able to delineate homogenous urban patterns used as samples in the classification in an unsupervised manner, without a-priori specification of types to minimise the potential bias built in the types definition. Optimally, the resulting method will overcome some of the limitations of previous research and provide comprehensive description of urban form which will inclusively cover the whole urban fabric instead of predefined case samples. 
 
-## statement of the problem / motivation for the study
-==title?==
-- *motivate further interest in the area*
-- *your research is nearly always an attempt to find a solution to a problem that you have identified*
-- *the driving force behind your research*
-- *make it relevant, definitive, and free of ambiguities*
-- *no review of literature or theory here (he did review it later in his thesis), merely a clear statement that here was a large problem that was worth putting some effort into*
-- *It acts as the precursor to the research aim*
--  *In summary, a ‘Statement of the Problem’ or ‘Motivation for the Study’ generally contains four parts:*
-	-  *A brief history of the issue at hand (‘Since the early 1950s, there has been ...’).*
-	-  *A recent increase of the issue (‘Recently, however, an increase in the ...’).*
-	-  *Dissatisfaction with current knowledge (‘To date, however, the lack of ...’).*
-	-  *An identification of specific set of factors (‘In particular, a focus on ...’).*
--  *Identify a key point of concern*
--  *Refer to the literature only to the extent needed to demonstrate why your project is worth doing. Reserve your full review of existing theory or practice for later chapters.*
--  *Be sure that the motivation, or problem, suggests a need for further investigation.*
+The scope of work is limited to quantitative approach enabling large scale analysis, and minimal data input expanding the applicability of results. To reduce data requirement even further, this research is purely form-focused, excluding land use data, points of interest or any other additional data layers normally used in urban analytics. From the perspective of data sources, it is limited to vector representation of urban form as earth observation does not yet offer detailed understanding of morphological elements within raster remotely sensed data.
 
-- algorithmic understanding of form is relatively new
-	- Batty
-	- Space Syntax
-	- MCA
-	- MFA
-	- Remote sensing
-	- all these are great and the filed is rapidly developing
+The aim and scope drive the backgrounds analysis presented in chapter 2, 3 and 4. Explicit research questions and hypothesis (see Chapter 5) are then formulated on the basis of conclusion derived from each of the chapters.
+
+## Significance of the study
+Due to its scope, this research should provide wide applicability. Large number of urban areas around the world are currently covered either by governmental, crowdsources or even private data representing urban form. As the method results in a classification based on numerical profiling of each recognised urban pattern, it could become an input for the studies analysis the effect of urban form to other aspects of life in cities. From a technical perspective, this work is design as a replicable and reproducible research, enabling an easy application by other researchers to other areas.
+
+On a theoretical level, this thesis proposes a comprehensive morphometric description of urban form, including specification of fundamental elements and a framework for their analysis. Furthermore, it revisits the implementation of originally biological concepts of morphometrics and numerical taxonomy in urban morphology, along with specification of classification units.
+
+On a practical level, it provides a methodological foundation for a construction of an expandable hierarchical classification of urban form. Moreover, it comes with bespoke software tools for quantitative analysis of urban form backing the whole research.
+
+## Overview of the study
+The thesis is structured into two major parts, background and core each with three individual chapters. The structure of is graphically represented as a figure \ref{fig:thesis_map}.
+
+Chapter 2 (Existing approaches to classification of urban form), looks into the theory of classification, introduces different methods of its application followed by the theoretical proposal of criteria for an optimal classification model of urban form. Furthermore, it provides an overview of approaches to classification of urban form known in literature to date and assesses each of them against the aforementioned criteria, allowing the identification of a gap within the existing research.
+
+Chapter 3 (Numerical taxonomy) zooms into a detail of one specific classification method - numerical taxonomy. The concept originally developed in biology has been recently introduced into urban morphology. However, as chapter 3 shows, some of the aspects of the existing proposal need to be reevaluated before applying it further. Principles of numerical taxonomy are hence introduced and theoretically transposed onto urban form, specifying the key question which need to be resolved.
+
+Chapter 4 (Urban morphometrics and its terminological inconsistency) dives into the realm of quantitative characterisation of urban form, providing an overview of nearly all potential measurements literature used to date. That requires to deal with the terminological inconsistency and missing framework for nomenclature and categorisation of measurable characters. Therefore chapter 4 proposes a classification and naming schema and applies it across a wide range of characters, enabling the identification of predominant ways of measuring and potential gaps.
+
+The three background chapters are then synthesised in chapter 5 (Research design statement), which builds hypothesis and research question on the gained findings and proposes a framework for reproducibility for the rest of the work. Further, it outlines the selected case studies and generally links background and core chapters.
+
+Chapter 6 (Morphometric elements of urban form), the first of the core chapters, provides the basis for morphometric assessment by proposing its fundamental elements, ways of their aggregation and a coherent relational framework binding all together. The chapter builds on fundamental elements of urban form known from literature, but proposes the implementation of morphological tessellation as a basic spatial unit instead of traditionally used plots. The ability of tessellation to reflect similar phenomena as plot is then empirically tested together with the various models of location-based aggregation aiming to capture contextual information.
+
+Chapter 7 (Identification of tissue types through urban morphometrics) uses the foundation proposed in chapter 6 and the databased on measurable characters from chapter 4 to develop a comprehensive morphometric characterisation of urban form on the level of individual building. The resulting hyper-dimensional description is used as an input of cluster analysis able to identify distinct types of urban tissues within unrestricted urban fabric within a case study of Prague, CZ.
+
+Chapter 8 (Taxonomic relationships of urban tissues) proposes the final methodological step resulting in hierarchical classification (i.e. taxonomy) of types of urban tissues delineated in previous chapter. The whole method is then validated using additional variables reflecting historical origin, land use and qualitative classification of urban form. Furthermore, the transferability of the whole method is tested on another case study (Amsterdam, NL) and both cases are then combined together to the potential of extensibility of proposed numerical taxonomy of urban form.
+
+Final chapter 9 (Synthesis) synthesises the whole research, discuss its character, potential application, limits and directions of further research.
+
+![Structure of the thesis and allocation of chapters into parts.](source/figures/ch1/scheme.pdf "Structure of the thesis and allocation of chapters into parts."){#fig:thesis_map width=90%}
 
 
-- recently, tools and data are more available as is the focus on cities
 
-- the algorithmic understanding of form is still in its infancy
-	- vague description
-		- vague classification
-		- arbitrary selection of descriptors for relationship analyses, 
-	- while there is space syntax and other (MCA, MFA, Chalmers), it is still a start
-	- none tackles the complexity of form
-	- it does not offer classification of patterns. The most they do is the detection of different ones ==check with ch2==
-	- no relations between types
-	- or just a bits and pieces here and there
-		- either classification into types
-		- or relations between types
-		- or otherwise limited (Dibble)
-	- mostly, **relations** are missing and not thoroughly identified and studied
-	
-- in particular focus on identification or urban patterns and their classification (taxonomy)
-	- data-driven
-	- ML
-	- comprehensive
-
-## aim and scope
-==title?==
-- *aim*
-	- *follow as a logical consequence of the problem statement*
-	- *You must identify only one aim*
-	- *The conclusions in your last chapter must respond to this aim*
-	- *make sure research questions are clear in the statement of your aim*
-- *scope*
-	- *set out limits*
-	- *a focused, high-impact study*
-	- *identifying limitations of factors such as time, location, resources, or the established boundaries of particular fields or theories.*
-
-*aim*
-- a **method** of derivation of data-driven taxonomy of urban form patterns
-	- taxonomy is a specific kind of classification which (relations)
-	- *==I am providing a method of doing taxonomy, not the taxonomy itself==*
-
-*scope*
-- minimal data input
-- purely quantitative
-- purely form-focused 
-	- excluding land use, POIs and any other data
-- comprehensive, inclusive
-- reproducible & replicable
-- urban morphometrics
-- vector data
-
-## significance of the study
-==title?==
-
-- *scope is linked to the significance*
-- *equate it with potential impact*
-- *theoretical level*
-- *practical level*
-- *Explain how your thesis contributes to the field.*
-- *There are four main areas of contribution: theory development, tangible solution, **innovative methods**, and policy extension. One of these contributions must be identified as the basis of your primary contribution to the field.*
-
-- wide applicability
-- primary research backing up further studies related to urban form
-	- ==LINK to %==
-- replicable method
-
-- on theoretical level
-	- develop umm description of form, relational model, units (tissue as OTU)
-- on practical level
-	- develop a method of classification
-
-## Overview of the Study
-==title?==
-
-- *follow on logically from your statement of the aim*
-- *an annotated version of the table of contents*
-- *a synopsis of the storyline*
-- *Sketch out how the thesis is structured. Don’t confine yourself to a list of the chapters, but show how they are linked and that one section logically leads to another.*
-- *Check whether the reader can see from this sketch how the aim will be achieved.*
-
-- understand existing classification attempts
-- understand quantitative description of form
-- understand taxonomy
-- specify hypothesis and method
-- define structural elements and theory of description of form
-- define a method of identification of patterns
-- define taxonomy of patterns
-- discuss, conclude
-
-==add a map of the work here==

@@ -1,12 +1,11 @@
-# Propositions
+\setcounter{chapter}{4}
+
+# Research design statement
+The following chapter bridges three previous background chapters and three following core chapters. It provides a partial research design, formulating hypothesis and research questions and introduces case studies and general approach to the research driven by reproducibility of the whole study.
+
+In the first section, this chapter summarises the core findings from background chapters (2, 3, 4) and uses them to formulate hypothesis, main research question and supplementary research questions provided in the second section. The third section introduces the principle of reproducibility into technical aspects of the work and provides an overview of an open-source software package design for morphometric research. Fourth section presents three case studies used within the remaining chapters of the work and the last section outlines the contents of the three core chapters 6, 7 and 8 coming immediately after.
 
 ## Synthesis of background chapters
-*Draw on the conclusions of the background chapters to identify your research hypotheses or research questions.*
-
-*Understand where your work lies on the dimensions that are appropriate to your discipline: theoretical or applied, study or case study, and so on. Use this understanding to inform your explanation of your intended contribution.*
-
-*Positioning requires justification. For example, if you decide on a case-study approach, explain why, and justify your choice of specific case to study; if a long description of the case is needed, note that you will do this in a separate following chapter.*
-
 The goal of chapters 2, 3 and 4 was to provide a necessary theoretical, conceptual and methodological background for the work proposed within this study. It is clear that the field of urban morphometrics is advancing in recent years in a fast pace. However, as shown in each of the chapters, there are still clear and wide gaps to fill.
 
 Existing literature, as shown in the chapter 2, offers a various methods for classification of urban form. While approaches vary from simple duality *organised-unorganised* form based on remotely sensed data () to comprehensive small scale studies based on detailed manual digitisation of  urban form elements [@dibble2017], none of them is ideal. The optimal classification model, which consists of 7 principles (see section XXX) is not fully reflected in any of the existing proposals.
@@ -66,97 +65,53 @@ The final SRQ focus on the final aspect of creation of a numerical taxonomy, the
 
 The method of numerical taxonomy in the context of urban form and related answers to the last question are part of the chapter 8.
 
-## Methodological propositions
-- *describe method and say why this particular method*
-- *Discuss the range of research methods that could be used to test your hypotheses or answer your questions, and choose the most appropriate. Don’t forget to justify your choice, even if it is standard for your discipline.*
-- *Experimental validation requires an experimental design. Expect to have to explain it in detail, and also to justify it. Make appropriate choices of measurement or assessment mechanisms.*
-- *link to the scope*
+## momepy: Urban Morphology Measuring Toolkit
+> *The content of this section was partially published in @fleischmann2019a.*
 
-*If you have not already described your detailed research procedure in the ‘Research Design’ chapter you should describe it first before you go on to report any research results.*
+==link [@boeing2020] here==
 
-*building a case that your new approach solves problems that previous approaches neglected.*
+Urban morphology is based on the analysis of space, traditionally mostly visual and qualitative [@dibble2015]; its objects are the fundamental elements of urban form (building, plot, street) [@moudon1997] as well as a range of analytical constructs such as axial maps [@ariza-villaverde2013] or proximity bands [@araldi2019]. The increased availability of morphological data and computational power have led in time to more emphasis on quantitative forms of analysis, and the emergence of urban morphometrics [@dibble2017]. Since morphometric analysis is addressed both in-depth and at large scale, it is grounded on the intensive use of GIS software (proprietary ArcGIS, MapInfo, open-source QGIS) either through built-in processing tools or specific plugins like Urban Network Analysis [@sevtsuk2012] or Place Syntax Tool [@stahle2005]. However, essential functions to conduct measurements of specific urban morphometric characters or tools to generate required geometry as axial maps or proximity bands are not always available: current plugins offer only a limited number of functionalities as they are mainly application or case-specific. 
 
-*top level to reflect the questions above and chapter-level*
+This thesis is hereby proposing ``momepy``, a Python toolkit which aims to overcome such limitations by enabling a systematic in-depth analysis of urban form, to comprehensively include a wide range of measurable characters, with a prospect of expanding future development due to its open-source nature and independence on proprietary software or operating systems. The development of momepy is timely, as the role of measurable characters is vital to recognise form-based patterns and establish descriptive and analytical frameworks of human settlements, in the “age of urbanisation”.
 
-### Assessment of morphometric elements
+Momepy holds all morphometric algorithms used within this thesis (and some more) to simplify adoption of urban morphometrics and allow easy reproducibility of the whole work presented in this study. Furthermore, ``momepy`` is designed to be more flexible than other toolkits as its functions are generally not restricted to specific morphological elements but to geometry types only and as such, can be used in various analytical models. 
 
-*fundamental elements, aggregations, models*
-- understand fundamental elements for morphometric assessment ==link to scope==
-	- exploration of morphological tessellation
-- understand methods of their aggregation to larger spatial units
-- understand models of capturing relations between elements and their aggregations
-*leading to the relational model and tissue as OTU*
-- define the model of capturing the relationship between elements and their aggregations 
-- define the role of urban tissue in relation to the model
+The six core modules of ``momepy``, represent six categories of urban morphometric characters: ``dimension``, ``shape``, spatial `distribution``, ``intensity``, connectivity (``graph`` module), and ``diversity`` identified in the literature and ongoing research. These six modules together provide a wide range of algorithms measuring different aspects of urban form and are able to describe its complexity with a significant degree of precision. Each of the characters tested or used in chapters 6 and 7 is included in the respective module. Additional modules help with generation of necessary morphometric elements, preprocessing of input data and other utilities.
 
-### OTU
-- Urban tissue is an optimal OTU
-- ==Hypothesis *Urban tissues can be recognised by empirical measuring of the physical structure of urban fabric in a form of homogenous clusters.*==
-- Urban tissue is a contiguous area of a single tissue type, i.e. a single cluster
+Internally, ``momepy`` is built on the GeoPandas Python package [@kelsey_jordahl_2020_3946761], using its GeoSeries and GeoDataFrame objects to store and handle large amounts of geospatial information. Under the hood uses PySAL [@doi:10.1080/17421772.2019.1593495; @rey2007], mostly taking care of spatial weights matrices capturing the adjacency of elements of urban form. The graph module uses the capabilities of networkX [@hagberg2008] for the analysis of urban street networks. Basic Python knowledge is required to use ``momepy``, but exemplar Jupyter notebooks should provide enough information to allow using momepy with a standard GIS knowledge only. 
 
-_Refer back to chapter 2 and discuss the reason why tissue is optimal_
-- _it reflects unconstrained morphological unit_
-- _tissue as OTU (link to Ch4 and Ch5)_ ==after ch4 is done==
-- _morphological regionalizaition (Oliveira)_
-- _heavily refer to literature which sees tissue as unit as well. Why SA is not a unit is in chapter 4_
+The version 0.1. of the package was released in November 2019. Current version 0.3 (as of November 2020) was released in July 2020 and the software is being picked up by the research community [@mottelson2020fine] ==REF Dupont==. Thanks to the Journal of Open Source Software, the whole package is now peer-reviewed.
 
-### Identification of OTU in urban fabric
+The reproducibility and replicability of research is a critical asset which should be ever present especially in the data-driven studies as this one. Momepy is seen as a fundamental component of the significance of this work as it enables further research and minimises barriers to urban morphometrics.
 
-*selection and definition of morphometric characters*
-- definition of selection criteria
-- primary and contextual characters
-- selection of primary characters
-- selection of contextual characters
-*identification of OTU using cluster analysis*
-- clustering method (==justify selection==)
-	- ==move from ch7?==
+The software and its documentation are publicly available on GitHub and docs.momepy.org.
 
-### Estimating taxonomic relationships
-
-*Ward's hierarchical clustering*
-- clustering method
-
-### Validation
-*Validation theory*
-- if it relates to data and works elsewhere and can be expanded
-*validation method*
-- relation to data
-- transferability
-- expandability
-- *if A & B & C, then valid*
-
-### momepy: Urban Morphology Measuring Toolkit
-reproducibility, scalability, openness
-Need for tools
-==link functions and classes to each relevant stage==
-==link Jupyter notebooks to each relevant stage==
-
-### Case studies
+## Case studies
 *for a case study, you need to persuade the reader that the subject is representative of a broader population.*
 
-Prague
-- brief description
+The following chapters will present the work done on the three case studies - Prague, CZ, Amsterdam, NL and Zurich, CH.
 
-Amsterdam
-- brief description
+The research focus of this work requires morphological richness in its case studies, which should capture various situations and assess the versatility of the proposed method. The second requirement is the availability of data representing selected morphometric elements in a consistent quality and level of detail. Furthermore, it is advantageous if the researcher knows the place or has the ability to do a study visit to verify findings and interpretation on the ground.
 
-Zurich
-- used for a specific task (mostly due to publishing as an independent paper)
-- brief description (take from ch6)
+The core case study, used throughout the following chapters is Prague. Prague was selected as a case for its morphological richness of multiple historical layers. It was only mildly affected by bombing during the WW2, leaving the large part of the medieval core intact. Furthermore, during the era of communism between 1948 and 1989, the city built its modernist belt, offering, together with the other areas, wide scope of urban patterns within relatively compact extent. The study area is limited by the administrative boundary of the city (figure \ref{fig:prague_area}), but still extends the built-up area of the city by a large margin. That ensures the minimisation of the edge effect [@gil2016] which could otherwise adversely affect the actual morphometric values. The data used within this study were provided by Prague’s Institute for Planning and Development (www.geoportalpraha.cz) and further preprocessed using bespoke algorithms.
+
+![Prague case study area, which matches the administrative boundaries. Data source © IPR Praha, CC BY-SA 4.0](source/figures/ch7/PRG_admin_boundary.png "Prague case study area"){#fig:prague_area width=70%}
+
+The second case study to which Prague will be compared in chapter 8 is Amsterdam. Both cities share some of the characteristics as both have (relatively) preserved medieval cores and a range of patterns of development spanning through historical periods. However, Amsterdam's planning context is very different. Prague is historically mercantile city on the river, which was never fully exploited by industry. On the other hand, Amsterdam is a port city with a high presence of port-related industry. It's historical centre is interlaced with artificial canals bringing different spatial order. Furthermore, the development of the second half of the 20^th^ century and the beginning of 21^st^ followed different planning paradigms that the one in Prague. The study area could not be limited to administrative boundary as that does not reflect morphology of a city. Instead, contiguous built-up land is used to avoid cutting through urban fabric (figure \ref{fig:ams_area}).The data are obtained from @dukai and Basisregistratie Grootschalige Topografie, BGT (http://data.nlextract.nl/). Road network was further preprocessed to eliminate dual carriageways, roundabouts and similar transport-focused features following the procedure proposed in @krenz2018.
+
+![Amsterdam case study area, which follows continuous built-up area. Data source © BGT](source/figures/ch5/AMS_case_boundary.png "Amsterdam case study area"){#fig:ams_area width=70%}
+
+For a one specific step requiring cadastral layer, Zurich, CH is used as a case study. The relevant section of the chapter 6 has been published as an independent research paper [@fleischmann2020] prior specification of Prague and Amsterdam as case studies for numerical taxonomy. As a boundary is administrative area of Zurich (figure \ref{fig:zurich_area}). This was chosen for its historically characterised and heterogeneous urban fabric as well as for the availability of the ‘_Amtliche Vermessung_’ dataset, a freely-accessible resource containing high-quality information on cadastral plots and building footprints.
+
+![Zurich case study area, which matches the administrative boundaries. Data source © Kanton Zürich, CC BY-SA 4.0](source/figures/ch5/ZUR_case_boundary.png "Zurich case study area"){#fig:zurich_area width=70%}
 
 ## Outline of the second part
-- ch6
-- ch7
-- ch8
-- ch9
+The second part of the thesis is formed of three core chapters, followed by a synthesis.
 
-———
+Chapter 6 studies morphometric elements of urban form. It provides an overview of fundamental ones and method of their aggregation, both area-based and location-based. In discusses in detail the issue of the smallest spatial unit, leading to the proposal and later test of morphological tessellation, Voronoi-based partitioning of space, as a basic unit instead of commonly used plot. The topological aggregation capability of tessellation is further tested in comparison to conventionally used methods. Furthermore, chapter 6 proposes urban tissue as an operational taxonomic unit for numerical taxonomy and defines relational framework of urban form which will be later used for the morphometric characterisation of both main case studies.
 
+Chapter 7 builds on the proposals and empirical tests presented in the previous chapter and presents a selection of morphometric characters of two kinds - primary and contextual. A complex quantitative description of urban form patterns linked to the level of individual buildings is then used as an input for cluster analysis identifying urban tissue types in urban fabric in a form of homogenous clusters.
 
-*These components together form a hypothesis*
+Chapter 8, the last core chapter then proposes a method of composition of numerical taxonomy based on urban tissue types identified in the chapter 7. Furthermore, it extensively validates the whole method using additional data layers (historical origin, land use, municipal typology) and additional case study (Amsterdam). The final part of the chapter assessed the extensibility of a taxonomy allowing further expansion of the database, eventually leading to the atlas of urban form.
 
-*Design a narrative flow that takes the reader painlessly through the central part of your thesis—the part that consists of the new ideas that you are arguing for (and is thus the most unfamiliar).*
-
-*Ensure that at all stages you have a clear understanding of the argument you*
-*intend to use for linking of question, data, analysis, and outcome.*
-
+The final chapter 9 synthesises the whole research, discusses the implications, limits and potential application of the proposed method, outlines potential further research and concludes the thesis.
