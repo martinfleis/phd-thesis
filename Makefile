@@ -252,4 +252,36 @@ glossary:
 	--pdf-engine=xelatex \
 	--verbose
 
+appendix4:
+	pandoc "$(INPUTDIR)"/18*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/appendix4.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+appendix6:
+	pandoc "$(INPUTDIR)"/19*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/appendix6.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 .PHONY: help pdf docx html tex chapter7 chapter8

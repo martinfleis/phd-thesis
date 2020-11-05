@@ -84,7 +84,7 @@ The version 0.1. of the package was released in November 2019. Current version 0
 
 The reproducibility and replicability of research is a critical asset which should be ever present especially in the data-driven studies as this one. Momepy is seen as a fundamental component of the significance of this work as it enables further research and minimises barriers to urban morphometrics.
 
-The software and its documentation are publicly available on GitHub and docs.momepy.org.
+The software and its documentation are publicly available on GitHub and docs.momepy.org. Documentation is attached as an Annexe 1.
 
 ## Case studies
 *for a case study, you need to persuade the reader that the subject is representative of a broader population.*

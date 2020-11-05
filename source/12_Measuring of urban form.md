@@ -207,8 +207,8 @@ measurable urban form characters, showing: definition of each category;
 name/definition of characters according to the Index of Elements
 approach; urban form character's position according to category and
 scale. The complete version of the Table, including all 361 urban form
-characters identified at this stage of our research, is provided as
-an Appendix XXX.} \label{tab:uf_chars} \\
+characters identified at this stage of the research, is provided as
+an Appendix 4.1.} \label{tab:uf_chars} \\
 
 \toprule
 category & definition & Index & & Element & grain & extent & reference\tabularnewline

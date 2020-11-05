@@ -262,7 +262,7 @@ Further reading of the branching shows the bifurcation dividing medieval city fr
 
 ![Spatial distribution of clusters within a branch representing high density, organised development with a fringe-like disorder in their patterns.](source/figures/ch8/PRG_hierarchical_branch_1.png "Spatial distribution of clusters within a branch representing high density, organised development with a fringe-like disorder in their patterns."){#fig:PRG_hierarchical_branch_1 width=100%}
 
-This basic description of branching shows that the top-level structure of the taxonomy reflects the spatial logic of the structure of Prague to a high degree of interpretability. As the key aim of this study is not to provide deep insight into Prague's structure but to develop the method itself, this section does not go into a further details. However, Tthe rest of the maps of individual branches is available as an ==Appendix XXX.== 
+This basic description of branching shows that the top-level structure of the taxonomy reflects the spatial logic of the structure of Prague to a high degree of interpretability. As the key aim of this study is not to provide deep insight into Prague's structure but to develop the method itself, this section does not go into a further details. However, Tthe rest of the maps of individual branches is available as an ==Appendix 8.1.== 
 
 \newpage
 
@@ -311,7 +311,7 @@ Looking at the composition of each cluster extracted from the contingency table 
 
 ![Illustration of composition of selected representative clusters from the perspective of historical origin.](source/figures/ch8/PRG_cluster_origin_subplot.pdf "Illustration of composition of selected representative clusters from the perspective of historical origin."){#fig:PRG_cluster_origin_subplot width=100%}
 
-Branches fo the local taxonomy show similar relation (where is feasible to expect one), especially regarding the overall tendency of significant changes of development patterns after the Second World War (figure XXX). However it is important to note that unlike other European cities, Prague was not significantly damaged during the War and the difference then cannot be interpreted as post-war regeneration and redevelopment. Complete data are in the table above and the rest of graphs showing the distributions is available as an Appendix XXX.
+Branches fo the local taxonomy show similar relation (where is feasible to expect one), especially regarding the overall tendency of significant changes of development patterns after the Second World War (figure XXX). However it is important to note that unlike other European cities, Prague was not significantly damaged during the War and the difference then cannot be interpreted as post-war regeneration and redevelopment. Complete data are in the table above.
 
 ![Illustration of composition of selected representative branches from the perspective of historical origin.](source/figures/ch8/PRG_branch_origin_subplot.pdf "Illustration of composition of selected representative branches from the perspective of historical origin."){#fig:PRG_branch_origin_subplot width=100%}
 
@@ -442,7 +442,7 @@ Even though the method is now validated in the context of Prague, it is unclear 
 
 Amsterdam dataset tests not only the transferability of the method, but also its scalability. The number of buildings on the input of clustering is 252,385 compared to 140,315 buildings in Prague. 
 
-The results of primary and contextual characters are not presented in the main body of the text and their distributions are available as Appendix XXX. The complete data are available in the data repository REF. Since the method is following the steps defined in sections 7XXX and 8XXX, results report the selection of optimal number of components, results of clustering and hierarchical classification.
+The results of primary and contextual characters are not presented in the main body of the text and their distributions are available as Appendix 8.2. The complete data are available in the data repository REF. Since the method is following the steps defined in sections 7XXX and 8XXX, results report the selection of optimal number of components, results of clustering and hierarchical classification.
 
 ##### Clusters
 Bayesian Information Criterion shows different curve than we have seen in Prague case as it does not culminate to indicate the optimum. That is a situation which may happen with BIC and indicates overfitting of the model, which BIC is unable to correct.

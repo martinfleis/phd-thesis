@@ -4,7 +4,7 @@
 
 ==ensure that terminology is precise and fixed==
 	==use "systematic" in titles==
-	==add a but of intro and reiterate motivation==
+	==add a bit of intro and reiterate motivation==
   ==restate reasons why we go for quantitative only==
   ==point out issues specifically - issue 1, issue 2==
 	  ==resolve some issue in thesis and get back to other in discussion== 
@@ -34,7 +34,7 @@ Before we can talk about classification, it is necessary to declutter and define
 
 While first two coincide with the definition offered by @bailey1994, the last adds one more option - a class. To minimise the confusion, this research will refer to classification as process and end result, following Bailey's approach, always trying to specify which meaning is used. The last definition offered by OED will not be used within this research.
 
-Classification systems vary and can be systematised based on the different aspects of the resulting structure and on the method used in the process. The first distinction can be done based on the number of dimensions to *unidimensional* and *multidimensional*. Dimensions can be both numerical and categorical variables, where unidimensional numerical classification is also known as *binning* REF. The scope of this work is in multidimensional classification as single dimension does not have the explanatory power to describe the complexity of urban form.
+Classification systems vary and can be systematised based on the different aspects of the resulting structure and on the method used in the process. The first distinction can be done based on the number of dimensions to *unidimensional* and *multidimensional*. Dimensions can be both numerical and categorical variables, where unidimensional numerical classification is also known as *binning*. The scope of this work is in multidimensional classification as single dimension does not have the explanatory power to describe the complexity of urban form.
 
 Looking at the structure of the classification results, we can talk about *flat* and *hierarchical* models. Flat models generally define all classes as equal and do not specify the relationship between them, either because it could not be specified or because the model does not focus on such aspect. And example is general land use classification, which is flat in the nature (residential use, commercial, industrial etc.) and relationship between different classes is conceptually complicated to define. Hierarchical models specify, either numerically or conceptually, relationship between different classes and hence offer certain level of flexibility of classification as their structure can be interpreted on multiple levels of resolution. That allows division of elements into two macro classes or multiple micro classes within the same system. Typical example is biological taxonomy of species, where different levels of resolution are represented by domains, kingdoms, families or species. Typical hierarchical classification is, compared to flat models, computationally or conceptually more challenging, but the flexibility which it brings (where applicable) is usually valuable. 
 

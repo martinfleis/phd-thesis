@@ -7,7 +7,7 @@
 \renewcommand{\listfigurename}{}
 
 \pagenumbering{roman}
-\setcounter{page}{3}
+\setcounter{page}{4}
 
 \listoffigures
 
