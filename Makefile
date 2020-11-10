@@ -228,6 +228,22 @@ chapter8:
 	--pdf-engine=xelatex \
 	--verbose
 
+chapter9:
+	pandoc "$(INPUTDIR)"/17*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/chapter9.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 docx7:
 	pandoc "$(INPUTDIR)"/15*.md \
 	-o "$(OUTPUTDIR)/chapter7.docx" \
@@ -272,6 +288,38 @@ appendix6:
 	pandoc "$(INPUTDIR)"/19*.md \
 	--filter pandoc-shortcaption \
 	-o "$(OUTPUTDIR)/appendix6.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+appendix7:
+	pandoc "$(INPUTDIR)"/20*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/appendix7.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+appendixN:
+	pandoc "$(INPUTDIR)"/22*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/appendixN.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
 	--template="$(STYLEDIR)/template.tex" \
 	--bibliography="$(BIBFILE)" 2>pandoc.log \

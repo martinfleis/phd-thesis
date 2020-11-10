@@ -7,6 +7,8 @@
 \pagestyle{plain}
 
 ## A4.1 Table of Urban Form Characters {.unnumbered}
+The full version of the Table 4.2 (see section 4.3.2).
+
 \scriptsize
 \begin{longtable}[]{@{}P{2cm}P{3cm}P{2cm}P{0.7cm}P{0.9cm}P{3.5cm}@{}}
 \caption{Table of Urban Form Characters. A full overview of

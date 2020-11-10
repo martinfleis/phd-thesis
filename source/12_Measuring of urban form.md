@@ -5,8 +5,9 @@
 
 # Urban morphometrics and its terminological inconsistency
 
+==rewrite paper -> thesis==
 
-_link back_
+==_link back_==
 
 
 In the age of urbanisation, urban planning and design still struggle to offer reliable models to address the challenges of the 21st century [@cuthbert2007urban; @romice2020masterplanning], while the discipline’s shift towards an evidence-based approach and a “new science of cities” is still in its infancy [@batty2012, p.S15]. Despite remarkable growth and progress, urban morphology (UM)—the area of urban studies that focuses on cities’ physical form, its patterns of change in time and relations with non-spatial dynamics—is no exception. In particular, two issues still hinder a quantitative approach to the analysis of urban form: first, the availability, quality and consistency of data across geographical regions; second, the discipline’s inherent difficulties to offer a rigorous and consistent definition of urban form, its fundamental components and the relationships between them. This paper offers a contribution towards the resolution of this second problem.

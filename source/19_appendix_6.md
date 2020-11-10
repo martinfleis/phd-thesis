@@ -9,7 +9,7 @@
 
 ## A6.1 Spearman’s rho rank correlation  {.unnumbered}
 
-Additional figures capturing the details of Spearman’s rank correlation on subsets of data.
+Additional figures to figure 6.23 capturing the details of Spearman’s rank correlation on subsets of data (see section 6.4.1.2.1).
 
 ![Spearman’s rho rank correlation between cadastral values and each of the selected buffers of tessellation based on the single-building plots.](source/figures/ch6/spearman_single.pdf "Spearman’s rho rank correlation between cadastral and MT values"){#fig:spearman_s width=80%}
 
@@ -17,7 +17,7 @@ Additional figures capturing the details of Spearman’s rank correlation on sub
 
 ## A6.2 NRMSD  {.unnumbered}
 
-Additional figures capturing the details of NRMSD on subsets of data.
+Additional figures to figure 6.24 capturing the details of NRMSD on subsets of data (see section 6.4.1.2.2).
 
 ![NRMSD of cadastral values and each of the selected buffers of tessellation based on the single-building plots.](source/figures/ch6/nrmsd_single.pdf "NRMSD of cadastral and MT values"){#fig:nrmsd_s width=80%}
 
@@ -25,7 +25,7 @@ Additional figures capturing the details of NRMSD on subsets of data.
 
 ## A6.3 LISA accuracy  {.unnumbered}
 
-Additional figures capturing the details of LISA accuracy on subsets of data.
+Additional figures to figure 6.25 capturing the details of LISA accuracy on subsets of data (see section 6.4.1.2.3).
 
 ![LISA accuracy of cadastral values and each of the selected buffers of tessellation based on the single-building plots.](source/figures/ch6/accu_single.pdf "LISA accuracy of cadastral and MT values"){#fig:accu_s width=80%}
 

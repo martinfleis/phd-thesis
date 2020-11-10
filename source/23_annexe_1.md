@@ -20,19 +20,4 @@ Fleischmann, M., 2019. Momepy: Urban Morphology Measuring Toolkit. *Journal of O
 
 \includepdf[pages=-]{source/figures/annexe/paper_momepy.pdf}
 
-## Conference papers
-
-### The Urban Atlas: Towards a Morphometric Taxonomy of Urban Form
-
-Fleischmann, M., Romice, O. and Porta, S., 2020. The Urban Atlas: Towards a Morphometric Taxonomy of Urban Form, in *XXVII International Seminar on Urban Form Cities in the twenty-fist century*. XXVII International Seminar on Urban Form Cities in the twenty-fist century, Salt Lake City.
-
-\includepdf[pages=-]{source/figures/annexe/isuf20.pdf}
-
-
-### Applicability of morphological tessellation and its topological derivatives in the quantitative analysis of urban form
-
-Fleischmann, M., Romice, O. and Porta, S., 2019. Applicability of morphological tessellation and its topological derivatives in the quantitative analysis of urban form, in *XXVI International Seminar on Urban Form Cities as Assemblages*. XXVI International Seminar on Urban Form Cities as Assemblages, Nicosia.
-
-\includepdf[pages=-]{source/figures/annexe/isuf19.pdf}
-
 

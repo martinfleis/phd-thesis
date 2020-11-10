@@ -1,64 +1,113 @@
-# Synthesis TBD
+\setcounter{chapter}{8}
+\tableofcontents
 
-"The last chapter which is currently only crudely outlined as the major part of the discussion will be based on the data I do not have at this moment (final clustering, taxonomy, extetended case study)."
+# Synthesis
+Where chapter 1 introduced the issue of classification of urban form, chapters 2, 3, and 4 provided background knowledge allowing formulation of hypothesis and research questions in chapter 5 to be answered in chapters 6, 7, and 8, the aim of the final chapter is to put the whole research back into the wider context. Therefore, the following chapter provides necessary reflections and discussion of the value of the thesis and its components, their limitations and potential further research.
 
-## Research outcomes
+## Reflections and discussion
 
-### Reflections
+The background chapter (2, 3, and 4) provided context of specific aspects of urban morphology to date. It is hence only fair to examine where the method proposed in core chapter (6, 7, and 8) sits in relation to all three chapters and the key gaps of knowledge they identify.
 
-#### Placement of the research in the context of chapter 2
+### The research in the context of chapter 2
 
-#### Placement of the research in the context of chapter 3
-+
+Classification can be done in multitude ways as shown in chapter 2. However, a classification which reflects the aim of this thesis should follow seven principles of the *Optima Classification Model* (see section 2.1.2 for details). As shown in Table 2.1, none of the existing models presented in the published literature reflects all seven principles. The method proposed in this research attempts to be the first one which does.
+
+The method, as a combination of cluster analysis delineating urban tissue types and subsequent hierarchical classification deriving a taxonomy, is *exhaustive* as it covers all elements of urban form leaving none unclassified. Due to the high dimensionality of the dataset, classification is *mutually exclusive* - none of the features is member of more than on class at the same time. The method is unsupervised, data-driven, hence purely *empirical*. The final structure of the taxonomy is hierarchical, allowing flexible interpretation following different branches, enabling classification of form from 2 to *N* classes, depending on the requirements of each subsequent study. The data input for cluster analysis has 296 variables, reflecting the spatial distribution of 74 primary morphometric characters, based on relational framework of urban form, which indicates that the method can be considered comprehensive. That in turn minimises the selection bias and attempts to reflect complexity of urban form. At the same time, the classification is done on the level of individual buildings / tessellation cells. That brings high granularity of the result making the method *detailed*. Finally, due to its algorithmic nature and Python backend (see section 5.3 and Annexe 2), the method is *scalable*. While it is currently shown on metropolitan areas composed of up to 250 000 features, the method itself has a potential to scale further up.
+
+There are similarities between the proposed method and some of the existing. The principle of tissue type delineation is similar to @araldi2019, where both methods measure primary characters on selected elements (street segment in the case of @araldi2019), then include contextualisation layer (LISA/ILINCS patterns in the case of @araldi2019) which is used in cluster analysis determining types. Similarly to @dibble2017, @dong2019, @li2020 or @serra2018a, the resulting classification it hierarchical, but there are generally more differences between mentioned works and the current one than similarities, mostly due to the automatic delineation of tissue types used as the OTU. Granularity and extent is similar to 
+@berghauserpont2019a, who, however, do not combine elements into a single classification and generally use only a small number of variables.
+
+### The research in the context of chapter 3
+
+The proposed method adheres to the seven principles of numerical taxonomy outlined in the chapter 3, where applicable to urban morphology. Although some results may indicate the possibility to infer phylogenetic relationship between urban tissue types from the taxonomy, it would be a bold statement at this point. 
+
+The classification of urban form is, in principle, classification on the population level. Where in biology population would reflect a group of individuals belonging to the same species within the same geographical area, population in case of urban form is analogous to urban tissue. Therefore, the whole process is seen as a *mixture problem* (see section 3.1.2.2). The Operational Taxonomic Unit is an urban tissue type, which itself is recognised as a population of fundamental elements of urban form defined by inner morphometric homogeneity. Such an approach limits the effect of MAUP as no predefined artificial aggregation or boundary is in play. Moreover, it allows capturing patterns in different planning contexts, following different structural principles.
+
+### The research in the context of chapter 4
+
+The context of chapter 4 and classification of quantitative studies in urban morphology (section 4.2), this work can be categorised into *comparison* based on purpose, using 296 characters, with the smallest scale of grain (1) and the largest scale of extent (10), occupying the bottom right corner of the figure 4.2, as show on figure \ref{fig:scale_diagram_inc}.
+
+![Classification of Literature with an inclusion of this research (bottom right). Predominantly quantitative studies in urban morphology classified according to grain scale (Y axis), extent scale (X axis), purpose (colour) and number of urban form characters (size). The histograms show a relative balance in terms of scale of grain and a tendency towards large scales of extent. Note: placement of points is jittered to minimise overlaps.](source/figures/ch9/scale_diagram_include.pdf "Classification of Literature with an inclusion of this research"){#fig:scale_diagram_inc width=100%}
+
+Terminologically, the whole research follows *Index of Element* principle in naming of morphometric characters, limiting ambiguity and *nicknaming* to a minimum. Their classification into categories is illustrated in figure \ref{fig:m_char_used}. The most common category of primary characters (24 characters) is dimension, the most simple one. Shape (16), spatial distribution (15) and intensity (11) are relatively balanced. Connectivity is naturally sparse, since the required scale of characters does not allow for characters derived from large networks. Diversity is present in two examples only, but that is due to the research design. Looking at the distribution of contextual characters used in the cluster analysis (figure \ref{fig:m_char_used}b), the fact that interquartile range, interdecile Theil index and Simpson's diversity index are all meta characters belonging to diversity category changes the balance with a significant prevalence of diversity over other categories (see section 7.1.2.2 for details). 
+
+![Number of morphometric characters per category as used within different stages of this study. a) shows counts of primary characters per category; b) shows counts of contextual characters per category.](source/figures/ch9/totals_chars.pdf "Number of morphometric characters per category as used within different stages of this study"){#fig:m_char_used width=100%}
 
 
-==Among these aspects, the completeness of the data set is of crucial importance. Completeness of characters is an illusion, since each single organism theoretically consists of an infinite number of characters. ==
+### Hypothesis and research questions
+As chapter 5 formulated the hypothesis and a series of research questions, the following chapters tries to answer then and validate them.
 
-## Applicability
+The main hypothesis of the research related to the applicability of methods of morphometrics and numerical taxonomy in the context of urban morphology remains plausible. The results do not indicate that there is a ground for its rejection and it is possible to conclude that the hypothesis still holds. That means, that there is a clear potential in the application of such methods and further research in the topic as the initial work of @dibble2017 as well as this one are explorative. Both works, although using different implementations, conclude the same - numerical taxonomy is applicable in urban morphology.
 
-### Applicability of Urban Morphometrics
+The overall method proposed in chapters 6, 7 and 8 provides an answer to the main research question, *‌how to adapt methods of numerical taxonomy to study of urban form*. Subdividing the answer into relevant supplementary research questions:
 
-#### Resilience of urban form
+> SRQ1 - *‌What are the fundamental morphometric elements and how to model their relationship?*
 
-#### Climate-induced risk assessment
+Chapter six proposes three fundamental elements based on two sources of input data. Buildings, represented as footprint polygons and street network, represented as polyline geometry, which can be further split to nodes and edges capturing intersections and streets are direct inputs. Furthemore, buildings can be used to generate morphological tessellation, the smallest spatial unit substituting the role of plot within morphometric assessment. The relationships between all elements are then capturer by the relational framework of urban form, structurally following overlapping semi-lattice argued for in @alexander1966.
 
-#### Prediction of FF types (Logistic Regression)
+> SRQ2 - *‌What is the optimal Operational Taxonomic Unit of urban form and how to identify it in continuous urban fabric?*
 
-+
+OTU, as understood within this study, is an urban tissue type for the level of taxonomy. The way of identifying it in continuous urban fabric follows mixture problem, i.e. delineation of populations based on morphometric profiles of individual features (building/tessellation cell entity). The method itself then measures primary and contextual characters, which are then used within cluster analysis defining tissue types (OTUs).
 
-### Applicability of DHC and taxonomy
+> SRQ3 - *‌What are the taxonomic characters describing urban form?*
 
-## Interpretation of the tree
-*Taxonomic tree needs specific attention regarding its interpretation as the detail we can read can vary based on the stability of urban form under scrutiny.*
+Chapter 4 and Appendix A4 provide a comprehensive overview of possible morphometric characters which can be used in the study of urban form. The set of *taxonomic* characters used within this thesis is smaller subset primarily designed to delineate urban tissue types and characterise them. However, it is worth noting that the completeness of a set of taxonomic characters is always an illusion to a degree. Each urban tissue and even each individual element can be theoretically described by an infinite number of characters. 
 
-- Different branches allow different distiction
+> SRQ4 - *How to determine the taxonomic relationship between OTUs to derive taxa of urban form?*
+
+The answer to the last supplementary question, which completes the answer to the main research question is proposed in the chapter 8. The application of Ward's hierarchical clustering in derivation of the taxonomic relationship between urban tissue types seem to be plausible not only based on the results of validation in chapter 8, but also considering relevant literature tending to employ the same algorithm [@serra2018a; @dibble2017].
+
+One question remains. What is the relation of morphometric urban tissue type (i.e. clusters) and urban tissue as it would be identified using qualitative (typo-morphological) methods? If we assume that clusters precisely capture what would be an urban tissue type, a single urban tissue would be a contiguous patch of morphological tessellation belonging to the same class. However, the question is still hard to answer as it would require proper typo-morphological study of one of the case studies and comparison of results. The closest dataset is the municipal typology of Prague's urban fabric, which event though it has its own limitations (see section 8.2.2.1.2.3), indicates a high association between the two. What plays significant role in this relationship is the definition of homogeneity. Tissue is *a distinct area* but the definition does not specify how much distinct is should be. Therefore it is not straightforward to link tissue and cluster in a definitive way. Is tissue a contiguous area of a cluster as delineated in chapter 7? Or is tissue rather a contiguous area of a branch of dendrogram defined in chapter 8? Theory does not give us an answer as both can be correct. It always depends on the required resolution of each study. However, the flexibility which comes with the dendrogram helps in finding this connection.
 
 ## Limitations
-It is not complicated to find case studies offering the data in required quality and detail, but it is true that data of this level of precision are not available everywhere around the world. That is true, especially for building height parameters. Having all data, as outlined above, is the ideal situation, which will be tested in this research. In the real world, the situation might be less optimal than that, so pre-processing procedures have to be employed before performing the analysis itself. The case analysis using extremely sub-optimal data is available as Annexe X, outlining the work done on Grand Rapids, Michigan using building footprints not representing individual buildings and missing any height attributes.
+Whilst the method proposed in this thesis and its components appear to be a promising new addition to urban morphology, there are some limitations.
 
+The general limitation which affects all steps of the method is data availability. It is not complicated to find case studies offering the data in required quality and detail, but it is true that data of this level of precision are not available everywhere around the world. That is true, especially for building height parameters. Having all data, as outlined in chapter 6, is the ideal situation. In the real world, the situation might be less optimal than that, so pre-processing procedures have to be employed before performing the analysis itself. Furthermore, in cases with sub-optimal data which can not be preprocessed to the required level of detail or which do not have known building height, the method needs to be adapted and further validated.
 
-### Limits of morphological tessellation
-Whilst MT and MC appear to be promising new addition to the tools available for UMM applications, a first limit of this work is that the cadastral parcels in Zurich, which we have loosely treated as ‘plots’, are solely based on land-ownership. That causes discrepancy between the generated tessellation and the cadastral layer which includes multi-building plots. However, as only 21% of plots are affected and results are reported for both groups, we believe that the presented method is robust enough to provide relevant results.
+Going to the individual aspects of the proposed method, the first limit of an assessment of morphological tessellation presented in chapter 6 is that the cadastral parcels in Zurich, which were loosely treated as ‘plots’, are solely based on land-ownership. That causes discrepancy between the generated tessellation and the cadastral layer which includes multi-building plots. However, as only 21% of plots are affected and results are reported for both groups, it is believed that the presented method is robust enough to provide relevant results.
 
-Second, whilst it is true that a MT can be generated directly from a building layer alone, it cannot be created from any building layer, as this needs to comply to certain quality requirements. Notably, since the method sees every feature of GIS layer as an individual input for tessellation, it is important not to have buildings composed of multiple features each representing, for example, different heights or different parts of the same (as in the case of British Ordnance Survey). Similarly, it is important not to have different independent buildings collapsed into a single simplified feature (as in the case of vast portions of Open Street Maps).
+Furthermore, whilst it is true that a morphological tessellation can be generated directly from a building layer alone, it cannot be created from any building layer, as this needs to comply to certain quality requirements, which links back to the first limitation above. Notably, since the method sees every feature of GIS layer as an individual input for tessellation, it is important not to have buildings composed of multiple features each representing, for example, different heights or different parts of the same (as in the case of British Ordnance Survey). Similarly, it is important not to have different independent buildings collapsed into a single simplified feature (as in the case of vast portions of Open Street Maps).
 
+The key component of the method is the selection of morphometric characters used for both delineation of tissue types and hierarchical clustering. Although the set of primary characters is defined based on a thorough procedure (see section 7.1.2.1.1), its verification comes only indirectly through the validation of the whole method. It is likely, that there are characters which are not included, but which would help in classification. Furthermore, due to computational demands, it was not tested whether the full set is required. However, the results indicate that the used set of characters could be perceived as valid for the purpose.
+
+Similar situation is with contextual characters. The method uses four meta contextual characters to derive spatially lagged information on the spatial distribution of values of primary characters. Although the selection is able to deliver expected results, other options may be more suitable. However, that is left for the further research.
+
+Gaussian Mixture Model technique used to delineate morphometric tissue types does reflect the nature of the clustering problem, but comes with certain limits. First, the method is non-spatial, which mean that it does not include any contiguity constraint. That can be an issue, since the resulting cluster may be in some cases scattered, especially along boundaries of distinct tissues or in heterogenous areas. While this issue is largely mitigated by the design of contextual characters which are an input of the cluster analysis, it is not perfect and there are some features which could be seen as mislabeled from the perspective of contiguity. However, available methods of spatially constrained clustering are not yet efficient enough to deal with datasets of this size.
+
+The computational efficiency also limits GMM to a degree. Compared to simpler methods as K-Means, a probabilistic component of GMM significantly slows down the computation and it is a question how scalable the method will be when used on larger areas composed of millions of features. Although there are potential performant implementations based of distributed computing on GPU [@bingham2019pyro; @matthew_rocklin-proc-scipy-2015], it may become a weak link in the whole process of scaling up. However, as show in chapter 7, there is still a potential to train model on a sample of the data.
+
+Furthermore, similarly to K-Means, GMM uses an initial random seed, which affects the final result. While the effect of the seed is not significant, there is some, present mostly in areas where two tissues meet. The resulting boundary between tissue types should hence be seen as fuzzy, since different random seeds place is in a similar, but not the same position.
+
+The validation has two limitations - one related to additional data, other related to additional case study. As mentioned in chapter 8, there is no ground truth with which the results could be compared. Therefore, the first step of validation is using data which should indirectly reflect changes in urban patterns. Although the selection is representative, there could be other sources of data more appropriate, which would give us better, more direct, understanding of the performance of the proposed method. One such layer could be the qualitative study of the same case study already mentioned above.
+
+The second limitation is affecting the validation of transferability and extensibility of the method. Since this research focus on solely on European context and selects two cities of a historical origin, its validity in other contexts is still unknown. Although it is assumed that it should perform similarly in Asian, African or North American cities with different spatial logic, this remains to be tested.
 
 ## Further research
+The avenue of further research based on the findings presented in this thesis is wide. One direction could further study different aspects of the method to eliminate some of its current limitations, while the other could focus on the applicability of urban morphometrics and numerical taxonomy in urban science.
 
-fuzzinness
-efficeincy - PCA, FA effects
-Atlas
-Number of components (BIC??)
-+
+Starting with the first direction and proposed morphological tessellation, further research should resolve the question of external boundary of tessellation which is currently defined as a static 100m buffer around building footprints. It is likely that this decision causes some edge effect, where edge cells are significantly larger that they should be. The optimal solution could be limitation of tessellation by pre-defined known boundary of built-up area. Alternatively, an adaptive buffer capturing the different scales of urban patterns could be developed. Moreover, further research should focus on the question of the exact meaning and variation of topological distance on morphological tessellation and its definition for specific purposes. The question of how many topological steps should be used for the analysis of urban form does not have a fixed answer. It is expected that it will vary depending on the scope of the research.
 
+Inclusion (or even elimination) of additional morphometric characters into the set of of primary characters is expected evolution of the method. Furthermore, the set should be adapted to different data sources, e.g. with missing height attribute of different level of detail to expand its applicability. That also entails Earth Observation. One of the potential directions could attempt to derive morphometric profiles based on EO only, which would radically expand the applicability of the method.
 
-Further research should focus on the question of the exact meaning and variation of topological distance and its definition for specific purposes. The question of how many topological steps should be used for the analysis of urban form remains open. It is expected that it will vary depending on the scope of the research.
+Similarly, contextual characters should be further studied to ensure better interpretability and eliminate potential issues related to binning within Simpson's diversity index.
+
+Considering limitations of GMM outlined above, further research should focus on efficiency of the implementation needed for studies on the larger scale. Also, as shown in the case of Amsterdam, Bayesian Information Criterion might not be the optimal method to determine the number of clusters and other options (e.g. clustergram [@schonlau2002clustergram]) could be tested alongside with other clustering algorithms besides GMM.
+
+Finally, as already briefly discussed in previous section, the method could be further validated using other additional data and especially using comparative analysis with qualitative typo-morphological and/or historic-geographical studies of urban form alongside the application of the method in different geographical contexts.
+
+The second major direction of further research can build on the methodological foundations presented in this thesis and focus on different questions using the information obtained from numerical taxonomy. One of them is the application if the method to eventually build an atlas of urban form, containing urban tissue types from a wide set of case studies, hierarchically categorised based on their phenetic similarity. Such an atlas could provide a global repository of urban patterns, a counterpart of atlases known in biology (e.g. atlas of birds or atlas of fungi).
+
+When it comes to the application of the method on specific case studies, large number of observations can be made based on morphometric values backing the whole method. Each recognised tissue type as well as each branch of taxonomy have rich morphometric profiles. The combination of all measured values within each cluster give an abundant description of various morphological aspects which can be further analysed and eventually even turned into form-based regulatory plans directing further development. Moreover, the raw morphometric values can be used within various predictive models and semi-morphological studies, aiming at understanding relations between different aspects of urban form and other facets of life. 
 
 ## Conclusions
+There are two different perspective when it comes to the study of patterns of development of cities. This research belongs to the second one, to urban morphology, trying to describe urban form as it is and as it was formed. At the same time, it aims to support the other perspective. When it comes to the study of relation of urban form and other aspects of life, not matter if it is economy, wellbeing, happiness, or social deprivation, the core component is the description of urban form, i.e. the way we are able to capture and characterise it. This work offers one approach, exploiting the abundance of geospatial data, building tools to make sense of it and proposing rich quantitative description of individual elements of urban form, patterns they form and similarity between them.
+
+In the introduction, I have stated that urban morphology or urban studies in general face three problems. The field is unable to describe form comprehensively enough, its methods of identification and systematisation of homogenous areas are lacking either detail, granularity or scalability, and it  data-driven classification is in its infancy. This work proposes methodological steps which may eventually lead to the minimising or even elimination of all three of them.
+
+The overall aim of this thesis was to propose a method of derivation of data-driven taxonomy of urban form patterns. Considering the contents presented in previous chapters and results of validation, it seems to be fulfilled. The method of analysis of urban form based on urban morphometrics and numerical taxonomy allows for unsupervised delineation of urban tissue types, or using the generalised terminology of the first chapter, urban form pattern. Furthermore, it defines phenetic relationship between all of them forming the basis for the taxonomy of urban form. All that within the scope defined in section 1.3, thus using minimal data input (building footprints with a height attribute and street network) capturing solely the fundaments of urban form.
+
+The method proves to be transferable to other geographical and planning contexts, indicating the potential of a wide applicability. Together with the proposal of morphological tessellation as a smallest spatial unit and relational framework of urban form, the work builds a foundation not only for transfer of numerical taxonomy to urban morphology, but also for a wider application of urban morphometrics as such. That is further supported by the release of software tools allowing reproduction of the whole work in a flexible form of an open-source Python package, allowing further development within the research community.
+
+Although quantitative science of urban form is rapidly evolving, we still have a long way to go. I believe that this thesis can be a small but valuable addition to the pursuit for a comprehensive quantitative description of urban form and one step towards capturing its inherent complexity.  
 
 
-*The conclusions in your last chapter must respond to the aim from Chapter 1 and chapter 5*
-
-
-
-*Comparison and interpretation. If the method is extensible and reflects the similarity across the contexts, we can do a lot of great and cool things, starting from the interpretation of the spatial distribution of branched clusters to plenty of stuff*. TEXT

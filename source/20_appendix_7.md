@@ -6,13 +6,183 @@
 \setcounter{table}{0}
 \pagestyle{plain}
 
-## 7.1 Process of selection of primary characters {.unnumbered}
+## 7.1 Selection of primary characters {.unnumbered}
+==refer back to the section==
 To be done.
 
-- complete table of potential characters
-- correlation matrices
+\small
+\begin{longtable}[]{@{}P{1.5cm}P{3.5cm}P{2.8cm}P{1.3cm}P{2.5cm}P{2cm}@{}}
+\caption{Initial selection of applicable characters as an extraction from the Table of Urban Form Characters (Table A4.1.)
+Selection reflects steps defined in section 7.1.2.1.1. Result indicates whether teseted character is included in
+the final set of primary characters or not, alternatively specifies the reason. Characters using different data
+than specified in the relational model are excluded a priori.} \label{tab:long_chars} \\
+\toprule
+     id &                                   index &            element & extent &      category &  result \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+ sdbAre &                                    area &           building &     S &     dimension &     included \\
+ sdbFlA &                              floor area &           building &     S &     dimension &    collinear \\
+ sdbHei &                                  height &           building &     S &     dimension &     included \\
+ sdbVol &                                  volume &           building &     S &     dimension &     included \\
+ sdbPer &                               perimeter &           building &     S &     dimension &     included \\
+ sdbCoA &                          courtyard area &           building &     S &     dimension &     included \\
+ sdbBRA &                 bounding rectangle area &           building &     S &     dimension &    collinear \\
+ sdbBRW &                bounding rectangle width &           building &     S &     dimension &    collinear \\
+ sbdBRL &               bounding rectangle length &           building &     S &     dimension &    collinear \\
+ sdbBRP &            bounding rectangle perimeter &           building &     S &     dimension &    collinear \\
+ sdbECR &                 enclosing circle radius &           building &     S &     dimension &    collinear \\
+ sdbCHA &                        convex hull area &           building &     S &     dimension &    collinear \\
+ sdbCHP &                   convex hull perimeter &           building &     S &     dimension &    collinear \\
+ ssbFoF &                             form factor &           building &     S &         shape &     included \\
+ ssbFra &                       fractal dimension &           building &     S &         shape &    collinear \\
+ ssbVFR &                     volume/façade ratio &           building &     S &         shape &     included \\
+ ssbCCo &                    circular compactness &           building &     S &         shape &     included \\
+ ssbSCo &                      square compactness &           building &     S &         shape &    collinear \\
+ ssbCon &                              convexeity &           building &     S &         shape &    collinear \\
+ ssbCor &                                 corners &           building &     S &         shape &     included \\
+ ssbShI &                             shape index &           building &     S &         shape &    collinear \\
+ ssbSqu &                              squareness &           building &     S &         shape &     included \\
+ ssbERI &            equivalent rectangular index &           building &     S &         shape &     included \\
+ ssbElo &                              elongation &           building &     S &         shape &     included \\
+ ssbCCD &  centroid - corners  distance deviation &           building &     S &         shape &     included \\
+ ssbCCM &        centroid - corners mean distance &           building &     S &         shape &     included \\
+ stbOri &                       solar orientation &           building &     S &  distribution &     included \\
+ stbSAl &                        street alignment &           building &     S &  distribution &     included \\
+ stbCeA &                          cell alignment &           building &     S &  distribution &     included \\
+ sdcLAL &                     longest axis length &  tessellation cell &     S &     dimension &     included \\
+ sdcAre &                                    area &  tessellation cell &     S &     dimension &     included \\
+ sdcBRA &                 bounding rectangle area &  tessellation cell &     S &     dimension &    collinear \\
+ sdcBRW &                bounding rectangle width &  tessellation cell &     S &     dimension &    collinear \\
+ sdcBRL &               bounding rectangle length &  tessellation cell &     S &     dimension &    collinear \\
+ sdcBRP &            bounding rectangle perimeter &  tessellation cell &     S &     dimension &    collinear \\
+ sdcECR &                 enclosing circle radius &  tessellation cell &     S &     dimension &    collinear \\
+ sdcCHA &                        convex hull area &  tessellation cell &     S &     dimension &    collinear \\
+ sdcCHP &                   convex hull perimeter &  tessellation cell &     S &     dimension &    collinear \\
+ sscCCo &                    circular compactness &  tessellation cell &     S &         shape &     included \\
+ sscSCo &                      square compactness &  tessellation cell &     S &         shape &    collinear \\
+ sscElo &                              elongation &  tessellation cell &     S &         shape &    collinear \\
+ sscFra &                       fractal dimension &  tessellation cell &     S &         shape &    collinear \\
+ sscCon &                              convexeity &  tessellation cell &     S &         shape &    collinear \\
+ sscShI &                             shape index &  tessellation cell &     S &         shape &    collinear \\
+ sscERI &            equivalent rectangular index &  tessellation cell &     S &         shape &     included \\
+ sscElo &                              elongation &  tessellation cell &     S &         shape &    collinear \\
+ stcOri &                       solar orientation &  tessellation cell &     S &  distribution &     included \\
+ stcSAl &                        street alignment &  tessellation cell &     S &  distribution &     included \\
+ sicCAR &                     coverage area ratio &  tessellation cell &     S &     intensity &     included \\
+ sicFAR &                        floor area ratio &  tessellation cell &     S &     intensity &     included \\
+ sdsLen &                                  length &     street segment &     S &     dimension &     included \\
+ sdsSPW &                    street profile width &             street &     S &     dimension &     included \\
+ sdsSPH &                   street profile height &             street &     S &     dimension &     included \\
+ sdsSPR &       street profile height/width ratio &     street segment &     S &         shape &     included \\
+ sdsSPO &                         street openness &             street &     S &  distribution &     included \\
+ sdsSWD &                       setback deviation &             street &     S &     diversity &     included \\
+ sdsSHD &                        height deviation &             street &   	 S &     diversity &     included \\
+ sssLin &                               linearity &     street segment &     S &         shape &     included \\
+ sdsAre &                            area covered &  tessellation cell &     S &     dimension &     included \\
+ sisBpS &                   buildings per segment &           building &     S &     intensity &   no meaning \\
+ sisBpM &                     buildings per meter &           building &     S &     intensity &     included \\
+ sddAre &                            area covered &  tessellation cell &     S &     dimension &     included \\
+ sddBpN &                      buildings per node &           building &     S &     intensity &   no meaning \\
+ mtbSWR &                      shared walls ratio &           building &     M &  distribution &     included \\
+ mtbAli &                      building alignment &           building &     M &  distribution &     included \\
+ mtbNDi &                 mean neighbour distance &           building &     M &  distribution &     included \\
+ mtcNei &                               neigbours &  tessellation cell &     M &  distribution &   no meaning \\
+ mtcWNe &                         neigbours per m &  tessellation cell &     M &  distribution &     included \\
+ mdcAre &                            area covered &  tessellation cell &     M &     dimension &     included \\
+ mtsMDO &           mean deviation of orientation &     street segment &     M &  distribution &   no meaning \\
+ misRea &                           reached cells &  tessellation cell &     M &     intensity &     included \\
+ mdsLen &                                  length &     street segment &     M &     dimension &    collinear \\
+ mdsAre &                            area covered &  tessellation cell &     M &     dimension &     included \\
+ mtdDeg &                             node degree &        street node &     M &  distribution &     included \\
+ mtdMDi &                  mean distance to nodes &        street node &     M &     dimension &     included \\
+ midRea &                           reached cells &  tessellation cell &     M &     intensity &     included \\
+ midAre &                            area covered &  tessellation cell &     M &     dimension &     included \\
+ libNCo &                    number of courtyards &           building &     L &     intensity &     included \\
+ ldbPWL &                   perimeter wall length &           building &     L &     dimension &     included \\
+ ltbIBD &            mean inter-building distance &           building &     L &  distribution &     included \\
+ ltcBuA &                      building adjacency &           building &     L &  distribution &     included \\
+ licGDe &                           gross density &  tessellation cell &     L &     intensity &     included \\
+ ltcWRB &                 weighted reached blocks &  tessellation cell &     L &     intensity &     included \\
+ ldkAre &                              block area &              block &     L &     dimension &     included \\
+ ldkPer &                         block perimeter &              block &     L &     dimension &     included \\
+ ldkBRA &                 bounding rectangle area &              block &     L &     dimension &    collinear \\
+ ldkBRW &                bounding rectangle width &              block &     L &     dimension &    collinear \\
+ ldkBRL &               bounding rectangle length &              block &     L &     dimension &    collinear \\
+ ldkBRP &            bounding rectangle perimeter &              block &     L &     dimension &    collinear \\
+ ldkECR &                 enclosing circle radius &              block &     L &     dimension &    collinear \\
+ ldkCHA &                        convex hull area &              block &     L &     dimension &    collinear \\
+ ldkCHP &                   convex hull perimeter &              block &     L &     dimension &    collinear \\
+ lskElo &                        block elongation &              block &     L &         shape &    collinear \\
+ lskFra &                 block fractal dimension &              block &     L &         shape &    collinear \\
+ lskCCo &              block circular compactness &              block &     L &         shape &     included \\
+ lskSCo &               blocks square compactness &              block &     L &         shape &    collinear \\
+ lskCon &                        block convexeity &              block &     L &         shape &    collinear \\
+ lskShI &                       block shape index &              block &     L &         shape &    collinear \\
+ lskERI &      block equivalent rectangular index &              block &     L &         shape &     included \\
+ lskCWA &               Compactness-weighted axis &              block &     L &         shape &     included \\
+ ltkOri &                 block solar orientation &              block &     L &  distribution &     included \\
+ ltkNei &                        block neighbours &              block &     L &  distribution &   no meaning \\
+ ltkWBN &               weighted block neighbours &              block &     L &  distribution &     included \\
+ likBpB &                     buildings per block &              block &     L &     intensity &   no meaning \\
+ likWBB &            weighted buildings per block &              block &     L &     intensity &     included \\
+ lcdMes &                              meshedness &     street network &     L &  connectivity &     included \\
+ ldsMSL &                     mean segment length &     street network &     L &     dimension &     included \\
+ ldsTSL &                    total segment length &     street network &     L &     dimension &    collinear \\
+ ldsCDL &                       cul-de-sac length &     street network &     L &     dimension &     included \\
+ ldsRea &                           reached cells &  tessellation cell &     L &     dimension &     included \\
+ lddNDe &                            node density &     street network &     L &     intensity &     included \\
+ lddRea &                           reached cells &  tessellation cell &     L &     dimension &     included \\
+ lddARe &                            area covered &  tessellation cell &     L &     dimension &     included \\
+ lcnMND &                        mean node degree &     street network &     L &  connectivity &    collinear \\
+ linPDE &                 proportion of dead-ends &     street network &     L &  connectivity &     included \\
+ linP3W &       proportion of 3-way intersections &     street network &     L &  connectivity &     included \\
+ linP4W &       proportion of 4-way intersections &     street network &     L &  connectivity &     included \\
+ linWID &           weighted intersection density &     street network &     L &     intensity &     included \\
+ licSpA &                      spatial attraction &  tessellation cell &     L &     intensity &        scale \\
+ lcnSLP &                    self-loop proportion &     street network &     L &  connectivity &    collinear \\
+ lcnNeC &                      network clustering &     street network &     L &  connectivity &    collinear \\
+ lncWNC &             weighted network clustering &     street network &     L &  connectivity &    collinear \\
+ lcnEdC &                       edge connectivity &     street network &     L &  connectivity &    collinear \\
+ lcnNoC &                       node connectivity &     street network &     L &  connectivity &    collinear \\
+ lcnCyC &                   cyclomatic complexity &     street network &     L &  connectivity &    collinear \\
+ lcnENR &                       edge / node ratio &     street network &     L &  connectivity &    collinear \\
+ lcnExC &                   external connectivity &     street network &     L &  connectivity &      no data \\
+ lcnGaI &                             gamma index &     street network &     L &  connectivity &    collinear \\
+ lcnDiD &                    directional distance &     street network &     L &  connectivity &  ineffective \\
+ lcnGCC &           global clustering coefficient &     street network &     L &  connectivity &  meaningless \\
+ lcnRed &                              redundancy &     street network &     L &  connectivity &  ineffective \\
+ lcnClo &              local closeness centrality &     street network &     L &  connectivity &     included \\
+ xcnSCl &                       square clustering &     street network &    XL &  connectivity &     included \\
+\end{longtable}
+\normalsize
+\newpage
+
+The following figures measure Spearman correlation between tested characters within each group of elements. It illustrates the reasoning behind exclusion of characters due to collinearity. From a group of collinear characters, only one is included in the final set. The selection is driven by variance, interpretability and literature.
+
+
+![Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on buildings.](source/figures/a7/buildings_corr.pdf "Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on buildings."){#fig:blg_cor width=100%}
+
+![Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on tessellation cells.](source/figures/a7/tessellation_corr.pdf "Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on tessellation cells."){#fig:tes_cor width=100%}
+
+![Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on streets.](source/figures/a7/streets_corr.pdf "Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on streets."){#fig:stree_cor width=100%}
+
+![Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on blocks.](source/figures/a7/blocks_corr.pdf "Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on blocks."){#fig:blo_cor width=100%}
+
+![Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on network nodes.](source/figures/a7/nodes_corr.pdf "Correlation matrix of Spearman's rho values capturing the statistical relationship between morphometric values of tested characters based on  network nodes."){#fig:nodes_cor width=100%}
+
+\newpage
 
 ## 7.2 Classification of primary characters {.unnumbered}
+
+Classification of primary characters into categories. See section 7.1.2.1.2 for details.
+
 
 | notation          | index                                | element                         | category     | extent   |
 |:------------------|:-------------------------------------|:--------------------------------|:-------------|---------:|
@@ -93,6 +263,11 @@ To be done.
 
 Table: Classification of primary characters. Grain is S for all characters. \label{prim_chars_clas}
 
+\newpage
+
+References for primary characters. Characters without a reference are newly introduced or adapted to the point where it would not be correct to refer to its original implementation. See section 7.1.2.1.2 for details.
+
+
 | notation          | reference           | id     |
 |:------------------|:--------------------|:-------|
 | $a_{blg}$         | [@hallowell2013]    | sdbAre |
@@ -172,11 +347,19 @@ Table: Classification of primary characters. Grain is S for all characters. \lab
 
 Table: Reference table for primary characters. Contains references to existing literature and to identifier of each character used within computational Jupyter notebooks. \label{prim_chars_ref}
 
+\newpage
 
 ## 7.3 Sectional diagram analysis {.unnumbered}
-To be done.
 
-- few sectional diagrams with a short commentary
+==todo: description==
+
+Note: Please refer to the electronical version of the thesis for a better clarity. Sectional diagrams are not optimised for print.
+
+![Sectional](source/figures/a7/sect_full.pdf "Sectional"){#fig:sect_full width=100%}
+
+![Sectional](source/figures/a7/sect_det.pdf "Sectional"){#fig:sect_det width=100%}
+
+\newpage
 
 ## 7.4 Analysis of local central tendency characters {.unnumbered}
 To be done.
