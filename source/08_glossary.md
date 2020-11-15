@@ -42,3 +42,12 @@ To be revised, not these are just randomly dumped terms.
 \newpage
 \setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
+
+Classification - the ordering of entities into groups or classes on the basis of their similarity
+Taxonomy
+Typology
+Cluster analysis/clustering
+Phenetics
+Cladistics
+Phylogeny
+Taxa

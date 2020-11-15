@@ -109,5 +109,3 @@ The overall aim of this thesis was to propose a method of derivation of data-dri
 The method proves to be transferable to other geographical and planning contexts, indicating the potential of a wide applicability. Together with the proposal of morphological tessellation as a smallest spatial unit and relational framework of urban form, the work builds a foundation not only for transfer of numerical taxonomy to urban morphology, but also for a wider application of urban morphometrics as such. That is further supported by the release of software tools allowing reproduction of the whole work in a flexible form of an open-source Python package, allowing further development within the research community.
 
 Although quantitative science of urban form is rapidly evolving, we still have a long way to go. I believe that this thesis can be a small but valuable addition to the pursuit for a comprehensive quantitative description of urban form and one step towards capturing its inherent complexity.  
-
-
