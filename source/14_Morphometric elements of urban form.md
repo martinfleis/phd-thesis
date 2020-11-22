@@ -2,7 +2,7 @@
 
 # Morphometric elements of urban form
 
-> *The content of this chapter was partially published in @fleischmann2020.*
+> *The content of this chapter was partially published in @fleischmann2020. Relevant sections are therefore licensed accordingly.*
 
 The first half of the thesis presented the work in the field of morphometrics done so far, which was used as a basis for the formulation of hypothesis and research questions made in the previous chapter. The following chapter 6 is the first of the three chapters which focus on operationalising top-level ideas and answering questions posed in chapter 5.
 

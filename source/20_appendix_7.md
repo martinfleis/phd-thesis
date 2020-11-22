@@ -7,8 +7,8 @@
 \pagestyle{plain}
 
 ## 7.1 Selection of primary characters {.unnumbered}
-==refer back to the section==
-To be done.
+
+Supplementary material for section 7.1.2.1.1. Table \ref{tab:long_chars} contains intial selection of applicable characters and reasoning behind its selection or exclusion.
 
 \small
 \begin{longtable}[]{@{}P{1.5cm}P{3.5cm}P{2.8cm}P{1.3cm}P{2.5cm}P{2cm}@{}}
@@ -351,24 +351,469 @@ Table: Reference table for primary characters. Contains references to existing l
 
 ## 7.3 Sectional diagram analysis {.unnumbered}
 
-==todo: description==
+Sectional diagrams show the distribution of measured values along the longitudinal section through the whole case study. Diagrams were generated every 1km and individually assessed to understand the effect of a different number of steps on the distribution. The overall aim is to use that number of steps which illustrate the tendency within the local area but in too smooth to disable identification of boundaries between areas of different characters. Based on the visual assessment of sectional diagrams, three topological steps are the closest option to the goal mentioned above. Figures \ref{fig:sect_full} and \ref{fig:sect_det} below illustrate one such diagram and its detail.
 
 Note: Please refer to the electronical version of the thesis for a better clarity. Sectional diagrams are not optimised for print.
 
-![Sectional](source/figures/a7/sect_full.pdf "Sectional"){#fig:sect_full width=100%}
+![Full sectional diagrams illustrating spatial distribution of selected values (IQM of area, ID Theil index of area, IQR of area, adjacency).](source/figures/a7/sect_full.pdf "Full sectional diagrams illustrating spatial distribution of selected values."){#fig:sect_full width=100%}
 
-![Sectional](source/figures/a7/sect_det.pdf "Sectional"){#fig:sect_det width=100%}
+![Details of two sectional diagrams illustrating spatial distribution of selected values (IQM of area, ID Theil index of area).](source/figures/a7/sect_det.pdf "Details of two sectional diagrams illustrating spatial distribution of selected values."){#fig:sect_det width=100%}
 
 \newpage
 
 ## 7.4 Analysis of local central tendency characters {.unnumbered}
-To be done.
+This appendix presents results of tests of different of measuring central tendency to better understand the differences between them. The aim is to select one (or more) to be used within the cluster analysis.
 
-## 7.5 Contextual characters comparison {.unnumbered}
-To be done.
+**Tested characters:**
 
-## 7.6 Spatial autocorrelation of contextual characters {.unnumbered}
-To be done.
+- building area
+- tessellation area
+- height
+- building circular compactness
+- building solar orientation
+- cell circular compactness
+- CAR
+- shared walls ratio
+
+**Tested options:**
+
+- mean
+- interdecile mean
+- interquartile mean
+- median
+
+Tested on 3 topological steps.
+
+The aim is to identify such a method which is not prone to oulier effect but at the same time reflect the best true nature of each context.
+
+\newpage
+\thispagestyle{empty}
+
+![Distributions of values measured using each tested option to capture local central tendency.](source/figures/a7/distributions.pdf "Distributions of values measured using each tested option to capture local central tendency."){#fig:avg_dist width=80%}
+
+\newpage
+\thispagestyle{empty}
+
+![Mean deviations of measured primary characters compared to the central tendency value. The lower the deviation is, the better reflection of central tendecy the method offers. It is clear that mean deviates the most, while IQM and median are very similar.](source/figures/a7/deviations.pdf "Mean deviations of measured primary characters compared to the central tendency value."){#fig:avg_devs width=80%}
+
+
+## 7.5 Comparison of characters capturing properties of distributions {.unnumbered}
+Supplementary data for section 7.1.2.2.2.4. Figures below show spatial distribution (figures \ref{fig:area1} - \ref{fig:far2})and correlation (figures \ref{fig:corrarea}, \ref{fig:corrfar}) of selected characters capturing properties of distributions.
+
+![Spatial distribution of characters capturing properties of distributions tested on area of a building.](source/figures/a7/area_1.png "Spatial distribution of characters capturing properties of distributions tested on area of a building."){#fig:area1 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on area of a building (cont.).](source/figures/a7/area_2.png "Spatial distribution of characters capturing properties of distributions tested on area of a building (cont.)"){#fig:area2 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on height of a building.](source/figures/a7/height_1.png "Spatial distribution of characters capturing properties of distributions tested on height of a building."){#fig:height_1 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on height of a building (cont.).](source/figures/a7/height_2.png "Spatial distribution of characters capturing properties of distributions tested on height of a building (cont.)"){#fig:a7height_2 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on coverage area ratio of tessellation cell.](source/figures/a7/car_1.png "Spatial distribution of characters capturing properties of distributions tested on coverage area ratio of tessellation cell."){#fig:car_1 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on coverage area ratio of tessellation cell (cont.).](source/figures/a7/car_2.png "Spatial distribution of characters capturing properties of distributions tested on coverage area ratio of tessellation cell (cont.)"){#fig:car_2 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on floor area ratio of tessellation cell.](source/figures/a7/far_1.png "Spatial distribution of characters capturing properties of distributions tested on floor area ratio of tessellation cell."){#fig:far1 width=100%}
+
+![Spatial distribution of characters capturing properties of distributions tested on floor area ratio of tessellation cell (cont.).](source/figures/a7/far_2.png "Spatial distribution of characters capturing properties of distributions tested on floor area ratio of tessellation cell (cont.)"){#fig:far2 width=100%}
+
+![Correlation of characters capturing properties of distributions tested on area of a building.](source/figures/a7/corr_area.pdf "Correlation of characters capturing properties of distributions tested on area of a building."){#fig:corrarea width=100%}
+
+![Correlation of characters capturing properties of distributions tested on height of a building.](source/figures/a7/corr_height.pdf "Correlation of characters capturing properties of distributions tested on height of a building."){#fig:corrhei width=100%}
+
+![Correlation of characters capturing properties of distributions tested on coverage area ratio of tessellation cell.](source/figures/a7/corr_car.pdf "Correlation of characters capturing properties of distributions tested on coverage area ratio of tessellation cell."){#fig:corrcar width=100%}
+
+![Correlation of characters capturing properties of distributions tested on floor area ratio of tessellation cell.](source/figures/a7/corr_far.pdf "Correlation of characters capturing properties of distributions tested on floor area ratio of tessellation cell."){#fig:corrfar width=100%}
+
+## 7.6 Spatial autocorrelation of morphometric characters {.unnumbered}
+
+Results of assessment of spatial autocorrelation of morphometric characters. Values which show significant autocorrelation (Moran's I) tend to capture contiguous patterns.
+
+See sections 7.1.2.1.1 and 7.1.3 for details.
+
+**Primary characters**
+
+|        |         I |   p_sim |   p_norm |
+|:-------|----------:|--------:|---------:|
+| lcdMes | 0.85362   |   0.001 |        0 |
+| lcnClo | 0.862475  |   0.001 |        0 |
+| ldbPWL | 0.592621  |   0.001 |        0 |
+| lddARe | 0.798202  |   0.001 |        0 |
+| lddNDe | 0.577277  |   0.001 |        0 |
+| lddRea | 0.736014  |   0.001 |        0 |
+| ldkAre | 0.731736  |   0.001 |        0 |
+| ldkPer | 0.676249  |   0.001 |        0 |
+| ldsCDL | 0.709263  |   0.001 |        0 |
+| ldsMSL | 0.815984  |   0.001 |        0 |
+| ldsRea | 0.810434  |   0.001 |        0 |
+| libNCo | 0.710798  |   0.001 |        0 |
+| licGDe | 0.938796  |   0.001 |        0 |
+| likWBB | 0.655763  |   0.001 |        0 |
+| linP3W | 0.852988  |   0.001 |        0 |
+| linP4W | 0.911839  |   0.001 |        0 |
+| linPDE | 0.815483  |   0.001 |        0 |
+| linWID | 0.629364  |   0.001 |        0 |
+| lskCCo | 0.533229  |   0.001 |        0 |
+| lskCWA | 0.65397   |   0.001 |        0 |
+| lskERI | 0.562295  |   0.001 |        0 |
+| ltbIBD | 0.819981  |   0.001 |        0 |
+| ltcBuA | 0.918511  |   0.001 |        0 |
+| ltcWRB | 0.786888  |   0.001 |        0 |
+| ltkOri | 0.607896  |   0.001 |        0 |
+| ltkWNB | 0.729433  |   0.001 |        0 |
+| mdcAre | 0.509591  |   0.001 |        0 |
+| mdsAre | 0.780909  |   0.001 |        0 |
+| midAre | 0.793405  |   0.001 |        0 |
+| midRea | 0.664584  |   0.001 |        0 |
+| misRea | 0.642062  |   0.001 |        0 |
+| mtbAli | 0.302355  |   0.001 |        0 |
+| mtbNDi | 0.319068  |   0.001 |        0 |
+| mtbSWR | 0.387207  |   0.001 |        0 |
+| mtcWNe | 0.43183   |   0.001 |        0 |
+| mtdDeg | 0.338198  |   0.001 |        0 |
+| mtdMDi | 0.699161  |   0.001 |        0 |
+| sdbAre | 0.0909169 |   0.001 |        0 |
+| sdbCoA | 0.0101648 |   0.001 |        0 |
+| sdbHei | 0.508558  |   0.001 |        0 |
+| sdbPer | 0.171366  |   0.001 |        0 |
+| sdbVol | 0.101862  |   0.001 |        0 |
+| sdcAre | 0.244891  |   0.001 |        0 |
+| sdcLAL | 0.377011  |   0.001 |        0 |
+| sddAre | 0.762546  |   0.001 |        0 |
+| sdsAre | 0.736197  |   0.001 |        0 |
+| sdsLen | 0.63461   |   0.001 |        0 |
+| sdsSHD | 0.45782   |   0.001 |        0 |
+| sdsSPH | 0.738876  |   0.001 |        0 |
+| sdsSPO | 0.542333  |   0.001 |        0 |
+| sdsSPR | 0.700646  |   0.001 |        0 |
+| sdsSPW | 0.395235  |   0.001 |        0 |
+| sdsSWD | 0.357013  |   0.001 |        0 |
+| sicCAR | 0.510195  |   0.001 |        0 |
+| sicFAR | 0.60611   |   0.001 |        0 |
+| sisBpM | 0.153048  |   0.001 |        0 |
+| ssbCCD | 0.0972815 |   0.001 |        0 |
+| ssbCCM | 0.246668  |   0.001 |        0 |
+| ssbCCo | 0.159506  |   0.001 |        0 |
+| ssbCor | 0.101771  |   0.001 |        0 |
+| ssbERI | 0.0928927 |   0.001 |        0 |
+| ssbElo | 0.171279  |   0.001 |        0 |
+| ssbFoF | 0.267186  |   0.001 |        0 |
+| ssbSqu | 0.136881  |   0.001 |        0 |
+| ssbVFR | 0.251518  |   0.001 |        0 |
+| sscCCo | 0.152741  |   0.001 |        0 |
+| sscERI | 0.0677793 |   0.001 |        0 |
+| sssLin | 0.412019  |   0.001 |        0 |
+| stbCeA | 0.0993836 |   0.001 |        0 |
+| stbOri | 0.540843  |   0.001 |        0 |
+| stbSAl | 0.285133  |   0.001 |        0 |
+| stcOri | 0.291539  |   0.001 |        0 |
+| stcSAl | 0.147622  |   0.001 |        0 |
+| xcnSCl | 0.466779  |   0.001 |        0 |
+
+Table: Global Moran's I spatial autocorrelation of primary characters. Key to character IDs is available in table A7.3. \label{moran_conx}
+
+
+**Contextual characters**
+
+|                 |        I |   p_sim |   p_norm |
+|:----------------|---------:|--------:|---------:|
+| lcdMes_meanIQ3  | 0.955598 |   0.001 |        0 |
+| lcdMes_rangeIQ3 | 0.50685  |   0.001 |        0 |
+| lcdMes_simpson  | 0.689865 |   0.001 |        0 |
+| lcdMes_theilID3 | 0.681572 |   0.001 |        0 |
+| lcnClo_meanIQ3  | 0.959075 |   0.001 |        0 |
+| lcnClo_rangeIQ3 | 0.536619 |   0.001 |        0 |
+| lcnClo_simpson  | 0.726854 |   0.001 |        0 |
+| lcnClo_theilID3 | 0.658432 |   0.001 |        0 |
+| ldbPWL_meanIQ3  | 0.940908 |   0.001 |        0 |
+| ldbPWL_rangeIQ3 | 0.772736 |   0.001 |        0 |
+| ldbPWL_simpson  | 0.877407 |   0.001 |        0 |
+| ldbPWL_theilID3 | 0.652227 |   0.001 |        0 |
+| lddARe_meanIQ3  | 0.950351 |   0.001 |        0 |
+| lddARe_rangeIQ3 | 0.630399 |   0.001 |        0 |
+| lddARe_simpson  | 0.814212 |   0.001 |        0 |
+| lddARe_theilID3 | 0.62819  |   0.001 |        0 |
+| lddNDe_meanIQ3  | 0.907499 |   0.001 |        0 |
+| lddNDe_rangeIQ3 | 0.620502 |   0.001 |        0 |
+| lddNDe_simpson  | 0.810196 |   0.001 |        0 |
+| lddNDe_theilID3 | 0.675864 |   0.001 |        0 |
+| lddRea_meanIQ3  | 0.931665 |   0.001 |        0 |
+| lddRea_rangeIQ3 | 0.543221 |   0.001 |        0 |
+| lddRea_simpson  | 0.674778 |   0.001 |        0 |
+| lddRea_theilID3 | 0.66969  |   0.001 |        0 |
+| ldkAre_meanIQ3  | 0.928541 |   0.001 |        0 |
+| ldkAre_rangeIQ3 | 0.570235 |   0.001 |        0 |
+| ldkAre_simpson  | 0.788347 |   0.001 |        0 |
+| ldkAre_theilID3 | 0.522912 |   0.001 |        0 |
+| ldkPer_meanIQ3  | 0.918906 |   0.001 |        0 |
+| ldkPer_rangeIQ3 | 0.585438 |   0.001 |        0 |
+| ldkPer_simpson  | 0.777687 |   0.001 |        0 |
+| ldkPer_theilID3 | 0.597642 |   0.001 |        0 |
+| ldsCDL_meanIQ3  | 0.921323 |   0.001 |        0 |
+| ldsCDL_rangeIQ3 | 0.60509  |   0.001 |        0 |
+| ldsCDL_simpson  | 0.810959 |   0.001 |        0 |
+| ldsCDL_theilID3 | 0.534048 |   0.001 |        0 |
+| ldsMSL_meanIQ3  | 0.944622 |   0.001 |        0 |
+| ldsMSL_rangeIQ3 | 0.583908 |   0.001 |        0 |
+| ldsMSL_simpson  | 0.799475 |   0.001 |        0 |
+| ldsMSL_theilID3 | 0.615352 |   0.001 |        0 |
+| ldsRea_meanIQ3  | 0.95118  |   0.001 |        0 |
+| ldsRea_rangeIQ3 | 0.600647 |   0.001 |        0 |
+| ldsRea_simpson  | 0.80886  |   0.001 |        0 |
+| ldsRea_theilID3 | 0.618526 |   0.001 |        0 |
+| libNCo_meanIQ3  | 0.949998 |   0.001 |        0 |
+| libNCo_rangeIQ3 | 0.841513 |   0.001 |        0 |
+| libNCo_simpson  | 0.909637 |   0.001 |        0 |
+| libNCo_theilID3 | 0.561885 |   0.001 |        0 |
+| licGDe_meanIQ3  | 0.976722 |   0.001 |        0 |
+| licGDe_rangeIQ3 | 0.758523 |   0.001 |        0 |
+| licGDe_simpson  | 0.845604 |   0.001 |        0 |
+| licGDe_theilID3 | 0.60388  |   0.001 |        0 |
+| likWBB_meanIQ3  | 0.904411 |   0.001 |        0 |
+| likWBB_rangeIQ3 | 0.59347  |   0.001 |        0 |
+| likWBB_simpson  | 0.803015 |   0.001 |        0 |
+| likWBB_theilID3 | 0.599414 |   0.001 |        0 |
+| linP3W_meanIQ3  | 0.962415 |   0.001 |        0 |
+| linP3W_rangeIQ3 | 0.513581 |   0.001 |        0 |
+| linP3W_simpson  | 0.690559 |   0.001 |        0 |
+| linP3W_theilID3 | 0.56403  |   0.001 |        0 |
+| linP4W_meanIQ3  | 0.976016 |   0.001 |        0 |
+| linP4W_rangeIQ3 | 0.508686 |   0.001 |        0 |
+| linP4W_simpson  | 0.71637  |   0.001 |        0 |
+| linP4W_theilID3 | 0.646389 |   0.001 |        0 |
+| linPDE_meanIQ3  | 0.95383  |   0.001 |        0 |
+| linPDE_rangeIQ3 | 0.551748 |   0.001 |        0 |
+| linPDE_simpson  | 0.827951 |   0.001 |        0 |
+| linPDE_theilID3 | 0.627833 |   0.001 |        0 |
+| linWID_meanIQ3  | 0.922797 |   0.001 |        0 |
+| linWID_rangeIQ3 | 0.602441 |   0.001 |        0 |
+| linWID_simpson  | 0.815416 |   0.001 |        0 |
+| linWID_theilID3 | 0.595879 |   0.001 |        0 |
+| lskCCo_meanIQ3  | 0.882728 |   0.001 |        0 |
+| lskCCo_rangeIQ3 | 0.518586 |   0.001 |        0 |
+| lskCCo_simpson  | 0.682315 |   0.001 |        0 |
+| lskCCo_theilID3 | 0.714485 |   0.001 |        0 |
+| lskCWA_meanIQ3  | 0.913762 |   0.001 |        0 |
+| lskCWA_rangeIQ3 | 0.593642 |   0.001 |        0 |
+| lskCWA_simpson  | 0.790063 |   0.001 |        0 |
+| lskCWA_theilID3 | 0.568035 |   0.001 |        0 |
+| lskERI_meanIQ3  | 0.897361 |   0.001 |        0 |
+| lskERI_rangeIQ3 | 0.566972 |   0.001 |        0 |
+| lskERI_simpson  | 0.671685 |   0.001 |        0 |
+| lskERI_theilID3 | 0.785261 |   0.001 |        0 |
+| ltbIBD_meanIQ3  | 0.916813 |   0.001 |        0 |
+| ltbIBD_rangeIQ3 | 0.641772 |   0.001 |        0 |
+| ltbIBD_simpson  | 0.760663 |   0.001 |        0 |
+| ltbIBD_theilID3 | 0.619924 |   0.001 |        0 |
+| ltcBuA_meanIQ3  | 0.961734 |   0.001 |        0 |
+| ltcBuA_rangeIQ3 | 0.631009 |   0.001 |        0 |
+| ltcBuA_simpson  | 0.79074  |   0.001 |        0 |
+| ltcBuA_theilID3 | 0.725754 |   0.001 |        0 |
+| ltcWRB_meanIQ3  | 0.915843 |   0.001 |        0 |
+| ltcWRB_rangeIQ3 | 0.737241 |   0.001 |        0 |
+| ltcWRB_simpson  | 0.850155 |   0.001 |        0 |
+| ltcWRB_theilID3 | 0.609031 |   0.001 |        0 |
+| ltkOri_meanIQ3  | 0.904165 |   0.001 |        0 |
+| ltkOri_rangeIQ3 | 0.536899 |   0.001 |        0 |
+| ltkOri_simpson  | 0.697909 |   0.001 |        0 |
+| ltkOri_theilID3 | 0.68647  |   0.001 |        0 |
+| ltkWNB_meanIQ3  | 0.928892 |   0.001 |        0 |
+| ltkWNB_rangeIQ3 | 0.54861  |   0.001 |        0 |
+| ltkWNB_simpson  | 0.74367  |   0.001 |        0 |
+| ltkWNB_theilID3 | 0.60766  |   0.001 |        0 |
+| mdcAre_meanIQ3  | 0.861546 |   0.001 |        0 |
+| mdcAre_rangeIQ3 | 0.751638 |   0.001 |        0 |
+| mdcAre_simpson  | 0.8328   |   0.001 |        0 |
+| mdcAre_theilID3 | 0.574389 |   0.001 |        0 |
+| mdsAre_meanIQ3  | 0.944663 |   0.001 |        0 |
+| mdsAre_rangeIQ3 | 0.617205 |   0.001 |        0 |
+| mdsAre_simpson  | 0.807483 |   0.001 |        0 |
+| mdsAre_theilID3 | 0.57988  |   0.001 |        0 |
+| midAre_meanIQ3  | 0.947303 |   0.001 |        0 |
+| midAre_rangeIQ3 | 0.620141 |   0.001 |        0 |
+| midAre_simpson  | 0.810922 |   0.001 |        0 |
+| midAre_theilID3 | 0.586441 |   0.001 |        0 |
+| midRea_meanIQ3  | 0.904878 |   0.001 |        0 |
+| midRea_rangeIQ3 | 0.507217 |   0.001 |        0 |
+| midRea_simpson  | 0.766685 |   0.001 |        0 |
+| midRea_theilID3 | 0.610119 |   0.001 |        0 |
+| misRea_meanIQ3  | 0.903812 |   0.001 |        0 |
+| misRea_rangeIQ3 | 0.534213 |   0.001 |        0 |
+| misRea_simpson  | 0.77369  |   0.001 |        0 |
+| misRea_theilID3 | 0.604976 |   0.001 |        0 |
+| mtbAli_meanIQ3  | 0.845607 |   0.001 |        0 |
+| mtbAli_rangeIQ3 | 0.741485 |   0.001 |        0 |
+| mtbAli_simpson  | 0.83494  |   0.001 |        0 |
+| mtbAli_theilID3 | 0.676688 |   0.001 |        0 |
+| mtbNDi_meanIQ3  | 0.855789 |   0.001 |        0 |
+| mtbNDi_rangeIQ3 | 0.755206 |   0.001 |        0 |
+| mtbNDi_simpson  | 0.846039 |   0.001 |        0 |
+| mtbNDi_theilID3 | 0.729665 |   0.001 |        0 |
+| mtbSWR_meanIQ3  | 0.920196 |   0.001 |        0 |
+| mtbSWR_rangeIQ3 | 0.744766 |   0.001 |        0 |
+| mtbSWR_simpson  | 0.839345 |   0.001 |        0 |
+| mtbSWR_theilID3 | 0.642402 |   0.001 |        0 |
+| mtcWNe_meanIQ3  | 0.869615 |   0.001 |        0 |
+| mtcWNe_rangeIQ3 | 0.654455 |   0.001 |        0 |
+| mtcWNe_simpson  | 0.75302  |   0.001 |        0 |
+| mtcWNe_theilID3 | 0.682041 |   0.001 |        0 |
+| mtdDeg_meanIQ3  | 0.835449 |   0.001 |        0 |
+| mtdDeg_rangeIQ3 | 0.519432 |   0.001 |        0 |
+| mtdDeg_simpson  | 0.705833 |   0.001 |        0 |
+| mtdDeg_theilID3 | 0.723812 |   0.001 |        0 |
+| mtdMDi_meanIQ3  | 0.925984 |   0.001 |        0 |
+| mtdMDi_rangeIQ3 | 0.593588 |   0.001 |        0 |
+| mtdMDi_simpson  | 0.806522 |   0.001 |        0 |
+| mtdMDi_theilID3 | 0.588363 |   0.001 |        0 |
+| sdbAre_meanIQ3  | 0.820124 |   0.001 |        0 |
+| sdbAre_rangeIQ3 | 0.756028 |   0.001 |        0 |
+| sdbAre_simpson  | 0.900207 |   0.001 |        0 |
+| sdbAre_theilID3 | 0.743363 |   0.001 |        0 |
+| sdbCoA_meanIQ3  | 0.676399 |   0.001 |        0 |
+| sdbCoA_rangeIQ3 | 0.472574 |   0.001 |        0 |
+| sdbCoA_simpson  | 0.902308 |   0.001 |        0 |
+| sdbCoA_theilID3 | 0.74238  |   0.001 |        0 |
+| sdbHei_meanIQ3  | 0.941584 |   0.001 |        0 |
+| sdbHei_rangeIQ3 | 0.78105  |   0.001 |        0 |
+| sdbHei_simpson  | 0.92606  |   0.001 |        0 |
+| sdbHei_theilID3 | 0.756276 |   0.001 |        0 |
+| sdbPer_meanIQ3  | 0.880991 |   0.001 |        0 |
+| sdbPer_rangeIQ3 | 0.809868 |   0.001 |        0 |
+| sdbPer_simpson  | 0.881562 |   0.001 |        0 |
+| sdbPer_theilID3 | 0.770573 |   0.001 |        0 |
+| sdbVol_meanIQ3  | 0.840984 |   0.001 |        0 |
+| sdbVol_rangeIQ3 | 0.764246 |   0.001 |        0 |
+| sdbVol_simpson  | 0.904012 |   0.001 |        0 |
+| sdbVol_theilID3 | 0.708305 |   0.001 |        0 |
+| sdcAre_meanIQ3  | 0.846201 |   0.001 |        0 |
+| sdcAre_rangeIQ3 | 0.788472 |   0.001 |        0 |
+| sdcAre_simpson  | 0.833662 |   0.001 |        0 |
+| sdcAre_theilID3 | 0.64362  |   0.001 |        0 |
+| sdcLAL_meanIQ3  | 0.858866 |   0.001 |        0 |
+| sdcLAL_rangeIQ3 | 0.721431 |   0.001 |        0 |
+| sdcLAL_simpson  | 0.823481 |   0.001 |        0 |
+| sdcLAL_theilID3 | 0.657668 |   0.001 |        0 |
+| sddAre_meanIQ3  | 0.937527 |   0.001 |        0 |
+| sddAre_rangeIQ3 | 0.611057 |   0.001 |        0 |
+| sddAre_simpson  | 0.806723 |   0.001 |        0 |
+| sddAre_theilID3 | 0.548801 |   0.001 |        0 |
+| sdsAre_meanIQ3  | 0.925027 |   0.001 |        0 |
+| sdsAre_rangeIQ3 | 0.606761 |   0.001 |        0 |
+| sdsAre_simpson  | 0.805935 |   0.001 |        0 |
+| sdsAre_theilID3 | 0.524675 |   0.001 |        0 |
+| sdsLen_meanIQ3  | 0.91244  |   0.001 |        0 |
+| sdsLen_rangeIQ3 | 0.598489 |   0.001 |        0 |
+| sdsLen_simpson  | 0.796079 |   0.001 |        0 |
+| sdsLen_theilID3 | 0.576659 |   0.001 |        0 |
+| sdsSHD_meanIQ3  | 0.891916 |   0.001 |        0 |
+| sdsSHD_rangeIQ3 | 0.718592 |   0.001 |        0 |
+| sdsSHD_simpson  | 0.876636 |   0.001 |        0 |
+| sdsSHD_theilID3 | 0.68296  |   0.001 |        0 |
+| sdsSPH_meanIQ3  | 0.954994 |   0.001 |        0 |
+| sdsSPH_rangeIQ3 | 0.685786 |   0.001 |        0 |
+| sdsSPH_simpson  | 0.885641 |   0.001 |        0 |
+| sdsSPH_theilID3 | 0.659245 |   0.001 |        0 |
+| sdsSPO_meanIQ3  | 0.910225 |   0.001 |        0 |
+| sdsSPO_rangeIQ3 | 0.525057 |   0.001 |        0 |
+| sdsSPO_simpson  | 0.715839 |   0.001 |        0 |
+| sdsSPO_theilID3 | 0.773536 |   0.001 |        0 |
+| sdsSPR_meanIQ3  | 0.964001 |   0.001 |        0 |
+| sdsSPR_rangeIQ3 | 0.725299 |   0.001 |        0 |
+| sdsSPR_simpson  | 0.889633 |   0.001 |        0 |
+| sdsSPR_theilID3 | 0.64308  |   0.001 |        0 |
+| sdsSPW_meanIQ3  | 0.879784 |   0.001 |        0 |
+| sdsSPW_rangeIQ3 | 0.540892 |   0.001 |        0 |
+| sdsSPW_simpson  | 0.695483 |   0.001 |        0 |
+| sdsSPW_theilID3 | 0.683547 |   0.001 |        0 |
+| sdsSWD_meanIQ3  | 0.859928 |   0.001 |        0 |
+| sdsSWD_rangeIQ3 | 0.544153 |   0.001 |        0 |
+| sdsSWD_simpson  | 0.706063 |   0.001 |        0 |
+| sdsSWD_theilID3 | 0.683033 |   0.001 |        0 |
+| sicCAR_meanIQ3  | 0.942188 |   0.001 |        0 |
+| sicCAR_rangeIQ3 | 0.775051 |   0.001 |        0 |
+| sicCAR_simpson  | 0.877473 |   0.001 |        0 |
+| sicCAR_theilID3 | 0.771826 |   0.001 |        0 |
+| sicFAR_meanIQ3  | 0.964149 |   0.001 |        0 |
+| sicFAR_rangeIQ3 | 0.889602 |   0.001 |        0 |
+| sicFAR_simpson  | 0.934126 |   0.001 |        0 |
+| sicFAR_theilID3 | 0.74142  |   0.001 |        0 |
+| sisBpM_meanIQ3  | 0.834023 |   0.001 |        0 |
+| sisBpM_rangeIQ3 | 0.520404 |   0.001 |        0 |
+| sisBpM_simpson  | 0.774814 |   0.001 |        0 |
+| sisBpM_theilID3 | 0.593089 |   0.001 |        0 |
+| ssbCCD_meanIQ3  | 0.849419 |   0.001 |        0 |
+| ssbCCD_rangeIQ3 | 0.780761 |   0.001 |        0 |
+| ssbCCD_simpson  | 0.84992  |   0.001 |        0 |
+| ssbCCD_theilID3 | 0.813876 |   0.001 |        0 |
+| ssbCCM_meanIQ3  | 0.889831 |   0.001 |        0 |
+| ssbCCM_rangeIQ3 | 0.819487 |   0.001 |        0 |
+| ssbCCM_simpson  | 0.881239 |   0.001 |        0 |
+| ssbCCM_theilID3 | 0.78196  |   0.001 |        0 |
+| ssbCCo_meanIQ3  | 0.864255 |   0.001 |        0 |
+| ssbCCo_rangeIQ3 | 0.749751 |   0.001 |        0 |
+| ssbCCo_simpson  | 0.788952 |   0.001 |        0 |
+| ssbCCo_theilID3 | 0.790146 |   0.001 |        0 |
+| ssbCor_meanIQ3  | 0.841669 |   0.001 |        0 |
+| ssbCor_rangeIQ3 | 0.697948 |   0.001 |        0 |
+| ssbCor_simpson  | 0.826181 |   0.001 |        0 |
+| ssbCor_theilID3 | 0.688075 |   0.001 |        0 |
+| ssbERI_meanIQ3  | 0.856649 |   0.001 |        0 |
+| ssbERI_rangeIQ3 | 0.808194 |   0.001 |        0 |
+| ssbERI_simpson  | 0.812285 |   0.001 |        0 |
+| ssbERI_theilID3 | 0.848991 |   0.001 |        0 |
+| ssbElo_meanIQ3  | 0.864312 |   0.001 |        0 |
+| ssbElo_rangeIQ3 | 0.698684 |   0.001 |        0 |
+| ssbElo_simpson  | 0.765896 |   0.001 |        0 |
+| ssbElo_theilID3 | 0.791906 |   0.001 |        0 |
+| ssbFoF_meanIQ3  | 0.893053 |   0.001 |        0 |
+| ssbFoF_rangeIQ3 | 0.777009 |   0.001 |        0 |
+| ssbFoF_simpson  | 0.857507 |   0.001 |        0 |
+| ssbFoF_theilID3 | 0.805237 |   0.001 |        0 |
+| ssbSqu_meanIQ3  | 0.89365  |   0.001 |        0 |
+| ssbSqu_rangeIQ3 | 0.827903 |   0.001 |        0 |
+| ssbSqu_simpson  | 0.873586 |   0.001 |        0 |
+| ssbSqu_theilID3 | 0.659983 |   0.001 |        0 |
+| ssbVFR_meanIQ3  | 0.892769 |   0.001 |        0 |
+| ssbVFR_rangeIQ3 | 0.777149 |   0.001 |        0 |
+| ssbVFR_simpson  | 0.876502 |   0.001 |        0 |
+| ssbVFR_theilID3 | 0.772907 |   0.001 |        0 |
+| sscCCo_meanIQ3  | 0.837064 |   0.001 |        0 |
+| sscCCo_rangeIQ3 | 0.633735 |   0.001 |        0 |
+| sscCCo_simpson  | 0.730701 |   0.001 |        0 |
+| sscCCo_theilID3 | 0.781972 |   0.001 |        0 |
+| sscERI_meanIQ3  | 0.814612 |   0.001 |        0 |
+| sscERI_rangeIQ3 | 0.691816 |   0.001 |        0 |
+| sscERI_simpson  | 0.720924 |   0.001 |        0 |
+| sscERI_theilID3 | 0.75613  |   0.001 |        0 |
+| sssLin_meanIQ3  | 0.834239 |   0.001 |        0 |
+| sssLin_rangeIQ3 | 0.626923 |   0.001 |        0 |
+| sssLin_simpson  | 0.815024 |   0.001 |        0 |
+| sssLin_theilID3 | 0.731798 |   0.001 |        0 |
+| stbCeA_meanIQ3  | 0.833449 |   0.001 |        0 |
+| stbCeA_rangeIQ3 | 0.75756  |   0.001 |        0 |
+| stbCeA_simpson  | 0.838166 |   0.001 |        0 |
+| stbCeA_theilID3 | 0.784623 |   0.001 |        0 |
+| stbOri_meanIQ3  | 0.909016 |   0.001 |        0 |
+| stbOri_rangeIQ3 | 0.639928 |   0.001 |        0 |
+| stbOri_simpson  | 0.797732 |   0.001 |        0 |
+| stbOri_theilID3 | 0.752463 |   0.001 |        0 |
+| stbSAl_meanIQ3  | 0.844173 |   0.001 |        0 |
+| stbSAl_rangeIQ3 | 0.694922 |   0.001 |        0 |
+| stbSAl_simpson  | 0.827305 |   0.001 |        0 |
+| stbSAl_theilID3 | 0.61161  |   0.001 |        0 |
+| stcOri_meanIQ3  | 0.890039 |   0.001 |        0 |
+| stcOri_rangeIQ3 | 0.696291 |   0.001 |        0 |
+| stcOri_simpson  | 0.795035 |   0.001 |        0 |
+| stcOri_theilID3 | 0.805094 |   0.001 |        0 |
+| stcSAl_meanIQ3  | 0.832939 |   0.001 |        0 |
+| stcSAl_rangeIQ3 | 0.719319 |   0.001 |        0 |
+| stcSAl_simpson  | 0.821816 |   0.001 |        0 |
+| stcSAl_theilID3 | 0.739995 |   0.001 |        0 |
+| xcnSCl_meanIQ3  | 0.838289 |   0.001 |        0 |
+| xcnSCl_rangeIQ3 | 0.592369 |   0.001 |        0 |
+| xcnSCl_simpson  | 0.780986 |   0.001 |        0 |
+| xcnSCl_theilID3 | 0.422105 |   0.001 |        0 |
+
+Table: Global Moran's I spatial autocorrelation of contextual characters. Key to character IDs is available in table A7.3. \label{moran_conx}
 
 ## 7.7 Statistical overview of contextual characters results {.unnumbered}
 
@@ -451,7 +896,7 @@ To be done.
 | ltkWNB |      0.0074  |      0.0035  |     0       |      0.0047  |      0.0071  |      0.0097  |      0.025   |
 | likWBB |      0.00088 |      0.00051 |     3e-05   |      0.00051 |      0.0008  |      0.0012  |      0.004   |
 
-Table: Overview of the contextual morphometric values of interquartile mean for the whole case study. Key to character IDs is available in table XXX. \label{meanIQ3_chars}
+Table: Overview of the contextual morphometric values of interquartile mean for the whole case study. Key to character IDs is available in table A7.3. \label{meanIQ3_chars}
 
 ![Histograms of interquartile mean for characters 1-15 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_15__meanIQ3.pdf "Histograms of contextual characters 1-15"){#fig:conxdistplot1 width=100%}
 
@@ -541,7 +986,7 @@ Table: Overview of the contextual morphometric values of interquartile mean for 
 | ltkWNB |      0.0028  |      0.0024  | 0       |     0.00085 |     0.0023  |      0.0041  |      0.019   |
 | likWBB |      0.00049 |      0.00048 | 0       |     0.00014 |     0.00037 |      0.0007  |      0.0053  |
 
-Table: Overview of the contextual morphometric values of interquartile range for the whole case study. Key to character IDs is available in table XXX. \label{rangeIQ3_chars}
+Table: Overview of the contextual morphometric values of interquartile range for the whole case study. Key to character IDs is available in table A7.3. \label{rangeIQ3_chars}
 
 ![Histograms of interquartile range for characters 1-15 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_15__rangeIQ3.pdf "Histograms of contextual characters 1-15 (range)"){#fig:conxdistplot1range width=100%}
 
@@ -631,7 +1076,7 @@ Table: Overview of the contextual morphometric values of interquartile range for
 | ltkWNB | 0.041   | 0.047  | -6.7e-16 | 0.0092  | 0.026   | 0.058   | 0.54  |
 | likWBB | 0.081   | 0.082  | -6.7e-16 | 0.019   | 0.057   | 0.12    | 0.84  |
 
-Table: Overview of the contextual morphometric values of interdecile Theil index for the whole case study. Key to character IDs is available in table XXX. \label{theilID3_chars}
+Table: Overview of the contextual morphometric values of interdecile Theil index for the whole case study. Key to character IDs is available in table A7.3. \label{theilID3_chars}
 
 ![Histograms of interdecile Theil index for characters 1-15 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_15__theilID3.pdf "Histograms of contextual characters 1-15 (Theil)"){#fig:conxdistplot1Theil width=100%}
 
@@ -721,7 +1166,7 @@ Table: Overview of the contextual morphometric values of interdecile Theil index
 | ltkOri |   0.53 | 0.21  |  0.17 |  0.37 |  0.48 |  0.63 |     1 |
 | ltkWNB |   0.53 | 0.22  |  0.15 |  0.36 |  0.47 |  0.64 |     1 |
 
-Table: Overview of the contextual morphometric values of Simpson index for the whole case study. Key to character IDs is available in table XXX. \label{simpson_chars}
+Table: Overview of the contextual morphometric values of Simpson index for the whole case study. Key to character IDs is available in table A7.3. \label{simpson_chars}
 
 ![Histograms of Simpson index for characters 1-15 are showing the variety of distributions within the measured contextual data.](source/figures/appendix_conx/conx_distplot_15__simpson.pdf "Histograms of contextual characters 1-15 (Simpson)"){#fig:conxdistplot1Simpson width=100%}
 
@@ -736,11 +1181,16 @@ Table: Overview of the contextual morphometric values of Simpson index for the w
 
 ## 7.8 Correlation matrix of contextual characters {.unnumbered}
 
-	![TITLE. ](source/figures/appendix_conx/spearman_conx.pdf "Short caption"){#fig:spearman_conx_hq width=100%}
+	![Correlation matrix of contextual characters](source/figures/appendix_conx/spearman_conx.pdf "Correlation matrix of contextual characters"){#fig:spearman_conx_hq width=100%}
 
 ==Commented out, uncomment for final export.==
 
 ## 7.9 Structure of clusters of sampled and complete clustering {.unnumbered}
 
-To be done.
-(Maybe not)
+Supplementary material for section 7.2.3.2.2.1.
+
+![Composition of clusters in relation to sampled clustering. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/a7/relation_complete-sampled.pdf "Composition of clusters in relation to sampled clustering."){#fig:compsamp width=100%}
+
+
+![Composition of sampled clusters in relation to original clustering. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/a7/relation_sampled-complete.pdf "Composition of sampled clusters in relation to original clustering"){#fig:sapmcomp width=100%}
+

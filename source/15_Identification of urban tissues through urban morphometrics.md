@@ -580,7 +580,7 @@ Statistics knows central tendency as a measure of a typical value for a probabil
 
 Commonly used measures of central tendency are mean, median or mode [@wilcox2003modern]. Each of them fits a different purpose. If one wants to use the arithmetic mean to determine central values, underlying distribution should not be skewed . Otherwise, outliers may significantly affect the resulting value. A mode is, by definition, not suitable for continuous variables like those obtained in primary characters. Median is the most robust of all, measuring the middle value. However, the robustness comes at a cost - the shape of a distribution is not reflected at all. Another option is to find a middle ground between easily distorted mean and robust median using truncated mean. Instead of computing arithmetic mean of the whole distribution, we can work with interquartile (smallest and largest 25% are omitted) or interdecile (smallest and largest 10% are omitted) range to minimise the outlier effect on the mean.  
 
-The distribution of values of individual characters vary and in some cases, tends to be skewed. As shown in Appendix 7.4 analysing the difference between mean, interdecile mean, interquartile mean and median (being equal to extremely truncated mean) on a selection of 8 characters, it is clear, that majority of data is somewhat asymmetric, causing volatility of mean, which should not be used in such cases. The question is then limited to the distinction between the median and truncated means (leaving aside midhinge and similar estimators). The data indicate that the difference between median and interquartile mean is minimal (but still present, e.g., in the case of *shared walls ratio*). As interquartile mean uses more information than the median, while being similarly robust to outliers, this research settles on implementation of the interquartile mean as a measure of local central tendency, denoted as
+The distribution of values of individual characters vary and in some cases, tends to be skewed. As shown in Appendix 7.4 analysing the difference between mean, interdecile mean, interquartile mean and median (being equal to extremely truncated mean) on a selection of 8 characters, it is clear, that due to the majority of data being asymmetric, mean is more volatile than others andshould not be used. The question is then limited to the distinction between the median and truncated means (leaving aside midhinge and similar estimators). The data indicate that the difference between median and interquartile mean is minimal (but still present, e.g., in the case of *shared walls ratio*). As interquartile mean uses more information than the median, while being similarly robust to outliers, this research settles on implementation of the interquartile mean as a measure of local central tendency, denoted as
 
 (@eq_iqm) $IQM_{ch} = \frac{2}{n} \sum_{i=\frac{n}{4}+1}^{\frac{3 n}{4}} ch_{i}$,
 
@@ -618,7 +618,7 @@ Using four morphometric characters as test data - *area of a building*, *height 
 The results section of this assessment is available as Appendix 7.5.
 
 ###### Resulting selection of contextual characters
-While the complete results of the analysis are available as Appendix 7.5, the main conclusions are as follows.
+While the results of the analysis are available as Appendix 7.5, the main conclusions are as follows.
 
 Because some of the values follow exponential (power-law or similar) distribution within the whole dataset, the binning method for Simpson's diversity index has to acknowledge that. For that reason, HeadTail Breaks are the ideal method as it is specifically tailored to exponential distributions [@jiang2013]. Those characters which do not resemble exponential distribution should use natural breaks or similar classification method sensitive to the actual distribution, rather than quantiles, which may cause significant disruptions and very similar values may fall into multiple bins causing high diversity values in place where is not.
 
@@ -775,7 +775,7 @@ The last case, *degree of a street node* (bottom right), is specific as the resu
 
 These are not the only types of distributions in the set, but they illustrate the variability of morphometric characters.
 
-Descriptive summary values of all character are presented in table \ref{primary_chars}.
+Descriptive summary values of all characters are presented in table \ref{primary_chars}.
 
 | id     |         mean |          std |       min |          25% |          50% |          75% |          max |
 |:-------|-------------:|-------------:|----------:|-------------:|-------------:|-------------:|-------------:|
@@ -854,7 +854,7 @@ Descriptive summary values of all character are presented in table \ref{primary_
 | lcnClo |      5.3e-06 |      2.5e-06 |   0       |      3.4e-06 |      5.1e-06 |      6.9e-06 |      2e-05   |
 | xcnSCl |      0.056   |      0.087   |   0       |      0       |      0       |      0.086   |      1       |
 
-Table: Overview of the primary morphometric values for the whole case study. The key to character IDs is available in table \ref{prim_chars_ref}. Units, where applicable are in the section [Identified set of primary characters] \label{primary_chars}
+Table: Overview of the primary morphometric values for the whole case study. The key to character IDs is available in Appendix 7. Units, where applicable are in the section [Identified set of primary characters] \label{primary_chars}
 
 Without exploring the table \ref{primary_chars} above in detail, it is worth pointing out two characters standing out - *courtyard area of a building (sdbCoA)* and *‌number of courtyards of adjacent buildings (libNCo)*. Both are capturing similar concepts of closed courtyards (either in a single building or in a composite of adjacent buildings), and both are relatively invariant (min, 25%, 50% and 75% are all 0). While these might not be critical for identification of clusters in Prague, there are urban tissues, especially in warmer environments, characterised by these properties. While the overall aim of this research is to be comparable, not tailored to a specific context, these characters are still included.
 
@@ -1132,7 +1132,7 @@ The composition of clusters is, with a few exceptions equal (figure \ref{fig:rel
 
 Three examples above show that there is a striking similarity between both results. However, there is a different number of clusters, so where is the difference? The example on figure \ref{fig:PRG_cluster_comparison_4} shows cluster 15 based on complete data, which does not have its counterpart in sampled clustering. Instead, it is split into three almost equal parts (figure \ref{fig:relation_cluster15}) each linked to another cluster. What was the so-called transitional area between medieval core and historical compact city is no longer present. That by itself is likely not a big issue, but it illustrates the behaviour of sampled clustering with a smaller number of components. It does not necessarily merge two similar clusters into one, but at some places splits clusters into multiple pieces. GMM, in this case, sees different data and hence might exclude some smaller clusters. Because these might have been *in between* other, parts are now closer to one and other parts closer to another cluster. The resulting clustering should then be seen as a different perspective using different resolution, rather than a coarser version of complete clustering.
 
-![composition of cluster 15 in relation to sampled clustering. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/ch7/relation_cluster15.pdf "Composition of cluster 15"){#fig:relation_cluster15 width=40%}
+![Composition of cluster 15 in relation to sampled clustering. Shows number of features labeled as studied cluster and their labels in the other clustering variant.](source/figures/ch7/relation_cluster15.pdf "Composition of cluster 15"){#fig:relation_cluster15 width=40%}
 
 Looking onto other clusters which do not have a counterpart in sampled clustering (apart from 15, 2, 6, 9, and 10), none of them is *swallowed* by one larger cluster. All are split into two sampled clusters. Sometimes more equally (e.g., cluster 2 is equally split between 10 and 14), sometimes less equally (e.g., cluster 6 is more present in sampled cluster 0 than sampled cluster 8). This illustrates the probabilistic rather than hierarchical nature of GMM. The full comparison is available in Appendix 7.9.
 
