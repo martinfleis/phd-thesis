@@ -57,7 +57,7 @@ Chapter 8 (Taxonomic relationships of urban tissues) proposes the final methodol
 
 Final chapter 9 (Synthesis) synthesises the research, discuss its character, potential application, limits and directions of further research.
 
-Furthermore, this thesis contains five appendices, four containing supplementary information to relevant chapters (4, 6, 7, and 8) and one containing Jupyter notebooks allowing reproduction of the major parts of the work. On top of that, two additional annexes contain evidence of dissemination of the work. Annexe 1 consists of the documentation of open-source Python package `momepy`, which accompanies the work presented in this thesis, allows its reproducibility and lays a foundation for further morphometric research. Finally, Annexe 2 contains peer-review articles publishing parts of this thesis.
+Furthermore, this thesis contains five appendices, four containing supplementary information to relevant chapters (4, 6, 7, and 8) and one containing Jupyter notebooks allowing reproduction of the major parts of the work. On top of that, two additional annexes contain evidence of dissemination of the work. Annexe 1 consists of the open-source Python package `momepy`, which accompanies the work presented in this thesis, allows its reproducibility and lays a foundation for further morphometric research.
 
 Notice that the structure does not contain an independent chapter dedicated to methods. That is due to the specific design of the core chapters. Each of them has its methodology dependent on the results from the previous chapter. 
 

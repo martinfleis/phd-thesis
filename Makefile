@@ -50,7 +50,7 @@ tex:
 	-V documentclass=report \
 	-N \
 	--csl="$(STYLEDIR)/ref_format.csl" \
-	--latex-engine=xelatex
+	--pdf-engine=xelatex
 
 tex6:
 	pandoc "$(INPUTDIR)"/14*.md \
@@ -349,15 +349,36 @@ appendixN:
 	--verbose
 
 
-appendix8tex:
-	pandoc "$(INPUTDIR)"/21*.md \
-	-o "$(OUTPUTDIR)/appendix8.tex" \
+annexe1:
+	pandoc "$(INPUTDIR)"/23*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/annexe1.pdf" \
 	-H "$(STYLEDIR)/preamble.tex" \
-	--bibliography="$(BIBFILE)" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
 	-V fontsize=12pt \
 	-V papersize=a4paper \
 	-V documentclass=report \
 	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+markdown:
+	pandoc "$(INPUTDIR)"/*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/thesis.md" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
 	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
 
 .PHONY: help pdf docx html tex chapter7 chapter8
