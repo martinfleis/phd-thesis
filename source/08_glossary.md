@@ -34,14 +34,23 @@ To be revised, not these are just randomly dumped terms.
 
 & \tabularnewline
 
-\textbf{API} & \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface\tabularnewline
-\textbf{JSON} & \textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation\tabularnewline
+\textbf{BIC} & \textbf{B}ayesian \textbf{I}nformation \textbf{C}riterion\tabularnewline
+\textbf{GMM} & \textbf{G}aussian \textbf{M}ixture \textbf{M}odel\tabularnewline
+\textbf{IQM} & \textbf{I}nter\textbf{Q}uartile \textbf{M}ean\tabularnewline
+\textbf{IQR} & \textbf{I}nter\textbf{Q}uartile \textbf{R}ange\tabularnewline
+\textbf{LISA} & \textbf{L}ocal \textbf{I}ndex of \textbf{S}patial \textbf{A}utocorrelation\tabularnewline
+\textbf{MC} & \textbf{M}orphological \textbf{C}ell\tabularnewline
+\textbf{MT} & \textbf{M}orphological \textbf{T}essellation\tabularnewline
+\textbf{NRMSD} & \textbf{N}ormalised \textbf{R}oot \textbf{S}squared \textbf{M}ean \textbf{D}eviation\tabularnewline
+\textbf{OCM} & \textbf{O}ptimal \textbf{C}lassification \textbf{M}mdel\tabularnewline
+\textbf{OTU} & \textbf{O}perational \textbf{T}axonomic \textbf{U}nit\tabularnewline
+\textbf{SA} & \textbf{S}anctuary \textbf{A}rea\tabularnewline
+\textbf{VT} & \textbf{V}oronoi \textbf{T}essellation\tabularnewline
+
 \end{longtable}
 \endgroup
 
-\newpage
-\setcounter{page}{1}
-\renewcommand{\thepage}{\arabic{page}}
+
 
 Classification - the ordering of entities into groups or classes on the basis of their similarity
 Taxonomy
@@ -51,3 +60,6 @@ Phenetics
 Cladistics
 Phylogeny
 Taxa
+
+\newpage
+

@@ -1052,7 +1052,7 @@ Cluster 14 is distributed almost exclusively within the wider centre of Prague, 
 
 Cluster 15 (\ref{fig:PRG_cluster_detail_15}) is perimeter-block based tissue type with very heterogeneous development in the block interiors. It has a very high coverage area ratio located in in the city centre either as a transitional area between medieval core and compact city or as industrial development. There are only 3060 features within the cluster (2.2%).
 
-![Example of cluster 15 and its surroundings within 1,5km buffer located north of the city centre.](source/figures/ch7/PRG_cluster_detail_15.png "Short caption"){#fig:PRG_cluster_detail_15 width=100%}
+![Example of cluster 15 and its surroundings within 1,5km buffer located north of the city centre.](source/figures/ch7/PRG_cluster_detail_15.png "Example of cluster 15"){#fig:PRG_cluster_detail_15 width=100%}
 
 Cluster 16 (\ref{fig:PRG_cluster_detail_16}) is not very straightforward to define as it is a heterogeneous one. It mostly consists of small patches of not very well defined tissues with the predominant role of small-scale buildings but not exclusively. It may be seen as *other*, combining parts of the dataset which do not fit elsewhere, but at the same time, all places have the similar character of being *out of sight*. It is evenly distributed, but not very abundant one with 3548 making approximately 2.5% of the dataset.
 

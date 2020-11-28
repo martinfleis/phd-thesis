@@ -25,7 +25,7 @@ Spatial distribution of individual branches of the dendrogram. Selection of bran
 
 ## A8.2  Morphometric characters in Amsterdam {.unnumbered}
 
-Reported morpohometric data used in the section 8.3.2.2.
+Reported morphometric data used in the section 8.3.2.2.
 
 Descriptive summary values of all primary characters measured on Amsterdam data are presented in the table below.
 
@@ -106,7 +106,7 @@ Descriptive summary values of all primary characters measured on Amsterdam data 
 | lcnClo |      4.4e-06 |      2e-06   |    0       |     2.9e-06 |      4.4e-06 |      5.6e-06 |      1.4e-05 |
 | xcnSCl |      0.055   |      0.1     |    0       |     0       |      0       |      0.08    |      1       |
 
-Table: Overview of the primary morphometric values for the Amestrdam case study. The key to character IDs is available in Appendix 7.
+Table: Overview of the primary morphometric values for the Amsterdam case study. The key to character IDs is available in Appendix 7.
 
 \newpage 
 

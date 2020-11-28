@@ -100,6 +100,23 @@ titlepage:
 	--pdf-engine=xelatex \
 	--verbose
 
+tables:
+	pandoc "$(INPUTDIR)"/07*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/listoftables.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
+
 chapter1:
 	pandoc "$(INPUTDIR)"/09*.md \
 	--filter pandoc-shortcaption \
@@ -268,6 +285,22 @@ glossary:
 	--pdf-engine=xelatex \
 	--verbose
 
+quote:
+	pandoc "$(INPUTDIR)"/08_q*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/quote.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 appendix4:
 	pandoc "$(INPUTDIR)"/18*.md \
 	--filter pandoc-shortcaption \
@@ -364,6 +397,24 @@ annexe1:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+
+abstract:
+	pandoc "$(INPUTDIR)"/03*.md \
+	--filter pandoc-shortcaption \
+	-o "$(OUTPUTDIR)/abstract.pdf" \
+	-H "$(STYLEDIR)/preamble.tex" \
+	--template="$(STYLEDIR)/template.tex" \
+	--bibliography="$(BIBFILE)" 2>pandoc.log \
+	--csl="$(STYLEDIR)/ref_format.csl" \
+	--highlight-style pygments \
+	-V fontsize=12pt \
+	-V papersize=a4paper \
+	-V documentclass=report \
+	-N \
+	--pdf-engine=xelatex \
+	--verbose
+
 
 markdown:
 	pandoc "$(INPUTDIR)"/*.md \

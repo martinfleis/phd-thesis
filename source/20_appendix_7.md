@@ -8,12 +8,12 @@
 
 ## 7.1 Selection of primary characters {.unnumbered}
 
-Supplementary material for section 7.1.2.1.1. Table \ref{tab:long_chars} contains intial selection of applicable characters and reasoning behind its selection or exclusion.
+Supplementary material for section 7.1.2.1.1. Table \ref{tab:long_chars} contains initial selection of applicable characters and reasoning behind its selection or exclusion.
 
 \small
 \begin{longtable}[]{@{}P{1.5cm}P{3.5cm}P{2.8cm}P{1.3cm}P{2.5cm}P{2cm}@{}}
 \caption{Initial selection of applicable characters as an extraction from the Table of Urban Form Characters (Table A4.1.)
-Selection reflects steps defined in section 7.1.2.1.1. Result indicates whether teseted character is included in
+Selection reflects steps defined in section 7.1.2.1.1. Result indicates whether tested character is included in
 the final set of primary characters or not, alternatively specifies the reason. Characters using different data
 than specified in the relational model are excluded a priori.} \label{tab:long_chars} \\
 \toprule
@@ -353,7 +353,7 @@ Table: Reference table for primary characters. Contains references to existing l
 
 Sectional diagrams show the distribution of measured values along the longitudinal section through the whole case study. Diagrams were generated every 1km and individually assessed to understand the effect of a different number of steps on the distribution. The overall aim is to use that number of steps which illustrate the tendency within the local area but in too smooth to disable identification of boundaries between areas of different characters. Based on the visual assessment of sectional diagrams, three topological steps are the closest option to the goal mentioned above. Figures \ref{fig:sect_full} and \ref{fig:sect_det} below illustrate one such diagram and its detail.
 
-Note: Please refer to the electronical version of the thesis for a better clarity. Sectional diagrams are not optimised for print.
+Note: Please refer to the PDF version of the thesis for a better clarity. Sectional diagrams are not optimised for print.
 
 ![Full sectional diagrams illustrating spatial distribution of selected values (IQM of area, ID Theil index of area, IQR of area, adjacency).](source/figures/a7/sect_full.pdf "Full sectional diagrams illustrating spatial distribution of selected values."){#fig:sect_full width=100%}
 
@@ -384,7 +384,7 @@ This appendix presents results of tests of different of measuring central tenden
 
 Tested on 3 topological steps.
 
-The aim is to identify such a method which is not prone to oulier effect but at the same time reflect the best true nature of each context.
+The aim is to identify such a method which is not prone to outlier effect but at the same time reflect the best true nature of each context.
 
 \newpage
 \thispagestyle{empty}
@@ -1183,7 +1183,7 @@ Table: Overview of the contextual morphometric values of Simpson index for the w
 
 	![Correlation matrix of contextual characters](source/figures/appendix_conx/spearman_conx.pdf "Correlation matrix of contextual characters"){#fig:spearman_conx_hq width=100%}
 
-==Commented out, uncomment for final export.==
+<!-- Commented out, uncomment for final export. -->
 
 ## 7.9 Structure of clusters of sampled and complete clustering {.unnumbered}
 
