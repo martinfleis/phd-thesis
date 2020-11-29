@@ -44,7 +44,7 @@ To overcome terminological inconsistencies among the morphometric characters ado
 
 While the existing literature on urban morphology shows a historical inclination towards qualitative methods [@dibble2015], through the iterative literature review process illustrated above are identified 72 predominantly *quantitative* works (peer-reviewed articles, conference papers, book chapters, PhD theses). In figure \ref{fig:scale_diagram}, selected literature items are *positioned* according to their grain and extent scales and *classified* by their purpose (colour), and a number of urban form characters considered (size).
 
-![Classification of Literature. Predominantly quantitative studies in urban morphology classified according to grain scale (Y axis), extent scale (X axis), purpose (colour) and number of urban form characters (size). The histograms show a relative balance in terms of scale of grain and a tendency towards large scales of extent. Note: placement of points is jittered to minimise overlaps.](source/figures/ch3/scale_diagram.png "Classification of Literature"){#fig:scale_diagram width=100%}
+![Classification of Literature. Predominantly quantitative studies in urban morphology classified according to grain scale (Y axis), extent scale (X axis), purpose (colour) and number of urban form characters (size). The histograms show a relative balance in terms of scale of grain and a tendency towards large scales of extent. Note: placement of points is jittered to minimise overlaps.](source/figures/ch3/scale_diagram.png "Classification of Literature"){#fig:scale_diagram width=95%}
 
 ---
 nocite: |

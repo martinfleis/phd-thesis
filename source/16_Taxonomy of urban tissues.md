@@ -179,9 +179,9 @@ The first part of the analysis of Amsterdam is the identification of urban tissu
 Both results will be assessed visually on a map to understand whether the clusters alone and within their branches are interpretable and contiguous.
 
 ##### Validation of clustering in Amsterdam
-The resulting clusters in Amsterdam are validated using the method proposed in section \ref{meth_validation_rel} above, using data on the historical origin of each building. In the case of the datasets obtained from @dukai2020, each building has assigned a year of its construction. Unlike in Prague, the year does not represent the data when the area/plot was first built-up, but the latest construction. Even though the data are not initially binned, only buildings constructed after the year 1800 have a specific year. To ensure the compatibility of the data with those used in Prague and to avoid issues with pre-1800 periods, the origin dates are therefore binned into 11 groups following the classification of [@spaan2015]. The rest of the validation follows the method outlined in \ref{meth_validation_rel}.
+The resulting clusters in Amsterdam are validated using the method proposed in section \ref{meth_validation_rel} above, using data on the historical origin of each building. In the case of the datasets obtained from @dukai2020, each building has assigned a year of its construction. Unlike in Prague, the year does not represent the data when the area/plot was first built-up, but the latest construction. Even though the data are not initially binned, only buildings constructed after the year 1800 have a specific year. To ensure the compatibility of the data with those used in Prague and to avoid issues with pre-1800 periods, the origin dates are therefore binned into 11 groups following the classification of @spaan2015. The rest of the validation follows the method outlined in \ref{meth_validation_rel}.
 
-#### expandability of the classification \label{expandability}
+#### Expandability of the classification \label{expandability}
 The study of expandability of hierarchical classification is the last methodological step in the whole thesis, and its role is to understand whether results of the morphometric study from one case study can be related to another case study. Expandability of the classification is crucial for further expansion of the database of urban tissue types. Even though clusters and hierarchical classification may work in individual cases, the question is whether we can combine the results to a single taxonomy. It tests the compatibility of results and a potential issue of clustering being tied to a single context. The optimal situation would mirror the biological world, where a newly discovered species can be usually embedded into an existing taxonomy. However, to get to the stabilised situation where taxonomy is not substantially changed by the discovery of a new species, we first need a critical mass of species to be included. That is certainly not the case in newly built taxonomy of urban form, and it is expected that it could be relatively unstable in the beginning and stabilise by the inclusion of more cases.
 
 The method can be considered extensible if the taxonomy of tissue types from Prague and Amsterdam combined does not substantially change the interpretative value of dendrograms.
@@ -207,18 +207,7 @@ The dendrogram shows several major bifurcations on different levels of copheneti
 
 ![Spatial distribution of different branches of the dendrogram. Each tissue type is coloured according to a branch it belongs to, with a minor differences in colour intensity to allow for distinguishing of individual clusters.](source/figures/ch8/PRG_hierarchical_clusters.png "Spatial distribution of different branches of dendrogram"){#fig:PRG_hierarchical_clusters width=100%}
 
-
-\newpage
-\thispagestyle{empty}
-\newgeometry{left=2cm,bottom=2cm,top=3cm,right=2cm}
-\begin{figure}[h]
-	\makebox[\linewidth]{
-		\includegraphics[width=\textwidth]{source/figures/ch8/PRG_hierarchical_clusters_detail.pdf}
-	}
-	\caption[Spatial distribution of branches in the city centre]{Spatial distribution of different branches of dendrogram zoomed to the central area of Prague. Each tissue type is coloured according to a branch it belongs to, with minor differences in colour intensity to allow for distinguishing of individual clusters.}
-	\label{fig:PRG_hierarchical_clusters_detail}
-\end{figure}
-\restoregeometry
+![Spatial distribution of different branches of dendrogram zoomed to the central area of Prague. Each tissue type is coloured according to a branch it belongs to, with minor differences in colour intensity to allow for distinguishing of individual clusters.](source/figures/ch8/PRG_hierarchical_clusters_detail.pdf "Spatial distribution of branches in the city centre"){#fig:PRG_hierarchical_clusters_detail width=100%}
 
 Examining the dendrogram, we can highlight the different branches to understand their spatial distribution. Starting from the top of the dendrogram, from the bifurcation with the higher cophenetic distance (43.53), we can divide Prague's urban form into two major taxa. The right side of the tree represent urban form we could call *organised city* and is illustrated in figure \ref{fig:PRG_hierarchical_branch_7}. It consists of areas of mixed origin, spanning from the historical core to modernist and contemporary developments. The common characteristic is predominantly residential nature of all tissues.
 
@@ -513,7 +502,7 @@ Results of morphometric cluster analysis, consequent taxonomy and validation usi
 
 \newpage
 
-#### expandability and compatibility
+#### Expandability and compatibility
 The last question which remains to be answered is whether these two cases are compatible with each other. On other words, whether we can build combined taxonomy and further extend it by adding other cases. 
 
 The extension is tested in a relatively simple way. Identified tissue types from both cased are mixed to form a single pool of clusters, all represented as cluster centroids and used as an input of hierarchical clustering. That means that while the first step, the cluster analysis is done locally for each city independently on the other, the second, taxonomy is combining them. Hence, the resulting hierarchical taxonomic tree should identify the similarity of urban tissue types across both cities.
@@ -522,7 +511,7 @@ The dendrogram from the combined pool of clusters (figure \ref{fig:AMSPRG_dengro
 
 ![Dendrogram representing the results of Ward’s hierarchical clustering or urban tissue types from a combined pool of Prague and Amsterdam. The y-axis shows a cophenetic distance between individual clusters, i.e. their morphometric similarity. Branches are interpretative coloured - the colours are then used on maps illustrating spatial distribution of these branches.](source/figures/ch8/200505_dengrogram_mixed.pdf "Dendrogram representing the results of Ward’s hierarchical clustering or urban tissue types from a combined pool of Prague and Amsterdam"){#fig:AMSPRG_dengrogram_mixed width=100%}
 
-Spatial distribution of resulting branching (figures \ref{fig:AMSPRG_clusters_mixed_H_PRG_detai} and \ref{fig:AMSPRG_clusters_mixed_H_AMS_detail}) tells the same story as individual classifications in both Prague and Amsterdam. What is important here is the ability to compare similar tissue types across cities, and as shown in the dendrogram, there are some which are really close to each other.
+Spatial distribution of resulting branching (figures \ref{fig:AMSPRG_clusters_mixed_H_PRG_detail} and \ref{fig:AMSPRG_clusters_mixed_H_AMS_detail}) tells the same story as individual classifications in both Prague and Amsterdam. What is important here is the ability to compare similar tissue types across cities, and as shown in the dendrogram, there are some which are really close to each other.
 
 ![Detail of spatial distribution of different branches of a the combined dendrogram in Prague. Each tissue type is coloured according to a branch it belongs to, with a minor differences in colour intensity to allow for distinguishing of individual clusters.](source/figures/ch8/AMSPRG_clusters_mixed_H_PRG_detail.png "Detail of spatial distribution of different branches of a the combined dendrogram in Prague"){#fig:AMSPRG_clusters_mixed_H_PRG_detail width=100%}
 

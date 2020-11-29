@@ -1,6 +1,6 @@
 # Acknowledgements {.unnumbered}
 
-To list everyone who influenced the following pages is impossible. Let me thank the selection of those whose footprint is the most significant.
+It would impossible to list everyone who influenced following pages. Let me thank the selection of those whose footprint is the most significant.
 
 First and foremost, I would like to express my gratitude to Ombretta Romice and Sergio Porta for agreeing to embark on this journey with me as my supervisors. Thank you, Ombretta, for guiding me on my first steps through the labyrinth of research. Thank you, Sergio, for your bold ideas shaping my activities.
 

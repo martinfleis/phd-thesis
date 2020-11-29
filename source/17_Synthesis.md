@@ -18,7 +18,7 @@ The method, as a combination of cluster analysis delineating urban tissue types 
 There are similarities between the proposed method and some of the existing. The principle of tissue type delineation is similar to @araldi2019, where both methods measure primary characters on selected elements (street segment in the case of @araldi2019), then include contextualisation layer (LISA/ILINCS patterns in the case of @araldi2019) which is used in cluster analysis determining types. Similarly to @dibble2017, @dong2019, @li2020 or @serra2018a, the resulting classification is hierarchical, but there are generally more differences between mentioned works and the current one than similarities, mostly due to the automatic delineation of tissue types used as the OTU. Granularity and extent is similar to 
 @berghauserpont2019a, who, however, do not combine elements into a single classification and generally use only a small number of variables.
 
-### Numerical taxonoy
+### Numerical taxonomy
 
 The proposed method adheres to the seven principles of numerical taxonomy outlined in chapter 3, where applicable to urban morphology. Although some results may indicate the possibility to infer the phylogenetic relationship between urban tissue types from the taxonomy, it would be a bold statement at this point. 
 

@@ -1,3 +1,4 @@
+\pagenumbering{gobble}
 \begin{titlepage}
     \newgeometry{left=1cm,bottom=2cm,top=1cm,right=1cm}
     \begin{center}

@@ -1181,9 +1181,7 @@ Table: Overview of the contextual morphometric values of Simpson index for the w
 
 ## 7.8 Correlation matrix of contextual characters {.unnumbered}
 
-	![Correlation matrix of contextual characters](source/figures/appendix_conx/spearman_conx.pdf "Correlation matrix of contextual characters"){#fig:spearman_conx_hq width=100%}
-
-<!-- Commented out, uncomment for final export. -->
+![Correlation matrix of contextual characters. Please refer to a PDF version for a better clarity.](source/figures/appendix_conx/spearman_conx.png "Correlation matrix of contextual characters"){#fig:spearman_conx_hq width=100%}
 
 ## 7.9 Structure of clusters of sampled and complete clustering {.unnumbered}
 
