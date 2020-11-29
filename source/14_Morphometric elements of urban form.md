@@ -76,7 +76,7 @@ Not all mapping agencies explicitly report plots and, even when they do, not all
 Given the aforementioned issues, and despite plots being still widely used in urban morphology to capture the “*pattern of human intention and activity*” [@kropf1997, p.5], they are ill-suited as a basic unit for morphometric applications.
 
 ###### Morphological tessellation
-One of the few alternatives of plots proposed in the literature [@hamaina2012a; @hamaina2013, @schirmer2015; @schirmer2019] is morphological tessellation (MT). A method of deriving a spatial unit of analysis, the morphological cell (MC), which is able to convey reliable, universal and meaningful plot-scale information and, at the same time, to minimise manual labour, subjective interpretation and data dependence. Hence it is proposed to use MT as a substitute of plot in urban morphometrics.
+One of the few alternatives of plots proposed in the literature [@hamaina2012a; @hamaina2013; @schirmer2015; @schirmer2019] is morphological tessellation (MT). A method of deriving a spatial unit of analysis, the morphological cell (MC), which is able to convey reliable, universal and meaningful plot-scale information and, at the same time, to minimise manual labour, subjective interpretation and data dependence. Hence it is proposed to use MT as a substitute of plot in urban morphometrics.
 
 ![Illustration of morphological tessellation as the smallest spatial unit with the ability to partially replace plot while being fully derived from building footprint data.](source/figures/ch6/tess.pdf "Illustration of morphological tessellation"){#fig:tess width=80%}
 
@@ -307,7 +307,7 @@ Connectivity & Reach Centrality &
 $d_1 \ldots d_n$ are diagonals of convex hull of element.\newline
 $MBR$ is minimum bounding rectangle.\newline
 $Azimuth$ is defined as orientation of axis between 1st and 3rd quadrant.\newline
-“The reach centrality, $R^r [i]$, of a building $i$ in a graph $G$ describes the number of other buildings in $G$ that are reachable from $i$ at a shortest path distance of at most $r$.” [@sevtsuk2012, p.9].
+“The reach centrality, $R^r [i]$, of a building $i$ in a graph $G$ describes the number of other buildings in $G$ that are reachable from $i$ at a shortest path distance of at most $r$.” (Sevtsuk and Mekonnen, 2012, p.9).
 \end{small}
 \end{landscape}
 

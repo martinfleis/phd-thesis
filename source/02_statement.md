@@ -1,6 +1,3 @@
-<!-- This page is for an official declaration. -->
-
-
 \vspace*{\fill}
 \noindent
 
@@ -10,7 +7,7 @@
 
 \textit{Signed:}
 
-\textit{Date:}
+\textit{Date:} 30/11/2020
 
 \vspace{2.5cm}
 

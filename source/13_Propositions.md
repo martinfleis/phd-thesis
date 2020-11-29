@@ -76,7 +76,7 @@ The six core modules of momepy represent six categories of urban morphometric ch
 
 Internally, momepy is built on the GeoPandas Python package [@kelsey_jordahl_2020_3946761], using its GeoSeries and GeoDataFrame objects to store and handle large amounts of geospatial information. Under the hood uses PySAL [@doi:10.1080/17421772.2019.1593495; @rey2007], mostly taking care of spatial weights matrices capturing the adjacency of elements of urban form. The graph module uses the capabilities of networkX [@hagberg2008] for the analysis of urban street networks. Basic Python knowledge is required to use momepy, but exemplar Jupyter notebooks should provide enough information to allow using momepy with a standard GIS knowledge only. 
 
-Version 0.1. of the package was released in November 2019. Current version 0.3 (as of November 2020) was released in July 2020, and the software is being picked up by the research community [@mottelson2020fine] ==REF Dupont==. Thanks to the Journal of Open Source Software, the whole package is now peer-reviewed.
+Version 0.1. of the package was released in November 2019. Current version 0.3 (as of November 2020) was released in July 2020, and the software is being picked up by the research community [@mottelson2020fine]. Thanks to the Journal of Open Source Software, the whole package is now peer-reviewed.
 
 The reproducibility and replicability of research is a critical asset which should be ever-present, especially in the data-driven studies like this one. Momepy is seen as a fundamental component of the significance of this work as it enables further research and minimises barriers to urban morphometrics.
 

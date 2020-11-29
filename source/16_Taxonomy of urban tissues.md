@@ -222,8 +222,6 @@ The dendrogram shows several major bifurcations on different levels of copheneti
 
 Examining the dendrogram, we can highlight the different branches to understand their spatial distribution. Starting from the top of the dendrogram, from the bifurcation with the higher cophenetic distance (43.53), we can divide Prague's urban form into two major taxa. The right side of the tree represent urban form we could call *organised city* and is illustrated in figure \ref{fig:PRG_hierarchical_branch_7}. It consists of areas of mixed origin, spanning from the historical core to modernist and contemporary developments. The common characteristic is predominantly residential nature of all tissues.
 
-==include small dendrogram to figures==
-
 ![Spatial distribution of clusters within a branch representing organised city. We can see a relative contiguity in the city centre but scattered discontinuous areas in the periphery.](source/figures/ch8/PRG_hierarchical_branch_7.png "Spatial distribution of clusters within a branch representing organised city."){#fig:PRG_hierarchical_branch_7 width=100%}
 
 On the other side lies an *unorganised city*. It contains both industrial and fringe areas as well as contemporary office parks. The apparent shared logic is a relative disorder of patterns and high heterogeneity. 
@@ -242,7 +240,7 @@ Further reading of the branching shows the bifurcation dividing the medieval cit
 
 ![Spatial distribution of clusters within a branch representing high density, organised development with a fringe-like disorder in their patterns.](source/figures/ch8/PRG_hierarchical_branch_1.png "Spatial distribution of clusters within a branch representing high density, organised development with a fringe-like disorder in their patterns."){#fig:PRG_hierarchical_branch_1 width=100%}
 
-This basic description of branching shows that the top-level structure of the taxonomy reflects the spatial logic of the structure of Prague to a high degree of interpretability. As the key aim of this study is not to provide deep insight into Prague's structure but to develop the method itself, this section does not go into further detail. However, the rest of the maps of individual branches is available as an ==Appendix 8.1.== 
+This basic description of branching shows that the top-level structure of the taxonomy reflects the spatial logic of the structure of Prague to a high degree of interpretability. As the key aim of this study is not to provide deep insight into Prague's structure but to develop the method itself, this section does not go into further detail. However, the rest of the maps of individual branches is available as an Appendix 8.1. 
 
 \newpage
 
