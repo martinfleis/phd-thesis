@@ -546,14 +546,12 @@ There are a few differences worth noting. The Prague clusters 6 and 16 has moved
 
 As shown by the results above, there does not seem to be an issue with combining morphometric tissue types identified independently of each other into a singular taxonomy. The differences are expected as the current number of tissue types, i.e. OTUs for the derivation of taxonomy is still low, and the taxonomy itself is not yet saturated. However, it is assumed that further expansion of the pool of case studies could eventually lead to the stabilisation.
 
-\newpage
-
 ## Summary of taxonomy and validation \label{conclusion8}
 This chapter, the last of the core chapters, focused on the development of a method able to derive a taxonomy of urban form and validation of the whole morphometric assessment proposed in this research. 
 
 The development of taxonomy takes the form of Ward's hierarchical clustering of initial morphometric tissue types defined in Chapter 7, represented by their centroids (i.e. mean values of contextual morphometric characters). The results show a very meaningful identification of relationships between individual tissue types and allow a rich analysis of the structural composition of the city of Prague. 
 
-The validation of the morphometric assessment was done in three steps. The first one compares the spatial distribution of clusters and taxonomic branches to additional proxy data which are known to reflect the patterns of urban development partially. This research used data on historical origin, predominant land use patterns and finally, qualitative municipal typology of urban form. Data on all three showed a significant relationship between them and identified clusters, indicating that from the perspective of the ability of classification to reflect expected patterns of these proxy layers, morphometric urban tissue types are a valid concept.
+The validation of the morphometric assessment was done in three steps. The first one compares the spatial distribution of clusters and taxonomic branches to additional proxy data which are known to reflect the patterns of urban development. This research used data on historical origin, predominant land use patterns and finally, qualitative municipal typology of urban form. Data on all three showed a significant relationship between them and identified clusters, indicating that from the perspective of the ability of classification to reflect expected patterns of these proxy layers, morphometric urban tissue types are a valid concept.
 
 The second validation step was the application of the whole method on the case study of Amsterdam, NL, which on the one hand shares the morphological richness of Prague and on the other was built in a different planning context. The resulting urban tissue types and their taxonomy tend to behave in a similar manner as was observed in Prague, indicating that the method could be transferable from one context to the other.
 

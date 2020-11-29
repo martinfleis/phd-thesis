@@ -935,8 +935,6 @@ Even though there, once again, are some characters which tend to be correlated, 
 
 The exploration of measured primary and consequent contextual character shows that the data comply with requirements set by the method and show a high variety of information. It is assumed, that they describe urban form in its structural complexity as well as cross-scale complexity.
 
-\newpage
-
 ### Cluster analysis
 The critical point in the whole process if the identification of distinct clusters is the clustering procedure itself. This section will explore the results of clustering on the complete set of data and then on sampled data, to understand the difference and possibility to lower computational demands. Both ways will start with an assessment of an optimal number of components based on the Bayesian Information Criterion (BIC) and follow with Gaussian Mixture Model (GMM) clustering itself. Furthermore, the final part of this section explores the potential of sub-clustering, i.e., generating even more detailed distinction of urban tissues.
 
@@ -1170,6 +1168,6 @@ Both examples above indicate that there is a scope for sub-clustering if the res
 ## Summary
 This chapter took morphometric elements organised within the relational framework of urban form and defined the rich set of characters to be used within the rest of the study. Morphometric characters, divided into 74 primary and 296 contextual characters were then tested on the case of Prague. As the set followed specific rules driving its definition, it proved to provide a complex multi-scale characterisation of the local context of each individual building. That served as an input of cluster analysis using Gaussian Mixture Model method, which delineated 20 potential types of urban tissues within the fabric of the city.  
 
-While the validation is left for Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of distinct homogenous clusters has a potential. The outcome of the Gaussian Mixture Model learning procedure does match the expectations of what a tissue type should be. The question remains what the relation of these clusters to the actual concept of urban tissues is.
+While the validation is left for Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of urban tissues and their types has a potential. The outcome of the Gaussian Mixture Model learning procedure does match the expectations of what a tissue type should be. The question remains what the relation of these clusters to the actual concept of urban tissues is.
 
 One should be aware that cluster is a numerical, morphometric statistical **proxy** of urban tissue, not its definition and replacement. GMM clustering is non-deterministic, so boundaries are not fixed, but rather indicative. It is not a ground truth (there is no ground truth at all in fact), and the meaning of clusters and relation between them has to be determined and interpreted before any further steps. The one approach on how to do so is proposed in the next chapter.

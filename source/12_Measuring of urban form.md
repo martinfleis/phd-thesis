@@ -49,7 +49,7 @@ While the existing literature on urban morphology shows a historical inclination
 ---
 nocite: |
   [@borruso2003][@cooper2003][@frankhauser2004][@tsai2005][@yoshida2005][@huang2007][@gil2012][@serra2016]
-  [@steiniger2008][@marcus2010][@colaninno2011][@khirfan2011][@venerandi2016][@agryzcov2018][@boeing2017][@berghauserpont2017][@berghauserpont2017a][@hausleitner2017][@marcus2017][@peponis2007][@vanderhaegen2017][@omer2018][@serra2018a][@xu2003][@cheng2011][@pham2011][@nedovic-budic2016][@randall2001][@burton2002][@krizek2003][@dill2004][@lai2018][@laskari2008][@feng2013][@assunccao2006efficient][@duque2012max]
+  [@steiniger2008][@marcus2010][@colaninno2011][@khirfan2011][@venerandi2016][@agryzcov2018][@boeing2017][@berghauserpont2017][@berghauserpont2017a][@hausleitner2017][@marcus2017][@peponis2007][@vanderhaegen2017][@omer2018][@serra2018a][@xu2003][@cheng2011][@pham2011][@nedovic-budic2016][@randall2001][@burton2002][@krizek2003][@dill2004][@lai2018][@laskari2008][@feng2013][@assunccao2006efficient][@duque2012max][@williams2014]
 ...
 
 ### Patterns of research
@@ -220,7 +220,7 @@ Finally, terminological inconsistency could be explained by two causes. On the o
 
 In reviewing the literature, it was necessary to rely on previously defined descriptions of characters. In several cases, these proved to be vague, sometimes lacking any definitions and/or mathematical formulas. Therefore, the classification of such characters might not align perfectly with the original source work. Even if it was able to classify all relevant characters successfully, it still might be possible to find in the future some that just do not fit into any of the six proposed categories (yet, it would still be possible to define it through the *Index or Elements* naming approach).
 
-## Conclusions
+## Summary
 Quantitative approaches to urban morphology are critical to inform the long-overdue undertakings of a new “sciences of cities”. The current state of the discipline is, however, to some degree, inconsistent. To make further progress, it is essential to understand what the limits and potentials of existing measuring methods are, and where the gaps of knowledge are.
 
 The terminology used is often unclear, methods and urban form characters vary in ways that are at times difficult to understand. This limits the development of comparative studies, which however are essential to evidence-based research.

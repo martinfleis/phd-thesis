@@ -1,7 +1,7 @@
 \setcounter{chapter}{4}
 
 # Research design statement
-This chapter bridges three previous background chapters and three following core chapters. It provides a partial research design, formulates hypothesis and research questions and introduces case studies and general approach to the research driven by the reproducibility of the whole study.
+The following chapter bridges three previous background chapters and three subsequent core chapters. It provides a partial research design, formulates hypothesis and research questions and introduces case studies and general approach to the research driven by the reproducibility of the whole study.
 
 In the first section, this chapter summarises the core findings from background chapters (2, 3, 4) and uses them to formulate the hypothesis, main research question and supplementary research questions provided in the second section. The third section introduces the principle of reproducibility into technical aspects of the work and provides an overview of an open-source software package design for morphometric research. The fourth section presents three case studies used within the remaining chapters of the work, and the last section outlines the contents of the three core chapters 6, 7 and 8 coming immediately after.
 

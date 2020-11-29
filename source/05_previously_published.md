@@ -1,9 +1,5 @@
 # Previously published work {.unnumbered}
 
-\pagenumbering{roman}
-\setcounter{page}{3}
-
-
 **Fleischmann, M**., 2019. Momepy: Urban Morphology Measuring Toolkit. *Journal of Open Source Software*, 4(43), p.1807.
 
 **Fleischmann, M**. et al., 2020. Morphological tessellation as a way of partitioning space: Improving consistency in urban morphology at the plot scale. *Computers, Environment and Urban Systems*, 80, p.101441.
