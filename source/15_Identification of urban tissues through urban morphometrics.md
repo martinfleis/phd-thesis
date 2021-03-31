@@ -5,7 +5,7 @@ This chapter aims to provide theoretical and practical grounds to the method of 
 
 Structurally, this chapter is divided into two main sections. The first one is focusing on the methodological propositions and briefly discuss theoretical grounds of the whole approach based on numerical taxonomy (section \ref{tissue_type}), following with specification of two types of morphometric characters used within this research - primary (section \ref{prim_char}) and contextual (section \ref{cont_char}). The second part of methods (section \ref{cluster_an}) outlines the cluster analysis and introduces a Gaussian Mixture Model clustering together with the issues of the selection of the optimal number of clusters and scalability of the method.
 
-The second major section (\ref{results_dhc}) applies the methods on the case study of Prague, Czechia and presents the results of all steps, eventually presenting the urban tissue types detected using cluster analysis based on morphometric assessment. 
+The second major section (\ref{results_dhc}) applies the methods on the case study of Prague, Czechia and presents the results of all steps, eventually presenting the urban tissue types detected using cluster analysis based on morphometric assessment.
 
 ## Methodological proposition
 The automatic detection of urban tissue types consists of multiple procedural steps detailed in the following section. It first requires specification of the principle of the recognition itself, followed by the design of actual methodological steps, starting from identification of morphometric characters for individual elements, finishing with the clustering algorithm detecting clusters. The structure of the method is reflected in the structure of the following sections.
@@ -229,7 +229,7 @@ where $d_{cellC}$ is a diameter of the minimal circumscribed circle around the t
 
 19. **Area of a tessellation cell** is denoted as
 
-(@eq_sdcAre)  $a_{cell}$  
+(@eq_sdcAre)  $a_{cell}$
 
 and defined as an area covered by a tessellation cell footprint in m^2^.
 
@@ -576,7 +576,7 @@ Within this method, four types of contextual characters are proposed. One is cap
 ##### Local central tendency
 Statistics knows central tendency as a measure of a typical value for a probabilistic distribution [@weisberg1992central, p.2]. Based on a set of data of unknown distribution, central tendency aims to simplify the whole set into one representative number. In the case of morphometric characters, we can measure the central tendency of values of a single character across the whole case study, but that would not give us much information. As contextual characters are defined on three topological steps, it is proposed to measure *local central tendency*, thus a value unique for each building measured as a typical within its immediate context.
 
-Commonly used measures of central tendency are mean, median or mode [@wilcox2003modern]. Each of them fits a different purpose. If one wants to use the arithmetic mean to determine central values, underlying distribution should not be skewed. Otherwise, outliers may significantly affect the resulting value. A mode is, by definition, not suitable for continuous variables like those obtained in primary characters. Median is the most robust of all, measuring the middle value. However, the robustness comes at a cost - the shape of a distribution is not reflected at all. Another option is to find a middle ground between easily distorted mean and robust median using truncated mean. Instead of computing arithmetic mean of the whole distribution, we can work with interquartile (smallest and largest 25% are omitted) or interdecile (smallest and largest 10% are omitted) range to minimise the outlier effect on the mean.  
+Commonly used measures of central tendency are mean, median or mode [@wilcox2003modern]. Each of them fits a different purpose. If one wants to use the arithmetic mean to determine central values, underlying distribution should not be skewed. Otherwise, outliers may significantly affect the resulting value. A mode is, by definition, not suitable for continuous variables like those obtained in primary characters. Median is the most robust of all, measuring the middle value. However, the robustness comes at a cost - the shape of a distribution is not reflected at all. Another option is to find a middle ground between easily distorted mean and robust median using truncated mean. Instead of computing arithmetic mean of the whole distribution, we can work with interquartile (smallest and largest 25% are omitted) or interdecile (smallest and largest 10% are omitted) range to minimise the outlier effect on the mean.
 
 The distribution of values of individual characters vary and in some cases, tends to be skewed. As shown in Appendix 7.4 analysing the difference between mean, interdecile mean, interquartile mean and median (being equal to extremely truncated mean) on a selection of 8 characters, it is clear, that majority of data is somewhat asymmetric, causing volatility of mean, which should not be used in such cases. The question is then limited to the distinction between the median and truncated means (leaving aside midhinge and similar estimators). The data indicate that the difference between median and interquartile mean is minimal (but still present, e.g., in the case of *shared walls ratio*). As interquartile mean uses more information than the median, while being similarly robust to outliers, this research settles on implementation of the interquartile mean as a measure of local central tendency, denoted as
 
@@ -640,7 +640,7 @@ where $R$ is richness expressed as number of bins, $n_i$ is the number of featur
 
 For the clarity in terms of classification of contextual characters, IQM inherits the category from the primary parental character, while IQR, IDT and SDI all fall into *diversity* category.
 
-After linking together primary and contextual characters, each of the primary 74 characters is represented by all four contextual, based on the values measured within three topological steps on morphological tessellation around each building. That gives 296 contextual characters in total, the set which is spatially autocorrelated by definition and hence can be used within the clustering method to identify distinct homogenous clusters representing tissue types. The fact that all input data for clustering are measured using this spatially lagged method ensures that spatial clusters should be geographically coherent and mostly continuous. The nature of data allows the use of spatially unconstrained clustering methods. 
+After linking together primary and contextual characters, each of the primary 74 characters is represented by all four contextual, based on the values measured within three topological steps on morphological tessellation around each building. That gives 296 contextual characters in total, the set which is spatially autocorrelated by definition and hence can be used within the clustering method to identify distinct homogenous clusters representing tissue types. The fact that all input data for clustering are measured using this spatially lagged method ensures that spatial clusters should be geographically coherent and mostly continuous. The nature of data allows the use of spatially unconstrained clustering methods.
 
 Importance of the proper selection of morphometric characters and the effect it may have on the overall results in not debatable. A robust method described above is employed starting from the selection of primary morphometric characters from literature and their adaptation to fit *relational framework of the urban form* and to minimise the potential error in selection. The resulting set of 74 characters is established to cover a wide range of descriptive features capturing urban form configuration from dimensions of individual elements, through spatial distribution to diversity. Four contextual characters are introduced to describe a local central tendency and variation in the area capturing morphological patterns, rather than a description of individual elements. These, combined, have the potential to capture the nature of each of the primary characters and their behaviour in the immediate spatial context.
 
@@ -666,7 +666,7 @@ Within the context of urban morphology, the method has been applied within a sim
 
 #### Levels of clustering resolution and its scalability
 The ideal outcome of the tissue type recognition is each cluster as a distinct urban tissue type. However, the definition of urban tissue does not specify the threshold when two similar parts of the city are still the same tissue type and when they become a different one. This issue is mirrored in the clustering method. The ideal outcome of clustering is the optimal number of clusters based on the actual structure of the observed data. That might not be straightforward to determine as better-looking clustering (from the statistical, not visual perspective) might be just overfitted.
-Moreover, the relation between resulting clusters and urban tissues is always questionable as there is no ground truth for either of them. Detecting 5 large cluster in the whole Prague would likely be based on under-fitted model and cluster would not represent urban tissues in the traditional sense, but their aggregations. On the other hand, detecting 100 would likely represent the over-fitted model, and each cluster would be only a part of a tissue. It is expected that the statistically optimal number of clusters should be close to what we would typically call urban tissue. However, this link requires further interpretative work, which should happen based on the taxonomy of clusters to allow scale-dependent flexibility. 
+Moreover, the relation between resulting clusters and urban tissues is always questionable as there is no ground truth for either of them. Detecting 5 large cluster in the whole Prague would likely be based on under-fitted model and cluster would not represent urban tissues in the traditional sense, but their aggregations. On the other hand, detecting 100 would likely represent the over-fitted model, and each cluster would be only a part of a tissue. It is expected that the statistically optimal number of clusters should be close to what we would typically call urban tissue. However, this link requires further interpretative work, which should happen based on the taxonomy of clusters to allow scale-dependent flexibility.
 
 ##### Number of components
 Gaussian Mixture Model clustering requires, similarly to k-means, specification of a number of components of the model (i.e., clusters) before clustering. However, that number is usually not known, especially in the case of urban form. Assumptions can be made based on the expert knowledge, but that would limit the application and unsupervised nature of the whole process and go against the prepositions set in chapters 1 and 5.
@@ -981,83 +981,83 @@ Each of the individual clusters is presented by one example (usually the largest
 
 The first cluster (figure \ref{fig:PRG_cluster_detail_0}), noted as 0, is composed of predominantly low-rise, single-family housing. It has mostly residential character and tends to be located in the outer parts of the city, further away from the city centre. It is the largest of all clusters, with 15337 features, which is approximately 11% of all buildings in the study area.
 
-![Example of cluster 0 and its surroundings within 1,5km buffer located at the eastern boundary of study area.](source/figures/ch7/PRG_cluster_detail_0.png "Example of cluster 0"){#fig:PRG_cluster_detail_0 width=100%}
+![Example of cluster 0 and its surroundings within 1,5km buffer located at the eastern boundary of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_0.png "Example of cluster 0"){#fig:PRG_cluster_detail_0 width=100%}
 
 The cluster on figure \ref{fig:PRG_cluster_detail_1}, noted as 1, contains mostly small-scale industry areas with small coverage, relatively small buildings. Often is adjacent to other clusters. It tends to be located in outer rings of the city but is overall very sparsely distributed. With only 2038 (less than 1.5%) features is one of the smallest clusters overall.
 
-![Example of cluster 1 and its surroundings within 1,5km buffer located at the north-east of study area.](source/figures/ch7/PRG_cluster_detail_1.png "Example of cluster 1"){#fig:PRG_cluster_detail_1 width=100%}
+![Example of cluster 1 and its surroundings within 1,5km buffer located at the north-east of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_1.png "Example of cluster 1"){#fig:PRG_cluster_detail_1 width=100%}
 
 Cluster 2, shown in figure \ref{fig:PRG_cluster_detail_2} is one of the urban tissue types following modernist principles of spatial configuration, with linear buildings, but still relatively connected street network. These areas are mostly infills of the existing structure located within the city (except its central part) rather than on the periphery. It is relatively abundant with 12016 features (approximately 8.5%).
 
-![Example of cluster 2 and its surroundings within 1,5km buffer located at the north-west of study area.](source/figures/ch7/PRG_cluster_detail_2.png "Example of cluster 2"){#fig:PRG_cluster_detail_2 width=100%}
+![Example of cluster 2 and its surroundings within 1,5km buffer located at the north-west of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_2.png "Example of cluster 2"){#fig:PRG_cluster_detail_2 width=100%}
 
 Cluster 3 (figure \ref{fig:PRG_cluster_detail_3}) is one of the smaller ones. Its structure is defined by row-houses, a typology which is not very common in Prague. There are only 4133 features, less than 3% of all buildings scattered mostly in peripheral locations.
 
-![Example of cluster 3 and its surroundings within 1,5km buffer located at the east of study area.](source/figures/ch7/PRG_cluster_detail_3.png "Example of cluster 3"){#fig:PRG_cluster_detail_3 width=100%}
+![Example of cluster 3 and its surroundings within 1,5km buffer located at the east of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_3.png "Example of cluster 3"){#fig:PRG_cluster_detail_3 width=100%}
 
 Cluster 4 (figure \ref{fig:PRG_cluster_detail_4}) is one of the types with an industrial character, in this case being distributed as sort of infill development in the fringe areas. It is mostly adjacent to other urban tissues, relatively evenly distributed across the study area. It is composed of 5281, which is 3.8% of the total number.
 
-![Example of cluster 4 and its surroundings within 1,5km buffer located at the south of study area.](source/figures/ch7/PRG_cluster_detail_4.png "Example of cluster 4"){#fig:PRG_cluster_detail_4 width=100%}
+![Example of cluster 4 and its surroundings within 1,5km buffer located at the south of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_4.png "Example of cluster 4"){#fig:PRG_cluster_detail_4 width=100%}
 
 Cluster 5 (figure \ref{fig:PRG_cluster_detail_5}) can be best described as compact perimeter block-based residential area. This dense, grid-like development is located in the central areas of the city around the historical core and is one of the best defined urban tissues in Prague. There are 5930 of features belonging to this cluster, which is a bit more than 4.2% of the total count.
 
-![Example of cluster 5 and its surroundings within 1,5km buffer located at the centre of study area.](source/figures/ch7/PRG_cluster_detail_5.png "Example of cluster 5"){#fig:PRG_cluster_detail_5 width=100%}
+![Example of cluster 5 and its surroundings within 1,5km buffer located at the centre of study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_5.png "Example of cluster 5"){#fig:PRG_cluster_detail_5 width=100%}
 
 Cluster 6 (figure \ref{fig:PRG_cluster_detail_6}) is very different from the previous one as it contains fringe low-rise, not very well defined urban tissues. These are small-scale tissues scattered evenly around the study area, adjacent to other types of tissues, often filling topographically inconvenient areas. There are 10329 of these features, which is about 7.4%, so it is one of the more abundant clusters.
 
-![Example of cluster 6 and its surroundings within 1,5km buffer located the south-east direction from the city centre.](source/figures/ch7/PRG_cluster_detail_6.png "Example of cluster 6"){#fig:PRG_cluster_detail_6 width=100%}
+![Example of cluster 6 and its surroundings within 1,5km buffer located the south-east direction from the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_6.png "Example of cluster 6"){#fig:PRG_cluster_detail_6 width=100%}
 
 Cluster 7 (figure \ref{fig:PRG_cluster_detail_7}) is an example of more heterogeneous area. It has a similar character as cluster 4, but unlike that, it often contains other types of development with a less defined structure, like contemporary housing or office parks which do not reflect traditional rules of spatial configuration. That leads to higher heterogeneity in the area, making these tissues complicated to define. It consists of 4140 features, which is nearly 3% of the total amount.
 
-![Example of cluster 7 and its surroundings within 1,5km buffer located the souther direction from the city centre.](source/figures/ch7/PRG_cluster_detail_7.png "Example of cluster 7"){#fig:PRG_cluster_detail_7 width=100%}
+![Example of cluster 7 and its surroundings within 1,5km buffer located the souther direction from the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_7.png "Example of cluster 7"){#fig:PRG_cluster_detail_7 width=100%}
 
 Cluster 8 (figure \ref{fig:PRG_cluster_detail_8}) predominantly contains single-family housing in a relatively dense setting resembling garden city movement development. These places have interconnected network of relatively grid-like character, with buildings adjacent to each other either as row-house typology or similar. There are 7845 features within this cluster (5.6%).
 
-![Example of cluster 8 and its surroundings within 1,5km buffer located the souther direction from the city centre.](source/figures/ch7/PRG_cluster_detail_8.png "Example of cluster 8"){#fig:PRG_cluster_detail_8 width=100%}
+![Example of cluster 8 and its surroundings within 1,5km buffer located the souther direction from the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_8.png "Example of cluster 8"){#fig:PRG_cluster_detail_8 width=100%}
 
 Cluster 9 on figure \ref{fig:PRG_cluster_detail_9} seems to identify low-rise areas of organic development, which seems to be cores of the historical villages around Prague. These are small-scale tissues evenly distributed in the outer ring of development, now mostly embedded in the other development. They compose 5.6% of total features (7862).
 
-![Example of cluster 9 and its surroundings within 1,5km buffer located at the south-west of the study area.](source/figures/ch7/PRG_cluster_detail_9.png "Example of cluster 9"){#fig:PRG_cluster_detail_9 width=100%}
+![Example of cluster 9 and its surroundings within 1,5km buffer located at the south-west of the study area. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_9.png "Example of cluster 9"){#fig:PRG_cluster_detail_9 width=100%}
 
 Cluster 10 (figure \ref{fig:PRG_cluster_detail_10}) is very often adjacent to cluster 5 (compact blocks) or composes its own areas of block-based development. However, unlike in cluster 5, these blocks tend to be skewed or distorted in some other way. In some cases, this cluster could be seen as a transitional area between homogenous compact blocks and other types of urban tissue. These are 7203 features within this group, making 5.1% of the total amount.
 
-![Example of cluster 10 and its surroundings within 1,5km buffer located next to the city centre.](source/figures/ch7/PRG_cluster_detail_10.png "Example of cluster 10"){#fig:PRG_cluster_detail_10 width=100%}
+![Example of cluster 10 and its surroundings within 1,5km buffer located next to the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_10.png "Example of cluster 10"){#fig:PRG_cluster_detail_10 width=100%}
 
 Cluster 11 (figure \ref{fig:PRG_cluster_detail_11}) is a very straightforward one to describe as it composes solely of historic medieval core of Prague. It includes areas on both sides of the river and correctly excludes the area cut-out of the Old Town, which has been demolished in 19^th^ century and rebuilt after that [@hruuza2003urbanismus]ƒ. There are 2167 features, making historical core one of the smallest clusters of all, composing only 1.5% of the total amount.
 
-![Example of cluster 11 and its surroundings within 1,5km buffer located in the city centre.](source/figures/ch7/PRG_cluster_detail_11.png "Example of cluster 11"){#fig:PRG_cluster_detail_11 width=100%}
+![Example of cluster 11 and its surroundings within 1,5km buffer located in the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_11.png "Example of cluster 11"){#fig:PRG_cluster_detail_11 width=100%}
 
 Cluster 12 is another very distinct one. As illustrated in figure \ref{fig:PRG_cluster_detail_12}, the origin of the development is modernist, covering large-scale modernist housing estates. These are typical with slab buildings, the incoherent relationship between buildings, plots and streets and large amounts of open spaces, among other characteristics. In Prague they are almost exclusively on the peripheral ring of the city, forming a so-called modernist belt of Prague. They consist of 6885 features, which is 4.9% of the total amount.
 
-![Example of cluster 12 and its surroundings within 1,5km buffer located on the southern edge of the city.](source/figures/ch7/PRG_cluster_detail_12.png "Example of cluster 12"){#fig:PRG_cluster_detail_12 width=100%}
+![Example of cluster 12 and its surroundings within 1,5km buffer located on the southern edge of the city. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_12.png "Example of cluster 12"){#fig:PRG_cluster_detail_12 width=100%}
 
 Cluster 13 (figure \ref{fig:PRG_cluster_detail_13}) is another example consisting of single-family housing. This time it is low-density development with predominantly detached buildings. It is typical with elongated blocks which in part is a reaction to the underlying topography. It is a very abundant cluster with 14992 features, making more than 10.6% of the total amount, distributed along the periphery of the city.
 
-![Example of cluster 13 and its surroundings within 1,5km buffer located on the south-western edge of the city.](source/figures/ch7/PRG_cluster_detail_13.png "Example of cluster 13"){#fig:PRG_cluster_detail_13 width=100%}
+![Example of cluster 13 and its surroundings within 1,5km buffer located on the south-western edge of the city. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_13.png "Example of cluster 13"){#fig:PRG_cluster_detail_13 width=100%}
 
 Cluster 14 is distributed almost exclusively within the wider centre of Prague, often adjacent to the homogenous compact city as is illustrated on the figure \ref{fig:PRG_cluster_detail_14}. The cluster could be defined as an inner fringe composed of heterogeneous developments on the edge of existing homogenous one. There are 4984 features within it, making 3.6% of the data.
 
-![Example of cluster 14 and its surroundings within 1,5km buffer located north of the city centre.](source/figures/ch7/PRG_cluster_detail_14.png "Example of cluster 14"){#fig:PRG_cluster_detail_14 width=100%}
+![Example of cluster 14 and its surroundings within 1,5km buffer located north of the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_14.png "Example of cluster 14"){#fig:PRG_cluster_detail_14 width=100%}
 
 Cluster 15 (\ref{fig:PRG_cluster_detail_15}) is perimeter-block based tissue type with very heterogeneous development in the block interiors. It has a very high coverage area ratio located in in the city centre either as a transitional area between medieval core and compact city or as industrial development. There are only 3060 features within the cluster (2.2%).
 
-![Example of cluster 15 and its surroundings within 1,5km buffer located north of the city centre.](source/figures/ch7/PRG_cluster_detail_15.png "Example of cluster 15"){#fig:PRG_cluster_detail_15 width=100%}
+![Example of cluster 15 and its surroundings within 1,5km buffer located north of the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_15.png "Example of cluster 15"){#fig:PRG_cluster_detail_15 width=100%}
 
 Cluster 16 (\ref{fig:PRG_cluster_detail_16}) is not very straightforward to define as it is a heterogeneous one. It mostly consists of small patches of not very well defined tissues with the predominant role of small-scale buildings but not exclusively. It may be seen as *other*, combining parts of the dataset which do not fit elsewhere, but at the same time, all places have the similar character of being *out of sight*. It is evenly distributed, but not very abundant one with 3548 making approximately 2.5% of the dataset.
 
-![Example of cluster 16 and its surroundings within 1,5km buffer located north of the city centre.](source/figures/ch7/PRG_cluster_detail_16.png "Example of cluster 16"){#fig:PRG_cluster_detail_16 width=100%}
+![Example of cluster 16 and its surroundings within 1,5km buffer located north of the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_16.png "Example of cluster 16"){#fig:PRG_cluster_detail_16 width=100%}
 
 Cluster 17 (\ref{fig:PRG_cluster_detail_17}) is another of the low-density single-family tissue types. It has a less defined and rigid structure, and it is often adjacent to open space. It does have a certain inner heterogeneity expressed as various kinds of buildings from detached to row houses. Like the other similar clusters, this is also relatively abundant with 12145 features (8.7%).
 
-![Example of cluster 17 and its surroundings within 1,5km buffer located west of the city centre.](source/figures/ch7/PRG_cluster_detail_17.png "Example of cluster 17"){#fig:PRG_cluster_detail_17 width=100%}
+![Example of cluster 17 and its surroundings within 1,5km buffer located west of the city centre. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_17.png "Example of cluster 17"){#fig:PRG_cluster_detail_17 width=100%}
 
 Cluster 18 (\ref{fig:PRG_cluster_detail_18}) consists of relatively independent detached areas of low-density village-like development. Clusters can be only a strip along the road or other open-space facing tissues. It is located mostly on the periphery of the city and entails 8764 features (6.2%)
 
-![Example of cluster 18 and its surroundings within 1,5km buffer located on the north of the city.](source/figures/ch7/PRG_cluster_detail_18.png "Example of cluster 18"){#fig:PRG_cluster_detail_18 width=100%}
+![Example of cluster 18 and its surroundings within 1,5km buffer located on the north of the city. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_18.png "Example of cluster 18"){#fig:PRG_cluster_detail_18 width=100%}
 
 The last cluster, 19 illustrated on figure \ref{fig:PRG_cluster_detail_19} is industrial urban tissue type, consisting of a mixture of large-scale and small-scale buildings, convoluted street network and a minimum of residential use. It is only at a few places, but of a large-scale, mostly towards the edge of the city. There are only 1656 features within the cluster, making 1.2% of the total amount.
 
-![Example of cluster 19 and its surroundings within 1,5km buffer located on the eastern edge of the city.](source/figures/ch7/PRG_cluster_detail_19.png "Example of cluster 19"){#fig:PRG_cluster_detail_19 width=100%}
+![Example of cluster 19 and its surroundings within 1,5km buffer located on the eastern edge of the city. Aerial image courtesy of mapy.cz](source/figures/ch7/PRG_cluster_detail_19.png "Example of cluster 19"){#fig:PRG_cluster_detail_19 width=100%}
 
 From the overview is clear that some clusters are very distinct like the historical core (11) or modernist estates (12), while others resemble each other as is the case of low-density single-family clusters (0, 8, 13, 17). However, even between these seemingly similar clusters are recognisable differences. Numerical assessment of differences between clusters is part of Chapter 8, to determine which characters are causing the distinction and understand the clusters based on their morphometric profiles.
 
@@ -1157,7 +1157,7 @@ The map on the figure \ref{fig:PRG_subcluster12} shows the whole cluster 12 divi
 Both examples above indicate that there is a scope for sub-clustering if the research using this method needs a more refined level of detail. As noted above, sub-clustering ability depends on the internal homogeneity of each cluster, and it may not be possible in some cases. However, in cases where this possibility is available, results show meaningful patterns, enabled by the richness of the morphometric dataset.
 
 ## Summary
-This chapter took morphometric elements organised within the relational framework of urban form and defined the rich set of characters to be used within the rest of the study. Morphometric characters, divided into 74 primary and 296 contextual characters were then tested on the case of Prague. As the set followed specific rules driving its definition, it proved to provide a complex multi-scale characterisation of the local context of each individual building. That served as an input of cluster analysis using Gaussian Mixture Model method, which delineated 20 potential types of urban tissues within the fabric of the city.  
+This chapter took morphometric elements organised within the relational framework of urban form and defined the rich set of characters to be used within the rest of the study. Morphometric characters, divided into 74 primary and 296 contextual characters were then tested on the case of Prague. As the set followed specific rules driving its definition, it proved to provide a complex multi-scale characterisation of the local context of each individual building. That served as an input of cluster analysis using Gaussian Mixture Model method, which delineated 20 potential types of urban tissues within the fabric of the city.
 
 While the validation is left for Chapter 8, results of clustering illustrated on previous pages indicate that the morphometric method of identification of urban tissues and their types has a potential. The outcome of the Gaussian Mixture Model learning procedure does match the expectations of what a tissue type should be. The question remains what the relation of these clusters to the actual concept of urban tissues is.
 
