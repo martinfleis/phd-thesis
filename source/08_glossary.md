@@ -29,6 +29,8 @@
 \textbf{GMM} & \textbf{G}aussian \textbf{M}ixture \textbf{M}odel\tabularnewline
 \textbf{IQM} & \textbf{I}nter\textbf{Q}uartile \textbf{M}ean\tabularnewline
 \textbf{IQR} & \textbf{I}nter\textbf{Q}uartile \textbf{R}ange\tabularnewline
+\textbf{LC} & \textbf{L}and \textbf{C}over\tabularnewline
+\textbf{LCZ} & \textbf{L}ocal \textbf{C}limate \textbf{Z}one\tabularnewline
 \textbf{LISA} & \textbf{L}ocal \textbf{I}ndex of \textbf{S}patial \textbf{A}utocorrelation\tabularnewline
 \textbf{MAUP} & \textbf{M}odifiable \textbf{A}real \textbf{U}nit \textbf{P}roblem\tabularnewline
 \textbf{MC} & \textbf{M}orphological \textbf{C}ell\tabularnewline
@@ -37,7 +39,11 @@
 \textbf{OCM} & \textbf{O}ptimal \textbf{C}lassification \textbf{M}mdel\tabularnewline
 \textbf{OTU} & \textbf{O}perational \textbf{T}axonomic \textbf{U}nit\tabularnewline
 \textbf{RF} & \textbf{R}elational analytical \textbf{F}ramework\tabularnewline
+\textbf{RS} & \textbf{R}emote \textbf{S}ensing\tabularnewline
 \textbf{SA} & \textbf{S}anctuary \textbf{A}rea\tabularnewline
+\textbf{UM} & \textbf{U}rban \textbf{M}orphology\tabularnewline
+\textbf{UMM} & \textbf{U}rban \textbf{M}orpho\textbf{m}etrics\tabularnewline
+\textbf{UST} & \textbf{U}rban \textbf{S}tructural \textbf{T}ype\tabularnewline
 \textbf{VT} & \textbf{V}oronoi \textbf{T}essellation\tabularnewline
 
 \end{longtable}
