@@ -133,6 +133,10 @@ chapter1:
 	--pdf-engine=xelatex \
 	--verbose
 
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter1diff:
+	pandiff "$(INPUTDIR)"/initial/09*.md "$(INPUTDIR)"/09*.md -o "$(INPUTDIR)"/diffs/09diff.docx
+
 chapter2:
 	pandoc "$(INPUTDIR)"/10*.md \
 	--filter pandoc-shortcaption \
