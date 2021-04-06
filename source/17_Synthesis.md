@@ -43,7 +43,7 @@ The overall method proposed in chapters 6, 7 and 8 provides an answer to the mai
 
 > SRQ1 - *‌What are the fundamental morphometric elements and how to model their relationship?*
 
-Chapter six proposes three fundamental elements based on two sources of input data. Buildings, represented as footprint polygons and street network, represented as polyline geometry, which can be further split to nodes and edges capturing intersections and streets, are direct inputs. Furthermore, buildings can be used to generate morphological tessellation, the smallest spatial unit substituting the role of plot within the morphometric assessment. The relationships between all elements are then captured by the relational framework of urban form, structurally following overlapping semi-lattice argued for in @alexander1966.
+Chapter six proposes three fundamental elements based on two sources of input data. Buildings, represented as footprint polygons and street network, represented as polyline geometry, which can be further split to nodes and edges capturing intersections and streets, are direct inputs. Furthermore, buildings can be used to generate morphological tessellation, the smallest spatial unit taking the role of the smallest spatial unit of analysis within the morphometric assessment. The relationships between all elements are then captured by the relational framework of urban form, structurally following overlapping semi-lattice argued for in @alexander1966.
 
 > SRQ2 - *‌What is the optimal Operational Taxonomic Unit of urban form and how to identify it in continuous urban fabric?*
 

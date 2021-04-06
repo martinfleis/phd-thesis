@@ -135,7 +135,7 @@ chapter1:
 
 # run in gds_dev + npm install -g pandiff + pip install pancritic
 chapter1diff:
-	pandiff "$(INPUTDIR)"/initial/09*.md "$(INPUTDIR)"/09*.md -o "$(INPUTDIR)"/diffs/09diff.docx
+	pandiff "$(INPUTDIR)"/initial/09*.md "$(INPUTDIR)"/09*.md -o "$(INPUTDIR)"/diffs/chapter1_diff.docx
 
 chapter2:
 	pandoc "$(INPUTDIR)"/10*.md \
@@ -153,6 +153,10 @@ chapter2:
 	--pdf-engine=xelatex \
 	--verbose
 
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter2diff:
+	pandiff "$(INPUTDIR)"/initial/10*.md "$(INPUTDIR)"/10*.md -o "$(INPUTDIR)"/diffs/chapter2_diff.docx
+
 chapter3:
 	pandoc "$(INPUTDIR)"/11*.md \
 	--filter pandoc-shortcaption \
@@ -168,6 +172,10 @@ chapter3:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter3diff:
+	pandiff "$(INPUTDIR)"/initial/11*.md "$(INPUTDIR)"/11*.md -o "$(INPUTDIR)"/diffs/chapter3_diff.docx
 
 chapter4:
 	pandoc "$(INPUTDIR)"/12*.md \
@@ -185,6 +193,10 @@ chapter4:
 	--pdf-engine=xelatex \
 	--verbose
 
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter4diff:
+	pandiff "$(INPUTDIR)"/initial/12*.md "$(INPUTDIR)"/12*.md -o "$(INPUTDIR)"/diffs/chapter4_diff.docx
+
 chapter5:
 	pandoc "$(INPUTDIR)"/13*.md \
 	--filter pandoc-shortcaption \
@@ -200,6 +212,10 @@ chapter5:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter5diff:
+	pandiff "$(INPUTDIR)"/initial/13*.md "$(INPUTDIR)"/13*.md -o "$(INPUTDIR)"/diffs/chapter5_diff.docx
 
 chapter6:
 	pandoc "$(INPUTDIR)"/14*.md \
@@ -217,6 +233,10 @@ chapter6:
 	--pdf-engine=xelatex \
 	--verbose
 
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter6diff:
+	pandiff "$(INPUTDIR)"/initial/14*.md "$(INPUTDIR)"/14*.md -o "$(INPUTDIR)"/diffs/chapter6_diff.docx
+
 chapter7:
 	pandoc "$(INPUTDIR)"/15*.md \
 	--filter pandoc-shortcaption \
@@ -232,6 +252,10 @@ chapter7:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter7diff:
+	pandiff "$(INPUTDIR)"/initial/15*.md "$(INPUTDIR)"/15*.md -o "$(INPUTDIR)"/diffs/chapter7_diff.docx
 
 chapter8:
 	pandoc "$(INPUTDIR)"/16*.md \
@@ -249,6 +273,10 @@ chapter8:
 	--pdf-engine=xelatex \
 	--verbose
 
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter8diff:
+	pandiff "$(INPUTDIR)"/initial/16*.md "$(INPUTDIR)"/16*.md -o "$(INPUTDIR)"/diffs/chapter8_diff.docx
+
 chapter9:
 	pandoc "$(INPUTDIR)"/17*.md \
 	--filter pandoc-shortcaption \
@@ -264,6 +292,10 @@ chapter9:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+# run in gds_dev + npm install -g pandiff + pip install pancritic
+chapter9diff:
+	pandiff "$(INPUTDIR)"/initial/17*.md "$(INPUTDIR)"/17*.md -o "$(INPUTDIR)"/diffs/chapter9_diff.docx
 
 docx7:
 	pandoc "$(INPUTDIR)"/15*.md \
@@ -435,5 +467,16 @@ markdown:
 	-N \
 	--pdf-engine=xelatex \
 	--verbose
+
+diffs:
+	pandiff "$(INPUTDIR)"/initial/09*.md "$(INPUTDIR)"/09*.md -o "$(INPUTDIR)"/diffs/chapter1_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/10*.md "$(INPUTDIR)"/10*.md -o "$(INPUTDIR)"/diffs/chapter2_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/11*.md "$(INPUTDIR)"/11*.md -o "$(INPUTDIR)"/diffs/chapter3_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/12*.md "$(INPUTDIR)"/12*.md -o "$(INPUTDIR)"/diffs/chapter4_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/13*.md "$(INPUTDIR)"/13*.md -o "$(INPUTDIR)"/diffs/chapter5_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/14*.md "$(INPUTDIR)"/14*.md -o "$(INPUTDIR)"/diffs/chapter6_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/15*.md "$(INPUTDIR)"/15*.md -o "$(INPUTDIR)"/diffs/chapter7_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/16*.md "$(INPUTDIR)"/16*.md -o "$(INPUTDIR)"/diffs/chapter8_diff.docx \
+	&& pandiff "$(INPUTDIR)"/initial/17*.md "$(INPUTDIR)"/17*.md -o "$(INPUTDIR)"/diffs/chapter9_diff.docx
 
 .PHONY: help pdf docx html tex chapter7 chapter8

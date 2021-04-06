@@ -78,7 +78,7 @@ The starting point should be a wide range of characters used within relevant lit
 
 2. **Select characters using data intended to be used within each subset**
 
-Not all characters are based on the same data sources used within this research and relational framework (see Chapter 6 for details). Some can be adapted (e.g., a morphological cell can be, in some cases, used instead of the plot), but some are based on the different sources of data. Characters which could not be used within subsets of the relational framework are then excluded from the initial selection.
+Not all characters are based on the same data sources used within this research and relational framework (see Chapter 6 for details). Some can be adapted (e.g., a morphological cell can be, in some cases, used as a spatial unit where plot is normally used), but some are based on the different sources of data. Characters which could not be used within subsets of the relational framework are then excluded from the initial selection.
 
 3. **Adapt characters to fit the framework**
 
