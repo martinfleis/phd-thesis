@@ -29,13 +29,13 @@
 \textbf{IQM} & \textbf{I}nter\textbf{Q}uartile \textbf{M}ean\tabularnewline
 \textbf{IQR} & \textbf{I}nter\textbf{Q}uartile \textbf{R}ange\tabularnewline
 \textbf{LC} & \textbf{L}and \textbf{C}over\tabularnewline
-\textbf{LCZ} & \textbf{L}ocal \textbf{C}limate \textbf{Z}one\tabularnewline
+\textbf{LCZ} & \textbf{L}ocal \textbf{C}limate \textbf{Z}ones\tabularnewline
 \textbf{LISA} & \textbf{L}ocal \textbf{I}ndex of \textbf{S}patial \textbf{A}utocorrelation\tabularnewline
 \textbf{MAUP} & \textbf{M}odifiable \textbf{A}real \textbf{U}nit \textbf{P}roblem\tabularnewline
 \textbf{MC} & \textbf{M}orphological \textbf{C}ell\tabularnewline
 \textbf{MT} & \textbf{M}orphological \textbf{T}essellation\tabularnewline
 \textbf{NRMSD} & \textbf{N}ormalised \textbf{R}oot \textbf{S}squared \textbf{M}ean \textbf{D}eviation\tabularnewline
-\textbf{OCM} & \textbf{O}ptimal \textbf{C}lassification \textbf{M}mdel\tabularnewline
+\textbf{OCM} & \textbf{O}ptimal \textbf{C}lassification \textbf{M}odel\tabularnewline
 \textbf{OTU} & \textbf{O}perational \textbf{T}axonomic \textbf{U}nit\tabularnewline
 \textbf{POI} & \textbf{P}oint \textbf{o}f \textbf{I}nterest\tabularnewline
 \textbf{RF} & \textbf{R}elational analytical \textbf{F}ramework\tabularnewline
