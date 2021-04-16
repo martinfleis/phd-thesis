@@ -37,6 +37,7 @@
 \textbf{NRMSD} & \textbf{N}ormalised \textbf{R}oot \textbf{S}squared \textbf{M}ean \textbf{D}eviation\tabularnewline
 \textbf{OCM} & \textbf{O}ptimal \textbf{C}lassification \textbf{M}mdel\tabularnewline
 \textbf{OTU} & \textbf{O}perational \textbf{T}axonomic \textbf{U}nit\tabularnewline
+\textbf{POI} & \textbf{P}oint \textbf{o}f \textbf{I}nterest\tabularnewline
 \textbf{RF} & \textbf{R}elational analytical \textbf{F}ramework\tabularnewline
 \textbf{RS} & \textbf{R}emote \textbf{S}ensing\tabularnewline
 \textbf{SA} & \textbf{S}anctuary \textbf{A}rea\tabularnewline
