@@ -34,7 +34,7 @@
         Urban Design Studies Unit\\
         Department of Architecture\\
         University of Strathclyde, UK\\
-        November 2020
+        April 2021
 
     \end{center}
     \restoregeometry

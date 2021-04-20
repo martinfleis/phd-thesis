@@ -25,6 +25,7 @@
 & \tabularnewline
 
 \textbf{BIC} & \textbf{B}ayesian \textbf{I}nformation \textbf{C}riterion\tabularnewline
+\textbf{CAR} & \textbf{C}overed \textbf{A}rea \textbf{R}atio\tabularnewline
 \textbf{GMM} & \textbf{G}aussian \textbf{M}ixture \textbf{M}odel\tabularnewline
 \textbf{IQM} & \textbf{I}nter\textbf{Q}uartile \textbf{M}ean\tabularnewline
 \textbf{IQR} & \textbf{I}nter\textbf{Q}uartile \textbf{R}ange\tabularnewline
