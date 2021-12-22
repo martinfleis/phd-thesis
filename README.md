@@ -1,88 +1,31 @@
-# Template for writing a PhD thesis in Markdown [![Build Status](https://travis-ci.org/tompollard/phd_thesis_markdown.svg?branch=master)](https://travis-ci.org/tompollard/phd_thesis_markdown)  
+# Source code of the PhD thesis The Urban Atlas: Methodological Foundation of a Morphometric Taxonomy of Urban Form
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.58490.svg)](http://dx.doi.org/10.5281/zenodo.58490)
+Author: **Martin Fleischmann**
 
-This repository provides a framework for writing a PhD thesis in Markdown. I used the template for my PhD submission to University College London (UCL), but it should be straightforward to adapt suit other universities too.
+Urban Design Studies Unit
 
-## Citing the template
+Department of Architecture
 
-If you have used this template in your work, please cite the following publication:
+University of Strathclyde, UK
+
+April 2021
+
+contact: martin@martinfleischmann.net
+
+## Abstract
+
+No two cities in the world are alike. Each urban environment is characterised by a unique variety and heterogeneity as a result of its evolution and transformation, reflecting the differences in needs human populations have had over time manifested, in space, by a plethora of urban patterns.
+
+Traditionally, the study of these patterns over time and across space is the domain o urban morphology, a field of research stretching from geography to architecture. Whilst urban morphology has considerably advanced the current understanding of processes of formation, transformation and differentiation of many such patterns, predominantly through qualitative approaches, it has yet to fully take advantage of quantitative approaches and data-driven methods recently made possible by advances in geographic data science and expansion of available mapping products. Although relatively new, these methods hold immense potential in expanding our capacity to identify, characterise and compare urban patterns: these can be rich in terms of information, scalable (applicable to the large scale of extent, regional and national) and replicable, drastically improving the potential of comparative analysis and classification.
+
+Different disciplines with more profound quantitative methods can help in the development of data-driven urban morphology, as now, for the first time, we are in the position where we can rely on a large amount of data on the built environment, unthinkable just a decade ago. This thesis, therefore, aims to link urban morphology and methodologically strong area of quantitative biological systematics, adapting its concepts and methods to the context of built-up fabric. That creates an infrastructure for numerical description of urban form, known as urban morphometrics, and a subsequent classification of urban types.
+
+Conceptually building on the theory of numerical taxonomy, this research progresses the development of urban morphometrics to automate processes of urban form characterisation and classification. Whilst many available methods are characterised by significant limitation in applicability due to difficulties in obtaining necessary data, the proposed method employs only minimal data input - street network and building footprints - and overcomes limitations in the delineation of plots by identifying an alternative spatial unit of analysis, the morphological tessellation, a derivative of Voronoi tessellation partitioning the space based on a composition of building footprints. As tessellation covers the entirety of urban space, its inherent contiguity then constitutes a basis of a relational framework aimed at the comprehensive characterisation of individual elements of urban form and their relationships. Resulting abundant numerical description of all features is further utilised in cluster analysis delineating urban tissue types in an unrestricted urban fabric, shaping an input for hierarchical classification of urban form - a taxonomy.
+
+The proposed method is applied to the historical heterogeneous city of Prague, Czechia and validated using supplementary non-morphological data reflecting the variation of built-up patterns. Furthermore, its cross-cultural and morphological validity and expandability are tested by assessment of Amsterdam, Netherlands and a combination of both cases into a unified taxonomy of their urban patterns. The research is accompanied by a bespoke open-source software momepy for quantitative assessment of urban form, providing infrastructure for replicability and further community-led development.
+
+The work builds a basis for morphometric research of urban environment, providing operational tools and frameworks for its application and further development, eventually leading to a coherent taxonomy of urban form.
+<hr>
+The repository is based on the following template:
 
 > Tom Pollard et al. (2016). Template for writing a PhD thesis in Markdown. Zenodo. http://dx.doi.org/10.5281/zenodo.58490
-
-## Why write my thesis in Markdown?
-
-Markdown is a super-friendly plain text format that can be easily converted to a bunch of other formats like PDF, Word and LaTeX. You'll enjoy working in Markdown because:
-- it is a clean, plain-text format...
-- ...but you can use LaTeX when you need it (for example, in laying out mathematical formula).
-- it doesn't suffer from the freezes and crashes that some of us experience when working with large, image-heavy Word documents.
-- it automatically handles the table of contents, bibliography etc with Pandoc.
-- comments, drafts of text, etc can be added to the document by wrapping them in &lt;!--  --&gt;
-- it works well with Git, so keeping backups is straightforward. Just commit the changes and then push them to your repository.
-- there is no lock-in. If you decide that Markdown isn't for you, then just output to Word, or whatever, and continue working in the new format.
-
-## Are there any reasons not to use Markdown?
-
-There are some minor annoyances:
-- if you haven't worked with Markdown before then you'll find yourself referring to the style-guide fairly often at first.
-- it isn't possible to add a short caption to tables ~~and figures~~ ([figures are now fixed](https://github.com/tompollard/phd_thesis_markdown/pull/47), thanks to @martisak). This means that /listoftables includes the long-caption, which probably isn't what you want. If you want to include the list of tables, then you'll need to write it manually.
-- the style documents in this framework could be improved. The PDF and HTML (thanks [@ArcoMul](https://github.com/ArcoMul)) outputs are acceptable, but ~~HTML and~~ Word needs work if you plan to output to this format.  
-- ~~there is no straightforward way of specifying image size in the markdown right now, though this functionality is coming (see: https://github.com/tompollard/phd_thesis_markdown/issues/15)~~ (Image size can now be specified. Thanks to @rudolfbyker for [highlighting this](https://github.com/tompollard/phd_thesis_markdown/issues/15)).
-- ... if there are more, please add them here.
-
-## How is the template organised?
-
-- README.md => these instructions.
-- License.md => terms of reuse (MIT license).
-- Makefile => contains instructions for using Pandoc to produce the final thesis.
-- output/ => directory to hold the final version.
-- source/ => directory to hold the thesis content. Includes the references.bib file.
-- source/figures/ => directory to hold the figures.
-- style/ => directory to hold the style documents.
-
-## How do I get started?
-
-1. Install the following software:
-    - A text editor, like [Sublime](https://www.sublimetext.com/), which is what you'll use write the thesis.  
-    - A LaTeX distribution (for example, [MacTeX](https://tug.org/mactex/) for Mac users).
-    - [Pandoc](http://johnmacfarlane.net/pandoc), for converting the Markdown to the output format of your choice.  You may also need to install [Pandoc cite-proc](http://pandoc.org/demo/example19/Extension-citations.html) to create the bibliography.
-    - Install @martisak's shortcaption module for Pandoc, with `pip install pandoc-shortcaption`
-    - Git, for version control.
-2. [Fork the repository](https://github.com/tompollard/phd_thesis_markdown/fork) on Github  
-3. Clone the repository onto your local computer (or [download the Zip file](https://github.com/tompollard/phd_thesis_markdown/archive/master.zip)).  
-4. Navigate to the directory that contains the Makefile and type "make pdf" (or "make html") at the command line to update the PDF (or HTML) in the output directory.  
-**In case of an error** (e.g. `make: *** [pdf] Error 43`) run the following commands:  
-    ```
-    sudo tlmgr install truncate
-    sudo tlmgr install tocloft
-    sudo tlmgr install wallpaper
-    sudo tlmgr install morefloats
-    sudo tlmgr install sectsty
-    sudo tlmgr install siunitx
-    sudo tlmgr install threeparttable
-    sudo tlmgr update l3packages
-    sudo tlmgr update l3kernel
-    sudo tlmgr update l3experimental
-    ```
-    
-5. Edit the files in the 'source' directory, then goto step 4.  
-
-## What else do I need to know?
-
-Some useful points, in a random order:
-- each chapter must finish with at least one blank line, otherwise the header of the following chapter may not be picked up.
-- add two spaces at the end of a line to force a line break.
-- the template uses [John Macfarlane's Pandoc](http://johnmacfarlane.net/pandoc/README.html) to generate the output documents. Refer to this page for Markdown formatting guidelines.
-- PDFs are generated using the LaTeX templates in the style directory. Fonts etc can be changed in the TeX templates.
-- To change the citation style, just overwrite ref_format.csl with the new style. Style files can be obtained from [citationstyles.org/](http://citationstyles.org/)
-- For fellow web developers, there is a Grunt task file (Gruntfile.js) which can be used to 'watch' the markdown files. By running `$ npm install` and then `$ npm run watch` the PDF and HTML export is done automatically when saving a Markdown file.
-- You can automatically reload the HTML page on your browser using LiveReload with the command `$ npm run livereload`. The HTML page will automatically reload when saving a Markdown file after the export is done.
-
-# Contributing
-
-Contributions to the template are encouraged! There are lots of things that could be improved, like:
-- finding a way to add short captions for the tables, so that the lists of tables can be automatically generated.
-- cleaning up the LaTeX templates, which are messy at the moment.
-- improving the style of Word and TeX outputs.
-
-Please fork and edit the project, then send a pull request.
